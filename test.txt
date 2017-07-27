@@ -2,3 +2,5 @@ This is my personnal test
 type more words.
 slash
 slash
+slash
+comma
