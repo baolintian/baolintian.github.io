@@ -6,23 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Unicode学习 | 宝宝天龙</title>
+  <title>Tag: 离线算法 | 宝宝天龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Unicode学习笔记">
-<meta name="keywords" content="unicode,utf-8,python">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Unicode学习">
-<meta property="og:url" content="http://yoursite.com/2017/09/25/Unicode学习/index.html">
+  <meta name="description" content="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="宝宝天龙">
+<meta property="og:url" content="http://yoursite.com/tags/离线算法/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="Unicode学习笔记">
-<meta property="og:image" content="https://t1.picb.cc/uploads/2017/09/25/5NCHc.png">
-<meta property="og:image" content="https://t1.picb.cc/uploads/2017/09/25/5NOkt.png">
-<meta property="og:image" content="https://t1.picb.cc/uploads/2017/09/25/5NBoW.png">
-<meta property="og:updated_time" content="2017-09-25T12:18:42.398Z">
+<meta property="og:description" content="description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Unicode学习">
-<meta name="twitter:description" content="Unicode学习笔记">
-<meta name="twitter:image" content="https://t1.picb.cc/uploads/2017/09/25/5NCHc.png">
+<meta name="twitter:title" content="宝宝天龙">
+<meta name="twitter:description" content="description">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
   
@@ -151,243 +145,78 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Unicode学习" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Unicode学习
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/10/01/Uva-1479-Graph-and-Queries/" class="archive-article-date">
+  	<time datetime="2017-10-01T13:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-01</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/10/01/Uva-1479-Graph-and-Queries/">Uva 1479 - Graph and Queries</a>
     </h1>
   
 
-        
-        <a href="/2017/09/25/Unicode学习/" class="archive-article-date">
-  	<time datetime="2017-09-25T06:54:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Unicode学习笔记<br><a id="more"></a></p>
-<script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-<h1 id="ASCII的诞生"><a href="#ASCII的诞生" class="headerlink" title="ASCII的诞生"></a>ASCII的诞生</h1><p>由于计算机最基本的单位是bit,只能记录0和1,于是人们想到了将复杂的字符与数字一一映射，从而从数字知道所要表示的内容。ASCII第一次以规范标准的类型发表是在1967年，最后一次更新是在1986年，共定义了128个字符（编号从 0 至 127）。</p>
-<h1 id="Extended-ASCII"><a href="#Extended-ASCII" class="headerlink" title="Extended ASCII"></a>Extended ASCII</h1><p>ASCII的局限在于只能显示26个基本英文字母、阿拉伯数字和英式标点符号，因此只能用于显示现代美国英语（而且在处理英语当中的外来词如naïve、café、élite等时，所有重音符号都不得不去掉，即使这样做会违反拼写规则）<br>有人开始使用128至255编码重音符号等，这就产生了Extended ASCII。</p>
-<h1 id="Unicode"><a href="#Unicode" class="headerlink" title="Unicode"></a>Unicode</h1><h2 id="Unicode的产生"><a href="#Unicode的产生" class="headerlink" title="Unicode的产生"></a>Unicode的产生</h2><p>尽管256个字符适合大部分的国家，但是像中国这样的国家，它们的字符的数量远远大于256种，于是，人们必须进一步扩大数字与字符的映射表，才能进一步的满足计算机表示的需求，Unicode应运而生。</p>
-<p>早期的Unicode曾使用2 bytes，也就是16 bits编码字符，这样可以有 65536 个不同的编码，目标是囊括所有人类语言的所有文字。<br>后来发现65536个编码不够用。当今的Unicode范围为：    0 – 1,114,111 (0x10ffff)</p>
-<h2 id="Unicode的基本概念"><a href="#Unicode的基本概念" class="headerlink" title="Unicode的基本概念"></a>Unicode的基本概念</h2><blockquote>
-<p>The Unicode standard describes how characters are represented by <font color="#FF3030">code points</font>.</p>
-</blockquote>
-<p>code points 是什么能？它就是一个数字，这个数字能够独一无二的表示一个字符。它通常使用16进制来表示的</p>
-<blockquote>
-<p>In the standard, a code point is written using the notation U+12CA to mean the character with value 0x12ca (4810 decimal). </p>
-</blockquote>
-<h2 id="Unicode是如何显示出来人类能够读懂的字符"><a href="#Unicode是如何显示出来人类能够读懂的字符" class="headerlink" title="Unicode是如何显示出来人类能够读懂的字符"></a>Unicode是如何显示出来人类能够读懂的字符</h2><p>正如前面的介绍一样，Unicode是一系列的十六进制的数字，但是为什么我们平时看到的是<font color="#FF3030">字型</font>呢？这里面涉及到了另外的一个机制，将数字展示为字型,涉及一个软件的GUI设计,不进行深入的介绍。</p>
-<blockquote>
-<p>Most Python code doesn’t need to worry about glyphs; figuring out the correct glyph to display is generally the job of a GUI toolkit or a terminal’s font renderer</p>
-</blockquote>
-<h2 id="encoding"><a href="#encoding" class="headerlink" title="encoding"></a>encoding</h2><p>一个Unicode string代表的是一串十六进制的数字。为了保存下来，我们必须设置一个过程，将这些十六进制的数字转换为二进制的数字，从而保存下下来。这个过程叫<font color="#FF3030"><strong>编码（encoding）</strong></font>。</p>
-<blockquote>
-<p>A Unicode string is a sequence of code points, which are numbers from 0 to 0x10ffff（十进制： 1,114,111 ）<br>This sequence needs to be represented as a set of bytes (meaning, values from 0–255) in memory.<br>The rules for translating a Unicode string into a sequence of bytes are called an encoding.</p>
-</blockquote>
-<p><a href="https://www.branah.com/unicode-converter" target="_blank" rel="external">在线编码的网站</a></p>
-<h3 id="32-bit-integer编码"><a href="#32-bit-integer编码" class="headerlink" title="32-bit integer编码"></a>32-bit integer编码</h3><p>我们将”python”编码为可储存的二进制的形式<br><img src="https://t1.picb.cc/uploads/2017/09/25/5NCHc.png" alt=""></p>
-<p>缺点：</p>
-<ul>
-<li>计算机中存储的数据大部分的Unicode都在0~255之间，这样造成了极大的空间浪费</li>
-<li>和原来的的C语言中的strlen()函数有冲突。</li>
-</ul>
-<h3 id="utf-8编码"><a href="#utf-8编码" class="headerlink" title="utf-8编码"></a>utf-8编码</h3><p>和之前的编码方式相比，utf-8编码的长度是可以变化的。</p>
-<ul>
-<li>若code point&lt;128,那么用1byte的二进数来储存这个字符</li>
-<li>若128&lt;=code point&lt;=2047 (0x7ff)用2bytes</li>
-<li>若code point&gt;2047,将会用3个或者是4个bytes来表示，每一个byte表示的范围都在<font color="#FF3030"><strong>128~255之间</strong></font>(想想为什么)。</li>
-</ul>
-<p>前面的想一想：如果三位或者是四位有一个byte表示在0~127之间，那么它到底是一个字节还是和三个字节表示一个整体呢？因此用这种规定来避免这种冲突，从而很容易判断哪些byte是一个整体</p>
-<h1 id="Python2-7与Unicode"><a href="#Python2-7与Unicode" class="headerlink" title="Python2.7与Unicode"></a>Python2.7与Unicode</h1><p>python2.7内的字符串的类型<br><img src="https://t1.picb.cc/uploads/2017/09/25/5NOkt.png" alt=""></p>
-<ul>
-<li>Python 2.7中，str表示<strong>8位文本</strong>（8-bit string）和二进制数据；unicode表示<strong>Unicode文本</strong></li>
-</ul>
-<p>注意，在Python2中，若有下面的代码，则会报错，原因str类型保存的是八位文本</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">name = str(<span class="string">'田'</span>)</div><div class="line"><span class="keyword">print</span> type(name)</div></pre></td></tr></table></figure>
-<p>但是，下面的代码又是对的，注意区别：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">'田'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(s)</div><div class="line">&lt;type <span class="string">'str'</span>&gt;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>len(s)</div><div class="line"><span class="number">2</span></div></pre></td></tr></table></figure></p>
-<p>一些操作的代码，注意操作的环境在Python2.7中进行<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>unichr(<span class="number">97</span>)<span class="comment">#数字的范围在0~65535之间</span></div><div class="line"><span class="string">u'a'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>unichr(<span class="number">30000</span>)</div><div class="line"><span class="string">u'\u7530'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>chr(<span class="number">97</span>)<span class="comment">#数字范围在0~255之间</span></div><div class="line"><span class="string">'a'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>ord(<span class="string">'a'</span>)</div><div class="line"><span class="number">97</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">u'田'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>ord(s)<span class="comment">#只接受unicode类型的变量，</span></div><div class="line"><span class="number">30000</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">'田'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>ord(s)</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</div><div class="line">TypeError: ord() expected a character, but string of length <span class="number">2</span> found</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(s)</div><div class="line">&lt;type <span class="string">'str'</span>&gt;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>len(s)</div><div class="line"><span class="number">2</span></div></pre></td></tr></table></figure></p>
-<h2 id="用于解码的-Built-in-Function-unicode"><a href="#用于解码的-Built-in-Function-unicode" class="headerlink" title="用于解码的 Built-in Function:unicode()"></a>用于解码的 Built-in Function:unicode()</h2><p>格式：</p>
-<blockquote>
-<p>unicode(string[, encoding, errors])</p>
-</blockquote>
-<p>encodeing表示的是原来的编码的方式，参数可以有utf-8,GB2312等等，若不填任何的参数，那么默认的encoding = ‘ASCII’. errors = ‘strict’(如有错误就会报错)或’repalce’(无法识别的会替换成+UFFFD，也是我们平时经常见到了一个黑色的菱形中间有一个问号的符号)或’ignore’(跳过这个编码数字)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>unicode(<span class="string">'abc\x80'</span>)</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</div><div class="line">UnicodeDecodeError: <span class="string">'gbk'</span> codec can<span class="string">'t decode byte 0x80 in position 3: incomplete multibyte sequence</span></div><div class="line"><span class="string">#原来我把系统的默认的编码方式改成了gbk,所以报错的时候显示的不是ASCII</span></div><div class="line"><span class="string">&gt;&gt;&gt; unicode('</span>abc\x80<span class="string">', encoding = '</span>latin_1<span class="string">')</span></div><div class="line"><span class="string">u'</span>abc\x80<span class="string">'</span></div></pre></td></tr></table></figure>
-<h2 id="Unicode-string的用于编码的方法：encode"><a href="#Unicode-string的用于编码的方法：encode" class="headerlink" title="Unicode string的用于编码的方法：encode()"></a>Unicode string的用于编码的方法：encode()</h2><p>格式：</p>
-<blockquote>
-<p>str.encode([encoding[,errors]])</p>
-</blockquote>
-<p><img src="https://t1.picb.cc/uploads/2017/09/25/5NBoW.png" alt=""><br>上面的图片很好的解释了之前讲过的utf-8编码的可变长度的特性<br>再次回顾：</p>
-<blockquote>
-<p>和之前的编码方式相比，utf-8编码的长度是可以变化的。<br>若code point &lt; 128,那么用1byte的二进数来储存这个字符<br>若128 &lt;= code point &lt;= 2047 (0x7ff)用2bytes<br>若code point > 2047,将会用3个或者是4个bytes来表示</p>
-</blockquote>
-<h2 id="8-bit-string的用于解码的方法：str-decode"><a href="#8-bit-string的用于解码的方法：str-decode" class="headerlink" title="8-bit string的用于解码的方法：str.decode()"></a>8-bit string的用于解码的方法：str.decode()</h2><p>直接上代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>s = unichr(<span class="number">40960</span>) + <span class="string">u'abcd'</span>+unichr(<span class="number">1972</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>s</div><div class="line"><span class="string">u'\ua000abcd\u07b4'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(s)</div><div class="line">&lt;type <span class="string">'unicode'</span>&gt;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>utf8_version = s.encode(<span class="string">'utf-8'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>utf8_version</div><div class="line"><span class="string">'\xea\x80\x80abcd\xde\xb4'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(utf8_version)</div><div class="line">&lt;type <span class="string">'str'</span>&gt;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>s2 = utf8_version.decode(<span class="string">'utf-8'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>s2</div><div class="line"><span class="string">u'\ua000abcd\u07b4'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>s == s2</div><div class="line"><span class="keyword">True</span></div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure></p>
-<p>说明：utf8_version保存的是8-bit string，这种类型是用来将数据保存到文件中的。然后将其解码，解码的方式是utf-8,最后又转变成了unicode类型。</p>
-<h2 id="是否可以对str对象使用encode-方法？"><a href="#是否可以对str对象使用encode-方法？" class="headerlink" title="是否可以对str对象使用encode()方法？"></a>是否可以对str对象使用encode()方法？</h2><blockquote>
-<p>str.encode() 实际上等价于：<br>str.decode(sys. getdefaultencoding()).encode()<br>而 sys.getdefaultencoding() 一般是ascii<br>不要对str对象使用encode，不要对unicode对象使用decode</p>
-<p>str.decode()和unicode.encode()是正规的用法</p>
-</blockquote>
-<h1 id="深刻理解python2-7里面的str和unicode类型的区别"><a href="#深刻理解python2-7里面的str和unicode类型的区别" class="headerlink" title="深刻理解python2.7里面的str和unicode类型的区别"></a>深刻理解python2.7里面的str和unicode类型的区别</h1><p>引号前是否有前缀 u 只是书写、显示时的表象。透过表象，进一步来看：<br>str表示<strong>8位文本</strong>（8-bit string）和<strong>二进制数据</strong><br>unicode表示<strong>Unicode文本</strong>（Unicode string）</p>
-<p>str对象是一个“<font color="#FF3030">byte</font>序列”（ sequence of bytes ）；而unicode对象是“character序列”（sequence of characters），也可理解为sequence of <font color="#FF3030">code-points</font><br>Character或其在Unicode中的表示形式code point只是概念上的东西，计算机存储、传输信息需要以byte形式进行。这就是需要对unicode对象进行编码的原因</p>
-<font color="#FF3030"><strong>如果你有一段数据保存在文件中，但是你不知道原理的编码方式是什么，那么打开文件就会变成一堆的乱码。因此，一个好的习惯是著名存储数据所用的编码方式，这样别人在打开文件的时候才知道用什么解码的方式来查看数据</strong></font>
-
-<h1 id="utf-8与gbk2312的区别："><a href="#utf-8与gbk2312的区别：" class="headerlink" title="utf-8与gbk2312的区别："></a>utf-8与gbk2312的区别：</h1><p>utf-8由于是针对世界上所有的文字，所以在处理中文的时候大多数编码成3bytes,而是用gbk2312编码的话，中文编码为2bytes,因此gbk2312更适合中国文字的存储。</p>
-<h1 id="Python-3-5与Unicode"><a href="#Python-3-5与Unicode" class="headerlink" title="Python 3.5与Unicode"></a>Python 3.5与Unicode</h1><ul>
-<li>str类型支持Unicode，或者说Python3.5中的str类型就相当于Python 2.7中的unicode类型</li>
-<li><p>str对象没有decode()方法,因为此时的str类型表示的就是python2的unicode类型。</p>
-<blockquote>
-<p>Python 2.7 包括两种数据类型：<font color="#FF3030">str</font>       和   <font color="#FF3030">unicode</font><br>Python 3.5 相对应的数据类型：<font color="#FF3030">bytes</font>   和   <font color="#FF3030">str</font></p>
-</blockquote>
-</li>
-<li><p>在Python 3.5中， “bytes” 类型存储的是 byte 串。可以通过一个 b 前缀来声明 bytes</p>
-</li>
-</ul>
-<h1 id="推荐链接"><a href="#推荐链接" class="headerlink" title="推荐链接"></a>推荐链接</h1><p><a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/" target="_blank" rel="external">unicode前世今生</a><br><a href="http://pycoders-weekly-chinese.readthedocs.io/en/latest/issue5/unipain.html" target="_blank" rel="external">前文的中文翻译</a><br><a href="https://nedbatchelder.com/text/unipain.html" target="_blank" rel="external">unicode</a><br><a href="https://docs.python.org/3/howto/unicode.html" target="_blank" rel="external">python3官网对unicode的说明</a><br><a href="https://docs.python.org/2/howto/unicode.html" target="_blank" rel="external">python2官网对unicode的说明</a></p>
-<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">unicode</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">utf-8</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">treap</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BST</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">离线算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">启发式合并</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/25/Unicode学习/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/10/01/Uva-1479-Graph-and-Queries/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Uva 1479 - Graph and Queries
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/09/21/Markdown语法学习/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Markdown语法学习</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
+    
 
-  
 
-  
 
           </div>
         </div>
@@ -409,9 +238,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
