@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="宝宝天龙">
 <meta property="og:description" content="国庆快乐~~~(^__^) 嘻嘻……">
 <meta property="og:image" content="https://t1.picb.cc/uploads/2017/10/01/8NTL7.jpg">
-<meta property="og:updated_time" content="2017-10-01T15:02:49.644Z">
+<meta property="og:updated_time" content="2017-10-01T15:11:47.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Uva 1479 - Graph and Queries">
 <meta name="twitter:description" content="国庆快乐~~~(^__^) 嘻嘻……">
@@ -179,11 +179,11 @@
 </li>
 <li><p>若正向的模拟，那么删除边的操作比较的难以实现。因为treap不能实现分裂的操作。而splay是能够实现合并与分裂的操作，但是是第k大的，不能删除任意两点间的</p>
 </li>
-<li><p>此时想到的是完全反过来的逆过程：我们最开始得到的图是删除了所有应该删去的边的图。query的操作不改变;delete的操作变成了add_edge的操作；change的操作变成了将值变成原来的值的操作。</p>
+<li><p>此时想到的是完全反过来的逆过程：我们最开始得到的图是删除了所有应该删去的边的图。query的操作不改变;delete的操作变成了add_edge的操作；change的操作变成了将值变成<font color="#FF3030"><strong>原来的值</strong></font>的操作。</p>
 </li>
 </ul>
 <h1 id="此题的坑点"><a href="#此题的坑点" class="headerlink" title="此题的坑点"></a>此题的坑点</h1><ul>
-<li>又一次的栽在了读入的操作上，注意数字和字母间的读入操作加个getchar()或者空格</li>
+<li>又一次的栽在了读入的操作上，注意数字和字母间的读入操作加个getchar()或者空格（Uva太垃圾了，一直显示的是RE，害的我调了三天。。。）</li>
 <li>数组大小的，防止越界</li>
 <li>在插入操作的时候不要使用结构体里面的cmp函数。因为可能插入<font color="#FF3030"><strong>相同的值</strong></font></li>
 </ul>
@@ -200,7 +200,7 @@
 <h2 id="编写代码时要注意的"><a href="#编写代码时要注意的" class="headerlink" title="编写代码时要注意的"></a>编写代码时要注意的</h2><p>当实现rotate的时候，心中时刻想着一张图：当将<font color="#FF3030"><strong>右儿子</strong></font>旋转到根部的时候，要进行<font color="#FF3030"><strong>左旋</strong></font>的操作。分成三步走就行了。</p>
 <p>当实现insert的时候，不断的寻找根部，最后插入了，若rank大于根节点的rank,则进行相应的旋转</p>
 <p>当实现delete的时候，若要删除的节点有两个孩子，那么将rank较大的旋转到根部，使之转换成只有一个孩子的情况，然后删除该节点。</p>
-<font color="#FF3030"><strong>总计，心中一定要有一张树的图，进行相应的操作的时候，在心里面进行相应的操作</strong></font>
+<font color="#FF3030"><strong>总之，心中一定要有一张树的图，进行相应的操作的时候，在心里面进行相应的操作</strong></font>
 
 <h1 id="启发式合并"><a href="#启发式合并" class="headerlink" title="启发式合并"></a>启发式合并</h1><p>假设有两棵树T1和T2，节点的数量分别是n1和n2,若n1&lt;n2,显然把T1合并到T2比较的高效，即把T1中的节点一一插入到T2中，时间复杂度为O(\(n_1log(n_2)\))<br>至于为什么这个名词，请自行百度。</p>
 <h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
@@ -466,10 +466,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
@@ -487,6 +483,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">启发式合并</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
               </li>
             
             <div class="clearfix"></div>
