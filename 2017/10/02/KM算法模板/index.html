@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Gale-Shapley Algorithm | 宝宝天龙</title>
+  <title>KM算法模板 | 宝宝天龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="宝宝天龙">
-<meta property="og:url" content="http://yoursite.com/tags/Gale-Shapley-Algorithm/index.html">
+  <meta name="description" content="KM算法，在此不涉及科学的证明，仅仅是粗略的说明算法的正确性。">
+<meta name="keywords" content="KM算法,模板">
+<meta property="og:type" content="article">
+<meta property="og:title" content="KM算法模板">
+<meta property="og:url" content="http://yoursite.com/2017/10/02/KM算法模板/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="description">
+<meta property="og:description" content="KM算法，在此不涉及科学的证明，仅仅是粗略的说明算法的正确性。">
+<meta property="og:updated_time" content="2017-10-03T09:13:42.836Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="宝宝天龙">
-<meta name="twitter:description" content="description">
+<meta name="twitter:title" content="KM算法模板">
+<meta name="twitter:description" content="KM算法，在此不涉及科学的证明，仅仅是粗略的说明算法的正确性。">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
   
@@ -145,66 +147,188 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-KM算法模板" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/03/稳定婚姻问题/" class="archive-article-date">
-  	<time datetime="2017-10-03T07:13:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/03/稳定婚姻问题/">稳定婚姻问题</a>
+    <h1 class="article-title" itemprop="name">
+      KM算法模板
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/10/02/KM算法模板/" class="archive-article-date">
+  	<time datetime="2017-10-02T03:28:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>KM算法，在此不涉及科学的证明，仅仅是粗略的说明算法的正确性。<br><a id="more"></a></p>
+<script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=4157" target="_blank" rel="external">Uva1411-Ants</a></p>
+<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>第一个参数是代表点的对数。<br>接下来n行表示蚂蚁的坐标<br>接下来n行表示apple tree的坐标<br>要求第i个蚂蚁对应的苹果树的序号，要求任意一种连线不能重合的方案即可</p>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>不妨将蚂蚁抽象成白点，苹果树抽象成黑点。黑点和白点构成了二分图的关系。两点间边的权值对应着欧几里得距离。<br>那么为什么使用KM算法是正确的呢？<br>假设最佳完美匹配中，存在两条相交的直线\(a_1-b_1\)和\(a_2-b_2\)。那么dist(a1, b1)+dist(a2, b2)一定大于dist(a1, b2)+dist(a2, b1);<br>而后者是不相交的。而KM算法算的是权值和最大的值.<strong>但是我们可以将原理的权值转换为负值来求最大值，再取反从而求得了最小值</strong>。</p>
+<h1 id="AC-代码"><a href="#AC-代码" class="headerlink" title="AC 代码"></a>AC 代码</h1><p>说明：这是我在网上找到的一个复杂度为O(\(n^3\))的算法，代码风格不是很好。<br>去除了原来算法中的slack[]变量。</p>
+<font color="#FF3030"><strong>左右顶标(ex_girl[]和ex_boy[])的和就是最佳完美匹配的权值和</strong></font>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN = <span class="number">110</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">double</span> INF = <span class="number">1e9</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">double</span> eps = <span class="number">1e-6</span>;</div><div class="line"></div><div class="line"><span class="keyword">double</span> love[MAXN][MAXN];   <span class="comment">// 记录每个妹子和每个男生的好感度</span></div><div class="line"><span class="keyword">double</span> ex_girl[MAXN];      <span class="comment">// 每个妹子的期望值</span></div><div class="line"><span class="keyword">double</span> ex_boy[MAXN];       <span class="comment">// 每个男生的期望值</span></div><div class="line"><span class="keyword">bool</span> vis_girl[MAXN];    <span class="comment">// 记录每一轮匹配匹配过的女生</span></div><div class="line"><span class="keyword">bool</span> vis_boy[MAXN];     <span class="comment">// 记录每一轮匹配匹配过的男生</span></div><div class="line"><span class="keyword">int</span> match[MAXN];        <span class="comment">// 记录每个男生匹配到的妹子 如果没有则为-1</span></div><div class="line"><span class="comment">//double slack[MAXN];        // 记录每个汉子如果能被妹子倾心最少还需要多少期望值</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> N;</div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_dis</span><span class="params">(<span class="keyword">int</span> x1, <span class="keyword">int</span> y1, <span class="keyword">int</span> x2, <span class="keyword">int</span> y2)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">sqrt</span>((<span class="keyword">double</span>)(x2-x1)*(x2-x1)+(<span class="keyword">double</span>)(y2-y1)*(y2-y1));</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> girl)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    vis_girl[girl] = <span class="literal">true</span>;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> boy = <span class="number">0</span>; boy &lt; N; ++boy) &#123;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (vis_boy[boy]) <span class="keyword">continue</span>; <span class="comment">// 每一轮匹配 每个男生只尝试一次</span></div><div class="line"></div><div class="line">        <span class="keyword">double</span> gap = ex_girl[girl] + ex_boy[boy] - love[girl][boy];</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (<span class="built_in">fabs</span>(gap) &lt;= eps) &#123;  <span class="comment">// 如果符合要求</span></div><div class="line">            vis_boy[boy] = <span class="literal">true</span>;</div><div class="line">            <span class="keyword">if</span> (match[boy] == <span class="number">-1</span> || dfs( match[boy] )) &#123;    <span class="comment">// 找到一个没有匹配的男生 或者该男生的妹子可以找到其他人</span></div><div class="line">                match[boy] = girl;</div><div class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span>  <span class="title">KM</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">memset</span>(match, <span class="number">-1</span>, <span class="keyword">sizeof</span>(match));    <span class="comment">// 初始每个男生都没有匹配的女生</span></div><div class="line">    <span class="built_in">memset</span>(ex_boy, <span class="number">0</span>, <span class="keyword">sizeof</span>(ex_boy));   <span class="comment">// 初始每个男生的期望值为0</span></div><div class="line"></div><div class="line">    <span class="comment">// 每个女生的初始期望值是与她相连的男生最大的好感度</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</div><div class="line">        ex_girl[i] = love[i][<span class="number">0</span>];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; N; ++j) &#123;</div><div class="line">            ex_girl[i] = max(ex_girl[i], love[i][j]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 尝试为每一个女生解决归宿问题</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i) &#123;</div><div class="line">        <span class="comment">//fill(slack, slack + N, INF);    // 因为要取最小值 初始化为无穷大</span></div><div class="line">        <span class="keyword">while</span> (<span class="number">1</span>) &#123;</div><div class="line">            <span class="comment">// 为每个女生解决归宿问题的方法是 ：如果找不到就降低期望值，直到找到为止</span></div><div class="line"></div><div class="line">            <span class="comment">// 记录每轮匹配中男生女生是否被尝试匹配过</span></div><div class="line">            <span class="built_in">memset</span>(vis_girl, <span class="literal">false</span>, <span class="keyword">sizeof</span>(vis_girl));</div><div class="line">            <span class="built_in">memset</span>(vis_boy, <span class="literal">false</span>, <span class="keyword">sizeof</span>(vis_boy));</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (dfs(i)) <span class="keyword">break</span>;  <span class="comment">// 找到归宿 退出</span></div><div class="line"></div><div class="line">            <span class="comment">// 如果不能找到 就降低期望值</span></div><div class="line">            <span class="comment">// 最小可降低的期望值</span></div><div class="line">            <span class="keyword">double</span> d = INF;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;N; i++)<span class="keyword">if</span>(vis_girl[i])&#123;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;N; j++)&#123;</div><div class="line">                    <span class="keyword">if</span>(!vis_boy[j])&#123;</div><div class="line">                        d = min(d, ex_girl[i]+ex_boy[j]-love[i][j]);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; N; ++j) &#123;</div><div class="line">                <span class="comment">// 所有访问过的女生降低期望值</span></div><div class="line">                <span class="keyword">if</span> (vis_girl[j]) ex_girl[j] -= d;</div><div class="line">                <span class="comment">// 所有访问过的男生增加期望值</span></div><div class="line">                <span class="keyword">if</span> (vis_boy[j]) ex_boy[j] += d;</div><div class="line">                <span class="comment">// 没有访问过的boy 因为girl们的期望值降低，距离得到女生倾心又进了一步！</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">double</span> ans = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;N; i++)&#123;</div><div class="line">        ans+=(ex_boy[i]+ex_girl[i]);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> kase=<span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> pos[MAXN][<span class="number">2</span>];</div><div class="line">    <span class="keyword">int</span> pos1[MAXN][<span class="number">2</span>];</div><div class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;N) == <span class="number">1</span>)&#123;</div><div class="line">        <span class="keyword">if</span>(++kase&gt;<span class="number">1</span>)<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;N; i++)&#123;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;pos[i][<span class="number">0</span>], &amp;pos[i][<span class="number">1</span>]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;N; i++)&#123;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;pos1[i][<span class="number">0</span>], &amp;pos1[i][<span class="number">1</span>]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; ++i)</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; N; ++j)</div><div class="line">                love[i][j] = <span class="number">-1.0</span>*get_dis(pos1[i][<span class="number">0</span>], pos1[i][<span class="number">1</span>], pos[j][<span class="number">0</span>], pos[j][<span class="number">1</span>]);</div><div class="line">        KM();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;N; i++)&#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, match[i]+<span class="number">1</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h1><h2 id="原理及其正确性"><a href="#原理及其正确性" class="headerlink" title="原理及其正确性"></a>原理及其正确性</h2><p><a href="http://www.cnblogs.com/wenruo/p/5264235.html" target="_blank" rel="external">算法模拟的详细过程</a></p>
+<p>首先我们定义两个概念：</p>
+<ul>
+<li><p><font color="#FF3030"><strong>可行顶标</strong></font>是一个节点函数l,使得对任意的弧(x, y), 有l(x)+l(y)\(\geq\)w(x, y)。<br>进一步的说明：l(x)和l(y)函数的值都是<strong>人为的自由的设定</strong>的， w(x, y)是边的权值,题目中给定。</p>
+</li>
+<li><p><font color="#FF3030"><strong>相等子图</strong></font>是G的<font color="#FF3030"><strong>生成子图</strong></font>，包含所有的点，但是只包含l(x)+l(y) = w(x, y)的所有的边(x, y)。</p>
+</li>
+</ul>
+<font color="#FF3030">结论：如果相等子图有完美匹配， 那么该匹配是原图的最大权匹配</font>
+
+<p>证明上面的结论：</p>
+<ol>
+<li>设\(M^* \)是相等子图的完美匹配，那么\(M^*\)的边权和<strong>等于点的权值和</strong>(顶标的和);</li>
+<li>任取G的一个完美匹配M，由于M中边满足不等式w(x, y)\(\geq\)l(x)+l(y)，M的边权的和<strong>不能超过所有的顶标之和</strong>。</li>
+<li>综合前面两点，完美匹配不能超过顶标之和（第二条的规定保证），并且能够取到等号(第一条的规定保证)，那么顶标之和就是权值最大了。</li>
+</ol>
+<h2 id="模板代码"><a href="#模板代码" class="headerlink" title="模板代码"></a>模板代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// LA4043 Ants</span></div><div class="line"><span class="comment">// Rujia Liu</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">100</span> + <span class="number">10</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">double</span> INF = <span class="number">1e9</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="keyword">double</span> W[maxn][maxn];</div><div class="line"><span class="keyword">double</span> Lx[maxn], Ly[maxn];   <span class="comment">// 顶标</span></div><div class="line"><span class="keyword">int</span> left[maxn];          <span class="comment">// left[i]为右边第i个点的匹配点编号</span></div><div class="line"><span class="keyword">bool</span> S[maxn], T[maxn];   <span class="comment">// S[i]和T[i]为左/右第i个点是否已标记</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">eq</span><span class="params">(<span class="keyword">double</span> a, <span class="keyword">double</span> b)</span> </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">fabs</span>(a-b) &lt; <span class="number">1e-6</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">match</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</div><div class="line">  S[i] = <span class="literal">true</span>;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) <span class="keyword">if</span> (eq(Lx[i]+Ly[j], W[i][j]) &amp;&amp; !T[j])&#123;</div><div class="line">    T[j] = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">if</span> (!left[j] || match(left[j]))&#123;</div><div class="line">      left[j] = i;</div><div class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">()</span></span>&#123;</div><div class="line">  <span class="keyword">double</span> a = INF;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="keyword">if</span>(S[i])</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) <span class="keyword">if</span>(!T[j])</div><div class="line">      a = min(a, Lx[i]+Ly[j] - W[i][j]);</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</div><div class="line">    <span class="keyword">if</span>(S[i]) Lx[i] -= a;</div><div class="line">    <span class="keyword">if</span>(T[i]) Ly[i] += a;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">KM</span><span class="params">()</span> </span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</div><div class="line">    left[i] = Lx[i] = Ly[i] = <span class="number">0</span>;</div><div class="line">    Lx[i] = W[i][<span class="number">1</span>];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</div><div class="line">      Lx[i] = max(Lx[i], W[i][j]);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</div><div class="line">    <span class="keyword">for</span>(;;) &#123;</div><div class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) S[j] = T[j] = <span class="number">0</span>;</div><div class="line">      <span class="keyword">if</span>(match(i)) <span class="keyword">break</span>; <span class="keyword">else</span> update();</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">  <span class="keyword">int</span> kase = <span class="number">0</span>;</div><div class="line">  <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n) == <span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">if</span>(++kase &gt; <span class="number">1</span>) <span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line"></div><div class="line">    <span class="keyword">int</span> x1[maxn], y1[maxn], x2[maxn], y2[maxn];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;x1[i], &amp;y1[i]);<span class="comment">//ants</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;x2[i], &amp;y2[i]);<span class="comment">//apple tree</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="comment">// ant colony</span></div><div class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; j++) <span class="comment">// apple tree</span></div><div class="line">        W[i][j] = -<span class="built_in">sqrt</span>((<span class="keyword">double</span>)(x1[j]-x2[i])*(x1[j]-x2[i]) + (<span class="keyword">double</span>)(y1[j]-y2[i])*(y1[j]-y2[i]));</div><div class="line"><span class="comment">//    for(int i=0; i&lt;n; i++)</span></div><div class="line"><span class="comment">////    &#123;</span></div><div class="line"><span class="comment">////        for(int j=0; j&lt;n; j++)&#123;</span></div><div class="line"><span class="comment">////            printf("%lf ", W[i][j]);</span></div><div class="line"><span class="comment">////        &#125;</span></div><div class="line"><span class="comment">////        printf("\n");</span></div><div class="line"><span class="comment">////    &#125;</span></div><div class="line">    KM(); <span class="comment">// 最大权匹配</span></div><div class="line">    <span class="keyword">double</span> ans = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++) ans+=(Lx[i]+Ly[i]);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, left[i]);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="适用的场景范围"><a href="#适用的场景范围" class="headerlink" title="适用的场景范围"></a>适用的场景范围</h1><p>题目中的二分图的两个集合中元素的<strong>个数要相同,即要首先要存在完美匹配</strong>。且两点间一定要有刻量的边权关系。(比如好感度，若两者间没有好感，那么边权赋值为0，不能是无法连接的状态。)</p>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1><p>KM算法还可以用费用来实现，这样的思想还不会。<br>适应的场景范围需要进一步的刷题求证。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Gale-Shapley Algorithm</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">KM算法</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">求婚-拒绝算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">模板</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/02/KM算法模板/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/10/03/稳定婚姻问题/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          稳定婚姻问题
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/10/01/Uva-1479-Graph-and-Queries/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Uva 1479 - Graph and Queries</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
 
+  
 
+  
 
           </div>
         </div>
@@ -226,9 +350,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
