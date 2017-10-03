@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: BST | 宝宝天龙</title>
+  <title>稳定婚姻问题 | 宝宝天龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="宝宝天龙">
-<meta property="og:url" content="http://yoursite.com/tags/BST/index.html">
+  <meta name="description" content="本文介绍的是婚姻匹配的问题">
+<meta name="keywords" content="Gale-Shapley Algorithm,求婚-拒绝算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="稳定婚姻问题">
+<meta property="og:url" content="http://yoursite.com/2017/10/03/稳定婚姻问题/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="description">
+<meta property="og:description" content="本文介绍的是婚姻匹配的问题">
+<meta property="og:updated_time" content="2017-10-03T09:04:21.774Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="宝宝天龙">
-<meta name="twitter:description" content="description">
+<meta name="twitter:title" content="稳定婚姻问题">
+<meta name="twitter:description" content="本文介绍的是婚姻匹配的问题">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
   
@@ -145,78 +147,171 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-稳定婚姻问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/01/Uva-1479-Graph-and-Queries/" class="archive-article-date">
-  	<time datetime="2017-10-01T13:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/01/Uva-1479-Graph-and-Queries/">Uva 1479 - Graph and Queries</a>
+    <h1 class="article-title" itemprop="name">
+      稳定婚姻问题
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/10/03/稳定婚姻问题/" class="archive-article-date">
+  	<time datetime="2017-10-03T07:13:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本文介绍的是婚姻匹配的问题<br><a id="more"></a></p>
+<script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<h1 id="算法问题及介绍"><a href="#算法问题及介绍" class="headerlink" title="算法问题及介绍"></a>算法问题及介绍</h1><p>首先贴上一份matrix67大神的博客<br><a href="http://www.matrix67.com/blog/archives/2976" target="_blank" rel="external">如何寻找稳定的婚姻搭配</a></p>
+<h1 id="需要解决的问题"><a href="#需要解决的问题" class="headerlink" title="需要解决的问题"></a>需要解决的问题</h1><p>每个男生需要和每一个女生结婚，每一个男生对每一个女生都有一个爱慕程度的排序，同样的每个女生对每一个男生都有一个爱慕的排序。<br>我们需要找到一个完美匹配，使得匹配的男生和女生有相对较优的匹配结果。不会出现<strong>男生A</strong>和<strong>女生1</strong>已经匹配好了，<strong>男生B</strong>和<strong>女生2</strong>已经匹配好了但是<strong>男生A</strong>心目中<strong>女生2</strong>的优先级更高，并且<strong>女生2</strong>心目中<strong>男生A</strong>的优先级比<strong>男生B</strong>高这种情况。</p>
+<h1 id="算法的流程及其稳定性"><a href="#算法的流程及其稳定性" class="headerlink" title="算法的流程及其稳定性"></a>算法的流程及其稳定性</h1><h2 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h2><ol>
+<li><p>第一轮，每个男生选择最喜欢的女生，并且向女生表白。这个时候女生有三种情况：①没有追求者，继续保持单身的状态。②有一个追求者，答应结束单身状态。③有多个追求者，选择<font color="#FF3030"><strong>最喜欢的男</strong></font>生并且拒绝其他的男生。</p>
+</li>
+<li><p>第二轮，剩下的单身男生<strong>划去</strong>刚才追求失败的女生的序号，从剩余的序号中选择<font color="#FF3030"><strong>最喜欢的女生</strong></font>。这个时候若女生第一轮后保持单身，像之前的三种方式处理。若在第一轮女生结束了单身的状态，此时会遇到两种情况：①这一轮没有男生追求，保持该状态。②有男生追求，这个时候选择<font color="#FF3030">最喜欢的男生（包括之前答应的男生）</font>。若在此时有更喜欢的男生，抛弃之前答应的男生，第一轮的男生变成单身状态，更喜欢的男生结束单身状态，并且拒绝其他的所有的男生。或者第一轮的男生在追求者依旧是最喜欢的，保持该关系，拒绝其他男生。</p>
+</li>
+<li><p>按照上面的规则不断的进行男生求婚，女生选择最优的男生并且拒绝其他男生的步骤来完成筛选的过程。</p>
+</li>
+</ol>
+<h2 id="算法的稳定性"><a href="#算法的稳定性" class="headerlink" title="算法的稳定性"></a>算法的稳定性</h2><p>那么算法会不会陷入一个死循环呢？答案是不会的。<br>简单说明：<br>一旦女生处于脱单的状态，那么该女生将会<strong>一直处于脱单的状态</strong>。<br>假设有n个男生，n个女生，那么意向的表的规模是\(n^2\)的，算法一定能将表依次的处理完（具体的处理过程看最开始推荐的博客），由于意向表使得一定所有的女生会被表白。（哪怕所有的男生的爱慕表的最后一位都是同一个女生，这个女生也是可以脱单的）</p>
+<h1 id="1175-Ladies’-Choice"><a href="#1175-Ladies’-Choice" class="headerlink" title="1175 - Ladies’ Choice"></a>1175 - Ladies’ Choice</h1><p><a href="https://uva.onlinejudge.org/index.phpoption=com_onlinejudge&amp;Itemid=8&amp;category=560&amp;page=show_problem&amp;problem=3616" target="_blank" rel="external">1175 - Ladies’ Choice</a></p>
+<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>很裸的一道稳定婚姻匹配问题，按照上面的步骤来操作就行了。<br>时间复杂度O(\(n^2\))<br>注意第一个输入的是女生的喜欢男生的列表。<br>第二个是男生的喜欢女生的列表。<br><strong>要求输出的是第i个女生匹配的男生的序号</strong>和下面的男女性别是不同的含义，但是结果是一样的。</p>
+<font color="#FF3030"><strong>题目是女生来选男生，下面的代码使男生来选择女生</strong></font>
+
+<h1 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e3</span>+<span class="number">10</span>;</div><div class="line"><span class="comment">//pref是男生的爱慕程度表，order是女生的爱慕表，nex数组是男生选择女生的顺序</span></div><div class="line"><span class="keyword">int</span> pref[maxn][maxn], order[maxn][maxn], nex[maxn];</div><div class="line"><span class="keyword">int</span> future_husband[maxn];</div><div class="line"><span class="keyword">int</span> future_wife[maxn];</div><div class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">engage</span><span class="params">(<span class="keyword">int</span> man, <span class="keyword">int</span> woman)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> m = future_husband[woman];</div><div class="line">    <span class="comment">//m不为0说明女生之前有男朋友，那么抛弃前男友，和新的男生匹配。</span></div><div class="line">    <span class="keyword">if</span>(m!=<span class="number">0</span>)&#123;</div><div class="line">        future_wife[m] = <span class="number">0</span>;</div><div class="line">        q.push(m);<span class="comment">//背弃的男生加入匹配的队列</span></div><div class="line">    &#125;</div><div class="line">    future_husband[woman] = man;</div><div class="line">    future_wife[man] = woman;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> kase=<span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> t;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;t);</div><div class="line">    <span class="keyword">while</span>(t--)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</div><div class="line">        <span class="keyword">while</span>(!q.empty()) q.pop();</div><div class="line">        <span class="keyword">if</span>(++kase&gt;<span class="number">1</span>)<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>; j&lt;=n; j++)&#123;</div><div class="line">                <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;pref[i][j]);<span class="comment">//编号为i的男生第j喜欢的女生</span></div><div class="line">            &#125;</div><div class="line">            future_wife[i] = <span class="number">0</span>;          <span class="comment">//未脱团初始化为0</span></div><div class="line">            nex[i] = <span class="number">1</span>;                  <span class="comment">//向排名第一名女生表白</span></div><div class="line">            q.push(i);                   <span class="comment">//进入脱单的匹配队列</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>; j&lt;=n; j++)&#123;</div><div class="line">                <span class="keyword">int</span> temp;</div><div class="line">                <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;temp);</div><div class="line">                order[i][temp] = j;      <span class="comment">//编号为i的女生男生temp在女生心中的序号</span></div><div class="line">            &#125;</div><div class="line">            future_husband[i] = <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">while</span>(!q.empty())&#123;</div><div class="line">            <span class="keyword">int</span> man = q.front();</div><div class="line">            q.pop();</div><div class="line">            <span class="keyword">int</span> woman = pref[man][nex[man]];</div><div class="line">            nex[man]++;</div><div class="line">            <span class="keyword">if</span>(!future_husband[woman]) engage(man, woman);<span class="comment">//若女生处于单身状态，直接匹配</span></div><div class="line">            <span class="comment">//现在匹配的男生比之前的男朋友更优，女生舍弃前男友而选择现在的男生</span></div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(order[woman][man]&lt;order[woman][future_husband[woman]])&#123;</div><div class="line">                engage(man, woman);</div><div class="line">            &#125;</div><div class="line">            <span class="comment">//未被选中，男生进入下一轮的匹配</span></div><div class="line">            <span class="keyword">else</span> q.push(man);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)&#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, future_wife[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>说明：该算法每次选择一个单身的男性进行匹配，根据情况男生被匹配或者被拒绝再次进行匹配。<br>又每一个男生最多考虑每个女生依次，时间复杂度为O(\(n^2\))。并且进一步的说明了该算法的稳定性，一定不会陷入死循环。</p>
+<h1 id="有趣的现象"><a href="#有趣的现象" class="headerlink" title="有趣的现象"></a>有趣的现象</h1><p>我们从上面的思想中看到了一个很有意思的现象：男生处于相对的主动的地方，不断的选择自己最喜欢的女生，虽然可能会被拒绝。<br>女生处于一个相对被动的位置，不断的接受最喜欢男生的请求。<br>结论：<font color="#FF3030"><strong>男生所得到的结果是不断的变坏的，女生选择结果是不断的变好的</strong></font>这两种趋向最后变成了最稳定的匹配，感觉很有意思。</p>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Gale-Shapley Algorithm</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">treap</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BST</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">离线算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">启发式合并</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">求婚-拒绝算法</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/03/稳定婚姻问题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/10/03/KM算法模板/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">KM算法模板</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
 
+  
 
+  
 
           </div>
         </div>
@@ -238,9 +333,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
