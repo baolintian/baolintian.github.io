@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/03/稳定婚姻问题/index.html">
 <meta property="og:site_name" content="宝宝天龙">
 <meta property="og:description" content="本文介绍的是婚姻匹配的问题">
-<meta property="og:updated_time" content="2017-10-03T09:13:12.148Z">
+<meta property="og:updated_time" content="2017-10-03T15:53:23.085Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="稳定婚姻问题">
 <meta name="twitter:description" content="本文介绍的是婚姻匹配的问题">
@@ -181,6 +181,12 @@
 <li><p>按照上面的规则不断的进行男生求婚，女生选择最优的男生并且拒绝其他男生的步骤来完成筛选的过程。</p>
 </li>
 </ol>
+<h2 id="算法的正确性说明"><a href="#算法的正确性说明" class="headerlink" title="算法的正确性说明"></a>算法的正确性说明</h2><p>我们讨论是否会出现一对男女，他们彼此间的爱慕程度都比现任的男女朋友高，但是现在并没有在一起。<br>我们直接给出一个例子：<br>男生A(1, 2)             女生(A, B)<br>男生B(1, 2)             女生(B, A)</p>
+<p>那么婚姻匹配的结果只能是A-1， B-2.会不会出现A-2， B-1的情况能？<br>答案是否定的。</p>
+<ul>
+<li>假设一开始B和1是男女朋友，当男生A向女生1发出请求的时候，那么女生1会改变男朋友而选择B。</li>
+<li>假设一开始A和1是男女朋友，当男生B向女生A发出请求的时候，那么女生1会保持原来的状态拒绝B。<br>综上，不会发生不稳定的情况。</li>
+</ul>
 <h2 id="算法的稳定性"><a href="#算法的稳定性" class="headerlink" title="算法的稳定性"></a>算法的稳定性</h2><p>那么算法会不会陷入一个死循环呢？答案是不会的。<br>简单说明：<br>一旦女生处于脱单的状态，那么该女生将会<strong>一直处于脱单的状态</strong>。<br>假设有n个男生，n个女生，那么意向的表的规模是\(n^2\)的，算法一定能将表依次的处理完（具体的处理过程看最开始推荐的博客），由于意向表使得一定所有的女生会被表白。（哪怕所有的男生的爱慕表的最后一位都是同一个女生，这个女生也是可以脱单的）</p>
 <h1 id="1175-Ladies’-Choice"><a href="#1175-Ladies’-Choice" class="headerlink" title="1175 - Ladies’ Choice"></a>1175 - Ladies’ Choice</h1><p><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=3616" target="_blank" rel="external">1175 - Ladies’ Choice</a></p>
 <h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>很裸的一道稳定婚姻匹配问题，按照上面的步骤来操作就行了。<br>时间复杂度O(\(n^2\))<br>注意第一个输入的是女生的喜欢男生的列表。<br>第二个是男生的喜欢女生的列表。<br><strong>要求输出的是第i个女生匹配的男生的序号</strong>和下面的男女性别是不同的含义，但是结果是一样的。</p>
@@ -275,6 +281,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/10/04/高斯消元/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          高斯消元
+        
+      </div>
+    </a>
   
   
     <a href="/2017/10/02/KM算法模板/" id="article-nav-older" class="article-nav-link-wrap">
@@ -436,6 +451,18 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
@@ -456,18 +483,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
               </li>
              
@@ -477,6 +492,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">求婚-拒绝算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">高斯消元</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">二进制高斯消元</a>
               </li>
             
             <div class="clearfix"></div>
