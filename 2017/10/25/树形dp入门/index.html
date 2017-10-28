@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/10/25/树形dp入门/index.html">
 <meta property="og:site_name" content="宝宝天龙">
 <meta property="og:description" content="dp真的好难啊QAQ">
-<meta property="og:updated_time" content="2017-10-28T03:08:07.640Z">
+<meta property="og:updated_time" content="2017-10-28T03:22:53.773Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树形dp入门">
 <meta name="twitter:description" content="dp真的好难啊QAQ">
@@ -214,13 +214,8 @@
 <li><p>注意和上面的题目的区别！！！~~~~</p>
 <h2 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h2><p>*确认状态： ①dp[u][0]：选点u，并且以点u为根的子树都被覆盖了。<br>②dp[u][1]：不选点u, u被其儿子覆盖<br>③dp[u][2]：不选点u，u没有被子节点覆盖（被其父亲覆盖）</p>
 </li>
-<li><p>状态转移方程：<br>dp[i][0]=1+Σmin(dp[u][0],dp[u][1],dp[u][2]) （u是i的儿子）<br>dp[i][2]=Σ(dp[u][1])<br>dp[i][1]的情况复杂一些：<br>if(i没有子节点)dp[i][1]=INF</p>
-<font color="#FF3030"><strong>想想什么时候初值的时候设置成INF，什么时候设置成0。</strong></font>
-
+<li><p>状态转移方程：<br>dp[u][0]=1+\(\sum min(dp[v][0],dp[v][1],dp[v][2])\) （v是u的儿子）<br>dp[u][2]=\(\sum min(dp[v][1], dp[v][0])\)<br>dp[u][1]的情况复杂一些：<br>if(i没有子节点)dp[i][1]=INF<br><font color="#FF3030"><strong>想想什么时候初值的时候设置成INF，什么时候设置成0。</strong></font><br>else dp[u][1]=\(\sum min(dp[v][0],dp[v][1])\)+inc<br>其中对于inc有：<br>if(上面式子中的\(\sum min(dp[v][0],dp[v][1])\)中包含某个dp[v][0])             inc=0;<br>else inc=min(dp[v][0]-dp[v][1])<br><font color="#FF3030"><strong>ps:这里的inc相当于强行让一个子节点上放了一个节点使其能够覆盖到父亲节点。选择的依据就是dp[u][0]-dp[u][1]的最小值</strong></font>。</p>
 </li>
-</ul>
-<p>else dp[i][1]=Σmin(dp[u][0],dp[u][1])+inc<br>其中对于inc有：<br>if(上面式子中的Σmin(dp[u][0],dp[u][1])中包含某个dp[u][0])             inc=0;<br>else inc=min(dp[u][0]-dp[u][1])</p>
-<ul>
 <li><p>边界：<br>dp[u][0] = 1;<br>dp[u][1] = dp[u][2] = 0;</p>
 </li>
 <li><p>结果：min(dp[1][0], dp[1][1])</p>
@@ -463,15 +458,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -503,15 +490,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
+                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -531,6 +522,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Gale-Shapley Algorithm</a>
               </li>
              
@@ -539,15 +534,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">高斯消元</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">二进制高斯消元</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
               </li>
             
             <div class="clearfix"></div>
