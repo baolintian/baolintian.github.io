@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>线性dp | 宝宝天龙</title>
+  <title>dp优化--连续递推的时间和空间优化 | 宝宝天龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="线性dp">
-<meta name="keywords" content="动态规划,线性dp">
+  <meta name="description" content="复习到k阶fibonacci数的时候，老师讲这是比较难的，然而不就是dp优化吗。通过化简合并式子减少时间复杂度。通过对前面无用的状态的覆盖来减少空间复杂度。(若要查询任意小于等于m的k阶fibonacci数这样的覆盖是不行的，必须全部记录下来。同01背包的一维的滚动数组。)顺便复习一下模板计数dp.">
+<meta name="keywords" content="动态规划,dp递推关系化简,计数dp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线性dp">
-<meta property="og:url" content="http://yoursite.com/2017/10/31/线性dp/index.html">
+<meta property="og:title" content="dp优化--连续递推的时间和空间优化">
+<meta property="og:url" content="http://yoursite.com/2017/11/05/dp优化-连续递推的时间和空间优化/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="线性dp">
-<meta property="og:updated_time" content="2017-11-01T14:28:02.812Z">
+<meta property="og:description" content="复习到k阶fibonacci数的时候，老师讲这是比较难的，然而不就是dp优化吗。通过化简合并式子减少时间复杂度。通过对前面无用的状态的覆盖来减少空间复杂度。(若要查询任意小于等于m的k阶fibonacci数这样的覆盖是不行的，必须全部记录下来。同01背包的一维的滚动数组。)顺便复习一下模板计数dp.">
+<meta property="og:updated_time" content="2017-11-05T17:20:04.370Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="线性dp">
-<meta name="twitter:description" content="线性dp">
+<meta name="twitter:title" content="dp优化--连续递推的时间和空间优化">
+<meta name="twitter:description" content="复习到k阶fibonacci数的时候，老师讲这是比较难的，然而不就是dp优化吗。通过化简合并式子减少时间复杂度。通过对前面无用的状态的覆盖来减少空间复杂度。(若要查询任意小于等于m的k阶fibonacci数这样的覆盖是不行的，必须全部记录下来。同01背包的一维的滚动数组。)顺便复习一下模板计数dp.">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
   
@@ -147,54 +147,72 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-线性dp" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-dp优化-连续递推的时间和空间优化" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      线性dp
+      dp优化--连续递推的时间和空间优化
     </h1>
   
 
         
-        <a href="/2017/10/31/线性dp/" class="archive-article-date">
-  	<time datetime="2017-10-31T15:52:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
+        <a href="/2017/11/05/dp优化-连续递推的时间和空间优化/" class="archive-article-date">
+  	<time datetime="2017-11-05T15:58:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>线性dp<br><a id="more"></a></p>
-<p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script></p>
-<h1 id="一般的线性递推式"><a href="#一般的线性递推式" class="headerlink" title="一般的线性递推式"></a>一般的线性递推式</h1><p>\( a_n = \sum_1^m c_i a_{n-i}\)</p>
-<p>特别的，m=2, \(c_1 = c_2 = a_1 = a_2 = 1\), 为斐波那契数列。<br>解决的方法： </p>
-<ul>
-<li>通项公式。然而在算法竞赛中并不适用</li>
-<li>快速幂(此时应该复习一波矩阵的乘法)</li>
-<li><del><font color="#FF3030"><strong>OEIS大法</strong></font></del></li>
+        <p>复习到k阶fibonacci数的时候，老师讲这是比较难的，然而不就是dp优化吗。<br>通过<font color="#FF3030"><strong>化简合并式子</strong></font>减少时间复杂度。<br>通过对前面<font color="#FF3030"><strong>无用的状态的覆盖</strong></font>来减少空间复杂度。(若要查询任意小于等于m的k阶fibonacci数这样的覆盖是不行的，必须全部记录下来。同01背包的一维的滚动数组。)<br>顺便复习一下模板计数dp.<br><a id="more"></a></p>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>k阶斐波那契数列</p>
+<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><ul>
+<li>若m\(\gt\)k-1, \(f_m = f_{m-1}+f_{m-2}+\ldots+f_{m-k}\)</li>
+<li>若m == k-1, \(f_m\) = 1</li>
+<li>若m &lt; k-1, \(f_m\) = 0</li>
+<li>若k &lt; 2 || m &lt; 0, 不存在</li>
 </ul>
-<h1 id="最长上升子序列-严格单调增"><a href="#最长上升子序列-严格单调增" class="headerlink" title="最长上升子序列(严格单调增)"></a>最长上升子序列(严格单调增)</h1><p>一般的解法：</p>
-<h3 id="更优的解法：O-nlogn"><a href="#更优的解法：O-nlogn" class="headerlink" title="更优的解法：O(nlogn)"></a>更优的解法：O(nlogn)</h3><ul>
-<li>状态：dp[i]: 长度为i的上升子序列的最末元素.若有多个长度为i的上升子序列，则记录其中最小的。那么dp[i] &lt; dp[i+1],即dp[]单调增</li>
-<li>对于每个\(A_i\),找j满足\(d_{j-1}&lt;A_i \le d_j\), 然后令\(d_j = A_i\)</li>
-<li>j可以使用二分查找lower_bound()</li>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><ul>
+<li><p>方法一：<br>就是按照递推式写就行了</p>
+</li>
+<li><p>方法二：<br>递归，边界条件为m\(\le\)k-1.</p>
+</li>
 </ul>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">int</span> num[maxn];</div><div class="line"><span class="keyword">int</span> dp[maxn];</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">LIS</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> len = <span class="number">1</span>;</div><div class="line">    dp[<span class="number">0</span>] = num[<span class="number">0</span>];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;n; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(num[i]&gt;dp[len<span class="number">-1</span>])</div><div class="line">            dp[len++] = num[i];</div><div class="line">        <span class="keyword">else</span></div><div class="line">            dp[lower_bound(dp, dp+len, num[i])-dp] = num[i];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> len;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n))&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num[i]);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, LIS());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>若记录数字，那么就相当于记录一个前面的路径即可.(路径是逆序的)<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">int</span> num[maxn];</div><div class="line"><span class="keyword">int</span> dp[maxn];</div><div class="line"><span class="keyword">int</span> id[maxn];</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">7</span></div><div class="line"><span class="comment">1 5 3 4 6 2 7</span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="keyword">int</span> pre[maxn];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">LIS</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> len = <span class="number">1</span>;</div><div class="line">    dp[<span class="number">0</span>] = num[<span class="number">0</span>];</div><div class="line">    pre[<span class="number">0</span>] = <span class="number">-1</span>;</div><div class="line">    id[<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;n; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(num[i]&gt;dp[len<span class="number">-1</span>])&#123;</div><div class="line">            pre[i] = id[len<span class="number">-1</span>];</div><div class="line">            id[len] = i;<span class="comment">//记录点的编号</span></div><div class="line">            dp[len++] = num[i];</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            <span class="comment">//若要替换新的点，记录这个点前面的编号</span></div><div class="line">            <span class="keyword">int</span> index = lower_bound(dp, dp+len, num[i])-dp;</div><div class="line">            id[index] = i;</div><div class="line">            pre[i] = pre[index];</div><div class="line">            dp[index] = num[i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> len;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n))&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num[i]);</div><div class="line">        <span class="keyword">int</span> ans = LIS();</div><div class="line">        <span class="keyword">int</span> index;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">            <span class="keyword">if</span>(num[i] == dp[ans<span class="number">-1</span>])&#123;</div><div class="line">                index = i;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, num[index]);</div><div class="line">        <span class="keyword">while</span>(pre[index] != <span class="number">-1</span>)&#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d "</span>, num[pre[index]]);</div><div class="line">            index = pre[index];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>数字三角形②<br>路径的权值mod m的最大值</p>
-<ul>
-<li>表示状态：f[i][j][k]:表示第i行第j列的路径和mod m是否等于k，记录一个bool值。</li>
-<li>答案：最后扫描一遍最后一行就可以了</li>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>直接把老师的代码复制过来了<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span>  <span class="title">Fib</span> <span class="params">( <span class="keyword">int</span> m, <span class="keyword">int</span> k)</span></span></div><div class="line"><span class="function"></span>&#123;  </div><div class="line">     <span class="keyword">if</span> ( k &lt;  <span class="number">2</span> || m&lt; <span class="number">0</span>)  <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">     <span class="keyword">if</span> ( m &lt; k<span class="number">-1</span>)  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">     <span class="keyword">else</span> <span class="keyword">if</span> ( m == k<span class="number">-1</span> ) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">     <span class="keyword">else</span> &#123;</div><div class="line">         sum = <span class="number">0</span>;</div><div class="line">         <span class="keyword">for</span>( i = <span class="number">1</span>; i &lt;= k; i++)</div><div class="line">                sum += Fib( m - i, k);</div><div class="line">         <span class="keyword">return</span> sum;</div><div class="line">      &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>时间复杂度的优化：<br>当m\(\ge\)k-1时：<br>\(f_m = f_{m-1}+f_{m-2}+\ldots+f_{m-k}\),发现后面的k-1项是\(f_{m-1}\)的展开的前k-1项。于是从后面<font color="#FF3030"><strong>借一项</strong></font>\(f_{m-(k+1)}\).<br>可化简为：<br>\(f_m = 2*f_{m-1}-f_{m-(k+1)}\)</p>
+<p>空间复杂度的优化：<br>由于递推式，第m项只和前k项有关，因此k项前面的可以覆盖。使用循环的数组来管理(模数)。</p>
+<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><p>递归版：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span>  <span class="title">Fib</span> <span class="params">( <span class="keyword">int</span> m, <span class="keyword">int</span> k)</span></span></div><div class="line"><span class="function"></span>&#123;    </div><div class="line">     <span class="keyword">if</span> ( k &lt;  <span class="number">2</span> || m&lt; <span class="number">0</span>)  <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">     <span class="keyword">if</span> ( m &lt; k<span class="number">-1</span>)  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">     <span class="keyword">else</span> <span class="keyword">if</span>( m == k<span class="number">-1</span> || m == k ) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">     <span class="keyword">else</span></div><div class="line">         <span class="keyword">return</span>  <span class="number">2</span>*Fib( m<span class="number">-1</span>, k) – Fib( m-k<span class="number">-1</span>, k);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>递推版：通项公式未化简，仅优化空间的：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Fib</span> <span class="params">(<span class="keyword">int</span> k, <span class="keyword">int</span> m)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">     <span class="keyword">if</span> (k&lt;<span class="number">2</span> || m&lt;<span class="number">0</span>)   <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">     <span class="keyword">if</span> (m&lt;k<span class="number">-1</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">     <span class="keyword">else</span> <span class="keyword">if</span> (m == k<span class="number">-1</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">     <span class="keyword">else</span>&#123;</div><div class="line">         <span class="keyword">int</span> temp[k];</div><div class="line">         <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;=k<span class="number">-2</span>; i++)  temp[i] = <span class="number">0</span>;</div><div class="line">         temp[k<span class="number">-1</span>] = <span class="number">1</span>;</div><div class="line">         <span class="keyword">for</span>(i=k; i&lt;=m; i++)&#123;</div><div class="line">              sum = <span class="number">0</span>;</div><div class="line">              <span class="keyword">for</span>(j=<span class="number">0</span>; j&lt;k; j++)   sum += temp[j];</div><div class="line">              temp[i%k] = sum;</div><div class="line">         &#125;</div><div class="line">	    r=temp[m%k];</div><div class="line">	    <span class="keyword">return</span> r;</div><div class="line">     &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>优化了时间和空间的递推版：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Fib</span><span class="params">(<span class="keyword">int</span> k, <span class="keyword">int</span> m)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">     <span class="keyword">if</span> (k&lt;<span class="number">2</span> || m&lt;<span class="number">0</span>)   <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">     <span class="keyword">if</span> (m&lt;k<span class="number">-1</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">     <span class="keyword">else</span> <span class="keyword">if</span> ((m == k<span class="number">-1</span>) || (m == k))  <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">     <span class="keyword">else</span> &#123;</div><div class="line">         <span class="keyword">int</span> temp[k];</div><div class="line">         <span class="keyword">for</span>(i=<span class="number">1</span>; i&lt;=k<span class="number">-2</span>; i++)  temp[i] = <span class="number">0</span>;</div><div class="line">         temp[<span class="number">0</span>] = temp[k<span class="number">-1</span>] = <span class="number">1</span>;  s = <span class="number">0</span>;</div><div class="line">         <span class="keyword">for</span>(i=k+<span class="number">1</span>; i&lt;=m; i++)&#123;</div><div class="line">              sum = <span class="number">2</span>*temp[(i<span class="number">-1</span>)%k]-s;</div><div class="line">              s = temp[i%k];<span class="comment">//下一个需要减去的项</span></div><div class="line">              temp[i%k] = sum;</div><div class="line">         &#125;</div><div class="line">         r=temp[m%k];</div><div class="line">         <span class="keyword">return</span> r;</div><div class="line">     &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h1><p>有n种物品，第i种物品有\(a_i\)个。不同的物品同类不可区分，不同类的可区分。若在这些物品中取m个。有多少种取法？答案模M</p>
+<h2 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h2><p>例如：<br>n = m = 3<br>{1, 2, 3}<br>3 = 0+0+3 = 0+1+2 = 0+2+1 = 1+0+2 = 1+1+1 = 1+2+0</p>
+<h2 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h2><ul>
+<li>设计状态：dp[i+1][j]:<font color="#FF3030"><strong>从前面i种物品中取j件的方案数</strong></font></li>
+<li>状态转移方程：dp[i+1][j] = \(\sum_{k=0}^{min(a[i], j)} dp[i][j-k]\).表示从i种物品中取出k件，其他的从前面的i-1种物品中选j-k件</li>
+<li>边界： dp[i][0] = 1;</li>
+<li>结果：dp[n][m], 下标从0开始</li>
 </ul>
-<p>数字三角形③<br>路径必须要经过中间的某个点：</p>
-<ul>
-<li>method①：将这一行将数字三角形分成两部分，做两遍dp.</li>
-<li>method②：将必须经过的点<font color="#FF3030"><strong>设置一个非常大的权值</strong></font>，从而dp的时候较大的值一定会选择这个点。最后的答案减去这个比较大的值就行了。</li>
+<h2 id="优化状态转移方程"><a href="#优化状态转移方程" class="headerlink" title="优化状态转移方程"></a>优化状态转移方程</h2><p>若按照前面的方程进行转移，那么时间复杂度是O\((n*m^2)\).</p>
+<p><font color="#FF3030"><strong>在j-1\(\ge\)a[i]的条件下</strong></font>。<br>\(\sum_{k=0}^{min(a[i], j)} dp[i][j-k]\) = \(\sum_{k=0}^{min(j-1, a[i])} dp[i+1][j-1]+dp[i][j]-dp[i][j-1-a_i]\)<br>时间复杂度降为O(nm).</p>
+<h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">int</span> n, m;</div><div class="line"><span class="keyword">int</span> a[MAX_N];</div><div class="line"><span class="keyword">int</span> dp[MAX_N][MAX_M];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=n; i++) dp[i][<span class="number">0</span>] = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;=m; j++)&#123;</div><div class="line">            <span class="keyword">if</span>(j<span class="number">-1</span>&gt;=a[i])&#123;</div><div class="line">                dp[i+<span class="number">1</span>][j] = (dp[i+<span class="number">1</span>][j<span class="number">-1</span>]+dp[i][j]-dp[i][j<span class="number">-1</span>-a[i]]+M)%M;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span> &#123;</div><div class="line">                dp[i+<span class="number">1</span>][j] = (dp[i+<span class="number">1</span>][j<span class="number">-1</span>]+dp[i][j])%M;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, dp[n][m]);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello world!"</span> &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h1><p>划分数，计数dp的入门题，无优化</p>
+<h2 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h2><ul>
+<li>给定一个数n, 将其划分成m个<font color="#FF3030"><strong>非负整数</strong></font>，求方案数,最后模M</li>
+<li>例如：n = 4, m=3:4 = 1+1+2 = 1+3 = 2+2</li>
 </ul>
-<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1><p>补充lrj紫书的习题。</p>
+<h2 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h2><ul>
+<li>状态设计：dp[i][j]：j划分成i的方案数</li>
+<li>状态转移： dp[i][j]  = dp[i][j-i]+dp[i-1][j].<font color="#FF3030"><strong>实际的意义：若将n划分成m， 如果对于每个\(a_i\)&gt;0,那么{\(a_i\)}就对应n-m的m划分</strong></font>。<br>若存在\(a_i == 0\)，那么就对应了n-1的m划分</li>
+<li>边界：dp[0][0] = 1;</li>
+<li>结果：dp[m][n]</li>
+</ul>
+<h2 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n, m;</div><div class="line"><span class="keyword">int</span> dp[MAX_M][MAX_N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</div><div class="line">    dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=m; i++)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;=n; j++)&#123;</div><div class="line">            <span class="keyword">if</span>(j-i&gt;=<span class="number">0</span>)&#123;</div><div class="line">                dp[i][j] = (dp[i<span class="number">-1</span>][j]+dp[i][j-i])%M;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span>&#123;</div><div class="line">                dp[i][j] = dp[i<span class="number">-1</span>][j];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1><p>困成傻逼，明天再校验吧emmmmm<br>2017年11月6日01:13:07</p>
 
       
 
@@ -212,7 +230,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">线性dp</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">dp递推关系化简</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">计数dp</a>
         		</li>
       		
 		</ul>
@@ -268,7 +290,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/31/线性dp/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/11/05/dp优化-连续递推的时间和空间优化/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -282,18 +304,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/11/01/区间dp/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          区间dp
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/10/31/背包问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">背包问题</div>
+    <a href="/2017/11/04/状压dp/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">状压dp</div>
       <i class="icon-circle-right"></i>
     </a>
   
