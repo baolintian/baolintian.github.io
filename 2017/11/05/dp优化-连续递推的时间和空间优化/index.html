@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/05/dp优化-连续递推的时间和空间优化/index.html">
 <meta property="og:site_name" content="宝宝天龙">
 <meta property="og:description" content="复习到k阶fibonacci数的时候，老师讲这是比较难的，然而不就是dp优化吗。通过化简合并式子减少时间复杂度。通过对前面无用的状态的覆盖来减少空间复杂度。(若要查询任意小于等于m的k阶fibonacci数这样的覆盖是不行的，必须全部记录下来。同01背包的一维的滚动数组。)顺便复习一下模板计数dp.">
-<meta property="og:updated_time" content="2017-11-05T17:20:04.370Z">
+<meta property="og:updated_time" content="2017-11-06T05:16:15.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dp优化--连续递推的时间和空间优化">
 <meta name="twitter:description" content="复习到k阶fibonacci数的时候，老师讲这是比较难的，然而不就是dp优化吗。通过化简合并式子减少时间复杂度。通过对前面无用的状态的覆盖来减少空间复杂度。(若要查询任意小于等于m的k阶fibonacci数这样的覆盖是不行的，必须全部记录下来。同01背包的一维的滚动数组。)顺便复习一下模板计数dp.">
@@ -207,12 +207,12 @@
 </ul>
 <h2 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h2><ul>
 <li>状态设计：dp[i][j]：j划分成i的方案数</li>
-<li>状态转移： dp[i][j]  = dp[i][j-i]+dp[i-1][j].<font color="#FF3030"><strong>实际的意义：若将n划分成m， 如果对于每个\(a_i\)&gt;0,那么{\(a_i\)}就对应n-m的m划分</strong></font>。<br>若存在\(a_i == 0\)，那么就对应了n-1的m划分</li>
+<li>状态转移： dp[i][j]  = dp[i][j-i]+dp[i-1][j].<font color="#FF3030"><strong>实际的意义：若将n划分成m， 如果对于每个\(a_i\)&gt;0,那么{\(a_i-1\)}就对应n-m的m划分</strong></font>。<br>若存在\(a_i == 0\)，那么就对应了n-1的m划分</li>
 <li>边界：dp[0][0] = 1;</li>
 <li>结果：dp[m][n]</li>
 </ul>
 <h2 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> n, m;</div><div class="line"><span class="keyword">int</span> dp[MAX_M][MAX_N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</div><div class="line">    dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=m; i++)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;=n; j++)&#123;</div><div class="line">            <span class="keyword">if</span>(j-i&gt;=<span class="number">0</span>)&#123;</div><div class="line">                dp[i][j] = (dp[i<span class="number">-1</span>][j]+dp[i][j-i])%M;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span>&#123;</div><div class="line">                dp[i][j] = dp[i<span class="number">-1</span>][j];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1><p>困成傻逼，明天再校验吧emmmmm<br>2017年11月6日01:13:07</p>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1><p>困成傻逼，明天再校验吧emmmmm<br>2017年11月6日01:13:07<br>果然是有错误的，<br>另外突然还想到了大霸计算超几何分布其实也是一种计算的优化。<br>还有树状数组可以优化的例子。<br>待更新吧。。。。。。</p>
 
       
 
@@ -464,11 +464,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">KM算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">模板</a>
+                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -492,15 +496,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
+                <a href="javascript:void(0)" class="js-tag color5">KM算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color3">模板</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -528,11 +528,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">树形dp</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
+                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -541,14 +545,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">求婚-拒绝算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -565,6 +561,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">二进制高斯消元</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
               </li>
             
             <div class="clearfix"></div>
