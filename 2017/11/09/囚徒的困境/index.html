@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 字符串 | 宝宝天龙</title>
+  <title>囚徒的困境 | 宝宝天龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="宝宝天龙">
-<meta property="og:url" content="http://yoursite.com/tags/字符串/index.html">
+  <meta name="description" content="突然发现一门很有意思的课程，在算法竞赛中也是一个十分有意思的分支。不过在算法中，博弈论一般都假定博弈的参与者都会做出最优的选择，且处于平等博弈。当然还有非零和博弈啊。可能更新的一系列的博弈论的知识，会结合相关的背景以及例子，讲解后面蕴含的博弈知识。">
+<meta name="keywords" content="博弈论">
+<meta property="og:type" content="article">
+<meta property="og:title" content="囚徒的困境">
+<meta property="og:url" content="http://yoursite.com/2017/11/09/囚徒的困境/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="description">
+<meta property="og:description" content="突然发现一门很有意思的课程，在算法竞赛中也是一个十分有意思的分支。不过在算法中，博弈论一般都假定博弈的参与者都会做出最优的选择，且处于平等博弈。当然还有非零和博弈啊。可能更新的一系列的博弈论的知识，会结合相关的背景以及例子，讲解后面蕴含的博弈知识。">
+<meta property="og:updated_time" content="2017-11-08T16:56:26.787Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="宝宝天龙">
-<meta name="twitter:description" content="description">
+<meta name="twitter:title" content="囚徒的困境">
+<meta name="twitter:description" content="突然发现一门很有意思的课程，在算法竞赛中也是一个十分有意思的分支。不过在算法中，博弈论一般都假定博弈的参与者都会做出最优的选择，且处于平等博弈。当然还有非零和博弈啊。可能更新的一系列的博弈论的知识，会结合相关的背景以及例子，讲解后面蕴含的博弈知识。">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
   
@@ -145,66 +147,212 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-囚徒的困境" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/06/AC自动机/" class="archive-article-date">
-  	<time datetime="2017-11-06T05:37:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/06/AC自动机/">AC自动机</a>
+    <h1 class="article-title" itemprop="name">
+      囚徒的困境
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/11/09/囚徒的困境/" class="archive-article-date">
+  	<time datetime="2017-11-08T16:00:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>突然发现一门很有意思的课程，在算法竞赛中也是一个十分有意思的分支。不过在算法中，博弈论一般都假定博弈的参与者都会做出最优的选择，且处于平等博弈。当然还有<font color="#FF3030"><strong>非零和博弈</strong></font>啊。<br>可能更新的一系列的博弈论的知识，会结合相关的背景以及例子，讲解后面蕴含的博弈知识。<br><a id="more"></a></p>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1 id="一个有趣的例子"><a href="#一个有趣的例子" class="headerlink" title="一个有趣的例子"></a>一个有趣的例子</h1><p>现在抓到两名犯人A， B，给他们这样的选择:</p>
+<ol>
+<li>一名A供认了对方，而对方B没有供认A，那么A无罪释放，B加刑两年。反之亦然。</li>
+<li>若两人互相都没有供认， 那么无罪释放两人。</li>
+<li>若两人互相供认，那么减刑1年。</li>
+</ol>
+<p>这就是非常著名的<font color="#FF3030"><strong>囚徒的困境</strong></font>的问题(prisoners’ dilemma)。</p>
+<p>你会怎么选择呢？</p>
+<h2 id="建立模型"><a href="#建立模型" class="headerlink" title="建立模型"></a>建立模型</h2><table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center"></th>
+<th style="text-align:center">player2</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">l</td>
+<td style="text-align:center">r</td>
+</tr>
+<tr>
+<td>player1</td>
+<td style="text-align:center">U</td>
+<td style="text-align:center">(0, 0)</td>
+<td style="text-align:center">(3, -1)</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:center">D</td>
+<td style="text-align:center">(-1,3)</td>
+<td style="text-align:center">(1, 1)</td>
+</tr>
+</tbody>
+</table>
+<p>（a, b）a表示player1的收益(payoffs), b表示player2的收益。<br>(0, 0)对应相互揭发的收益。<br>(1, 1)表示相互不揭发的收益。<br>其余的两格表示的是其中一个人揭发对方，另外一个人不揭发对方的收益。</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>加入现在我们是犯人player1，我们揣度B的选择：</p>
+<ul>
+<li>假设B选择了l,那么根据收益的大小，我们选择了U。</li>
+<li>假设B选择了r,那么根据收益的大小，我们还是选择了U。</li>
+</ul>
+<p>可见，不论对手选择什么, <font color="#FF3030"><strong>U都是最佳的选择</strong></font>。<br>同理，B选择l是最佳的选择。<br>我们将这样的点定义为<font color="#FF3030"><strong>绝对优势的点</strong></font>。</p>
+<h2 id="得到的结论"><a href="#得到的结论" class="headerlink" title="得到的结论"></a>得到的结论</h2><ul>
+<li><font color="#FF3030"><strong>Don’t play a strictly dominated stategy.</strong></font>（不要选择处于劣势的策略）</li>
+<li><font color="#FF3030"><strong>Put yourself in others’s shoes.</strong></font>(换位思考)</li>
+</ul>
+<h2 id="现实中的囚徒的困境的例子"><a href="#现实中的囚徒的困境的例子" class="headerlink" title="现实中的囚徒的困境的例子"></a>现实中的囚徒的困境的例子</h2><ul>
+<li>公共合作问题(不论对方是努力还是偷懒的，我偷懒的收益总是最大的)</li>
+<li>宿舍卫生问题</li>
+<li>企业之间指定价格</li>
+<li>各国面临全球变暖的问题所采取的方针</li>
+<li>公共资源不会去保护，而是尽可能的索取。</li>
+</ul>
+<h2 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h2><p>为了更加方便的描述一种博弈，因此引进符号加以表述。</p>
+<ul>
+<li><p>player:   \(player_i, player_j\)</p>
+</li>
+<li><p>strategies:<br>  \(s_i\):a particular strategy to \(player_i\)<br>  \(S\): the <font color="#FF3030"><strong>set</strong></font> of alternatives to the players<br>  s: a particular play in a game(a strategy <font color="#FF3030"><strong>vector/list</strong></font> and it is confirmed.)</p>
+</li>
+</ul>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1><p>emmm，有没有同学想和我一起学习博弈论啊，可以qq私信我哦。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">AC自动机</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">字符串</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">博弈论</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/11/09/囚徒的困境/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/11/08/c语言函数调用的机制/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">c语言函数调用的机制</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
 
+  
 
+  
 
           </div>
         </div>
@@ -226,9 +374,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
