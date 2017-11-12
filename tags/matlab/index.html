@@ -6,21 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Uva 1479 - Graph and Queries | 宝宝天龙</title>
+  <title>Tag: matlab | 宝宝天龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="国庆快乐~~~(^__^) 嘻嘻……">
-<meta name="keywords" content="数据结构,treap,BST,离线算法,启发式合并">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Uva 1479 - Graph and Queries">
-<meta property="og:url" content="http://yoursite.com/2017/10/01/Uva-1479-Graph-and-Queries/index.html">
+  <meta name="description" content="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="宝宝天龙">
+<meta property="og:url" content="http://yoursite.com/tags/matlab/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="国庆快乐~~~(^__^) 嘻嘻……">
-<meta property="og:image" content="https://t1.picb.cc/uploads/2017/10/01/8NTL7.jpg">
-<meta property="og:updated_time" content="2017-10-03T02:51:10.245Z">
+<meta property="og:description" content="description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Uva 1479 - Graph and Queries">
-<meta name="twitter:description" content="国庆快乐~~~(^__^) 嘻嘻……">
-<meta name="twitter:image" content="https://t1.picb.cc/uploads/2017/10/01/8NTL7.jpg">
+<meta name="twitter:title" content="宝宝天龙">
+<meta name="twitter:description" content="description">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
   
@@ -149,206 +145,66 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Uva-1479-Graph-and-Queries" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Uva 1479 - Graph and Queries
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/11/09/matlab语法复习/" class="archive-article-date">
+  	<time datetime="2017-11-09T15:50:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-09</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/11/09/matlab语法复习/">matlab语法复习</a>
     </h1>
   
 
-        
-        <a href="/2017/10/01/Uva-1479-Graph-and-Queries/" class="archive-article-date">
-  	<time datetime="2017-10-01T13:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>国庆快乐~~~(<em>^__^</em>) 嘻嘻……<br><img src="https://t1.picb.cc/uploads/2017/10/01/8NTL7.jpg" alt=""><br><a id="more"></a></p>
-<script type="text/javascript" async src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-<h1 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h1><p><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=4225" target="_blank" rel="external">题目链接</a></p>
-<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><ul>
-<li><p>题目共有三种操作：query表示查询x节点的第k大的值;delete表示删除编号为x的边所连接的两点的关系;change表示改变x节点的权值为value。</p>
-</li>
-<li><p>若正向的模拟，那么删除边的操作比较的难以实现。因为treap不能实现分裂的操作。而splay是能够实现合并与分裂的操作，但是是第k大的，不能删除任意两点间的</p>
-</li>
-<li><p>此时想到的是完全反过来的逆过程：我们最开始得到的图是删除了所有应该删去的边的图。query的操作不改变;delete的操作变成了add_edge的操作；change的操作变成了将值变成<font color="#FF3030"><strong>原来的值</strong></font>的操作。</p>
-</li>
-</ul>
-<h1 id="此题的坑点"><a href="#此题的坑点" class="headerlink" title="此题的坑点"></a>此题的坑点</h1><ul>
-<li>又一次的栽在了读入的操作上，注意数字和字母间的读入操作加个getchar()或者空格（Uva太垃圾了，一直显示的是RE，害的我调了三天。。。）</li>
-<li>数组大小的，防止越界</li>
-<li>在插入操作的时候不要使用结构体里面的cmp函数。因为可能插入<font color="#FF3030"><strong>相同的值</strong></font></li>
-</ul>
-<h1 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e4</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxm = <span class="number">6e5</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxc = <span class="number">5e5</span>+<span class="number">10</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></div><div class="line">    Node* ch[<span class="number">2</span>];</div><div class="line">    <span class="keyword">int</span> value;<span class="comment">//保存的是节点的值</span></div><div class="line">    <span class="keyword">int</span> rank_value;<span class="comment">//用随机函数生成名次，从而使时间复杂度保持O(logn)</span></div><div class="line">    <span class="keyword">int</span> s;<span class="comment">//增加这个size属性，从而实现从联通的块中寻找第K大的数</span></div><div class="line">    Node(<span class="keyword">int</span> value):value(value)&#123;</div><div class="line">        ch[<span class="number">0</span>] = ch[<span class="number">1</span>] = <span class="literal">NULL</span>;</div><div class="line">        rank_value = rand();</div><div class="line">        s = <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(x == value) <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">        <span class="keyword">return</span> x&lt;value?<span class="number">0</span>:<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">maintain</span><span class="params">()</span></span>&#123;</div><div class="line">       s = <span class="number">1</span>;</div><div class="line">       <span class="keyword">if</span>(ch[<span class="number">0</span>] != <span class="literal">NULL</span>) s+=ch[<span class="number">0</span>]-&gt;s;</div><div class="line">       <span class="keyword">if</span>(ch[<span class="number">1</span>] != <span class="literal">NULL</span>) s+=ch[<span class="number">1</span>]-&gt;s;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">//旋转的操作，使子节点旋转到根部</span></div><div class="line"><span class="comment">//rt代表根节点，d表示旋转的类型,d=0表示左旋,d=1表示右旋</span></div><div class="line"><span class="comment">//若使右孩子旋到根节点，则左旋；</span></div><div class="line"><span class="comment">//若使左孩子旋到根节点，则右旋；</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(Node* &amp;rt, <span class="keyword">int</span> d)</span></span>&#123;</div><div class="line">    Node* k = rt-&gt;ch[d^<span class="number">1</span>];</div><div class="line">    rt-&gt;ch[d^<span class="number">1</span>] = k-&gt;ch[d];</div><div class="line">    k-&gt;ch[d] = rt;</div><div class="line">    rt-&gt;maintain();</div><div class="line">    k-&gt;maintain();</div><div class="line">    rt = k;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(Node* &amp;rt, <span class="keyword">int</span> value)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(rt == <span class="literal">NULL</span>) rt = <span class="keyword">new</span> Node(value);</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">int</span> d = rt-&gt;value&lt;value?<span class="number">1</span>:<span class="number">0</span>;<span class="comment">//这里不能使用cmp函数，因为插入的值可能相等！！！</span></div><div class="line">        insert(rt-&gt;ch[d], value);</div><div class="line">        <span class="comment">//举一个例子便于理解：</span></div><div class="line">        <span class="comment">//若右孩子的rank大于根节点的rank,由于不满足名次树的性质，</span></div><div class="line">        <span class="comment">//则要将右孩子旋转到根节点，进行左旋。</span></div><div class="line">        <span class="keyword">if</span>(rt-&gt;ch[d]-&gt;rank_value&gt;rt-&gt;rank_value)&#123;</div><div class="line">            rotate(rt, d^<span class="number">1</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    rt-&gt;maintain();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">remove</span><span class="params">(Node* &amp;rt, <span class="keyword">int</span> value)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> d = rt-&gt;cmp(value);</div><div class="line">    Node * temp = rt;</div><div class="line">    <span class="comment">//若找到了要删除的节点，都是转换成该节点只有一个孩子</span></div><div class="line">    <span class="comment">//若该节点有两个孩子，则将rank较大的孩子进行旋转，旋转到根部</span></div><div class="line">    <span class="comment">//最后转换成只有一个孩子进行删除。</span></div><div class="line">    <span class="keyword">if</span>(d == <span class="number">-1</span>)&#123;</div><div class="line">        <span class="keyword">if</span>(rt-&gt;ch[<span class="number">0</span>] == <span class="literal">NULL</span>) rt = rt-&gt;ch[<span class="number">1</span>], <span class="keyword">delete</span> temp;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(rt-&gt;ch[<span class="number">1</span>] == <span class="literal">NULL</span>) rt = rt-&gt;ch[<span class="number">0</span>], <span class="keyword">delete</span> temp;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">int</span> d2 = (rt-&gt;ch[<span class="number">0</span>]-&gt;rank_value&lt;rt-&gt;ch[<span class="number">1</span>]-&gt;rank_value)?<span class="number">1</span>:<span class="number">0</span>;</div><div class="line">            rotate(rt, d2);</div><div class="line">            remove(rt-&gt;ch[d2], value);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//若没有找到孩子的话，则递归的继续向下寻找。</span></div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        remove(rt-&gt;ch[d], value);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(rt != <span class="literal">NULL</span>) rt-&gt;maintain();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Command</span>&#123;</span></div><div class="line">    <span class="keyword">char</span> type;</div><div class="line">    <span class="keyword">int</span> x, p;</div><div class="line">&#125;command[maxc];</div><div class="line"></div><div class="line">Node* root[maxn];</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, weight[maxn], from[maxm], to[maxm];</div><div class="line"><span class="keyword">int</span> fa[maxn];</div><div class="line"><span class="comment">//用并查集实现连通的团的查询和修改</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">findset</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</div><div class="line">    <span class="keyword">return</span> fa[x] == x? x:fa[x] = findset(fa[x]);</div><div class="line">&#125;</div><div class="line"><span class="comment">//找到一个连通块第K大的值</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">kth</span><span class="params">(Node* rt, <span class="keyword">int</span> k)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(k&lt;=<span class="number">0</span>||rt-&gt;s&lt;k||rt == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> k1;</div><div class="line">    <span class="keyword">if</span>(rt-&gt;ch[<span class="number">1</span>]!=<span class="literal">NULL</span>)&#123;</div><div class="line">        k1 = rt-&gt;ch[<span class="number">1</span>]-&gt;s;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> k1 = <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(k1+<span class="number">1</span> == k) <span class="keyword">return</span> rt-&gt;value;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(k&lt;=k1) <span class="keyword">return</span> kth(rt-&gt;ch[<span class="number">1</span>], k);</div><div class="line">    <span class="keyword">else</span> <span class="keyword">return</span> kth(rt-&gt;ch[<span class="number">0</span>], k-k1<span class="number">-1</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">//两个块的合并</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergeto</span><span class="params">(Node* &amp;sc, Node* &amp;dst)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(sc-&gt;ch[<span class="number">0</span>]!=<span class="literal">NULL</span>) mergeto(sc-&gt;ch[<span class="number">0</span>], dst);</div><div class="line">    <span class="keyword">if</span>(sc-&gt;ch[<span class="number">1</span>]!=<span class="literal">NULL</span>) mergeto(sc-&gt;ch[<span class="number">1</span>], dst);</div><div class="line">    insert(dst, sc-&gt;value);</div><div class="line">    <span class="keyword">delete</span> sc;</div><div class="line">    sc = <span class="literal">NULL</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">//初始化root的集合，使每个节点都是一个单独的块</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">init_tree</span><span class="params">(Node* &amp;rt)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(rt-&gt;ch[<span class="number">0</span>] != <span class="literal">NULL</span>) init_tree(rt-&gt;ch[<span class="number">0</span>]);</div><div class="line">    <span class="keyword">if</span>(rt-&gt;ch[<span class="number">1</span>] != <span class="literal">NULL</span>) init_tree(rt-&gt;ch[<span class="number">1</span>]);</div><div class="line">    <span class="keyword">delete</span> rt;</div><div class="line">    rt = <span class="literal">NULL</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">add_edge</span><span class="params">(<span class="keyword">int</span> edge_index)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> u = from[edge_index];</div><div class="line">    <span class="keyword">int</span> v = to[edge_index];</div><div class="line">    u = findset(u);</div><div class="line">    v = findset(v);</div><div class="line">    <span class="keyword">if</span>(u != v)&#123;</div><div class="line">        <span class="keyword">if</span>(root[u]-&gt;s&lt;root[v]-&gt;s)&#123;</div><div class="line">            fa[u] = v;</div><div class="line">            mergeto(root[u], root[v]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            fa[v] = u;</div><div class="line">            mergeto(root[v], root[u]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//改变点的权重</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> value)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> u = findset(x);</div><div class="line">    remove(root[u], weight[x]);</div><div class="line">    insert(root[u], value);</div><div class="line">    weight[x] = value;</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> query_cnt;</div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> query_tot;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> k)</span></span>&#123;</div><div class="line">    query_cnt++;</div><div class="line">    query_tot += kth(root[findset(x)], k);</div><div class="line">&#125;</div><div class="line"><span class="keyword">bool</span> removed[maxm];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> kase = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;m) == <span class="number">2</span>&amp;&amp;n)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;weight[i]);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=m; i++) <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;from[i], &amp;to[i]);</div><div class="line">        <span class="keyword">int</span> c = <span class="number">0</span>;</div><div class="line">        <span class="built_in">memset</span>(removed, <span class="number">0</span>, <span class="keyword">sizeof</span>(removed));</div><div class="line">        <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</div><div class="line">            <span class="keyword">char</span> type;</div><div class="line">            <span class="keyword">int</span> x, p;</div><div class="line">            getchar();</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%c"</span>, &amp;type);</div><div class="line">            <span class="keyword">if</span>(type == <span class="string">'E'</span>) <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(type == <span class="string">'C'</span>) &#123;</div><div class="line">                <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;x, &amp;p);</div><div class="line">                <span class="keyword">int</span> temp = p;</div><div class="line">                p = weight[x];</div><div class="line">                weight[x] = temp;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(type == <span class="string">'D'</span>)&#123;</div><div class="line">                <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;x);</div><div class="line">                removed[x] = <span class="literal">true</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(type == <span class="string">'Q'</span>)&#123;</div><div class="line">                <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;x, &amp;p);</div><div class="line">            &#125;</div><div class="line">            command[c++] = Command&#123;type, x, p&#125;;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)&#123;</div><div class="line">            fa[i] = i;</div><div class="line">            <span class="keyword">if</span>(root[i] != <span class="literal">NULL</span>) init_tree(root[i]);</div><div class="line">            root[i] = <span class="keyword">new</span> Node(weight[i]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=m; i++)&#123;</div><div class="line">            <span class="comment">//cout&lt;&lt;233&lt;&lt;endl;</span></div><div class="line">            <span class="keyword">if</span>(!removed[i]) add_edge(i);</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//cout&lt;&lt;root[1]&lt;&lt;endl;</span></div><div class="line">        query_cnt = query_tot = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=c<span class="number">-1</span>; i&gt;=<span class="number">0</span>; i--)&#123;</div><div class="line">            <span class="comment">//cout&lt;&lt;command[i].x&lt;&lt;" "&lt;&lt;command[i].p&lt;&lt;endl;</span></div><div class="line">            <span class="keyword">if</span>(command[i].type == <span class="string">'C'</span>) change(command[i].x, command[i].p);</div><div class="line">            <span class="keyword">if</span>(command[i].type == <span class="string">'Q'</span>) query(command[i].x, command[i].p);</div><div class="line">            <span class="keyword">if</span>(command[i].type == <span class="string">'D'</span>) add_edge(command[i].x);</div><div class="line">            <span class="comment">//cout&lt;&lt;query_cnt&lt;&lt;" "&lt;&lt;query_tot&lt;&lt;endl;</span></div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"Case %d: %.6lf\n"</span>, ++kase, query_tot*<span class="number">1.0</span>/query_cnt);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="treap"><a href="#treap" class="headerlink" title="treap"></a>treap</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>treap有<font color="#FF3030"><strong>键值</strong></font>(value)和<font color="#FF3030"><strong>优先级</strong></font>(rank_value)的树，又称为名次树。</p>
-<h2 id="成员函数及功能"><a href="#成员函数及功能" class="headerlink" title="成员函数及功能"></a>成员函数及功能</h2><p>属性：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></div><div class="line">    Node* ch[<span class="number">2</span>];</div><div class="line">    <span class="keyword">int</span> value;</div><div class="line">    <span class="keyword">int</span> rank_value;</div><div class="line">    <span class="keyword">int</span> s;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>void rotate(Node* &amp;rt, int d)<br>功能：将一个子节点翻转到根部</p>
-<p>void insert(Node* &amp;rt, int value)<br>功能：将一个值插入到树中</p>
-<p>void remove(Node* &amp;rt, int value)<br>功能：将特定的值从树中删除</p>
-<p>bool find(Node* &amp;rt, int value)<br>功能：查询一个值是否在树中</p>
-<p>int kth(Node* rt, int k)<br>功能：查询第k大的数字</p>
-<p>int rank(Node* rt, int value)<br>功能：查询value数值是第几小的，与kth()功能差不多</p>
-</blockquote>
-<p>模板代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Rank Tree</span></div><div class="line"><span class="comment">// Rujia Liu</span></div><div class="line"><span class="comment">// 输入格式：</span></div><div class="line"><span class="comment">// m     操作有m个</span></div><div class="line"><span class="comment">// 1 x   插入元素x</span></div><div class="line"><span class="comment">// 2 x   删除元素x。如果成功，输入1，否则输出0</span></div><div class="line"><span class="comment">// 3 k   输出第k小元素。k=1为最小元素</span></div><div class="line"><span class="comment">// 4 x   输出值x的“名次”，即比x小的结点个数加1</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span> &#123;</span></div><div class="line">  Node *ch[<span class="number">2</span>]; <span class="comment">// 左右子树</span></div><div class="line">  <span class="keyword">int</span> r; <span class="comment">// 随机优先级</span></div><div class="line">  <span class="keyword">int</span> v; <span class="comment">// 值</span></div><div class="line">  <span class="keyword">int</span> s; <span class="comment">// 结点总数</span></div><div class="line">  Node(<span class="keyword">int</span> v = <span class="number">0</span>):v(v) &#123; ch[<span class="number">0</span>] = ch[<span class="number">1</span>] = <span class="literal">NULL</span>; r = rand(); s = <span class="number">1</span>; &#125;</div><div class="line">  <span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> x)</span> <span class="keyword">const</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (x == v) <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    <span class="keyword">return</span> x &lt; v ? <span class="number">0</span> : <span class="number">1</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="function"><span class="keyword">void</span> <span class="title">maintain</span><span class="params">()</span> </span>&#123;</div><div class="line">    s = <span class="number">1</span>;</div><div class="line">    <span class="keyword">if</span>(ch[<span class="number">0</span>] != <span class="literal">NULL</span>) s += ch[<span class="number">0</span>]-&gt;s;</div><div class="line">    <span class="keyword">if</span>(ch[<span class="number">1</span>] != <span class="literal">NULL</span>) s += ch[<span class="number">1</span>]-&gt;s;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(Node* &amp;o, <span class="keyword">int</span> d)</span> </span>&#123;</div><div class="line">  Node* k = o-&gt;ch[d^<span class="number">1</span>]; o-&gt;ch[d^<span class="number">1</span>] = k-&gt;ch[d]; k-&gt;ch[d] = o; </div><div class="line">  o-&gt;maintain(); k-&gt;maintain(); o = k;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(Node* &amp;o, <span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">  <span class="keyword">if</span>(o == <span class="literal">NULL</span>) o = <span class="keyword">new</span> Node(x);</div><div class="line">  <span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">int</span> d = (x &lt; o-&gt;v ? <span class="number">0</span> : <span class="number">1</span>); <span class="comment">// 不要用cmp函数，因为可能会有相同结点</span></div><div class="line">    insert(o-&gt;ch[d], x);</div><div class="line">    <span class="keyword">if</span>(o-&gt;ch[d]-&gt;r &gt; o-&gt;r) rotate(o, d^<span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">  o-&gt;maintain();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">Node* <span class="title">find</span><span class="params">(Node* o, <span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">  <span class="keyword">if</span>(o == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">NULL</span>;</div><div class="line">  <span class="keyword">if</span>(x == o-&gt;v) <span class="keyword">return</span> o;</div><div class="line">  <span class="keyword">return</span> x &lt; o-&gt;v ? find(o-&gt;ch[<span class="number">0</span>], x) : find(o-&gt;ch[<span class="number">1</span>], x);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 要确保结点存在</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">remove</span><span class="params">(Node* &amp;o, <span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> d = o-&gt;cmp(x);</div><div class="line">  <span class="keyword">int</span> ret = <span class="number">0</span>;</div><div class="line">  <span class="keyword">if</span>(d == <span class="number">-1</span>) &#123;</div><div class="line">    Node* u = o;</div><div class="line">    <span class="keyword">if</span>(o-&gt;ch[<span class="number">0</span>] != <span class="literal">NULL</span> &amp;&amp; o-&gt;ch[<span class="number">1</span>] != <span class="literal">NULL</span>) &#123;</div><div class="line">      <span class="keyword">int</span> d2 = (o-&gt;ch[<span class="number">0</span>]-&gt;r &gt; o-&gt;ch[<span class="number">1</span>]-&gt;r ? <span class="number">1</span> : <span class="number">0</span>);</div><div class="line">      rotate(o, d2); remove(o-&gt;ch[d2], x);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">if</span>(o-&gt;ch[<span class="number">0</span>] == <span class="literal">NULL</span>) o = o-&gt;ch[<span class="number">1</span>]; <span class="keyword">else</span> o = o-&gt;ch[<span class="number">0</span>];</div><div class="line">      <span class="keyword">delete</span> u;</div><div class="line">    &#125;</div><div class="line">  &#125; <span class="keyword">else</span></div><div class="line">    remove(o-&gt;ch[d], x);</div><div class="line">  <span class="keyword">if</span>(o != <span class="literal">NULL</span>) o-&gt;maintain();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">kth</span><span class="params">(Node* o, <span class="keyword">int</span> k)</span> </span>&#123;</div><div class="line">  <span class="keyword">if</span>(o == <span class="literal">NULL</span> || k &lt;= <span class="number">0</span> || k &gt; o-&gt;s) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">  <span class="keyword">int</span> s = (o-&gt;ch[<span class="number">0</span>] == <span class="literal">NULL</span> ? <span class="number">0</span> : o-&gt;ch[<span class="number">0</span>]-&gt;s);</div><div class="line">  <span class="keyword">if</span>(k == s+<span class="number">1</span>) <span class="keyword">return</span> o-&gt;v;</div><div class="line">  <span class="keyword">else</span> <span class="keyword">if</span>(k &lt;= s) <span class="keyword">return</span> kth(o-&gt;ch[<span class="number">0</span>], k);</div><div class="line">  <span class="keyword">else</span> <span class="keyword">return</span> kth(o-&gt;ch[<span class="number">1</span>], k-s<span class="number">-1</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 在以o为根的子树中，值比x小的结点总数加1</span></div><div class="line"><span class="comment">//与kth是相对的</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">rank</span><span class="params">(Node* o, <span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">  <span class="keyword">if</span>(o == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">  <span class="keyword">if</span>(x &lt;= o-&gt;v) <span class="keyword">return</span> rank(o-&gt;ch[<span class="number">0</span>], x);</div><div class="line">  <span class="keyword">return</span> rank(o-&gt;ch[<span class="number">1</span>], x) + (o-&gt;ch[<span class="number">0</span>] == <span class="literal">NULL</span> ? <span class="number">0</span> : o-&gt;ch[<span class="number">0</span>]-&gt;s) + <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1000000000</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">  <span class="keyword">int</span> m, c, v;</div><div class="line">  Node* root = <span class="keyword">new</span> Node(INF);</div><div class="line">  <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;m) == <span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">while</span>(m--) &#123;</div><div class="line">      <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;c, &amp;v);</div><div class="line">      <span class="keyword">if</span>(c == <span class="number">1</span>) insert(root, v);</div><div class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(c == <span class="number">2</span>) &#123;</div><div class="line">        Node* o = find(root, v);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, o == <span class="literal">NULL</span> ? <span class="number">0</span> : <span class="number">1</span>);</div><div class="line">        <span class="keyword">if</span>(o != <span class="literal">NULL</span>) remove(root, v);</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(c == <span class="number">3</span>) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, kth(root, v));</div><div class="line">      <span class="keyword">else</span> <span class="keyword">if</span>(c == <span class="number">4</span>) <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, rank(root, v));</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="编写代码时要注意的"><a href="#编写代码时要注意的" class="headerlink" title="编写代码时要注意的"></a>编写代码时要注意的</h2><p>当实现rotate的时候，心中时刻想着一张图：当将<font color="#FF3030"><strong>右儿子</strong></font>旋转到根部的时候，要进行<font color="#FF3030"><strong>左旋</strong></font>的操作。分成三步走就行了。</p>
-<p>当实现insert的时候，不断的寻找根部，最后插入了，若rank大于根节点的rank,则进行相应的旋转</p>
-<p>当实现delete的时候，若要删除的节点有两个孩子，那么将rank较大的旋转到根部，使之转换成只有一个孩子的情况，然后删除该节点。</p>
-<font color="#FF3030"><strong>总之，心中一定要有一张树的图，进行相应的操作的时候，在心里面进行相应的操作</strong></font>
-
-<h1 id="启发式合并"><a href="#启发式合并" class="headerlink" title="启发式合并"></a>启发式合并</h1><p>假设有两棵树T1和T2，节点的数量分别是n1和n2,若n1&lt;n2,显然把T1合并到T2比较的高效，即把T1中的节点一一插入到T2中，时间复杂度为O(\(n_1log(n_2)\))<br>至于为什么这个名词，请自行百度。</p>
-<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">treap</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BST</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">离线算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">启发式合并</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">mathematical modeling</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/01/Uva-1479-Graph-and-Queries/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/10/02/KM算法模板/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          KM算法模板
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/09/25/Unicode学习/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Unicode学习</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
+    
 
-  
 
-  
 
           </div>
         </div>
@@ -370,9 +226,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
