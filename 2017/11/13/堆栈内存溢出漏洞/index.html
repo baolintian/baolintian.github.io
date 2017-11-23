@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/0060lm7Tly1flhiuob0w9j30ok0ffdkn.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/0060lm7Tly1flhiwkx4xfj314i0ojk0a.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tly1flhiy0y1u0j30rq0gt42m.jpg">
-<meta property="og:updated_time" content="2017-11-14T05:08:42.085Z">
+<meta property="og:updated_time" content="2017-11-20T15:20:42.751Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="堆栈内存溢出漏洞">
 <meta name="twitter:description" content="内存栈溢出导致的漏洞">
@@ -176,6 +176,9 @@
 
 <h1 id="example-1-内存内容覆盖"><a href="#example-1-内存内容覆盖" class="headerlink" title="example 1 内存内容覆盖"></a>example 1 内存内容覆盖</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> cookie;</div><div class="line">    <span class="keyword">char</span> buf[<span class="number">8</span>];</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%08x  %08x\n"</span>, &amp;cookie, &amp;buf);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, cookie);</div><div class="line">    gets(buf);</div><div class="line"></div><div class="line">    <span class="keyword">if</span>(cookie == <span class="number">0x41424344</span>)<span class="comment">//11111111DCBA</span></div><div class="line">        <span class="built_in">printf</span>(<span class="string">"win\n"</span>);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%08x\n"</span>, cookie);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><img src="http://ww3.sinaimg.cn/large/0060lm7Tly1flhiuob0w9j30ok0ffdkn.jpg" alt=""></p>
+<p>上图中的第二条注意：</p>
+<font color="#FF3030"><strong>main函数的返回地址指的是当函数执行完之后，EIP寄存器所应该跳转的地址!</strong></font>
+
 <h1 id="example2-覆盖函数返回地址"><a href="#example2-覆盖函数返回地址" class="headerlink" title="example2 覆盖函数返回地址"></a>example2 覆盖函数返回地址</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">copy</span><span class="params">(<span class="keyword">char</span>* input)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">char</span> var[<span class="number">20</span>];</div><div class="line">	<span class="built_in">strcpy</span>(var, input);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">hacked</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"Can you see me now?\n"</span>);</div><div class="line">	<span class="built_in">exit</span>(<span class="number">0</span>);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">char</span> n[<span class="number">100</span>];</div><div class="line">	<span class="keyword">char</span> source[] = <span class="string">"11112222333344445555eeee\x80\x10\x40\x00"</span>;</div><div class="line">	copy(source);</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>var处于栈内存的顶部，下面存放的是ebp寄存器的内容，这个不是我们关心的。<br>ebp下面是函数的返回指针，而这时我们修改的重点。将指针指向hacked()函数的首地址。<br><img src="http://ww1.sinaimg.cn/large/0060lm7Tly1flhiwkx4xfj314i0ojk0a.jpg" alt=""></p>
 <p>后来的内存变化:<br><img src="http://ww2.sinaimg.cn/large/0060lm7Tly1flhiy0y1u0j30rq0gt42m.jpg" alt=""></p>
@@ -419,14 +422,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">DAG最长路/最短路</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">AC自动机</a>
               </li>
              
@@ -435,27 +430,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">DAG最长路/最短路</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">KM算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">模板</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -479,6 +466,22 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
               </li>
              
@@ -499,18 +502,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">一般图最大匹配</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">带花树算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
               </li>
              
@@ -519,11 +510,31 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
+                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数位dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">一般图最大匹配</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">带花树算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">分治算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">树上分治</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -551,6 +562,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
               </li>
              
@@ -572,10 +587,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
               </li>
              
               <li class="article-tag-list-item">
