@@ -9,7 +9,7 @@
   <title>深度学习视频笔记 | 宝宝天龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="3Blue1Brown的视频中的笔记以及个人的理解。">
-<meta name="keywords" content="深度学习,数字识别">
+<meta name="keywords" content="深度学习,back propagation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深度学习视频笔记">
 <meta property="og:url" content="http://yoursite.com/2017/11/25/深度学习视频笔记/index.html">
@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://t1.picb.cc/uploads/2017/11/26/b15VT.png">
 <meta property="og:image" content="https://t1.picb.cc/uploads/2017/11/26/b18GM.png">
 <meta property="og:image" content="https://t1.picb.cc/uploads/2017/11/26/b1Apt.jpg">
-<meta property="og:updated_time" content="2017-11-25T16:46:47.280Z">
+<meta property="og:updated_time" content="2017-11-26T07:10:49.746Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深度学习视频笔记">
 <meta name="twitter:description" content="3Blue1Brown的视频中的笔记以及个人的理解。">
@@ -178,7 +178,7 @@
 <h1 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h1><p>我们得到的是一个784个范围属于(0, 1)的图像点阵。然后设置两层调参的元胞，每层16个，最后是表示0~9的层，值越大表示代表该数的可能性越大。最后定义一个方差：方差越小表示与目标的预测越精确。我们需要的调节的参数有两种：\(w和b\)，一个代表调节neutron的权重的边，另外一个表示偏度。总共需要调节的参数总数为：</p>
 <p>\((784*16 + 16*16 + 16*10) + (16 + 16 + 10) = 13002\),前面的表示w的数目，后面表示b的数目。</p>
 <p>其实不断训练的过程就是：<font color="#FF3030"><strong>调节13002个参数，使方差最小</strong></font>。若是多元的函数，我们会选择梯度下降法，在这个系列的视频中，采用的是<font color="#FF3030"><strong>back propagation</strong></font>(BP)算法来寻找最小值。</p>
-<h1 id="识别的过程"><a href="#识别的过程" class="headerlink" title="识别的过程"></a>识别的过程</h1><p>我们很自然的以为设置的第一次元胞是识别小的笔画，第二层识别第一层组合起来更大的笔画。最后一层是第二层笔画的组合。这样看起来合情合理。<br>但是时间上它生成了13002幅784像素的图，并且与现实吻合的很好，但是它的识别的过程完全是无规律的。不要把它想的太高端。<br>比如我们输入一幅噪点图，算法总能给我们一个结果，但实际上没有任何的数字。因此它的识别过程完全是无序的。</p>
+<h1 id="识别的过程"><a href="#识别的过程" class="headerlink" title="识别的过程"></a>识别的过程</h1><p>我们很自然的以为设置的第一层元胞是识别小的笔画，第二层识别第一层组合起来更大的笔画。最后一层是第二层笔画的组合。这样看起来合情合理。<br>但是时间上它生成了13002幅784像素的图，并且与现实吻合的很好，但是它的识别的过程完全是无规律的。不要把它想的太高端。<br>比如我们输入一幅噪点图，算法总能给我们一个结果，但实际上没有任何的数字。因此它的识别过程完全是无序的。</p>
 <h1 id="BP原理"><a href="#BP原理" class="headerlink" title="BP原理"></a>BP原理</h1><p>此处应该有大量的公式以及符号说明，等有时间再补吧qaq.</p>
 <h2 id="线性的neutron时："><a href="#线性的neutron时：" class="headerlink" title="线性的neutron时："></a>线性的neutron时：</h2><p><img src="https://t1.picb.cc/uploads/2017/11/26/b1HP6.png" alt=""></p>
 <p>符号说明:<br>\(C_0\):训练的代价，即一个<font color="#FF3030"><strong>方差</strong></font>。越小表示越接近真实值。<br>\(y\):要么是0， 要么是1,。并且只有一个1.<br>\(W^{(L)}\):第\(L\)层的权重。<br>\(a^{(L)}\):表示neutron的值(激活值)，它是连续的，并且属于(0, 1).<br>\(b^{(L)}\):偏差的系数(bias)。<br>\(\sigma()\):特殊函数，比如sigmoid函数。</p>
@@ -202,7 +202,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数字识别</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">back propagation</a>
         		</li>
       		
 		</ul>
@@ -428,6 +428,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">DAG最长路/最短路</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">KM算法</a>
               </li>
              
@@ -500,23 +508,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">DAG最长路/最短路</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
+                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
+                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -576,7 +576,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数字识别</a>
+                <a href="javascript:void(0)" class="js-tag color2">back propagation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -612,7 +612,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
+                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -620,11 +624,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
+                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
               </li>
              
               <li class="article-tag-list-item">
