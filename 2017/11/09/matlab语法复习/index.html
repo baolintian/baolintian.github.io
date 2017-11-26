@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/09/matlab语法复习/index.html">
 <meta property="og:site_name" content="宝宝天龙">
 <meta property="og:description" content="复习一波matlab，真的是什么都忘了。。。">
-<meta property="og:updated_time" content="2017-11-12T10:13:56.529Z">
+<meta property="og:updated_time" content="2017-11-26T15:18:23.567Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab语法复习">
 <meta name="twitter:description" content="复习一波matlab，真的是什么都忘了。。。">
@@ -182,12 +182,15 @@
 <li>↑↓方向键来找历史命令</li>
 <li>doc查阅文档</li>
 <li>m file中选中code blocks来执行命令。</li>
+<li>三分点可以续行</li>
 </ul>
 <h1 id="基本的语法"><a href="#基本的语法" class="headerlink" title="基本的语法"></a>基本的语法</h1><ul>
 <li>变量、赋值的概念</li>
 <li>条件判断语句，循环语句等</li>
 </ul>
 <p>初始化预分配一个数组提高效率：<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">num = <span class="built_in">zeros</span>(<span class="number">1</span>, <span class="number">100</span>);</div><div class="line"></div><div class="line">ii = <span class="number">1</span>: <span class="number">100</span>;</div><div class="line">num = ii.^<span class="number">2</span>;</div></pre></td></tr></table></figure></p>
+<h1 id="sym的使用"><a href="#sym的使用" class="headerlink" title="sym的使用"></a>sym的使用</h1><p>定义一个变量：syms x y<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">syms x a b</div><div class="line">subs(int(x*<span class="built_in">exp</span>(x), a, b), [a, b], [<span class="number">0</span>, <span class="number">2</span>])</div><div class="line"> </div><div class="line"><span class="built_in">ans</span> =</div><div class="line"> </div><div class="line"><span class="built_in">exp</span>(<span class="number">2</span>) + <span class="number">1</span></div><div class="line"></div><div class="line">syms a b r x y </div><div class="line">solve(<span class="string">'(x-a)^2+(y-b)^2=r^2'</span>,<span class="string">'x'</span>) </div><div class="line">solve(<span class="string">'(x-a)^2+(y-b)^2=r^2'</span>,<span class="string">'y'</span>)</div><div class="line">a = sym(<span class="string">'sqrt(2)'</span>)<span class="comment">%用来保存一个形式变量，而且这些变量是可以参与数值运算的。</span></div></pre></td></tr></table></figure></p>
+<h1 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">%% 画出包络线</span></div><div class="line">&gt;&gt; t = (<span class="number">0</span>:<span class="built_in">pi</span>/<span class="number">100</span>:<span class="built_in">pi</span>)';</div><div class="line">&gt;&gt; y1 = <span class="built_in">sin</span>(t)*[<span class="number">1</span>, <span class="number">-1</span>];</div><div class="line">&gt;&gt; y2 = <span class="built_in">sin</span>(t).*<span class="built_in">sin</span>(<span class="number">9</span>*t);</div><div class="line">&gt;&gt; t3 = <span class="built_in">pi</span>*(<span class="number">0</span>:<span class="number">9</span>)/<span class="number">9</span>;</div><div class="line">&gt;&gt; y3 = <span class="built_in">sin</span>(t3).*<span class="built_in">sin</span>(<span class="number">9</span>*t3);</div><div class="line">&gt;&gt; plot(t, y1, <span class="string">'r:'</span>, t, y2, <span class="string">'b'</span>, t3, y3, <span class="string">'bo'</span>)</div><div class="line"></div><div class="line"></div><div class="line">ezplot()<span class="comment">%设置画图的上下界</span></div></pre></td></tr></table></figure>
 <h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
 
@@ -504,14 +507,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">mathematical modeling</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">一般图最大匹配</a>
               </li>
              
@@ -520,15 +515,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">mathematical modeling</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -612,6 +615,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
               </li>
              
@@ -632,15 +639,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">网络流</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
               </li>
             
             <div class="clearfix"></div>

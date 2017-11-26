@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>区间dp | 宝宝天龙</title>
+  <title>用python生成公式logo | 宝宝天龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="区间dp模板题和一般性的思路">
-<meta name="keywords" content="动态规划,区间dp">
+  <meta name="description" content="无意间翻到一个很有意思的API，而且实现的过程也很简单。本来想学一波Python画图，因为定制性更强啊。然后想想我还是选择matlab的无脑流吧，(逃">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="区间dp">
-<meta property="og:url" content="http://yoursite.com/2017/11/01/区间dp/index.html">
+<meta property="og:title" content="用python生成公式logo">
+<meta property="og:url" content="http://yoursite.com/2017/11/26/用python生成公式logo/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="区间dp模板题和一般性的思路">
-<meta property="og:updated_time" content="2017-11-02T15:23:41.539Z">
+<meta property="og:description" content="无意间翻到一个很有意思的API，而且实现的过程也很简单。本来想学一波Python画图，因为定制性更强啊。然后想想我还是选择matlab的无脑流吧，(逃">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tly1flvvqhj35oj30bz086mz1.jpg">
+<meta property="og:updated_time" content="2017-11-26T15:24:30.776Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="区间dp">
-<meta name="twitter:description" content="区间dp模板题和一般性的思路">
+<meta name="twitter:title" content="用python生成公式logo">
+<meta name="twitter:description" content="无意间翻到一个很有意思的API，而且实现的过程也很简单。本来想学一波Python画图，因为定制性更强啊。然后想想我还是选择matlab的无脑流吧，(逃">
+<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/0060lm7Tly1flvvqhj35oj30bz086mz1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
   
@@ -147,63 +149,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-区间dp" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-用python生成公式logo" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      区间dp
+      用python生成公式logo
     </h1>
   
 
         
-        <a href="/2017/11/01/区间dp/" class="archive-article-date">
-  	<time datetime="2017-11-01T15:51:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-01</time>
+        <a href="/2017/11/26/用python生成公式logo/" class="archive-article-date">
+  	<time datetime="2017-11-26T14:55:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>区间dp模板题和一般性的思路<br><a id="more"></a></p>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-<p>一个大的区间可以分解为小的区间。并且这两个问题本质是一样的。并且可以通过<font color="#FF3030"><strong>合并子问题的过程得到较大区间的结果</strong></font>。<br>若使用递推的方式解决问题，那么要先<font color="#FF3030"><strong>枚举区间的长度</strong></font>。</p>
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>矩阵乘法：求一系列的矩阵的乘法，按照一定的结合律，使得运算量最小。</p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><ul>
-<li>枚举最后一次乘法的位置，转移的复杂度为O(n).</li>
-<li>合法的子区间的个数，故状态数是O(\(n^2\)),总的时间复杂度为O(\(n^3\))</li>
-</ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e3</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">int</span> dp[maxn][maxn];</div><div class="line"><span class="built_in">memset</span>(dp, <span class="number">0x3f</span>, <span class="keyword">sizeof</span>(dp));<span class="comment">//因为为了求最小值，初始值的时候设为无穷大。</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++) dp[i][i] = <span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(dp[l][r]!=<span class="number">0x3f3f3f3f</span>) <span class="keyword">return</span> dp[l][r];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=l ;i&lt;r; i++)&#123;</div><div class="line">        dp[l][r] = min(dp[l][r], dfs(l, i)+dfs(i+<span class="number">1</span>, r)+a[l<span class="number">-1</span>]*a[i]*a[r]);<span class="comment">//左边矩阵的次数+右边的次数+左右合并的次数。</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> f[l][r];</div><div class="line">&#125;</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, dfs(<span class="number">1</span>, n));</div></pre></td></tr></table></figure>
-<h1 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h1><p>括号匹配。给一个括号的序列。选择一个字序列，使匹配的括号数最大。</p>
-<h2 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h2><p>发现模式规律：</p>
-<ul>
-<li>空串括号匹配(初始化的时候)</li>
-<li>若s括号匹配，那么(s)与[s]是括号匹配的</li>
-<li>若s, t括号匹配，那么st是括号匹配的</li>
-</ul>
-<p>对于区间[l, r]，若\(S_l == S_r\), 则其可由[l+1, r-1]转移得到。<br>枚举中间点m，认为是[l, m]和[m+1, r]的组合</p>
-<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">match</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span>&#123;</div><div class="line">    <span class="keyword">char</span> x = s[l];</div><div class="line">    <span class="keyword">char</span> y = s[r];</div><div class="line">    <span class="keyword">return</span> x == <span class="string">'('</span>&amp;&amp;y == <span class="string">')'</span> || x == <span class="string">'['</span>&amp;&amp;y == <span class="string">']'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;n; i++)<span class="comment">//初始化</span></div><div class="line">    dp[i][i+<span class="number">1</span>] = match(i, i+<span class="number">1</span>);</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> len = <span class="number">2</span>; len&lt;n; len++)&#123;<span class="comment">//枚举区间的长度</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>, j; (j = i+len)&lt;=n; i++ )&#123;<span class="comment">//第一种匹配的方式</span></div><div class="line">        dp[i][j] = dp[i+<span class="number">1</span>][j<span class="number">-1</span>]+match(i, j);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> m=i; m&lt;j; m++)&#123;<span class="comment">//第二种划分的方法</span></div><div class="line">        dp[i][j] = max(dp[i][j], dp[i][m]+dp[m+<span class="number">1</span>][j]);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, f[<span class="number">1</span>][n]&lt;&lt;<span class="number">1</span>);</div></pre></td></tr></table></figure>
-<h1 id="石子合并问题"><a href="#石子合并问题" class="headerlink" title="石子合并问题"></a>石子合并问题</h1><p>N个石子排成一排，每次合并的代价为两堆石子的数量之和，并且只能是<font color="#FF3030"><strong>相邻</strong></font>的两堆石子合并。（想想不相邻的石子合并是什么问题）</p>
-<ul>
-<li>f[i][j] = min{f[i][k]+f[k+1][j]}+a[i]+\(\ldots \)+a[j]，在第k个位置分割</li>
-<li>预处理前缀和</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line">partial_sum(a+<span class="number">1</span>, a+n+<span class="number">1</span>, s+<span class="number">1</span>);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> len = <span class="number">1</span>; len&lt;n; len++)&#123;<span class="comment">//枚举r-l</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>, j; (j=i+len)&lt;=n; i++)&#123;</div><div class="line">        dp[i][j] = INT_MAX;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=i; k&lt;j; k++)&#123;</div><div class="line">            dp[i][j] = min(dp[i][j], dp[i][k]+dp[k+<span class="number">1</span>][j]);</div><div class="line">        &#125;</div><div class="line">        dp[i][j] += s[j]-s[i<span class="number">-1</span>];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, f[<span class="number">1</span>][n]);</div></pre></td></tr></table></figure>
-<h2 id="变形"><a href="#变形" class="headerlink" title="变形"></a>变形</h2><p>若N个石子绕成一个环，求最小的合并的个数。<br>method①：枚举断开的位置.时间复杂度O(\(n^4\))</p>
-<p>method②：在原链的基础上，后面再接一条链。最后扫描一遍所有长度为n的合并的次数的最小值。时间复杂度为O(\(n^3\));</p>
-<h1 id="决策单调性和四边形不等式优化"><a href="#决策单调性和四边形不等式优化" class="headerlink" title="决策单调性和四边形不等式优化"></a>决策单调性和四边形不等式优化</h1><blockquote>
-<p>上面的石子合并问题，可以优化到O(\(n^2\)).</p>
-</blockquote>
-<p>定义：</p>
-<ul>
-<li>对于区间[l, r],存在一个决策点k，使得分为区间[l, k]和区间[k+1, r]后的代建最小，记w[l][r] = k</li>
-<li>经过找规律，打表，可以发现<font color="#FF3030"><strong>w[l][r-1]\(\le \)w[l][r]\(\le\) w[l+1][r]</strong></font>.</li>
-<li>通过决策单调性，可以将时间复杂度降为O(\(n^2\))</li>
-</ul>
-<h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">partial_sum(a+<span class="number">1</span>, a+n+<span class="number">1</span>, s+<span class="number">1</span>);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;n; i++)&#123;<span class="comment">//初始化</span></div><div class="line">    dp[i][i+<span class="number">1</span>] = a[i] + a[i+<span class="number">1</span>];</div><div class="line">    w[i][i+<span class="number">1</span>] = i;</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> len = <span class="number">2</span>; len&lt;n; len++)&#123;<span class="comment">//枚举r-l</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>, j; (j=i+len)&lt;=n; i++)&#123;</div><div class="line">        dp[i][j] = INT_MAX;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k = w[i][j<span class="number">-1</span>]; k&lt;=w[i+<span class="number">1</span>][j]; k++)&#123;</div><div class="line">            <span class="keyword">if</span>(dp[i][j]&lt;=dp[i][k]+dp[k+<span class="number">1</span>][j]) <span class="keyword">continue</span>;</div><div class="line">            dp[i][j] = dp[i][k] + dp[k+<span class="number">1</span>][j];</div><div class="line">            w[i][j] = k;<span class="comment">//记录决策点</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    f[i][j] += s[j]-s[i<span class="number">-1</span>];</div><div class="line">&#125;</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, f[<span class="number">1</span>][n]);</div></pre></td></tr></table></figure>
+        <p>无意间翻到一个很有意思的API，而且实现的过程也很简单。<br>本来想学一波Python画图，因为定制性更强啊。然后想想我还是选择matlab的无脑流吧，(逃<br><a id="more"></a></p>
+<p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"># -----------------------------------------------------------------------------</div><div class="line"># Copyright (c) <span class="number">2015</span>, Nicolas P. Rougier. All Rights Reserved.</div><div class="line"># Distributed under the (new) BSD License. See LICENSE.txt for more info.</div><div class="line"># -----------------------------------------------------------------------------</div><div class="line"><span class="keyword">import</span> numpy as np</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot as plt</div><div class="line"></div><div class="line">eqs = []</div><div class="line">eqs.append((r<span class="string">"$W^&#123;3\beta&#125;_&#123;\delta_1 \rho_1 \sigma_2&#125; = U^&#123;3\beta&#125;_&#123;\delta_1 \rho_1&#125; + \frac&#123;1&#125;&#123;8 \pi 2&#125; \int^&#123;\alpha_2&#125;_&#123;\alpha_2&#125; d \alpha^\prime_2 \left[\frac&#123; U^&#123;2\beta&#125;_&#123;\delta_1 \rho_1&#125; - \alpha^\prime_2U^&#123;1\beta&#125;_&#123;\rho_1 \sigma_2&#125; &#125;&#123;U^&#123;0\beta&#125;_&#123;\rho_1 \sigma_2&#125;&#125;\right]$"</span>))</div><div class="line">eqs.append((r<span class="string">"$\frac&#123;d\rho&#125;&#123;d t&#125; + \rho \vec&#123;v&#125;\cdot\nabla\vec&#123;v&#125; = -\nabla p + \mu\nabla^2 \vec&#123;v&#125; + \rho \vec&#123;g&#125;$"</span>))</div><div class="line">eqs.append((r<span class="string">"$\int_&#123;-\infty&#125;^\infty e^&#123;-x^2&#125;dx=\sqrt&#123;\pi&#125;$"</span>))</div><div class="line">eqs.append((r<span class="string">"$E = mc^2 = \sqrt&#123;&#123;m_0&#125;^2c^4 + p^2c^2&#125;$"</span>))</div><div class="line">eqs.append((r<span class="string">"$F_G = G\frac&#123;m_1m_2&#125;&#123;r^2&#125;$"</span>))</div><div class="line"></div><div class="line"></div><div class="line">plt.axes([<span class="number">0.025</span>,<span class="number">0.025</span>,<span class="number">0.95</span>,<span class="number">0.95</span>])</div><div class="line"></div><div class="line"><span class="keyword">for</span> i in range(<span class="number">24</span>):</div><div class="line">    index = np.random.randint(<span class="number">0</span>,len(eqs))</div><div class="line">    eq = eqs[index]</div><div class="line">    size = np.random.uniform(<span class="number">12</span>,<span class="number">32</span>)</div><div class="line">    x,y = np.random.uniform(<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>)</div><div class="line">    alpha = np.random.uniform(<span class="number">0.25</span>,<span class="number">.75</span>)</div><div class="line">    plt.text(x, y, eq, ha='center', va='center', color="#11557c", alpha=alpha,</div><div class="line">             transform=plt.gca().transAxes, fontsize=size, clip_on=True)</div><div class="line"></div><div class="line">plt.xticks([]), plt.yticks([])</div><div class="line"># savefig('../figures/text_ex.png',dpi=48)</div><div class="line">plt.show()</div></pre></td></tr></table></figure></p>
+<p>效果图：<br><img src="http://ww2.sinaimg.cn/large/0060lm7Tly1flvvqhj35oj30bz086mz1.jpg" alt=""></p>
+<h2 id="其他的链接"><a href="#其他的链接" class="headerlink" title="其他的链接"></a>其他的链接</h2><p><a href="http://blog.csdn.net/xw_classmate/article/details/51302841" target="_blank" rel="external">matplotlib tutorial</a><br><a href="https://wenku.baidu.com/view/d6a8976f5727a5e9846a6130.html" target="_blank" rel="external">tutorial2</a><br><a href="http://blog.csdn.net/u011497262/article/details/52325705" target="_blank" rel="external">tutorial3</a><br><a href="http://download.csdn.net/download/zerostar/5123849#comment" target="_blank" rel="external">just a detailed book</a></p>
 <h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
 
@@ -217,11 +186,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">动态规划</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">区间dp</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
@@ -277,7 +242,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/11/01/区间dp/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/11/26/用python生成公式logo/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -291,18 +256,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/11/04/状压dp/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          状压dp
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/10/31/线性dp/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">线性dp</div>
+    <a href="/2017/11/25/深度学习视频笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">深度学习视频笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
