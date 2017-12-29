@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>bitcoin | 宝宝天龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我可能错过了发财的好机会了\微笑脸">
+  <meta name="description" content="我可能错过了发财的好机会了(微笑脸)">
 <meta name="keywords" content="bitcoin,数字签名,密码哈希函数,工作量证明">
 <meta property="og:type" content="article">
 <meta property="og:title" content="bitcoin">
 <meta property="og:url" content="http://yoursite.com/2017/12/28/bitcoin/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="我可能错过了发财的好机会了\微笑脸">
+<meta property="og:description" content="我可能错过了发财的好机会了(微笑脸)">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/0060lm7Tly1fmxkfcajf6j30mi17yqa8.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tly1fmxkliyo9aj31hc0u07mz.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tly1fmxclljxphj31hc0u0wr4.jpg">
@@ -25,10 +25,10 @@
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tly1fmxe3vxt49j31hc0u0tmt.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tly1fmxk8gz0fcj30qp0kxq3o.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tly1fmxkkpj5paj31hc0u0tjy.jpg">
-<meta property="og:updated_time" content="2017-12-29T05:43:50.402Z">
+<meta property="og:updated_time" content="2017-12-29T06:25:40.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bitcoin">
-<meta name="twitter:description" content="我可能错过了发财的好机会了\微笑脸">
+<meta name="twitter:description" content="我可能错过了发财的好机会了(微笑脸)">
 <meta name="twitter:image" content="http://ww3.sinaimg.cn/large/0060lm7Tly1fmxkfcajf6j30mi17yqa8.jpg">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
@@ -178,7 +178,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我可能错过了发财的好机会了\微笑脸<br><a id="more"></a></p>
+        <p>我可能错过了发财的好机会了(微笑脸)<br><a id="more"></a></p>
 <p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><br>今年五月的一段聊天记录。<br><img src="http://ww3.sinaimg.cn/large/0060lm7Tly1fmxkfcajf6j30mi17yqa8.jpg" alt=""></p>
 <h1 id="数字签名"><a href="#数字签名" class="headerlink" title="数字签名"></a>数字签名</h1><p>一句话的概况：既能加密，又能解密。是一个<font color="#FF3030"><strong>互逆的过程</strong></font>。</p>
 <h2 id="产生的背景"><a href="#产生的背景" class="headerlink" title="产生的背景"></a>产生的背景</h2><p>在网络上，我们要确定一起交易的记录，那么怎么来确定交易不是伪造的呢？还有的应用场景就是电子邮件的发送，http的通信等等发面，需要确认信息的来源是真是的而不是伪造的。</p>
@@ -186,13 +186,13 @@
 <h3 id="数字世界中的认证"><a href="#数字世界中的认证" class="headerlink" title="数字世界中的认证"></a>数字世界中的认证</h3><p>于是，我们需要一些加密的算法，来确定这个交易确实是本人来做的。<br>每一个人在通信的时候，都会有一对数字<br>假设Alice手中有这样的数字\(P_A, S_A\),分别代表Alice的公钥和私钥，公钥可以给任何一个人，但是私钥是绝对的保密的。<br>同理，Bob为\(P_B, S_B\).至于密钥的产生原理，稍后讲解。</p>
 <p>下面，我们来展示加密和解密的过程。<br>\(M = S_A(P_A(M))\)(1)</p>
 <p>\(M = P_A(S_A(M))\)(2)</p>
-<p>M代表的是信息（在处理的时候我们将其转化为二进制串）。\(S_A()和P_A()互为反函数\)，都可以通过两次函数的变换来得到原来的信息。但是上面的变换却有不同的用处。<br>(1)式的应用范围：<br>Bob想向Alice发送一封信息，并且只想让Alice读取。那么Bob先想办法得到Alice的公钥，然后用Alice的公钥进行加密。由于只有Alice有自己的公钥，因此只有自己才能解密。<br>(2)式的应用范围：<br>Alice想对其他人发送消息，怎么让别人相信就是她本人呢?用的就是第一个函数，Alice先对其进行加密。在信内容附上公钥，其他人就可以读取，并且确信这是Alice本人所写的了。<br>更多的应用：<br>在(2)的基础上,若<font color="#FF3030"><strong>Alice只想把信发给Bob</strong></font>该怎么办呢？方法很简单：<br>她先把数字签名加在信的末尾，这样能确定信是本人所写。然后对整体的内容用Bob的公钥进行加密，这样就只能Bob来读这样的一封信了。</p>
+<p>M代表的是信息（在处理的时候我们将其转化为二进制串）。\(S_A()和P_A()互为反函数\)，都可以通过两次函数的变换来得到原来的信息。但是上面的变换却有不同的用处。<br>(1)式的应用范围：<br>Bob想向Alice发送一封信息，并且只想让Alice读取。那么Bob先想办法得到Alice的公钥，然后用Alice的公钥进行加密。由于只有Alice有自己的密钥，因此只有自己才能解密。<br>(2)式的应用范围：<br>Alice想对其他人发送消息，怎么让别人相信就是她本人呢?用的就是第一个函数，Alice先对其进行加密。在信内容附上公钥，其他人就可以读取，并且确信这是Alice本人所写的了。<br>更多的应用：<br>在(2)的基础上,若<font color="#FF3030"><strong>Alice只想把信发给Bob</strong></font>该怎么办呢？方法很简单：<br>她先把数字签名加在信的末尾，这样能确定信是本人所写。然后对整体的内容用Bob的公钥进行加密，这样就只能Bob来读这样的一封信了。</p>
 <h4 id="公钥与私钥的产生原理"><a href="#公钥与私钥的产生原理" class="headerlink" title="公钥与私钥的产生原理"></a>公钥与私钥的产生原理</h4><p>破解难度的核心：</p>
 <blockquote>
 <p>RSA加密系统的安全性主要来源于对大整数进行因式分解的困难性。</p>
 </blockquote>
 <p>公式的推导以及证明：<br>要设计一个函数，这个函数要满足上面得两个函数式子的性质就行了。由于涉及数论方面的很多的知识，等有时间或者心情好了再更新。</p>
-<h4 id="hash-function和encrypt的区别"><a href="#hash-function和encrypt的区别" class="headerlink" title="hash function和encrypt的区别"></a>hash function和encrypt的区别</h4><p><img src="http://ww4.sinaimg.cn/large/0060lm7Tly1fmxkliyo9aj31hc0u07mz.jpg" alt=""><br>加密哈希函数：将任意长度的文本转化为固定长度的数字串，且稍有改动，整个数字串将发生巨大的变化，成为雪崩效应。<br>hash函数是<font color="#FF3030"><strong>不可逆</strong></font>的，将字符串作用与hash function之后，(将任意长度的文本串作用与hash function之后，得到固定长度的数字串)。得到数字之后，<font color="#FF3030"><strong>不能通过得到的结果推得原来的信息</strong></font>,正是因为它的不可逆，保证了后面nounce值的计算的复杂性。<br>而encrypt是一个可逆的过程，加密之后，可以通过另外的函数来解密。</p>
+<h4 id="hash-function和encrypt的区别"><a href="#hash-function和encrypt的区别" class="headerlink" title="hash function和encrypt的区别"></a>hash function和encrypt的区别</h4><p><img src="http://ww4.sinaimg.cn/large/0060lm7Tly1fmxkliyo9aj31hc0u07mz.jpg" alt=""><br>加密哈希函数：将任意长度的文本转化为固定长度的数字串，且稍有改动，整个数字串将发生巨大的变化，称为雪崩效应。<br>hash函数是<font color="#FF3030"><strong>不可逆</strong></font>的，将字符串作用与hash function之后，(将任意长度的文本串作用与hash function之后，得到固定长度的数字串)。得到数字之后，<font color="#FF3030"><strong>不能通过得到的结果推得原来的信息</strong></font>,正是因为它的不可逆，保证了后面nounce值的计算的复杂性。<br>而encrypt是一个可逆的过程，加密之后，可以通过另外的函数来解密。</p>
 <h4 id="用Python的RSA模块来进行模拟通信"><a href="#用Python的RSA模块来进行模拟通信" class="headerlink" title="用Python的RSA模块来进行模拟通信"></a>用Python的RSA模块来进行模拟通信</h4><p>进行(1)式的模拟过程。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> rsa</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>(pa, sa) = rsa.newkeys(<span class="number">512</span>, poolsize = <span class="number">8</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>pa</div><div class="line">PublicKey(<span class="number">7287399495366257413771058761739868049169593614102396165193288873805572387006976147311991494525422797626345758517789424374926210086557657000622100528243089</span>, <span class="number">65537</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>sa</div><div class="line">PrivateKey(<span class="number">7287399495366257413771058761739868049169593614102396165193288873805572387006976147311991494525422797626345758517789424374926210086557657000622100528243089</span>, <span class="number">65537</span>, <span class="number">7027647519823044002742644381047673841884240749574828570675817478880418391900191613482469197184481730731244721399577942685962117567047869164370454616227493</span>, <span class="number">4450325811458253528888359581209252517270748630183017819682214575947560280752282431</span>, <span class="number">1637497972980627729843564573878420999729638817154052481198228091129519919</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>(pb, sb) = rsa.newkeys(<span class="number">512</span>, poolsize = <span class="number">8</span>) <span class="comment">#poolsize表示运算时的cpu的核心数。</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>message = <span class="string">"Hello, Bob!"</span>;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>crypto = rsa.encrypt(message.encode(<span class="string">'utf-8'</span>), pb);<span class="comment">#加密的过程必须要将字符串转化为二进制的存储形式。</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>ans = rsa.decrypt(crypto, sb);</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>ans.decode(<span class="string">'utf-8'</span>)</div><div class="line"><span class="string">'Hello, Bob!'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>pb.n</div><div class="line"><span class="number">8713105263433599534777847820591755626411909814336518766153432253803317287304054914848665740291595392716126580950997697917807332757088457074926547527045377</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>pb.e</div><div class="line"><span class="number">65537</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>sb.n</div><div class="line"><span class="number">8713105263433599534777847820591755626411909814336518766153432253803317287304054914848665740291595392716126580950997697917807332757088457074926547527045377</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>str1 = bin(sb.n);</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>len(str1)</div><div class="line"><span class="number">514</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>len(bin(sb.p))</div><div class="line"><span class="number">274</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>len(bin(sb.q))</div><div class="line"><span class="number">242</span></div></pre></td></tr></table></figure></p>
 <p>说明：<br>可以看到公钥对\(P_B(n, e)\),n = (p-1)(q-1), e是一个较小的与n互质的数字。<br>私钥由\(S_B(n, e, p, q)\).<br>可以看出私钥可以推出公钥，但是公钥却不能推出私钥。原因就是大整数的因数分解的困难。<br>可以从后面看出n的二进制有514位，p,q位数差不多，都为两百多位。（这里说的位都是二进制下的位）</p>
 <p>并且可以看出，当信息传输完成后，<font color="#FF3030"><strong>n值发生了改变</strong></font>，这种动态的处理方式是为了信息安全的考虑。</p>
@@ -202,9 +202,9 @@
 <p>可以看到我们的文本信息串是95个字节的，但是<font color="#FF3030"><strong>最多的传输串长为53个字节</strong></font>，剩余的11个字节用来存储其他的信息，所以无法进行传输。或者是更改密钥的长度，或者用其他的有效的方法，可以在后面的文档进行查阅。<a href="https://stuvel.eu/python-rsa-doc/usage.html#generating-keys" target="_blank" rel="external">文件内容的传输</a></p>
 <p>进行(2)式的模拟: sign and verify<br>生动形象的原理图：<br><img src="http://ww2.sinaimg.cn/large/0060lm7Tly1fmxclljxphj31hc0u0wr4.jpg" alt="sign and verify"><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> rsa</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>(pubkey, prikey) = rsa.newkeys(<span class="number">512</span>);</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>message = <span class="string">"hello python, hello world"</span>;</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>signature = rsa.sign(message.encode(<span class="string">'utf-8'</span>), prikey, <span class="string">'SHA-1'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>rsa.verify(message.encode(<span class="string">'utf-8'</span>), signature, pubkey)</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>rsa.verify(<span class="string">"hello world"</span>.encode(<span class="string">'utf-8'</span>), signature, pubkey)</div><div class="line">Traceback (most recent call last):</div><div class="line">  File <span class="string">"&lt;stdin&gt;"</span>, line <span class="number">1</span>, <span class="keyword">in</span> &lt;module&gt;</div><div class="line">  File <span class="string">"C:\python3\lib\site-packages\rsa\pkcs1.py"</span>, line <span class="number">315</span>, <span class="keyword">in</span> verify</div><div class="line">    <span class="keyword">raise</span> VerificationError(<span class="string">'Verification failed'</span>)</div><div class="line">rsa.pkcs1.VerificationError: Verification failed</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>rsa.verify(<span class="string">"hello python, hello world"</span>.encode(<span class="string">'utf-8'</span>), signature, pubkey)</div><div class="line"><span class="keyword">True</span></div><div class="line"></div><div class="line"><span class="comment">#数字签名生成的返回值是64个字节的字符串，即256位的二进制数。</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>signature</div><div class="line"><span class="string">b'\x8c\xedy\xc6\xbb\x86\xa7f\x00\xc7\x8c\xdf\xc6Q\xfeE\xff\xcd\xba\x13iec\xaax\x1e2\x08\x83\x05\xd3\xdc&amp;jk\xc9\xfck\xe4\xb7\x0f\x985\x14\xfb=\\\xbd^b\xb3\xa5\x8829\xee\xed\x94~\x95\x181\xf3\xf0'</span></div><div class="line">len(signature)</div><div class="line"><span class="number">64</span></div><div class="line"></div><div class="line"><span class="comment">#传输的信息只用验证真假，因此任意长度的文本串都可以进行传输。因为加密哈希函数是将任意长度的文本串转化为固定长度的数字串，固定长度为256位。</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>str = <span class="string">"long_long_agolong_long_agolong_long_agolong_long_agolong_long_agolong_long_agolong_long_agolong_long_ago"</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>len(str)</div><div class="line"><span class="number">104</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>signature = rsa.sign(str.encode(<span class="string">'utf-8'</span>), prikey, <span class="string">'SHA-256'</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>len(signature)</div><div class="line"><span class="number">64</span></div></pre></td></tr></table></figure></p>
 <p>注意仔细看代码里面的注释。sign and verify的概念在交易中十分的重要。</p>
-<p>现在假设有黑客进行欺骗，他要得到正确的验证，并且传输给别人，让他人相信。由于持有私钥的人未进行相应的计算，黑客需要试\(2^256\)(signature有256位)种可能，才可能拿到正确的signature，这样的计算简直就是不可能。（具体可以看3blue1brown的视频）。因此，基于加密哈希函数的验证方式是十分的有效的。</p>
+<p>现在假设有黑客进行欺骗，他要得到正确的验证，并且传输给别人，让他人相信。由于持有私钥的人未进行相应的计算，黑客需要试\(2^{256}\)(signature有256位)种可能，才可能拿到正确的signature，这样的计算简直就是不可能。（具体可以看3blue1brown的视频）。因此，基于加密哈希函数的验证方式是十分的有效的。</p>
 <h4 id="基于数字签名系统不足"><a href="#基于数字签名系统不足" class="headerlink" title="基于数字签名系统不足"></a>基于数字签名系统不足</h4><ul>
-<li>可复制的：由于每一次的交易口令相同，那么就可以进行多次的复制，一个人原本只给一个人转账。但是经过多次的复制后，他就多次的给那个人转账。解决的方法是：将时间加入交易口令，进行密码哈希函数。或者是<font color="#FF3030">__加入特殊的序列号，来证明交易的唯一性</font>。</li>
+<li>可复制的：由于每一次的交易口令相同，那么就可以进行多次的复制，一个人原本只给一个人转账。但是经过多次的复制后，他就多次的给那个人转账。解决的方法是：将时间加入交易口令，进行密码哈希函数。或者是<font color="#FF3030"><strong>加入特殊的序列号，来证明交易的唯一性</strong></font>。</li>
 <li>无法确认时间的先后顺序：一个人余额为0。他先收到100，后花了50.若不知到时间的先后顺序，那么别人怎么能让他花50呢？解决的方法：一个人要花50，必须要先经过一个中心，中心会收取的你的钱，然后在将钱发给接收方。然而这还是存在中心的管理，没有去中心化。</li>
 <li>如何让他人相信这一笔交易的成立：这就需要第三方的信用中心的介入了。然而比特币的去中心化就是不希望依赖第三方。</li>
 </ul>
@@ -228,8 +228,9 @@
 <h4 id="区块链的构成"><a href="#区块链的构成" class="headerlink" title="区块链的构成"></a>区块链的构成</h4><p><img src="http://ww4.sinaimg.cn/large/0060lm7Tly1fmxe3vxt49j31hc0u0tmt.jpg" alt=""><br>从图中可以看出，一个区块中有前一块的hash value，交易的signature，nounce值。<br>好处：</p>
 <ol>
 <li>一旦某块的交易被更改，那么这一块的nounce值将会发生改变，这一块的hash value会发生改变，后面的块也要重新计算nounce值。这样的计算量是十分巨大的，因此黑客篡改根本是不可能。</li>
-<li>若交换前后两块的顺序，也会发生连锁反应，这也是不可能发生的事情的。<br>这样就很好的确定的交易的准确性，并且确认交易的顺序了。</li>
+<li>若交换前后两块的顺序，也会发生连锁反应，这也是不可能发生的事情的。</li>
 </ol>
+<p>这样就很好的确定的交易的准确性，并且确认交易的顺序了。</p>
 <h4 id="一笔交易中包含的信息："><a href="#一笔交易中包含的信息：" class="headerlink" title="一笔交易中包含的信息："></a>一笔交易中包含的信息：</h4><p><img src="http://ww4.sinaimg.cn/large/0060lm7Tly1fmxk8gz0fcj30qp0kxq3o.jpg" alt=""><br>区块链的设计很好的防止了double-spending的发生，<br>当你需要花钱的时候，你需要先将你账户中的比特币信息发送出去，这里的信息包含了：</p>
 <ul>
 <li>你得到的比特币的来源(发掘区块的奖励无来源)</li>
@@ -519,6 +520,18 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">KM算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">模板</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
@@ -532,10 +545,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -575,19 +584,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -599,6 +608,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
@@ -607,19 +620,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tips</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">一般图最大匹配</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">带花树算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -723,11 +732,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
+                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
+                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -740,14 +749,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">二进制高斯消元</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">KM算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">模板</a>
               </li>
             
             <div class="clearfix"></div>
