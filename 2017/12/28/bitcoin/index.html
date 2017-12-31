@@ -25,7 +25,8 @@
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tly1fmxe3vxt49j31hc0u0tmt.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tly1fmxk8gz0fcj30qp0kxq3o.jpg">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tly1fmxkkpj5paj31hc0u0tjy.jpg">
-<meta property="og:updated_time" content="2017-12-29T17:11:58.717Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0060lm7Tly1fmz0vye28nj30u01hcdma.jpg">
+<meta property="og:updated_time" content="2017-12-30T11:34:16.580Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bitcoin">
 <meta name="twitter:description" content="我可能错过了发财的好机会了(微笑脸)">
@@ -97,7 +98,13 @@
 		        
 					<a class="bilibili" target="_blank" href="https://space.bilibili.com/2168045/#!" title="bilibili"><i class="icon-bilibili"></i></a>
 		        
+					<a class="mail" target="_blank" href="mailto:tianbaolin1@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
 			</div>
+            <!--音乐播放-->
+            <div style="margin-top:15px;">
+                    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=260 height=86 src="//music.163.com/outchain/player?type=2&id=413812448&auto=0&height=66"></iframe>
+                 </div>
 		</nav>
 	</header>		
 </div>
@@ -135,6 +142,8 @@
 						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/bao-bao-tian-long/activities" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 						<a class="bilibili" target="_blank" href="https://space.bilibili.com/2168045/#!" title="bilibili"><i class="icon-bilibili"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:tianbaolin1@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -175,6 +184,11 @@
 </a>
         
       </header>
+      
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -261,7 +275,7 @@
 <h3 id="script"><a href="#script" class="headerlink" title="script"></a>script</h3><p>前面仅仅模拟的是比特币之间的转账，然而比特币还有其他的功能，而这些功能是用比特币的脚本语言来完成的。</p>
 <h1 id="比特币核心的总结"><a href="#比特币核心的总结" class="headerlink" title="比特币核心的总结"></a>比特币核心的总结</h1><p><img src="http://ww4.sinaimg.cn/large/0060lm7Tly1fmxkkpj5paj31hc0u0tjy.jpg" alt=""><br>我们再不厌其烦的整理一下思维：<br>1、 假如仅仅使用电子签名，我们可以确定交易确实是本人。但是，存在重复花一笔钱的危险，因为假设Alice几乎同时向Bob和Petter花了相同的一笔钱，那么到底这笔钱到底归谁呢？此刻，必须存在第三方，来确认交易的顺序，若先支付给Bob,那么就不能再支付给Petter了。<br>2、 能不能试图消除第三方的存在呢？可以，我们用区块链来确认交易的顺序，通过工作量的证明确认交易的有效性，这就产生了比特币。</p>
 <h1 id="资料来源"><a href="#资料来源" class="headerlink" title="资料来源"></a>资料来源</h1><p><a href="https://stuvel.eu/python-rsa-doc/usage.html#generating-keys" target="_blank" rel="external">RSA模块文档</a><br><a href="https://segmentfault.com/q/1010000002769065" target="_blank" rel="external">RSA模块的实战</a><br><a href="http://www.michaelnielsen.org/ddi/how-the-bitcoin-protocol-actually-works/" target="_blank" rel="external">How the Bitcoin protocol actually works</a><br><a href="https://blockexplorer.com" target="_blank" rel="external">中本聪的最初的论文</a><br><a href="https://blockexplorer.com/blocks" target="_blank" rel="external">bitcoin实时交易的网站</a><br><a href="http://www.cmd5.com/hash.aspx" target="_blank" rel="external">各种加密哈希函数的加密解密</a><br><a href="http://www.wanbizu.com/baike/201610257752.html" target="_blank" rel="external">bitcoin交易的收费标准</a></p>
-<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1><p>中间的公式推导过程<br>比特币划分block的交易量是怎么确认的？是随机产生的吗？</p>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1><p>中间的公式推导过程<br>比特币划分block的交易量是怎么确认的？是随机产生的吗？<br>可能真的是随机化产生的：<br><img src="http://ww1.sinaimg.cn/large/0060lm7Tly1fmz0vye28nj30u01hcdma.jpg" alt=""></p>
 
       
 
@@ -398,6 +412,11 @@
         </div>
       </div>
       <footer id="footer">
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span id="busuanzi_container_site_uv"> 
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
@@ -505,14 +524,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">DAG最长路/最短路</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">AC自动机</a>
               </li>
              
@@ -521,7 +532,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
+                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">DAG最长路/最短路</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -533,7 +548,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
+                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -546,6 +561,26 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">bitcoin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数字签名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">密码哈希函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">工作量证明</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -569,35 +604,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">bitcoin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数字签名</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">密码哈希函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">工作量证明</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -609,11 +636,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tips</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
+                <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -622,6 +649,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">带花树算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -665,6 +696,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
               </li>
              
@@ -673,19 +708,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">最大似然估计法(maximum likehood estimate)</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">分治算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">树上分治</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">最大似然估计法(maximum likehood estimate)</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -705,6 +736,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Gale-Shapley Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">求婚-拒绝算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">A*算法</a>
               </li>
              
@@ -713,11 +752,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Gale-Shapley Algorithm</a>
+                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">求婚-拒绝算法</a>
+                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -730,26 +769,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">二进制高斯消元</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
               </li>
             
             <div class="clearfix"></div>
