@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/02/01/python读写数据/index.html">
 <meta property="og:site_name" content="宝宝天龙">
 <meta property="og:description" content="python数据的读写">
-<meta property="og:updated_time" content="2018-02-01T13:48:50.167Z">
+<meta property="og:updated_time" content="2018-02-03T08:34:44.569Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python读写数据">
 <meta name="twitter:description" content="python数据的读写">
@@ -187,6 +187,11 @@
 <h2 id="写入Excel文件"><a href="#写入Excel文件" class="headerlink" title="写入Excel文件"></a>写入Excel文件</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">book = xlwt.Workbook(encoding=<span class="string">'utf-8'</span>, style_compression=<span class="number">0</span>)</div><div class="line">sheet = book.add_sheet(<span class="string">'test'</span>, cell_overwrite_ok=<span class="keyword">True</span>)</div><div class="line">row = <span class="number">0</span></div><div class="line">col = <span class="number">0</span></div><div class="line">length = len(x)</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(length):</div><div class="line">    sheet.write(i, col, x[i])</div><div class="line">book.save(<span class="string">r'e:\test.xls'</span>)</div></pre></td></tr></table></figure>
 <h1 id="python数据的读取"><a href="#python数据的读取" class="headerlink" title="python数据的读取"></a>python数据的读取</h1><h2 id="Python的txt文本文件的读取"><a href="#Python的txt文本文件的读取" class="headerlink" title="Python的txt文本文件的读取"></a>Python的txt文本文件的读取</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">f = open(<span class="string">'test.txt'</span>, <span class="string">'r'</span>)</div><div class="line"><span class="keyword">for</span> line <span class="keyword">in</span> f:</div><div class="line">    ls = line.strip(<span class="string">'\n'</span>)</div><div class="line">    ls = ls.split(<span class="string">' '</span>)</div><div class="line">    print(ls)</div></pre></td></tr></table></figure>
 <h2 id="python读取excel的数据"><a href="#python读取excel的数据" class="headerlink" title="python读取excel的数据"></a>python读取excel的数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> xlrd</div><div class="line">data = xlrd.open_workbook(<span class="string">r'E:\数模比赛\2016美赛C\data1\problem1.xlsx'</span>)</div><div class="line">table = data.sheets()[<span class="number">0</span>]</div><div class="line">nrows = table.nrows </div><div class="line">ncols = table.ncols</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,nrows):</div><div class="line">    rowValues= table.row_values(i)</div><div class="line">    <span class="comment">#然后对rowValues进行性相应的操作，rowValues是列表类型的数据。</span></div></pre></td></tr></table></figure>
+<h1 id="matlab数据的读取"><a href="#matlab数据的读取" class="headerlink" title="matlab数据的读取"></a>matlab数据的读取</h1><h2 id="matlab将数据读入excel"><a href="#matlab将数据读入excel" class="headerlink" title="matlab将数据读入excel"></a>matlab将数据读入excel</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xlswrite(<span class="string">'test.xlsx'</span>, x, <span class="number">1</span>, <span class="string">'A1:I1'</span>)</div></pre></td></tr></table></figure>
+<h2 id="matlab读取excel中的数据"><a href="#matlab读取excel中的数据" class="headerlink" title="matlab读取excel中的数据"></a>matlab读取excel中的数据</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">%score仅保存数字， head仅保存相应的字符串， raw所有的信息都会保存</span></div><div class="line">[score head raw] = xlsread(<span class="string">'score.xlsx'</span>)</div></pre></td></tr></table></figure>
+<h2 id="matlab将数据写入text"><a href="#matlab将数据写入text" class="headerlink" title="matlab将数据写入text"></a>matlab将数据写入text</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">x = <span class="number">0</span>:<span class="built_in">pi</span>/<span class="number">20</span>:<span class="built_in">pi</span>;</div><div class="line">u = <span class="built_in">sin</span>(x);</div><div class="line">fid = fopen(<span class="string">'data.txt'</span>,<span class="string">'w'</span>);</div><div class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="number">21</span>,</div><div class="line">	fprintf(fid,<span class="string">'%5.3f %8.4f\r\n'</span>,x(<span class="built_in">i</span>),u(<span class="built_in">i</span>));</div><div class="line"><span class="keyword">end</span>;</div><div class="line">fclose(fid);</div></pre></td></tr></table></figure>
+<h2 id="matlab将数据写入text文本文件"><a href="#matlab将数据写入text文本文件" class="headerlink" title="matlab将数据写入text文本文件"></a>matlab将数据写入text文本文件</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data = load(<span class="string">'test.txt'</span>)</div></pre></td></tr></table></figure>
+<h3 id="一些字符串的小技巧"><a href="#一些字符串的小技巧" class="headerlink" title="一些字符串的小技巧"></a>一些字符串的小技巧</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">%字符串的拼接</span></div><div class="line">first_name = <span class="string">'tian'</span>;</div><div class="line">second_name = <span class="string">'baolin'</span></div><div class="line">strcat(first_name, second_name)</div><div class="line"><span class="comment">%method 1</span></div><div class="line">strcat(&#123;first_name, second_name&#125;, &#123;<span class="string">'baby'</span>, <span class="string">'dragon'</span>&#125;)</div><div class="line"><span class="comment">%method 2</span></div><div class="line">sprintf(<span class="string">'%s%s'</span>, first_name, second_name)</div><div class="line"><span class="comment">%method 3</span></div><div class="line">str = [first_name, second_name];</div><div class="line">str</div><div class="line"></div><div class="line"><span class="comment">%数字转化为字符串</span></div><div class="line">number = <span class="number">23333</span>;</div><div class="line">num2str(number)</div></pre></td></tr></table></figure>
 <h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
 
@@ -269,6 +274,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/02/03/机器学习资料collection/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          机器学习大杂烩collection
+        
+      </div>
+    </a>
   
   
     <a href="/2018/01/28/画复杂的网络图像/" id="article-nav-older" class="article-nav-link-wrap">
@@ -423,11 +437,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
+                <a href="javascript:void(0)" class="js-tag color1">AC自动机</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">DAG最长路/最短路</a>
+                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -439,19 +453,35 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">AC自动机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">字符串</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
+                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">DAG最长路/最短路</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -475,6 +505,22 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">bitcoin</a>
               </li>
              
@@ -491,11 +537,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
+                <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -503,15 +545,39 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tips</a>
+                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">mathematical modeling</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -523,15 +589,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
+                <a href="javascript:void(0)" class="js-tag color5">数位dp</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
+                <a href="javascript:void(0)" class="js-tag color5">最大似然估计法(maximum likehood estimate)</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
+                <a href="javascript:void(0)" class="js-tag color5">树形dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -567,55 +637,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数位dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">最大似然估计法(maximum likehood estimate)</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">分治算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">树上分治</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">树形dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">back propagation</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">数据可视化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -627,6 +653,26 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">线段树</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">分治算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">树上分治</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">数据可视化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">A*算法</a>
               </li>
              
@@ -635,11 +681,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">线段树</a>
+                <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -651,35 +697,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">高斯消元</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">二进制高斯消元</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">mathematical modeling</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
               </li>
             
             <div class="clearfix"></div>
