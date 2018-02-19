@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/02/06/数模算法的整理/index.html">
 <meta property="og:site_name" content="宝宝天龙">
 <meta property="og:description" content="比赛前的整理">
-<meta property="og:updated_time" content="2018-02-06T12:31:55.525Z">
+<meta property="og:updated_time" content="2018-02-07T11:39:37.830Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数模算法的整理">
 <meta name="twitter:description" content="比赛前的整理">
@@ -196,6 +196,7 @@
 <h1 id="matlab中神经网络工具箱的使用的实例–运动运成绩的预测"><a href="#matlab中神经网络工具箱的使用的实例–运动运成绩的预测" class="headerlink" title="matlab中神经网络工具箱的使用的实例–运动运成绩的预测"></a>matlab中神经网络工具箱的使用的实例–运动运成绩的预测</h1><h2 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h2><p><a href="https://www.cnblogs.com/sallybin/p/3169572.html" target="_blank" rel="external">BP神经网络的预测</a></p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">% 样本集</span></div><div class="line">P=[<span class="number">3.2</span> <span class="number">3.2</span> <span class="number">3</span> <span class="number">3.2</span> <span class="number">3.2</span> <span class="number">3.4</span> <span class="number">3.2</span> <span class="number">3</span> <span class="number">3.2</span> <span class="number">3.2</span> <span class="number">3.2</span> <span class="number">3.9</span> <span class="number">3.1</span> <span class="number">3.2</span>;</div><div class="line"><span class="number">9.6</span> <span class="number">10.3</span> <span class="number">9</span> <span class="number">10.3</span> <span class="number">10.1</span> <span class="number">10</span> <span class="number">9.6</span> <span class="number">9</span> <span class="number">9.6</span> <span class="number">9.2</span> <span class="number">9.5</span> <span class="number">9</span> <span class="number">9.5</span> <span class="number">9.7</span>;</div><div class="line"><span class="number">3.45</span> <span class="number">3.75</span> <span class="number">3.5</span> <span class="number">3.65</span> <span class="number">3.5</span> <span class="number">3.4</span> <span class="number">3.55</span> <span class="number">3.5</span> <span class="number">3.55</span> <span class="number">3.5</span> <span class="number">3.4</span> <span class="number">3.1</span> <span class="number">3.6</span> <span class="number">3.45</span>;</div><div class="line"><span class="number">2.15</span> <span class="number">2.2</span> <span class="number">2.2</span> <span class="number">2.2</span> <span class="number">2</span> <span class="number">2.15</span> <span class="number">2.14</span> <span class="number">2.1</span> <span class="number">2.1</span> <span class="number">2.1</span> <span class="number">2.15</span> <span class="number">2</span> <span class="number">2.1</span> <span class="number">2.15</span>;</div><div class="line"><span class="number">140</span> <span class="number">120</span> <span class="number">140</span> <span class="number">150</span> <span class="number">80</span> <span class="number">130</span> <span class="number">130</span> <span class="number">100</span> <span class="number">130</span> <span class="number">140</span> <span class="number">115</span> <span class="number">80</span> <span class="number">90</span> <span class="number">130</span>;</div><div class="line"><span class="number">2.8</span> <span class="number">3.4</span> <span class="number">3.5</span> <span class="number">2.8</span> <span class="number">1.5</span> <span class="number">3.2</span> <span class="number">3.5</span> <span class="number">1.8</span> <span class="number">3.5</span> <span class="number">2.5</span> <span class="number">2.8</span> <span class="number">2.2</span> <span class="number">2.7</span> <span class="number">4.6</span>;</div><div class="line"><span class="number">11</span> <span class="number">10.9</span> <span class="number">11.4</span> <span class="number">10.8</span> <span class="number">11.3</span> <span class="number">11.5</span> <span class="number">11.8</span> <span class="number">11.3</span> <span class="number">11.8</span> <span class="number">11</span> <span class="number">11.9</span> <span class="number">13</span> <span class="number">11.1</span> <span class="number">10.85</span>;</div><div class="line"><span class="number">50</span> <span class="number">70</span> <span class="number">50</span> <span class="number">80</span> <span class="number">50</span> <span class="number">60</span> <span class="number">65</span> <span class="number">40</span> <span class="number">65</span> <span class="number">50</span> <span class="number">50</span> <span class="number">50</span> <span class="number">70</span> <span class="number">70</span>];</div><div class="line"><span class="comment">% 训练的目标数据</span></div><div class="line">T=[<span class="number">2.24</span> <span class="number">2.33</span> <span class="number">2.24</span> <span class="number">2.32</span> <span class="number">2.2</span> <span class="number">2.27</span> <span class="number">2.2</span> <span class="number">2.26</span> <span class="number">2.2</span> <span class="number">2.24</span> <span class="number">2.24</span> <span class="number">2.2</span> <span class="number">2.2</span> <span class="number">2.35</span>];</div><div class="line"><span class="comment">% 归一化</span></div><div class="line">[p1,minp,maxp,t1,mint,maxt]=premnmx(P,T);</div><div class="line">net=newff(minmax(P),[<span class="number">8</span>,<span class="number">6</span>,<span class="number">1</span>],&#123;<span class="string">'tansig'</span>,<span class="string">'tansig'</span>,<span class="string">'purelin'</span>&#125;,<span class="string">'trainlm'</span>);</div><div class="line">net.trainParam.epochs = <span class="number">5000</span>;</div><div class="line">net.trainParam.goal=<span class="number">0.0000001</span>;</div><div class="line">[net,tr]=train(net,p1,t1);</div><div class="line">a=[<span class="number">3.0</span>;<span class="number">9.3</span>;<span class="number">3.3</span>;<span class="number">2.05</span>;<span class="number">100</span>;<span class="number">2.8</span>;<span class="number">11.2</span>;<span class="number">50</span>];</div><div class="line">a=premnmx(a);</div><div class="line">b=sim(net,a);</div><div class="line">c=postmnmx(b,mint,maxt);</div><div class="line">c</div></pre></td></tr></table></figure>
 <h1 id="python中识别手写字体的设计"><a href="#python中识别手写字体的设计" class="headerlink" title="python中识别手写字体的设计"></a>python中识别手写字体的设计</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="string">""" 本代码来源于YouTube中的教程 """</span></div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> svm</div><div class="line"></div><div class="line">digits = datasets.load_digits()</div><div class="line">clf = svm.SVC(gamma = <span class="number">0.0001</span>, C = <span class="number">100</span>)</div><div class="line">print(len(digits.data))</div><div class="line">x, y = digits.data[:<span class="number">-10</span>], digits.target[:<span class="number">-10</span>]</div><div class="line">clf.fit(x, y)</div><div class="line"></div><div class="line">print(<span class="string">"prediction:"</span>, clf.predict(digits.data[<span class="number">-1</span>]))</div><div class="line">plt.imshow(digits.images[<span class="number">-1</span>], cmap = plt.cm.gray_r, interpolation = <span class="string">"nearest"</span>)</div><div class="line">plt.show()</div></pre></td></tr></table></figure>
+<h1 id="GM-1-1-模型来预测单值"><a href="#GM-1-1-模型来预测单值" class="headerlink" title="GM(1, 1)模型来预测单值"></a>GM(1, 1)模型来预测单值</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">clear</div><div class="line"><span class="comment">%注意其中的数据是以列来保存的。</span></div><div class="line">han1=[<span class="number">1</span></div><div class="line">    <span class="number">2</span></div><div class="line">    <span class="number">3</span></div><div class="line">    <span class="number">4</span></div><div class="line">    <span class="number">5</span></div><div class="line">    <span class="number">6</span></div><div class="line">    <span class="number">7</span></div><div class="line">    <span class="number">8</span></div><div class="line">    <span class="number">9</span></div><div class="line">    <span class="number">10</span>];    <span class="comment">%数据，建议十行以上的数据</span></div><div class="line">han1(<span class="keyword">end</span>,:)=[];</div><div class="line">m=<span class="built_in">size</span>(han1,<span class="number">2</span>);</div><div class="line">x0=mean(han1,<span class="number">2</span>);    <span class="comment">%平均每行的数据</span></div><div class="line">x1=cumsum(x0);       <span class="comment">%累加x0</span></div><div class="line">alpha=<span class="number">0.5</span>;</div><div class="line">n=<span class="built_in">length</span>(x0);    <span class="comment">%x0中元素个数</span></div><div class="line">z1=alpha*x1(<span class="number">2</span>:n)+(<span class="number">1</span>-alpha)*x1(<span class="number">1</span>:n<span class="number">-1</span>)<span class="comment">%x1的邻值生成数列</span></div><div class="line">Y=x0(<span class="number">2</span>:n);</div><div class="line">B=[-z1,ones(n<span class="number">-1</span>,<span class="number">1</span>)];</div><div class="line">ab=B\Y      <span class="comment">%a,b的值</span></div><div class="line">c=ab(<span class="number">2</span>)/ab(<span class="number">1</span>)   </div><div class="line">xhat=(x0(<span class="number">1</span>)-c)*(<span class="built_in">exp</span>(-ab(<span class="number">1</span>)*n)-<span class="built_in">exp</span>(-ab(<span class="number">1</span>)*(n<span class="number">-1</span>)))<span class="comment">%预测值方程</span></div></pre></td></tr></table></figure>
 <h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
 
@@ -282,6 +283,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/02/19/莫队算法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          莫队算法
+        
+      </div>
+    </a>
   
   
     <a href="/2018/02/03/机器学习资料collection/" id="article-nav-older" class="article-nav-link-wrap">
@@ -452,7 +462,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
+                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -464,23 +474,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -504,19 +498,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
+                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -536,23 +522,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tips</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
+                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
+                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -564,19 +550,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
+                <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -588,19 +562,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数位dp</a>
+                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">最大似然估计法(maximum likehood estimate)</a>
+                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">树形dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
+                <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -636,27 +606,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
+                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">back propagation</a>
+                <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Gale-Shapley Algorithm</a>
+                <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">求婚-拒绝算法</a>
+                <a href="javascript:void(0)" class="js-tag color5">数位dp</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">线段树</a>
+                <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -668,7 +634,43 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">树形dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">最大似然估计法(maximum likehood estimate)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">back propagation</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">数据可视化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Gale-Shapley Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">求婚-拒绝算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -680,11 +682,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
+                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
+                <a href="javascript:void(0)" class="js-tag color4">线段树</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网络爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -692,7 +698,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络爬虫</a>
+                <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">莫队算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -701,6 +711,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">二进制高斯消元</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
               </li>
             
             <div class="clearfix"></div>
