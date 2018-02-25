@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>线性dp | 宝宝天龙</title>
+  <title>素数表 | 宝宝天龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="线性dp">
-<meta name="keywords" content="动态规划,线性dp">
+  <meta name="description" content="我对素数一无所知">
+<meta name="keywords" content="素数表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="线性dp">
-<meta property="og:url" content="http://yoursite.com/2017/10/31/线性dp/index.html">
+<meta property="og:title" content="素数表">
+<meta property="og:url" content="http://yoursite.com/2018/02/26/素数表/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="线性dp">
-<meta property="og:updated_time" content="2017-11-01T14:28:02.812Z">
+<meta property="og:description" content="我对素数一无所知">
+<meta property="og:updated_time" content="2018-02-25T18:37:54.108Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="线性dp">
-<meta name="twitter:description" content="线性dp">
+<meta name="twitter:title" content="素数表">
+<meta name="twitter:description" content="我对素数一无所知">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
   
@@ -155,20 +155,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-线性dp" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-素数表" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      线性dp
+      素数表
     </h1>
   
 
         
-        <a href="/2017/10/31/线性dp/" class="archive-article-date">
-  	<time datetime="2017-10-31T15:52:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
+        <a href="/2018/02/26/素数表/" class="archive-article-date">
+  	<time datetime="2018-02-25T18:29:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-26</time>
 </a>
         
       </header>
@@ -180,35 +180,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>线性dp<br><a id="more"></a></p>
+        <p>我对素数一无所知<br><a id="more"></a></p>
 <p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script></p>
-<h1 id="一般的线性递推式"><a href="#一般的线性递推式" class="headerlink" title="一般的线性递推式"></a>一般的线性递推式</h1><p>\( a_n = \sum_1^m c_i a_{n-i}\)</p>
-<p>特别的，m=2, \(c_1 = c_2 = a_1 = a_2 = 1\), 为斐波那契数列。<br>解决的方法： </p>
-<ul>
-<li>通项公式。然而在算法竞赛中并不适用</li>
-<li>快速幂(此时应该复习一波矩阵的乘法)</li>
-<li><del><font color="#FF3030"><strong>OEIS大法</strong></font></del></li>
-</ul>
-<h1 id="最长上升子序列-严格单调增"><a href="#最长上升子序列-严格单调增" class="headerlink" title="最长上升子序列(严格单调增)"></a>最长上升子序列(严格单调增)</h1><p>一般的解法：</p>
-<h3 id="更优的解法：O-nlogn"><a href="#更优的解法：O-nlogn" class="headerlink" title="更优的解法：O(nlogn)"></a>更优的解法：O(nlogn)</h3><ul>
-<li>状态：dp[i]: 长度为i的上升子序列的最末元素.若有多个长度为i的上升子序列，则记录其中最小的。那么dp[i] &lt; dp[i+1],即dp[]单调增</li>
-<li>对于每个\(A_i\),找j满足\(d_{j-1}&lt;A_i \le d_j\), 然后令\(d_j = A_i\)</li>
-<li>j可以使用二分查找lower_bound()</li>
-</ul>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">int</span> num[maxn];</div><div class="line"><span class="keyword">int</span> dp[maxn];</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">LIS</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> len = <span class="number">1</span>;</div><div class="line">    dp[<span class="number">0</span>] = num[<span class="number">0</span>];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;n; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(num[i]&gt;dp[len<span class="number">-1</span>])</div><div class="line">            dp[len++] = num[i];</div><div class="line">        <span class="keyword">else</span></div><div class="line">            dp[lower_bound(dp, dp+len, num[i])-dp] = num[i];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> len;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n))&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num[i]);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, LIS());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>若记录数字，那么就相当于记录一个前面的路径即可.(路径是逆序的)<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">int</span> num[maxn];</div><div class="line"><span class="keyword">int</span> dp[maxn];</div><div class="line"><span class="keyword">int</span> id[maxn];</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">7</span></div><div class="line"><span class="comment">1 5 3 4 6 2 7</span></div><div class="line"><span class="comment">*/</span></div><div class="line"><span class="keyword">int</span> pre[maxn];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">LIS</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> len = <span class="number">1</span>;</div><div class="line">    dp[<span class="number">0</span>] = num[<span class="number">0</span>];</div><div class="line">    pre[<span class="number">0</span>] = <span class="number">-1</span>;</div><div class="line">    id[<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;n; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(num[i]&gt;dp[len<span class="number">-1</span>])&#123;</div><div class="line">            pre[i] = id[len<span class="number">-1</span>];</div><div class="line">            id[len] = i;<span class="comment">//记录点的编号</span></div><div class="line">            dp[len++] = num[i];</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            <span class="comment">//若要替换新的点，记录这个点前面的编号</span></div><div class="line">            <span class="keyword">int</span> index = lower_bound(dp, dp+len, num[i])-dp;</div><div class="line">            id[index] = i;</div><div class="line">            pre[i] = pre[index];</div><div class="line">            dp[index] = num[i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> len;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n))&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num[i]);</div><div class="line">        <span class="keyword">int</span> ans = LIS();</div><div class="line">        <span class="keyword">int</span> index;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">            <span class="keyword">if</span>(num[i] == dp[ans<span class="number">-1</span>])&#123;</div><div class="line">                index = i;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, num[index]);</div><div class="line">        <span class="keyword">while</span>(pre[index] != <span class="number">-1</span>)&#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d "</span>, num[pre[index]]);</div><div class="line">            index = pre[index];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>数字三角形②<br>路径的权值mod m的最大值</p>
-<ul>
-<li>表示状态：f[i][j][k]:表示第i行第j列的路径和mod m是否等于k，记录一个bool值。</li>
-<li>答案：最后扫描一遍最后一行就可以了</li>
-</ul>
-<p>数字三角形③<br>路径必须要经过中间的某个点：</p>
-<ul>
-<li>method①：将这一行将数字三角形分成两部分，做两遍dp.</li>
-<li>method②：将必须经过的点<font color="#FF3030"><strong>设置一个非常大的权值</strong></font>，从而dp的时候较大的值一定会选择这个点。最后的答案减去这个比较大的值就行了。</li>
-</ul>
-<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1><p>补充lrj紫书的习题。</p>
-
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本来今天打比赛的时候，一心想要打出1e9范围内的素数表，直到后来用python打了出来。。。</p>
+<blockquote>
+<p>pip install primesieve</p>
+</blockquote>
+<p>1e9范围内有50847534个素数，符合\(\frac{n}{ln(n)}\)的规律。<br>打出来的素数表的txt文本大小有478Mb之大。我真是一个智障，还痴心想要把打的表粘上去。<br>明天给自己的数论加一点技能点。。。</p>
+<p>学习如何减小筛选素数的范围，比如今天做的那个二分求等比数列的和的小技巧，其实还不是很懂。</p>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
 
       
@@ -221,11 +201,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">动态规划</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">线性dp</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">素数表</a>
         		</li>
       		
 		</ul>
@@ -281,7 +257,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/31/线性dp/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/02/26/素数表/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -295,18 +271,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/11/01/区间dp/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          区间dp
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/10/31/背包问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">背包问题</div>
+    <a href="/2018/02/25/等比数列的二分求和/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">等比数列的二分求和</div>
       <i class="icon-circle-right"></i>
     </a>
   
