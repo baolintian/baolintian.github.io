@@ -15,10 +15,14 @@
 <meta property="og:url" content="http://yoursite.com/2018/02/25/等比数列的二分求和/index.html">
 <meta property="og:site_name" content="宝宝天龙">
 <meta property="og:description" content="qsc视频中一道水题引发的一系列的知识">
-<meta property="og:updated_time" content="2018-02-25T15:10:13.944Z">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?number&space;=&space;p_1^{k_1}*p_2^{k_2}*\dots*p_n^{k_n},&space;(p_1,&space;p_2,&space;\dots,&space;p_n\in&space;primes)">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?sum\quad&space;factors&space;=&space;(1+p_1+p_1^2+\dots+p_1^{k_1})*(1+p_2+p_2^2+\dots+p_2^{k_2})*\dots*(1+p_n+p_n^2+\dots+p_n^{k_n})&space;\\&space;\\&space;=&space;\frac{1-p_1^{k_1+1}}{1-p_1}&space;+&space;\frac{1-p_2^{k_2+1}}{1-p_2}+\dots&space;+&space;\frac{1-p_n^{k_n+1}}{1-p_n}">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?\frac{p_i^{k_i*B+1}-1}{p_i-1}\%p=\frac{(p_i^{k_i*B+1}-1)\%(p*(p_i-1))}{p_i-1}=\frac{p_i^{k_i*B+1}\%(p*(p_i-1))+{\color{Red}&space;(-1\%p*(p_i-1))}}{p_i-1}=\frac{p_i^{k_i*B+1}\%p*(p_i-1))+{\color{Red}p*(p_i-1)-1}}{p_i-1}">
+<meta property="og:updated_time" content="2018-02-27T05:26:58.960Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="等比数列的二分求和">
 <meta name="twitter:description" content="qsc视频中一道水题引发的一系列的知识">
+<meta name="twitter:image" content="http://latex.codecogs.com/gif.latex?number&space;=&space;p_1^{k_1}*p_2^{k_2}*\dots*p_n^{k_n},&space;(p_1,&space;p_2,&space;\dots,&space;p_n\in&space;primes)">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
   
@@ -188,16 +192,21 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">35</span>;</div><div class="line"><span class="keyword">int</span> n, k, m;</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Mat</span>&#123;</span></div><div class="line">    ll mat[maxn][maxn];<span class="comment">//以后一定用ll,不适时的进行取模就会导致错误。</span></div><div class="line">    Mat()&#123;</div><div class="line">        <span class="built_in">memset</span>(mat, <span class="number">0</span>, <span class="keyword">sizeof</span>(mat));</div><div class="line">   &#125;</div><div class="line">&#125;;</div><div class="line"><span class="function">Mat <span class="title">mul</span><span class="params">(Mat a, Mat b, <span class="keyword">int</span> n, <span class="keyword">int</span> mod)</span></span>&#123;</div><div class="line">    Mat ans;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>; k&lt;n; k++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n; j++)&#123;</div><div class="line">                ans.mat[i][j]+=(a.mat[i][k]*b.mat[k][j])%mod;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">Mat <span class="title">pow</span><span class="params">(Mat a, <span class="keyword">int</span> b, <span class="keyword">int</span> n, <span class="keyword">int</span> mod)</span></span>&#123;</div><div class="line">    Mat ans;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) ans.mat[i][i] = <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(b)&#123;</div><div class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)&#123;</div><div class="line">            ans = mul(ans, a, n, mod);</div><div class="line">        &#125;</div><div class="line">        a = mul(a, a, n, mod);</div><div class="line">        b &gt;&gt;= <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">Mat <span class="title">add</span><span class="params">(Mat a, Mat b, <span class="keyword">int</span> n, <span class="keyword">int</span> mod)</span></span>&#123;</div><div class="line">    Mat ans;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n; j++)&#123;</div><div class="line">            ans.mat[i][j] = (a.mat[i][j]+b.mat[i][j])%mod;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">Mat <span class="title">sum</span><span class="params">(Mat a, <span class="keyword">int</span> k, <span class="keyword">int</span> n, <span class="keyword">int</span> mod)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(k == <span class="number">1</span>) <span class="keyword">return</span> a;</div><div class="line">    Mat half_sum = sum(a, k/<span class="number">2</span>, n, mod);</div><div class="line">    Mat ans;</div><div class="line">    <span class="keyword">if</span>(k&amp;<span class="number">1</span>)&#123;</div><div class="line">        Mat a1 = <span class="built_in">pow</span>(a, k/<span class="number">2</span>+<span class="number">1</span>, n, mod);</div><div class="line">        ans = add(half_sum, mul(half_sum, a1, n, mod), n, mod);</div><div class="line">        ans = add(ans, a1, n, mod);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        Mat a1 = <span class="built_in">pow</span>(a, k/<span class="number">2</span>, n, mod);</div><div class="line">        ans = add(half_sum, mul(half_sum, a1, n, mod), n, mod);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;n, &amp;k, &amp;m))&#123;</div><div class="line">        Mat ma;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n; j++)&#123;</div><div class="line">                <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;ma.mat[i][j]);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        Mat ans = sum(ma, k, n, m);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">            <span class="keyword">int</span> j=<span class="number">0</span>;</div><div class="line">            <span class="keyword">for</span>(j=<span class="number">0</span>; j&lt;n<span class="number">-1</span>; j++)&#123;</div><div class="line">                <span class="built_in">printf</span>(<span class="string">"%d "</span>, ans.mat[i][j]);</div><div class="line">            &#125;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans.mat[i][j]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>前面的都是为这做铺垫<br><a href="http://poj.org/problem?id=1845" target="_blank" rel="external">poj1845 Subdiv</a></p>
 <h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><ol>
-<li>先用唯一分解定理分解该数</li>
-<li>约数和定理</li>
-<li>然后使用二分求等比数列的和</li>
+<li>先用唯一分解定理分解该数<br><img src="http://latex.codecogs.com/gif.latex?number&space;=&space;p_1^{k_1}*p_2^{k_2}*\dots*p_n^{k_n},&space;(p_1,&space;p_2,&space;\dots,&space;p_n\in&space;primes)" title="number = p_1^{k_1}*p_2^{k_2}*\dots*p_n^{k_n}, (p_1, p_2, \dots, p_n\in primes)"></li>
+<li>约数和定理<br><img src="http://latex.codecogs.com/gif.latex?sum\quad&space;factors&space;=&space;(1&plus;p_1&plus;p_1^2&plus;\dots&plus;p_1^{k_1})*(1&plus;p_2&plus;p_2^2&plus;\dots&plus;p_2^{k_2})*\dots*(1&plus;p_n&plus;p_n^2&plus;\dots&plus;p_n^{k_n})&space;\\&space;\\&space;=&space;\frac{1-p_1^{k_1&plus;1}}{1-p_1}&space;&plus;&space;\frac{1-p_2^{k_2&plus;1}}{1-p_2}&plus;\dots&space;&plus;&space;\frac{1-p_n^{k_n&plus;1}}{1-p_n}" title="sum\quad factors = (1+p_1+p_1^2+\dots+p_1^{k_1})*(1+p_2+p_2^2+\dots+p_2^{k_2})*\dots*(1+p_n+p_n^2+\dots+p_n^{k_n}) \\ \\ = \frac{1-p_1^{k_1+1}}{1-p_1} + \frac{1-p_2^{k_2+1}}{1-p_2}+\dots + \frac{1-p_n^{k_n+1}}{1-p_n}"><br>第一个式子可以用二分求和来继续的求解，第二个化简的分式的形式可以用逆元来求解。</li>
+<li>然后使用二分求等比数列的和(或者使用逆元来求解)</li>
 </ol>
 <p>当然这一道题还可以用逆元来做，具体等以后的实现。<br><a href="http://blog.csdn.net/acdreamers/article/details/8220787" target="_blank" rel="external">逆元的实现</a></p>
 <p>若枚举5e7之间的所有的素数，那么结果就是T.<br>我觉的其中的缩小数字的搜索范围那一块处理的很奇妙，可以积累一下这个技巧。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; p[i]*p[i]&lt;a&amp;&amp;i&lt;cnt; i++)&#123;</div><div class="line">        <span class="keyword">int</span> tot=<span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span>(a%p[i] == <span class="number">0</span>)&#123;</div><div class="line">            tot++;</div><div class="line">            a /= p[i];</div><div class="line">        &#125;</div><div class="line">        ans *= (sum(p[i], tot*b)%mod);</div><div class="line">        ans %= mod;<span class="comment">//注意及时的模数</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(a &gt; <span class="number">1</span>)&#123;</div><div class="line">        ans *= (sum(a, b)%mod);</div><div class="line">        ans %= mod;<span class="comment">//注意及时的模数</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
 <h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> mod = <span class="number">9901</span>;</div><div class="line"><span class="keyword">int</span> A, B;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e4</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="keyword">bool</span> prime[maxn];</div><div class="line"><span class="keyword">int</span> p[maxn];</div><div class="line"><span class="keyword">int</span> cnt;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">get_prime</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>; i&lt;maxn; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(prime[i])&#123;</div><div class="line">            p[cnt++] = i;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i+i; j&lt;maxn; j+=i)&#123;</div><div class="line">                prime[j] = <span class="literal">false</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function">ll <span class="title">pow_mod</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    ll ans = <span class="number">1</span>;</div><div class="line">    a = a%mod;</div><div class="line">    <span class="keyword">while</span>(n)&#123;</div><div class="line">        <span class="keyword">if</span>(n&amp;<span class="number">1</span>)&#123;</div><div class="line">            ans = ans*a%mod;</div><div class="line">        &#125;</div><div class="line">        a = a*a%mod;</div><div class="line">        n&gt;&gt;=<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    ll half_sum = sum(a, (n<span class="number">-1</span>)/<span class="number">2</span>);</div><div class="line">    ll ans;</div><div class="line">    <span class="keyword">if</span>(n&amp;<span class="number">1</span>)&#123;</div><div class="line">        ll a1 = pow_mod(a, (n+<span class="number">1</span>)/<span class="number">2</span>);</div><div class="line">        ans = (half_sum+half_sum%mod*a1%mod)%mod;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">        ll a1 = pow_mod(a, (n+<span class="number">1</span>)/<span class="number">2</span>);</div><div class="line">        ans = (half_sum+half_sum%mod*a1%mod)%mod;</div><div class="line">        ans = (ans + pow_mod(a, n))%mod;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>&#123;</div><div class="line">    ll ans = <span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> temp = a;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; p[i]*p[i]&lt;a&amp;&amp;i&lt;cnt; i++)&#123;</div><div class="line">        <span class="keyword">int</span> tot=<span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span>(a%p[i] == <span class="number">0</span>)&#123;</div><div class="line">            tot++;</div><div class="line">            a /= p[i];</div><div class="line">        &#125;</div><div class="line">        ans *= (sum(p[i], tot*b)%mod);</div><div class="line">        ans %= mod;<span class="comment">//注意及时的模数</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(a &gt; <span class="number">1</span>)&#123;</div><div class="line">        ans *= (sum(a, b)%mod);</div><div class="line">        ans %= mod;<span class="comment">//注意及时的模数</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;maxn; i++) prime[i] = <span class="literal">true</span>;</div><div class="line">    cnt = <span class="number">0</span>;</div><div class="line">    get_prime();</div><div class="line"></div><div class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;A, &amp;B))&#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, solve(A, B));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="逆元AC代码"><a href="#逆元AC代码" class="headerlink" title="逆元AC代码"></a>逆元AC代码</h2><blockquote>
+<p>ll solve(ll a, ll b)</p>
+</blockquote>
+<p>这个一开始没有使用ll类型害死人。<br><img src="http://latex.codecogs.com/gif.latex?\frac{p_i^{k_i*B&plus;1}-1}{p_i-1}\%p=\frac{(p_i^{k_i*B&plus;1}-1)\%(p*(p_i-1))}{p_i-1}=\frac{p_i^{k_i*B&plus;1}\%(p*(p_i-1))&plus;{\color{Red}&space;(-1\%p*(p_i-1))}}{p_i-1}=\frac{p_i^{k_i*B&plus;1}\%p*(p_i-1))&plus;{\color{Red}p*(p_i-1)-1}}{p_i-1}" title="\frac{p_i^{k_i*B+1}-1}{p_i-1}\%p=\frac{(p_i^{k_i*B+1}-1)\%(p*(p_i-1))}{p_i-1}=\frac{p_i^{k_i*B+1}\%(p*(p_i-1))+{\color{Red} (-1\%p*(p_i-1))}}{p_i-1}=\frac{p_i^{k_i*B+1}\%p*(p_i-1))+{\color{Red}p*(p_i-1)-1}}{p_i-1}"></p>
+<p>其中快速幂的时候使用了二分乘积。<br>因为mod·b的范围超过了int,a的范围在[0, mod·b]之间， 乘积的话会溢出long long ,而加法不会，所以要用乘积的快速幂。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> mod = <span class="number">9901</span>;<span class="comment">//9901 is a prime number.</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line">ll a, b;</div><div class="line"><span class="keyword">bool</span> primes[maxn];</div><div class="line"><span class="keyword">int</span> cnt = <span class="number">0</span>;</div><div class="line"><span class="keyword">int</span> p[maxn];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">is_prime</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>; i&lt;=maxn; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(primes[i])&#123;</div><div class="line">            p[cnt++] = i;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">2</span>*i; j&lt;=maxn; j+=i)&#123;</div><div class="line">                primes[j] = <span class="literal">false</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function">ll <span class="title">mul</span><span class="params">(ll a, ll b, ll mod)</span></span>&#123;</div><div class="line">    ll ans = <span class="number">0</span>;</div><div class="line">    <span class="comment">//a%=mod;</span></div><div class="line">    <span class="keyword">while</span>(b)&#123;</div><div class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>)&#123;</div><div class="line">            ans = (ans+a)%mod;</div><div class="line">        &#125;</div><div class="line">        b&gt;&gt;=<span class="number">1</span>;</div><div class="line">        a = (a+a)%mod;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function">ll <span class="title">pow_mod</span><span class="params">(ll a, ll n, ll p)</span></span>&#123;</div><div class="line">    ll ans = <span class="number">1</span>;</div><div class="line">    <span class="comment">//a = a%p;</span></div><div class="line">    <span class="keyword">while</span>(n)&#123;</div><div class="line">        <span class="keyword">if</span>(n&amp;<span class="number">1</span>)&#123;</div><div class="line">            ans = mul(ans, a, p);</div><div class="line">        &#125;</div><div class="line">        a = mul(a, a, p);</div><div class="line">        n&gt;&gt;=<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">ll <span class="title">solve</span><span class="params">(ll a, ll b)</span></span>&#123;</div><div class="line">    ll ans = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; p[i]*p[i]&lt;=a&amp;&amp;i&lt;cnt; i++)&#123;</div><div class="line">        <span class="keyword">int</span> num = <span class="number">0</span>;</div><div class="line">        <span class="keyword">if</span>(a%p[i] == <span class="number">0</span>)&#123;</div><div class="line">            <span class="keyword">while</span>(a%p[i] == <span class="number">0</span>)&#123;</div><div class="line">                num++;</div><div class="line">                a/=p[i];</div><div class="line">            &#125;</div><div class="line">            ll p_mod = (p[i]<span class="number">-1</span>)*mod;</div><div class="line">            ans *= ll(pow_mod(p[i], num*b+<span class="number">1</span>, p_mod)+(p_mod<span class="number">-1</span>))/(p[i]<span class="number">-1</span>);</div><div class="line">            ans %= mod;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(a&gt;<span class="number">1</span>)&#123;</div><div class="line">        ll p_mod = (a<span class="number">-1</span>)*mod;</div><div class="line">        ans *= ll(pow_mod(a, b+<span class="number">1</span>, p_mod)+(p_mod<span class="number">-1</span>))/(a<span class="number">-1</span>);</div><div class="line">        ans %= mod;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;maxn; i++) primes[i] = <span class="literal">true</span>;</div><div class="line">    is_prime();</div><div class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>, &amp;a, &amp;b))&#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, solve(a, b));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1><ul>
 <li>等比矩阵的和的构造方法</li>
-<li>逆元来实现poj1845.</li>
+<li>逆元来实现poj1845.(solved)</li>
 </ul>
 
       
@@ -452,18 +461,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">DAG最长路/最短路</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">KM算法</a>
               </li>
              
@@ -472,19 +469,35 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">DAG最长路/最短路</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
+                <a href="javascript:void(0)" class="js-tag color3">bitcoin</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
+                <a href="javascript:void(0)" class="js-tag color5">数字签名</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color2">密码哈希函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">工作量证明</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -508,35 +521,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">bitcoin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数字签名</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">密码哈希函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">工作量证明</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -548,7 +549,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tips</a>
+                <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -560,11 +569,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
+                <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
+                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -640,6 +649,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
               </li>
              
@@ -648,27 +661,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">数据可视化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">A*算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Dijkstra算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">素数表</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -680,15 +673,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
+                <a href="javascript:void(0)" class="js-tag color3">数论</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
+                <a href="javascript:void(0)" class="js-tag color4">素数表</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">线段树</a>
+                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -696,15 +689,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">A*算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Dijkstra算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">莫队算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -716,11 +713,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+                <a href="javascript:void(0)" class="js-tag color4">线段树</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">莫队算法</a>
               </li>
             
             <div class="clearfix"></div>
