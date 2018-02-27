@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>状压dp | 宝宝天龙</title>
+  <title>hash | 宝宝天龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="状态压缩：将集合的状态用一个数字表示，这个数字的每一位是0或者1，表示着一个元素的两种状态。此处应该介绍一下位运算和性质(脑补一下？)几大类状压dp:  TSP问题 密铺问题(轮廓线法) 插头dp 传统的状压dp问题后面的两类问题并不会。">
-<meta name="keywords" content="动态规划,状压dp">
+  <meta name="description" content="一维的hash，二维hash， 康拓展开">
+<meta name="keywords" content="hash">
 <meta property="og:type" content="article">
-<meta property="og:title" content="状压dp">
-<meta property="og:url" content="http://yoursite.com/2017/11/04/状压dp/index.html">
+<meta property="og:title" content="hash">
+<meta property="og:url" content="http://yoursite.com/2018/02/27/hash/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="状态压缩：将集合的状态用一个数字表示，这个数字的每一位是0或者1，表示着一个元素的两种状态。此处应该介绍一下位运算和性质(脑补一下？)几大类状压dp:  TSP问题 密铺问题(轮廓线法) 插头dp 传统的状压dp问题后面的两类问题并不会。">
-<meta property="og:updated_time" content="2017-11-04T17:53:49.507Z">
+<meta property="og:description" content="一维的hash，二维hash， 康拓展开">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?H(C)&space;=&space;c_1b^{m-1}+c_2b^{m-2}+\dots+c_mb^0">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?H(C)&space;=&space;c_1b^{m-1}+c_2b^{m-2}+\dots+c_mb^0&space;\\&space;H(C_1)&space;=&space;c_2b^{m-1}+c_3b^{m-2}+\dots+c_{m+1}b^0={\color{DarkOrange}&space;H(C)*b-c_1b^m+c_{m+1}b^0}&space;\\&space;generalize-the-formula:\\&space;H(S[k+1,\dots,&space;k+m+1])&space;=&space;{\color{Red}&space;H(S[k,&space;\dots,&space;k+m]*b-S[k]b^m+S[k+m+1])}">
+<meta property="og:updated_time" content="2018-02-27T06:53:54.809Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="状压dp">
-<meta name="twitter:description" content="状态压缩：将集合的状态用一个数字表示，这个数字的每一位是0或者1，表示着一个元素的两种状态。此处应该介绍一下位运算和性质(脑补一下？)几大类状压dp:  TSP问题 密铺问题(轮廓线法) 插头dp 传统的状压dp问题后面的两类问题并不会。">
+<meta name="twitter:title" content="hash">
+<meta name="twitter:description" content="一维的hash，二维hash， 康拓展开">
+<meta name="twitter:image" content="http://latex.codecogs.com/gif.latex?H(C)&space;=&space;c_1b^{m-1}+c_2b^{m-2}+\dots+c_mb^0">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
   
@@ -155,20 +158,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-状压dp" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-hash" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      状压dp
+      hash
     </h1>
   
 
         
-        <a href="/2017/11/04/状压dp/" class="archive-article-date">
-  	<time datetime="2017-11-04T09:31:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-04</time>
+        <a href="/2018/02/27/hash/" class="archive-article-date">
+  	<time datetime="2018-02-27T06:28:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-27</time>
 </a>
         
       </header>
@@ -180,45 +183,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>状态压缩：将集合的状态用一个数字表示，这个数字的每一位是0或者1，表示着一个元素的两种状态。<br>此处应该介绍一下<font color="#FF3003"><strong>位运算</strong></font>和性质(脑补一下？)<br>几大类状压dp:</p>
-<ul>
-<li>TSP问题</li>
-<li>密铺问题(轮廓线法)</li>
-<li>插头dp</li>
-<li>传统的状压dp问题<br>后面的两类问题并不会。</li>
-</ul>
-<a id="more"></a>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>TSP问题</p>
-<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><ul>
-<li>从0开始，经过图中<font color="#FF3003"><strong>所有的点有且仅有一次</strong></font>，最终回到原点</li>
-<li>这个图是完全图</li>
-<li>问最小的路径距离</li>
-</ul>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><ul>
-<li>状态设计: dp[i][state]:到达i这个点，状态为state的最短路,state的二进制每一位为1表示访问过了，0表示没有被访问过</li>
-<li>状态转移：<br>if(state|(1&lt;&lt;j) == 0) dp[j][state|(1&lt;&lt;j)] = min(dp[j][state|(1&lt;&lt;j)], dp[i][state]+dis[i][j]);</li>
-<li>边界：dp[0][0] = 0;</li>
-<li>结果: dp[0][(1&lt;&lt;n)-1]</li>
-</ul>
-<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><p>注意min()被重写了。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">int</span> dis[<span class="number">16</span>][<span class="number">16</span>];</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="keyword">int</span> dp[<span class="number">17</span>][<span class="number">1</span>&lt;&lt;<span class="number">16</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">min</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(x == <span class="number">-1</span>) <span class="keyword">return</span> y;</div><div class="line">    <span class="keyword">if</span>(y == <span class="number">-1</span>) <span class="keyword">return</span> x;</div><div class="line">    <span class="keyword">if</span>(x&lt;=y) <span class="keyword">return</span> x;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">return</span> y;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="built_in">memset</span>(dp, <span class="number">-1</span>, <span class="keyword">sizeof</span>(dp));</div><div class="line">    dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> state=<span class="number">0</span>; state&lt;(<span class="number">1</span>&lt;&lt;n); state++)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">            <span class="keyword">if</span>(dp[i][state] != <span class="number">-1</span>)&#123;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n; j++)&#123;</div><div class="line">                    <span class="keyword">if</span>(dp[j][state|(<span class="number">1</span>&lt;&lt;j) == <span class="number">0</span>])&#123;<span class="comment">//j点没有被访问过，注意中括号的位置！</span></div><div class="line">                        dp[j][state|(<span class="number">1</span>&lt;&lt;j)] = min(dp[i][state]+dis[i][j],</div><div class="line">                                                  dp[j][state|(<span class="number">1</span>&lt;&lt;j)]);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;dp[<span class="number">0</span>][(<span class="number">1</span>&lt;&lt;n)<span class="number">-1</span>]&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n&amp;&amp;n)&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=n; i++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;=n; j++)&#123;</div><div class="line">                <span class="built_in">cin</span>&gt;&gt;dis[i][j];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        n++;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>; k&lt;n; k++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n; j++)&#123;</div><div class="line"></div><div class="line">                    dis[i][j] = min(dis[i][j], dis[i][k]+dis[k][j]);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        solve();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p><a href="http://poj.org/problem?id=2411" target="_blank" rel="external">Mondriaan’s Dream</a></p>
-<h2 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h2><ul>
-<li>在n*m的格子中铺满1*2或者2*1的格子</li>
-<li>一共有多少种铺设方案</li>
-</ul>
-<h2 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h2><ul>
-<li>状态设计: dp[i][state]:第i行在前面i-1行<font color="#FF3003"><strong>全部铺满</strong></font>的情况下的状态state(因为第i-1行铺设的时候可能会竖着铺影响到第i行，把所有被第i-1行影响到的格子记录成state)</li>
-<li><p>状态转移:<br>①若第j列被第i-1行影响了，那么跳这一列在第j+1列铺<br>②竖着铺，影响到第i+1行的第j列的格子(改变nex).<br>③横着铺，若第j+1列是空着的，那么直接跳到第j+2列铺，否则在第j列只能竖着铺。（横着铺不影响第i+1行的状态，因此不需要改变nex）</p>
-</li>
-<li><p>边界: dp[0][0] = 1;（个人感觉边界的起始点设置的很神奇，空即是有还是无?）</p>
-</li>
-<li>结果: dp[n][0],（行从0开始到n-1）state == 0<font color="#FF3003"><strong>表示第n+1行上面没有铺设任何的格子</strong></font>。 </li>
-</ul>
-<h2 id="AC代码-1"><a href="#AC代码-1" class="headerlink" title="AC代码"></a>AC代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">int</span> h, w;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">11</span>;</div><div class="line"><span class="keyword">long</span> <span class="keyword">long</span> dp[maxn+<span class="number">3</span>][<span class="number">1</span>&lt;&lt;maxn];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> column, <span class="keyword">int</span> row, <span class="keyword">int</span> state, <span class="keyword">int</span> nex)</span></span>&#123;</div><div class="line">    <span class="comment">//nex表示下一行的状态</span></div><div class="line">    <span class="keyword">if</span>(column == w)&#123;</div><div class="line">        dp[row+<span class="number">1</span>][nex] += dp[row][state];</div><div class="line">        <span class="keyword">return</span> ;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//这个一开始想错了emmmmm，注意位运算表示的意义</span></div><div class="line">    <span class="comment">// 区分&gt;0和 == 1 的差别！</span></div><div class="line">    <span class="keyword">if</span>(((<span class="number">1</span>&lt;&lt;column)&amp;state) &gt; <span class="number">0</span>)dfs(column+<span class="number">1</span>, row, state, nex);</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">      dfs(column+<span class="number">1</span>, row, state, (nex|(<span class="number">1</span>&lt;&lt;column)));</div><div class="line">      <span class="keyword">if</span>(column+<span class="number">1</span>&lt;w&amp;&amp;(state&amp;(<span class="number">1</span>&lt;&lt;(column+<span class="number">1</span>))) == <span class="number">0</span>)</div><div class="line">            dfs(column+<span class="number">2</span>, row, state, nex);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;h, &amp;w)&amp;&amp;h+w!=<span class="number">0</span>)&#123;</div><div class="line">        <span class="built_in">memset</span>(dp, <span class="number">0</span>, <span class="keyword">sizeof</span>(dp));</div><div class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;<span class="comment">//初始条件很有意思，它的实际意义呢？</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;h; i++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> state = <span class="number">0</span>; state&lt;(<span class="number">1</span>&lt;&lt;w); state++)&#123;</div><div class="line">                <span class="keyword">if</span>(dp[i][state])&#123;</div><div class="line">                    dfs(<span class="number">0</span>, i, state, <span class="number">0</span>);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, dp[h][<span class="number">0</span>]);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1><p><a href="https://njzwj.github.io/2017/06/28/plug-dp-101/" target="_blank" rel="external">插头dp,轮廓线题目推荐</a><br>看艾教的ppt,很多都不会emmmm被菜醒。</p>
-
+        <p>一维的hash，二维hash， 康拓展开<br><a id="more"></a></p>
+<p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script></p>
+<h1 id="一般的hash函数的定义"><a href="#一般的hash函数的定义" class="headerlink" title="一般的hash函数的定义"></a>一般的hash函数的定义</h1><p>\(C = c_1c_2c_3\dotsc_m\), C代表的是一个长度为m的字符串。<br>hash函数的目的是用一个数字唯一的表示一个字符串。<br><img src="http://latex.codecogs.com/gif.latex?H(C)&space;=&space;c_1b^{m-1}&plus;c_2b^{m-2}&plus;\dots&plus;c_mb^0" title="H(C) = c_1b^{m-1}+c_2b^{m-2}+\dots+c_mb^0"></p>
+<p>下面就要进行递推的计算长度为m的子串的hash值了。<br><img src="http://latex.codecogs.com/gif.latex?H(C)&space;=&space;c_1b^{m-1}&plus;c_2b^{m-2}&plus;\dots&plus;c_mb^0&space;\\&space;H(C_1)&space;=&space;c_2b^{m-1}&plus;c_3b^{m-2}&plus;\dots&plus;c_{m&plus;1}b^0={\color{DarkOrange}&space;H(C)*b-c_1b^m&plus;c_{m&plus;1}b^0}&space;\\&space;generalize-the-formula:\\&space;H(S[k&plus;1,\dots,&space;k&plus;m&plus;1])&space;=&space;{\color{Red}&space;H(S[k,&space;\dots,&space;k&plus;m]*b-S[k]b^m&plus;S[k&plus;m&plus;1])}" title="H(C) = c_1b^{m-1}+c_2b^{m-2}+\dots+c_mb^0 \\ H(C_1) = c_2b^{m-1}+c_3b^{m-2}+\dots+c_{m+1}b^0={\color{DarkOrange} H(C)*b-c_1b^m+c_{m+1}b^0} \\ generalize-the-formula:\\ H(S[k+1,\dots, k+m+1]) = {\color{Red} H(S[k, \dots, k+m]*b-S[k]b^m+S[k+m+1])}"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>运用了unsigned long long 自动溢出的特性，就不需要进行取模了。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</div><div class="line"><span class="keyword">const</span> ull base = <span class="number">1e9</span>+<span class="number">7</span>;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">solve</span><span class="params">(<span class="built_in">string</span> a, <span class="built_in">string</span> b)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> len_a = a.length();</div><div class="line">    <span class="keyword">int</span> len_b = b.length();</div><div class="line">    <span class="keyword">if</span>(len_a&gt;len_b) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    ull t = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;len_a; i++)&#123;</div><div class="line">        t*=base;</div><div class="line">    &#125;</div><div class="line">    ull ha, hb;</div><div class="line">    ha = hb = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;len_a; i++)&#123;</div><div class="line">        ha = ha*base+a[i];</div><div class="line">        hb = hb*base+b[i];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i+len_a&lt;=len_b; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(ha == hb) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        <span class="keyword">if</span>(i+len_a&lt;len_b)&#123;</div><div class="line">            hb = hb*base+b[i+len_a]-t*b[i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">string</span> a, b;</div><div class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b)&#123;</div><div class="line">        <span class="keyword">if</span>(solve(a, b))&#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"YES\n"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"NO\n"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
 
       
@@ -231,11 +201,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">动态规划</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">状压dp</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hash</a>
         		</li>
       		
 		</ul>
@@ -291,7 +257,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/11/04/状压dp/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/02/27/hash/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -305,18 +271,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/11/05/dp优化-连续递推的时间和空间优化/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          dp优化--连续递推的时间和空间优化
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/11/01/区间dp/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">区间dp</div>
+    <a href="/2018/02/26/素数表/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">素数表</div>
       <i class="icon-circle-right"></i>
     </a>
   
