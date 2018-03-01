@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/09/matlab语法复习/index.html">
 <meta property="og:site_name" content="宝宝天龙">
 <meta property="og:description" content="复习一波matlab，真的是什么都忘了。。。">
-<meta property="og:updated_time" content="2017-11-26T15:18:23.567Z">
+<meta property="og:updated_time" content="2018-03-01T13:43:46.465Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="matlab语法复习">
 <meta name="twitter:description" content="复习一波matlab，真的是什么都忘了。。。">
@@ -204,6 +204,7 @@
 <p>初始化预分配一个数组提高效率：<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">num = <span class="built_in">zeros</span>(<span class="number">1</span>, <span class="number">100</span>);</div><div class="line"></div><div class="line">ii = <span class="number">1</span>: <span class="number">100</span>;</div><div class="line">num = ii.^<span class="number">2</span>;</div></pre></td></tr></table></figure></p>
 <h1 id="sym的使用"><a href="#sym的使用" class="headerlink" title="sym的使用"></a>sym的使用</h1><p>定义一个变量：syms x y<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">syms x a b</div><div class="line">subs(int(x*<span class="built_in">exp</span>(x), a, b), [a, b], [<span class="number">0</span>, <span class="number">2</span>])</div><div class="line"> </div><div class="line"><span class="built_in">ans</span> =</div><div class="line"> </div><div class="line"><span class="built_in">exp</span>(<span class="number">2</span>) + <span class="number">1</span></div><div class="line"></div><div class="line">syms a b r x y </div><div class="line">solve(<span class="string">'(x-a)^2+(y-b)^2=r^2'</span>,<span class="string">'x'</span>) </div><div class="line">solve(<span class="string">'(x-a)^2+(y-b)^2=r^2'</span>,<span class="string">'y'</span>)</div><div class="line">a = sym(<span class="string">'sqrt(2)'</span>)<span class="comment">%用来保存一个形式变量，而且这些变量是可以参与数值运算的。</span></div></pre></td></tr></table></figure></p>
 <h1 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">%% 画出包络线</span></div><div class="line">&gt;&gt; t = (<span class="number">0</span>:<span class="built_in">pi</span>/<span class="number">100</span>:<span class="built_in">pi</span>)';</div><div class="line">&gt;&gt; y1 = <span class="built_in">sin</span>(t)*[<span class="number">1</span>, <span class="number">-1</span>];</div><div class="line">&gt;&gt; y2 = <span class="built_in">sin</span>(t).*<span class="built_in">sin</span>(<span class="number">9</span>*t);</div><div class="line">&gt;&gt; t3 = <span class="built_in">pi</span>*(<span class="number">0</span>:<span class="number">9</span>)/<span class="number">9</span>;</div><div class="line">&gt;&gt; y3 = <span class="built_in">sin</span>(t3).*<span class="built_in">sin</span>(<span class="number">9</span>*t3);</div><div class="line">&gt;&gt; plot(t, y1, <span class="string">'r:'</span>, t, y2, <span class="string">'b'</span>, t3, y3, <span class="string">'bo'</span>)</div><div class="line"></div><div class="line"></div><div class="line">ezplot()<span class="comment">%设置画图的上下界</span></div></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">&gt;&gt; syms x a b</div><div class="line">&gt;&gt; subs(int(x*<span class="built_in">exp</span>(x), a, b), [a, b], [<span class="number">0</span>, <span class="number">2</span>])</div><div class="line"> </div><div class="line"><span class="built_in">ans</span> =</div><div class="line"> </div><div class="line"><span class="built_in">exp</span>(<span class="number">2</span>) + <span class="number">1</span></div><div class="line"></div><div class="line">syms a b r x y </div><div class="line">solve(<span class="string">'(x-a)^2+(y-b)^2=r^2'</span>,<span class="string">'x'</span>) </div><div class="line">solve(<span class="string">'(x-a)^2+(y-b)^2=r^2'</span>,<span class="string">'y'</span>)</div><div class="line"></div><div class="line">hist画出来的图的纵坐标表示所在区间范围内数字的个数。</div><div class="line"></div><div class="line"></div><div class="line">GM模型以算法的实现</div><div class="line">元胞自动机的科普</div><div class="line">学会画好看的图形</div><div class="line">待续。。。多看一点理论吧</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">matlab向量化的思想，尽量少的使用<span class="keyword">for</span>循环</div><div class="line">什么是运筹学？计算机专业的仿真能力的优势在哪里？</div><div class="line">涂色的函数：fill()</div><div class="line">spline可以修正误差曲线。</div><div class="line">randi([<span class="number">0</span>, <span class="number">100</span>], <span class="number">1</span>, <span class="number">100</span>);</div><div class="line">histogram来画重叠的图像。</div><div class="line">用画图菜单里面的选亮菜单可以造假。。。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">&gt;&gt; x = <span class="built_in">rand</span>(<span class="number">1</span>, <span class="number">100</span>);</div><div class="line">&gt;&gt; x = <span class="built_in">rand</span>(<span class="number">1</span>, <span class="number">100</span>).*<span class="number">10</span>;</div><div class="line">&gt;&gt; noise = <span class="built_in">randn</span>(<span class="number">1</span>, <span class="number">100</span>);</div><div class="line">&gt;&gt; y = <span class="number">2</span>*x+<span class="number">5</span>+noise;</div><div class="line">&gt;&gt; figure;</div><div class="line">&gt;&gt; plot(x, y, <span class="string">'b*'</span>);</div><div class="line">&gt;&gt; grid on;</div><div class="line">&gt;&gt; </div><div class="line"></div><div class="line">lsqcurvefit</div></pre></td></tr></table></figure>
 <h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
 
@@ -493,6 +494,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
@@ -513,6 +518,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">bitcoin</a>
               </li>
              
@@ -529,23 +542,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
+                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -554,14 +551,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -586,6 +575,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -625,15 +618,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -646,18 +639,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">树形dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">分治算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">树上分治</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -677,11 +658,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Gale-Shapley Algorithm</a>
+                <a href="javascript:void(0)" class="js-tag color5">分治算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">求婚-拒绝算法</a>
+                <a href="javascript:void(0)" class="js-tag color5">树上分治</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -697,7 +678,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
+                <a href="javascript:void(0)" class="js-tag color3">Gale-Shapley Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">求婚-拒绝算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">素数表</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -709,15 +698,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">素数表</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">网络爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -729,11 +714,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">高斯消元</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">二进制高斯消元</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
               </li>
             
             <div class="clearfix"></div>

@@ -17,7 +17,7 @@
 <meta property="og:description" content="一维的hash，二维hash， 康拓展开">
 <meta property="og:image" content="http://latex.codecogs.com/gif.latex?H(C)&space;=&space;c_1b^{m-1}+c_2b^{m-2}+\dots+c_mb^0">
 <meta property="og:image" content="http://latex.codecogs.com/gif.latex?H(C)&space;=&space;c_1b^{m-1}+c_2b^{m-2}+\dots+c_mb^0&space;\\&space;H(C_1)&space;=&space;c_2b^{m-1}+c_3b^{m-2}+\dots+c_{m+1}b^0={\color{DarkOrange}&space;H(C)*b-c_1b^m+c_{m+1}b^0}&space;\\&space;generalize-the-formula:\\&space;H(S[k+1,\dots,&space;k+m+1])&space;=&space;{\color{Red}&space;H(S[k,&space;\dots,&space;k+m]*b-S[k]b^m+S[k+m+1])}">
-<meta property="og:updated_time" content="2018-02-27T06:53:54.809Z">
+<meta property="og:updated_time" content="2018-02-28T02:13:04.667Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hash">
 <meta name="twitter:description" content="一维的hash，二维hash， 康拓展开">
@@ -188,7 +188,7 @@
 <h1 id="一般的hash函数的定义"><a href="#一般的hash函数的定义" class="headerlink" title="一般的hash函数的定义"></a>一般的hash函数的定义</h1><p>\(C = c_1c_2c_3\dotsc_m\), C代表的是一个长度为m的字符串。<br>hash函数的目的是用一个数字唯一的表示一个字符串。<br><img src="http://latex.codecogs.com/gif.latex?H(C)&space;=&space;c_1b^{m-1}&plus;c_2b^{m-2}&plus;\dots&plus;c_mb^0" title="H(C) = c_1b^{m-1}+c_2b^{m-2}+\dots+c_mb^0"></p>
 <p>下面就要进行递推的计算长度为m的子串的hash值了。<br><img src="http://latex.codecogs.com/gif.latex?H(C)&space;=&space;c_1b^{m-1}&plus;c_2b^{m-2}&plus;\dots&plus;c_mb^0&space;\\&space;H(C_1)&space;=&space;c_2b^{m-1}&plus;c_3b^{m-2}&plus;\dots&plus;c_{m&plus;1}b^0={\color{DarkOrange}&space;H(C)*b-c_1b^m&plus;c_{m&plus;1}b^0}&space;\\&space;generalize-the-formula:\\&space;H(S[k&plus;1,\dots,&space;k&plus;m&plus;1])&space;=&space;{\color{Red}&space;H(S[k,&space;\dots,&space;k&plus;m]*b-S[k]b^m&plus;S[k&plus;m&plus;1])}" title="H(C) = c_1b^{m-1}+c_2b^{m-2}+\dots+c_mb^0 \\ H(C_1) = c_2b^{m-1}+c_3b^{m-2}+\dots+c_{m+1}b^0={\color{DarkOrange} H(C)*b-c_1b^m+c_{m+1}b^0} \\ generalize-the-formula:\\ H(S[k+1,\dots, k+m+1]) = {\color{Red} H(S[k, \dots, k+m]*b-S[k]b^m+S[k+m+1])}"></p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>运用了unsigned long long 自动溢出的特性，就不需要进行取模了。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</div><div class="line"><span class="keyword">const</span> ull base = <span class="number">1e9</span>+<span class="number">7</span>;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">solve</span><span class="params">(<span class="built_in">string</span> a, <span class="built_in">string</span> b)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> len_a = a.length();</div><div class="line">    <span class="keyword">int</span> len_b = b.length();</div><div class="line">    <span class="keyword">if</span>(len_a&gt;len_b) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    ull t = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;len_a; i++)&#123;</div><div class="line">        t*=base;</div><div class="line">    &#125;</div><div class="line">    ull ha, hb;</div><div class="line">    ha = hb = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;len_a; i++)&#123;</div><div class="line">        ha = ha*base+a[i];</div><div class="line">        hb = hb*base+b[i];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i+len_a&lt;=len_b; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(ha == hb) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        <span class="keyword">if</span>(i+len_a&lt;len_b)&#123;</div><div class="line">            hb = hb*base+b[i+len_a]-t*b[i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">string</span> a, b;</div><div class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b)&#123;</div><div class="line">        <span class="keyword">if</span>(solve(a, b))&#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"YES\n"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"NO\n"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
+<h1 id="二维hash"><a href="#二维hash" class="headerlink" title="二维hash"></a>二维hash</h1><h1 id="康拓展开-amp-八数码问题"><a href="#康拓展开-amp-八数码问题" class="headerlink" title="康拓展开&amp;八数码问题"></a>康拓展开&amp;八数码问题</h1><h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
 
       
@@ -270,6 +270,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/02/28/二维线段树/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          二维线段树
+        
+      </div>
+    </a>
   
   
     <a href="/2018/02/26/素数表/" id="article-nav-older" class="article-nav-link-wrap">
@@ -464,6 +473,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
@@ -484,6 +497,14 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">bitcoin</a>
               </li>
              
@@ -500,23 +521,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
+                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -525,14 +530,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -557,6 +554,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -596,15 +597,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -617,18 +618,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">树形dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">分治算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">树上分治</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -648,11 +637,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Gale-Shapley Algorithm</a>
+                <a href="javascript:void(0)" class="js-tag color5">分治算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">求婚-拒绝算法</a>
+                <a href="javascript:void(0)" class="js-tag color5">树上分治</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -668,7 +657,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
+                <a href="javascript:void(0)" class="js-tag color3">Gale-Shapley Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">求婚-拒绝算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">素数表</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -680,15 +677,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">素数表</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">网络爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -700,11 +693,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">高斯消元</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">二进制高斯消元</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
               </li>
             
             <div class="clearfix"></div>
