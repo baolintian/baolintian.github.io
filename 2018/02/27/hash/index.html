@@ -17,7 +17,9 @@
 <meta property="og:description" content="一维的hash，二维hash， 康拓展开">
 <meta property="og:image" content="http://latex.codecogs.com/gif.latex?H(C)&space;=&space;c_1b^{m-1}+c_2b^{m-2}+\dots+c_mb^0">
 <meta property="og:image" content="http://latex.codecogs.com/gif.latex?H(C)&space;=&space;c_1b^{m-1}+c_2b^{m-2}+\dots+c_mb^0&space;\\&space;H(C_1)&space;=&space;c_2b^{m-1}+c_3b^{m-2}+\dots+c_{m+1}b^0={\color{DarkOrange}&space;H(C)*b-c_1b^m+c_{m+1}b^0}&space;\\&space;generalize-the-formula:\\&space;H(S[k+1,\dots,&space;k+m+1])&space;=&space;{\color{Red}&space;H(S[k,&space;\dots,&space;k+m]*b-S[k]b^m+S[k+m+1])}">
-<meta property="og:updated_time" content="2018-02-28T02:13:04.667Z">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?hash\_value=a_n*(n-1)!+a_{n-1}*(n-2)!+\dots+a_1*0!">
+<meta property="og:image" content="https://t1.picb.cc/uploads/2018/03/02/Ys9tR.jpg">
+<meta property="og:updated_time" content="2018-03-02T03:12:05.041Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hash">
 <meta name="twitter:description" content="一维的hash，二维hash， 康拓展开">
@@ -188,7 +190,13 @@
 <h1 id="一般的hash函数的定义"><a href="#一般的hash函数的定义" class="headerlink" title="一般的hash函数的定义"></a>一般的hash函数的定义</h1><p>\(C = c_1c_2c_3\dotsc_m\), C代表的是一个长度为m的字符串。<br>hash函数的目的是用一个数字唯一的表示一个字符串。<br><img src="http://latex.codecogs.com/gif.latex?H(C)&space;=&space;c_1b^{m-1}&plus;c_2b^{m-2}&plus;\dots&plus;c_mb^0" title="H(C) = c_1b^{m-1}+c_2b^{m-2}+\dots+c_mb^0"></p>
 <p>下面就要进行递推的计算长度为m的子串的hash值了。<br><img src="http://latex.codecogs.com/gif.latex?H(C)&space;=&space;c_1b^{m-1}&plus;c_2b^{m-2}&plus;\dots&plus;c_mb^0&space;\\&space;H(C_1)&space;=&space;c_2b^{m-1}&plus;c_3b^{m-2}&plus;\dots&plus;c_{m&plus;1}b^0={\color{DarkOrange}&space;H(C)*b-c_1b^m&plus;c_{m&plus;1}b^0}&space;\\&space;generalize-the-formula:\\&space;H(S[k&plus;1,\dots,&space;k&plus;m&plus;1])&space;=&space;{\color{Red}&space;H(S[k,&space;\dots,&space;k&plus;m]*b-S[k]b^m&plus;S[k&plus;m&plus;1])}" title="H(C) = c_1b^{m-1}+c_2b^{m-2}+\dots+c_mb^0 \\ H(C_1) = c_2b^{m-1}+c_3b^{m-2}+\dots+c_{m+1}b^0={\color{DarkOrange} H(C)*b-c_1b^m+c_{m+1}b^0} \\ generalize-the-formula:\\ H(S[k+1,\dots, k+m+1]) = {\color{Red} H(S[k, \dots, k+m]*b-S[k]b^m+S[k+m+1])}"></p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>运用了unsigned long long 自动溢出的特性，就不需要进行取模了。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</div><div class="line"><span class="keyword">const</span> ull base = <span class="number">1e9</span>+<span class="number">7</span>;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">solve</span><span class="params">(<span class="built_in">string</span> a, <span class="built_in">string</span> b)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> len_a = a.length();</div><div class="line">    <span class="keyword">int</span> len_b = b.length();</div><div class="line">    <span class="keyword">if</span>(len_a&gt;len_b) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    ull t = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;len_a; i++)&#123;</div><div class="line">        t*=base;</div><div class="line">    &#125;</div><div class="line">    ull ha, hb;</div><div class="line">    ha = hb = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;len_a; i++)&#123;</div><div class="line">        ha = ha*base+a[i];</div><div class="line">        hb = hb*base+b[i];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i+len_a&lt;=len_b; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(ha == hb) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        <span class="keyword">if</span>(i+len_a&lt;len_b)&#123;</div><div class="line">            hb = hb*base+b[i+len_a]-t*b[i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">string</span> a, b;</div><div class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b)&#123;</div><div class="line">        <span class="keyword">if</span>(solve(a, b))&#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"YES\n"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"NO\n"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h1 id="二维hash"><a href="#二维hash" class="headerlink" title="二维hash"></a>二维hash</h1><h1 id="康拓展开-amp-八数码问题"><a href="#康拓展开-amp-八数码问题" class="headerlink" title="康拓展开&amp;八数码问题"></a>康拓展开&amp;八数码问题</h1><h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
+<h1 id="二维hash"><a href="#二维hash" class="headerlink" title="二维hash"></a>二维hash</h1><h1 id="康拓展开-amp-八数码问题"><a href="#康拓展开-amp-八数码问题" class="headerlink" title="康拓展开&amp;八数码问题"></a>康拓展开&amp;八数码问题</h1><p>首先需要知道康拓展开是什么？<br>康拓展开的本质也是hash.不同之处在它hash的初始变量是一个有排列顺序的组合。具体的原理见博文。<br><a href="http://blog.csdn.net/u010372095/article/details/9904497" target="_blank" rel="external">康拓展开</a><br><img src="http://latex.codecogs.com/gif.latex?hash\_value=a_n*(n-1)!&plus;a_{n-1}*(n-2)!&plus;\dots&plus;a_1*0!" title="hash\_value=a_n*(n-1)!+a_{n-1}*(n-2)!+\dots+a_1*0!"><br>其中\(a_n\)表示它比后面的的值大的个数。</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1430" target="_blank" rel="external">hdu1430 魔板</a></p>
+<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>有三种变换，问怎么样从初态经过三种变换变成末态。</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>这个题目有个小技巧就是打表。<br>先把所有的初始状态装化为标准状态(1, 2, 3, 4, 5, 6, 7, 8).这就相当于原来这个人交张三，现在叫李四， 人还是这个人。下面用一个例子来说明。<br><img src="https://t1.picb.cc/uploads/2018/03/02/Ys9tR.jpg" alt=""></p>
+<p>这样就缩小了搜索的范围，一共有8!种状态。<br>然后用康拓展开来进行hash搜索就行了，把每一种状态编码成一个唯一的数字，从而进行搜索。</p>
+<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">10</span>;</div><div class="line"><span class="keyword">int</span> fact[<span class="number">8</span>] = &#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">6</span>, <span class="number">24</span>, <span class="number">120</span>, <span class="number">720</span>, <span class="number">5040</span>&#125;;</div><div class="line"><span class="keyword">char</span> op[maxn];</div><div class="line"><span class="keyword">char</span> ed[maxn];</div><div class="line"><span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; mp;</div><div class="line"><span class="keyword">int</span> terminal[maxn];</div><div class="line"><span class="keyword">int</span> change[<span class="number">3</span>][<span class="number">8</span>] = &#123;&#123;<span class="number">7</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>&#125;,</div><div class="line">                    &#123;<span class="number">3</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">4</span>&#125;,</div><div class="line">                    &#123;<span class="number">0</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">7</span>&#125;&#125;;</div><div class="line"><span class="built_in">string</span> ans[<span class="number">40320</span>+<span class="number">10</span>];</div><div class="line"><span class="keyword">bool</span> vis[<span class="number">40320</span>+<span class="number">10</span>];</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> num[maxn];</div><div class="line">&#125;;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">get_hash</span><span class="params">(<span class="keyword">int</span>* num)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> h_value = <span class="number">0</span>;</div><div class="line">    <span class="keyword">int</span> cnt = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">8</span>; i++)&#123;</div><div class="line">        cnt = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>; j&lt;<span class="number">8</span>; j++)&#123;</div><div class="line">            <span class="keyword">if</span>(num[j]&lt;num[i]) cnt++;</div><div class="line">        &#125;</div><div class="line">        h_value += cnt*fact[<span class="number">7</span>-i];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> h_value;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">bfs</span><span class="params">()</span></span>&#123;</div><div class="line">    Node s;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=<span class="number">8</span>; i++)&#123;</div><div class="line">        s.num[i<span class="number">-1</span>] = i;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> init_value = get_hash(s.num);</div><div class="line">    vis[init_value] = <span class="literal">true</span>;</div><div class="line">    <span class="built_in">queue</span>&lt;Node&gt; q;</div><div class="line">    q.push(s);</div><div class="line">    <span class="keyword">while</span>(!q.empty())&#123;</div><div class="line">        Node temp = q.front();</div><div class="line">        q.pop();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">3</span>; i++)&#123;</div><div class="line">            Node cur;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;<span class="number">8</span>; j++)&#123;</div><div class="line">                cur.num[j] = temp.num[change[i][j]];</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">int</span> pre_value = get_hash(temp.num);</div><div class="line">            <span class="keyword">int</span> h_value = get_hash(cur.num);</div><div class="line">            <span class="keyword">if</span>(!vis[h_value])&#123;</div><div class="line">                q.push(cur);</div><div class="line">                vis[h_value] = <span class="literal">true</span>;</div><div class="line">                ans[h_value] = ans[pre_value]+<span class="keyword">char</span>(<span class="string">'A'</span>+i);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">   </div><div class="line">    bfs();</div><div class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%s%s"</span>, op, ed))&#123;</div><div class="line">        mp.clear();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">8</span>; i++)&#123;</div><div class="line">            mp.insert(make_pair(op[i]-<span class="string">'0'</span>, i+<span class="number">1</span>));</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">8</span>; i++)&#123;</div><div class="line">            terminal[i] = mp[ed[i]-<span class="string">'0'</span>];</div><div class="line">        &#125;</div><div class="line"><span class="comment">//        for(int i=0; i&lt;8; i++)&#123;</span></div><div class="line"><span class="comment">//            printf("%d ", terminal[i]);</span></div><div class="line"><span class="comment">//        &#125;</span></div><div class="line">        <span class="keyword">int</span> h_value = get_hash(terminal);</div><div class="line">        <span class="built_in">cout</span>&lt;&lt;ans[h_value]&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
 
       
@@ -441,19 +449,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">KM算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">模板</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">DAG最长路/最短路</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">KM算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">模板</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -477,6 +485,30 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">bitcoin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数字签名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">密码哈希函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">工作量证明</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
@@ -497,35 +529,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">bitcoin</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数字签名</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">密码哈希函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">工作量证明</a>
+                <a href="javascript:void(0)" class="js-tag color5">hash</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hash</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -557,11 +565,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
+                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
+                <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -597,15 +609,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -613,27 +617,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数独</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">树形dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">最大似然估计法(maximum likehood estimate)</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">back propagation</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -645,15 +641,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">树形dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">back propagation</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">数据可视化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">A*算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Dijkstra算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -665,35 +669,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">素数表</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数论</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">线段树</a>
+                <a href="javascript:void(0)" class="js-tag color4">素数表</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络爬虫</a>
+                <a href="javascript:void(0)" class="js-tag color5">A*算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">莫队算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+                <a href="javascript:void(0)" class="js-tag color1">Dijkstra算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -705,11 +693,35 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网络爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">莫队算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">高斯消元</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">二进制高斯消元</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">线段树</a>
               </li>
              
               <li class="article-tag-list-item">
