@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/02/01/python读写数据/index.html">
 <meta property="og:site_name" content="宝宝天龙">
 <meta property="og:description" content="python数据的读写">
-<meta property="og:updated_time" content="2018-02-03T08:34:44.569Z">
+<meta property="og:updated_time" content="2018-03-02T17:58:27.779Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python读写数据">
 <meta name="twitter:description" content="python数据的读写">
@@ -191,6 +191,7 @@
 <h2 id="matlab读取excel中的数据"><a href="#matlab读取excel中的数据" class="headerlink" title="matlab读取excel中的数据"></a>matlab读取excel中的数据</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">%score仅保存数字， head仅保存相应的字符串， raw所有的信息都会保存</span></div><div class="line">[score head raw] = xlsread(<span class="string">'score.xlsx'</span>)</div></pre></td></tr></table></figure>
 <h2 id="matlab将数据写入text"><a href="#matlab将数据写入text" class="headerlink" title="matlab将数据写入text"></a>matlab将数据写入text</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">x = <span class="number">0</span>:<span class="built_in">pi</span>/<span class="number">20</span>:<span class="built_in">pi</span>;</div><div class="line">u = <span class="built_in">sin</span>(x);</div><div class="line">fid = fopen(<span class="string">'data.txt'</span>,<span class="string">'w'</span>);</div><div class="line"><span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="number">21</span>,</div><div class="line">	fprintf(fid,<span class="string">'%5.3f %8.4f\r\n'</span>,x(<span class="built_in">i</span>),u(<span class="built_in">i</span>));</div><div class="line"><span class="keyword">end</span>;</div><div class="line">fclose(fid);</div></pre></td></tr></table></figure>
 <h2 id="matlab将数据写入text文本文件"><a href="#matlab将数据写入text文本文件" class="headerlink" title="matlab将数据写入text文本文件"></a>matlab将数据写入text文本文件</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data = load(<span class="string">'test.txt'</span>)</div></pre></td></tr></table></figure>
+<h2 id="将c-数据读入读出txt"><a href="#将c-数据读入读出txt" class="headerlink" title="将c++数据读入读出txt"></a>将c++数据读入读出txt</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">freopen(<span class="string">"data.in"</span>,<span class="string">"r"</span>,<span class="built_in">stdin</span>);  </div><div class="line"></div><div class="line">freopen(<span class="string">"data.out"</span>,<span class="string">"w"</span>,<span class="built_in">stdout</span>);</div></pre></td></tr></table></figure>
 <h3 id="一些字符串的小技巧"><a href="#一些字符串的小技巧" class="headerlink" title="一些字符串的小技巧"></a>一些字符串的小技巧</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">%字符串的拼接</span></div><div class="line">first_name = <span class="string">'tian'</span>;</div><div class="line">second_name = <span class="string">'baolin'</span></div><div class="line">strcat(first_name, second_name)</div><div class="line"><span class="comment">%method 1</span></div><div class="line">strcat(&#123;first_name, second_name&#125;, &#123;<span class="string">'baby'</span>, <span class="string">'dragon'</span>&#125;)</div><div class="line"><span class="comment">%method 2</span></div><div class="line">sprintf(<span class="string">'%s%s'</span>, first_name, second_name)</div><div class="line"><span class="comment">%method 3</span></div><div class="line">str = [first_name, second_name];</div><div class="line">str</div><div class="line"></div><div class="line"><span class="comment">%数字转化为字符串</span></div><div class="line">number = <span class="number">23333</span>;</div><div class="line">num2str(number)</div></pre></td></tr></table></figure>
 <h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
@@ -465,11 +466,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
+                <a href="javascript:void(0)" class="js-tag color4">RMQ</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">RMQ</a>
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -482,6 +483,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -505,6 +514,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">bitcoin</a>
               </li>
              
@@ -521,35 +534,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hash</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -574,6 +559,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">二分、三分</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">线段树</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -621,11 +610,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
+                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数学建模</a>
+                <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -677,19 +666,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Gale-Shapley Algorithm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">求婚-拒绝算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">A*算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Dijkstra算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Gale-Shapley Algorithm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">求婚-拒绝算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -701,11 +690,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
+                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">线段树</a>
+                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -730,6 +719,18 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">二进制高斯消元</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hash</a>
               </li>
             
             <div class="clearfix"></div>
