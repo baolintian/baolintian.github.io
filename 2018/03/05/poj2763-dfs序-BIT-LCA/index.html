@@ -14,10 +14,12 @@
 <meta property="og:url" content="http://yoursite.com/2018/03/05/poj2763-dfs序-BIT-LCA/index.html">
 <meta property="og:site_name" content="宝宝天龙">
 <meta property="og:description" content="挑战程序设计里面的一道题目，然而调整很长的时间，结果T了emmmm其中的思想还是相当的重要的">
-<meta property="og:updated_time" content="2018-03-05T10:24:38.380Z">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tly1fp258iej5cj30k00fzt9j.jpg">
+<meta property="og:updated_time" content="2018-03-05T11:01:44.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="poj2763(dfs序+BIT+LCA)">
 <meta name="twitter:description" content="挑战程序设计里面的一道题目，然而调整很长的时间，结果T了emmmm其中的思想还是相当的重要的">
+<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/0060lm7Tly1fp258iej5cj30k00fzt9j.jpg">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
   
@@ -190,11 +192,12 @@
 <li>改变某条边的权值</li>
 </ol>
 <h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><ol>
-<li><p>针对第一种操作，我们先预处理出来LCA, 然后求出每个点到root点的路径权重和(为什么算出来的是一条路径的呢？因为回边会相互抵消。)。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sum(id[v])+sum(id[u])<span class="number">-2</span>*sum(id[p])</div></pre></td></tr></table></figure>
+<li>针对第一种操作，我们先预处理出来LCA, 然后求出每个点到root点的路径权重和(为什么算出来的是一条路径的呢？因为回边会相互抵消。)。<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sum(id[v])+sum(id[u])<span class="number">-2</span>*sum(id[p])</div></pre></td></tr></table></figure>
 </li>
-<li><p>对第二种操作，只要改变相应的边权，然后在BIT中进行相应的更新就可以了</p>
-</li>
+</ol>
+<p><img src="http://ww2.sinaimg.cn/large/0060lm7Tly1fp258iej5cj30k00fzt9j.jpg" alt=""></p>
+<ol>
+<li>对第二种操作，只要改变相应的边权，然后在BIT中进行相应的更新就可以了</li>
 </ol>
 <h2 id="T了的代码"><a href="#T了的代码" class="headerlink" title="T了的代码"></a>T了的代码</h2><p>期间遇到了：</p>
 <ul>
@@ -436,19 +439,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">KM算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">模板</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">动态规划</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">DAG最长路/最短路</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">KM算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">模板</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -520,11 +523,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hash</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -548,11 +567,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">线段树</a>
+                <a href="javascript:void(0)" class="js-tag color1">二分、三分</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">二分、三分</a>
+                <a href="javascript:void(0)" class="js-tag color4">线段树</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -560,11 +579,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
+                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
+                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -680,19 +699,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">网络流</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+                <a href="javascript:void(0)" class="js-tag color5">网络爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">莫队算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -701,26 +724,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">二进制高斯消元</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">计数dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">线性dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hash</a>
               </li>
             
             <div class="clearfix"></div>
