@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: bitcoin | 宝宝天龙</title>
+  <title>manacher算法 | 宝宝天龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="宝宝天龙">
-<meta property="og:url" content="http://yoursite.com/tags/bitcoin/index.html">
+  <meta name="description" content="manacher算法判断回文串的时间复杂度最低，为\(O(n)\).其他判断回文串的算法，例如：二分+hash， 后缀数组，他们的时间复杂度都是\(O(nlogn)\)">
+<meta name="keywords" content="manacher">
+<meta property="og:type" content="article">
+<meta property="og:title" content="manacher算法">
+<meta property="og:url" content="http://yoursite.com/2018/03/12/manacher算法/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="description">
+<meta property="og:description" content="manacher算法判断回文串的时间复杂度最低，为\(O(n)\).其他判断回文串的算法，例如：二分+hash， 后缀数组，他们的时间复杂度都是\(O(nlogn)\)">
+<meta property="og:updated_time" content="2018-03-12T10:24:26.477Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="宝宝天龙">
-<meta name="twitter:description" content="description">
+<meta name="twitter:title" content="manacher算法">
+<meta name="twitter:description" content="manacher算法判断回文串的时间复杂度最低，为\(O(n)\).其他判断回文串的算法，例如：二分+hash， 后缀数组，他们的时间复杂度都是\(O(nlogn)\)">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
   
@@ -153,74 +155,163 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-manacher算法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/28/bitcoin/" class="archive-article-date">
-  	<time datetime="2017-12-27T16:03:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/28/bitcoin/">bitcoin</a>
+    <h1 class="article-title" itemprop="name">
+      manacher算法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/03/12/manacher算法/" class="archive-article-date">
+  	<time datetime="2018-03-12T10:19:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-12</time>
+</a>
+        
+      </header>
+      
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>manacher算法判断回文串的时间复杂度最低，为\(O(n)\).<br>其他判断回文串的算法，例如：<br>二分+hash， 后缀数组，他们的时间复杂度都是\(O(nlogn)\)</p>
+<a id="more"></a>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1 id="manacher算法"><a href="#manacher算法" class="headerlink" title="manacher算法"></a>manacher算法</h1><p>不断的维护三个属性</p>
+<ul>
+<li>p[i]:以i字母为中心的最长的回文半径</li>
+<li>id:最长回文半径的坐标</li>
+<li>mx最长p[i]做能触及的最右边+1，相当于是一个开区间</li>
+</ul>
+<p>具体看代码</p>
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3068" target="_blank" rel="external">hdu 3068最长回文</a></p>
+<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><h1 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">3e5</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">char</span> s[maxn], str[maxn];</div><div class="line"><span class="keyword">int</span> p[maxn];<span class="comment">//回文半径</span></div><div class="line"><span class="keyword">int</span> len1, len2;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</div><div class="line">    str[<span class="number">0</span>] = <span class="string">'?'</span>;</div><div class="line">    str[<span class="number">1</span>] = <span class="string">'#'</span>;<span class="comment">//使之变成奇数长度的字符串</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;len1; i++)&#123;</div><div class="line">        str[i*<span class="number">2</span>+<span class="number">2</span>] = s[i];</div><div class="line">        str[i*<span class="number">2</span>+<span class="number">3</span>] = <span class="string">'#'</span>;</div><div class="line">    &#125;</div><div class="line">    len2 = len1*<span class="number">2</span>+<span class="number">2</span>;</div><div class="line">    str[len2] = <span class="string">'$'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">manacher</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> mid = <span class="number">0</span>, mx = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;len2; i++)&#123;<span class="comment">//mx是最右边的开区间</span></div><div class="line">        <span class="keyword">if</span>(mx&gt;i) p[i] = min(p[<span class="number">2</span>*mid-i], mx-i);</div><div class="line">        <span class="keyword">else</span> p[i] = <span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span>(; str[i+p[i]] == str[i-p[i]]; p[i]++);</div><div class="line">        <span class="keyword">if</span>(p[i]+i&gt;mx)&#123;</div><div class="line">            mx = p[i]+i;</div><div class="line">            mid = i;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%s"</span>, s))&#123;</div><div class="line">        len1 = <span class="built_in">strlen</span>(s);</div><div class="line">        init();</div><div class="line">        manacher();</div><div class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;len2; i++)&#123;</div><div class="line">            ans = max(ans, p[i]);</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//#b#a # a#b#，偶数</span></div><div class="line">        <span class="comment">//#a#, 奇数  他们的长度都是回文半径-1</span></div><div class="line">        <span class="built_in">cout</span>&lt;&lt;ans<span class="number">-1</span>&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">bitcoin</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数字签名</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">密码哈希函数</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">工作量证明</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">manacher</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/03/12/manacher算法/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/03/12/子集生成/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">序列的全排列、子集的生成</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
 
+  
 
+  
 
           </div>
         </div>
@@ -247,9 +338,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
