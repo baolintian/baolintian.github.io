@@ -17,7 +17,7 @@
 <meta property="og:description" content="组合数学中的一些基本的套路，感觉还是不会做题目啊QAQ感觉高中的组合数学被翔碾压，大学被各位巨巨智商碾压emmmmmm还有群论的大坑没有开， polya还不会">
 <meta property="og:image" content="http://latex.codecogs.com/gif.latex?f(n)&space;=&space;(n-1)*(f(n-1)+f(n-2))\\&space;f(n)-n*f(n-1)&space;=&space;-(f(n-1)-(n-1)*f(n-2))\\&space;we&space;\quad&space;find&space;\quad&space;a&space;\quad&space;series,&space;and&space;\quad&space;their&space;\quad&space;common&space;\quad&space;ratio&space;\quad&space;is\quad&space;-1.\\&space;initial&space;\quad&space;value:f(1)&space;=&space;0,&space;f(2)&space;=&space;1;\\&space;f(n)-n*f(n-1)&space;=&space;(-1)^{n-2}*(f(2)-f(1))\\&space;{\color{Red}&space;f(n)&space;=&space;n*f(n-1)+(-1)^{n},&space;n\ge&space;1}\\&space;Also,&space;after\quad&space;reading&space;\quad&space;some\quad&space;paper,&space;we&space;\quad&space;also\quad&space;have\quad&space;the\quad&space;following&space;\quad&space;equation:\\&space;{\color{Red}&space;f(n)=&space;[\frac{n!}{e}+0.5]}">
 <meta property="og:image" content="http://latex.codecogs.com/gif.latex?h(n)&space;=&space;\frac{4n-2}{n+1}&space;h(n-1)">
-<meta property="og:updated_time" content="2018-03-20T06:41:45.880Z">
+<meta property="og:updated_time" content="2018-03-20T16:27:43.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组合数的整理">
 <meta name="twitter:description" content="组合数学中的一些基本的套路，感觉还是不会做题目啊QAQ感觉高中的组合数学被翔碾压，大学被各位巨巨智商碾压emmmmmm还有群论的大坑没有开， polya还不会">
@@ -186,7 +186,13 @@
         <p>组合数学中的一些基本的套路，感觉还是不会做题目啊QAQ<br>感觉高中的组合数学被翔碾压，大学被各位巨巨智商碾压emmmmmm<br>还有群论的大坑没有开， polya还不会<br><a id="more"></a></p>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-<h1 id="错排公式"><a href="#错排公式" class="headerlink" title="错排公式"></a>错排公式</h1><h2 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h2><p>1~n这n个数构成一个排列，第1项不是1，第2项不是2,……,第n项不是n的方案数</p>
+<h1 id="圈排列问题"><a href="#圈排列问题" class="headerlink" title="圈排列问题"></a>圈排列问题</h1><p>n位同学，围成一圈玩狼人杀，问分配座位的方案。</p>
+<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>\((n-1)!\)</p>
+<h1 id="链排列"><a href="#链排列" class="headerlink" title="链排列"></a>链排列</h1><p>翻转后可以等价的</p>
+<h2 id="公式-1"><a href="#公式-1" class="headerlink" title="公式"></a>公式</h2><p>\(frac{1}{2}(n-1)!\)</p>
+<h1 id="隔板法"><a href="#隔板法" class="headerlink" title="隔板法"></a>隔板法</h1><h1 id="第一类斯特林数"><a href="#第一类斯特林数" class="headerlink" title="第一类斯特林数"></a>第一类斯特林数</h1><p>把一个包含n个元素的集合分成k个环排列的方法数。</p>
+<h1 id="第二类斯特林数"><a href="#第二类斯特林数" class="headerlink" title="第二类斯特林数"></a>第二类斯特林数</h1><p>把一个包含n个元素的集合分成k个<font color="#FF3030"><strong>非空子集</strong></font>的个数</p>
+<h1 id="Bell数（排名问题）"><a href="#Bell数（排名问题）" class="headerlink" title="Bell数（排名问题）"></a>Bell数（排名问题）</h1><h1 id="分拆数（计数dp）"><a href="#分拆数（计数dp）" class="headerlink" title="分拆数（计数dp）"></a>分拆数（计数dp）</h1><h1 id="错排公式"><a href="#错排公式" class="headerlink" title="错排公式"></a>错排公式</h1><h2 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h2><p>1~n这n个数构成一个排列，第1项不是1，第2项不是2,……,第n项不是n的方案数</p>
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>我们考虑1的位置，1的位置有n-1个，在每一个位置都是等价的，因此我们不妨设1在第2项，那么再考虑2的位置，2的位置有两种：<br>如果2在第1项，那么剩余3~n这n-2个数，需要放在第3~n项中，方案数是f(n-2)。<br>如果2不再第1项，那么2~n这n-1个数，需要放在第1,3~n项，且因为假设了2不能放在第1项，因此这是n-1个数构成错位排列的情况，方案数是f(n-1)</p>
 <h2 id="公式以及相应的化简"><a href="#公式以及相应的化简" class="headerlink" title="公式以及相应的化简"></a>公式以及相应的化简</h2><p><img src="http://latex.codecogs.com/gif.latex?f(n)&space;=&space;(n-1)*(f(n-1)&plus;f(n-2))\\&space;f(n)-n*f(n-1)&space;=&space;-(f(n-1)-(n-1)*f(n-2))\\&space;we&space;\quad&space;find&space;\quad&space;a&space;\quad&space;series,&space;and&space;\quad&space;their&space;\quad&space;common&space;\quad&space;ratio&space;\quad&space;is\quad&space;-1.\\&space;initial&space;\quad&space;value:f(1)&space;=&space;0,&space;f(2)&space;=&space;1;\\&space;f(n)-n*f(n-1)&space;=&space;(-1)^{n-2}*(f(2)-f(1))\\&space;{\color{Red}&space;f(n)&space;=&space;n*f(n-1)&plus;(-1)^{n},&space;n\ge&space;1}\\&space;Also,&space;after\quad&space;reading&space;\quad&space;some\quad&space;paper,&space;we&space;\quad&space;also\quad&space;have\quad&space;the\quad&space;following&space;\quad&space;equation:\\&space;{\color{Red}&space;f(n)=&space;[\frac{n!}{e}&plus;0.5]}" title="f(n) = (n-1)*(f(n-1)+f(n-2))\\ f(n)-n*f(n-1) = -(f(n-1)-(n-1)*f(n-2))\\ we \quad find \quad a \quad series, and \quad their \quad common \quad ratio \quad is\quad -1.\\ initial \quad value:f(1) = 0, f(2) = 1;\\ f(n)-n*f(n-1) = (-1)^{n-2}*(f(2)-f(1))\\ {\color{Red} f(n) = n*f(n-1)+(-1)^{n}, n\ge 1}\\ Also, after\quad reading \quad some\quad paper, we \quad also\quad have\quad the\quad following \quad equation:\\ {\color{Red} f(n)= [\frac{n!}{e}+0.5]}"></p>
 <h1 id="卡特兰数–计数映射的伟大胜利"><a href="#卡特兰数–计数映射的伟大胜利" class="headerlink" title="卡特兰数–计数映射的伟大胜利"></a>卡特兰数–计数映射的伟大胜利</h1><p>暑假的时候积累了很多的卡特兰数的模型，然而还是不会用，先祭上我收集的博客的知识的链接。其实这一类的找规律的问题都可以使用OEIS大法。然而比赛的时候根本不能用。<br><a href="http://lanqi.org/skills/10939/" target="_blank" rel="external">卡特兰数的讲解</a></p>
@@ -447,23 +453,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">2SAT</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">AC自动机</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">字符串</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -475,11 +469,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">KM算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">模板</a>
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -487,15 +477,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
+                <a href="javascript:void(0)" class="js-tag color5">KM算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color3">模板</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -519,19 +505,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">bitcoin</a>
+                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数字签名</a>
+                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">密码哈希函数</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">工作量证明</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -543,6 +525,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
               </li>
              
@@ -551,19 +537,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hash</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+                <a href="javascript:void(0)" class="js-tag color5">2SAT</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -575,10 +549,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">manacher</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
@@ -587,7 +557,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">scc</a>
+                <a href="javascript:void(0)" class="js-tag color1">markdown语法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hash</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -603,6 +577,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">scc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">一般图最大匹配</a>
               </li>
              
@@ -611,11 +589,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">图论</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">二分、三分</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">图论</a>
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -631,15 +613,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">manacher</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -675,7 +653,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">曲线插值与拟合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">内存溢出攻击</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -687,11 +677,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
+                <a href="javascript:void(0)" class="js-tag color3">数独</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数独</a>
+                <a href="javascript:void(0)" class="js-tag color2">MATLAB</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -700,18 +690,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">有向图最小生成树</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">最大似然估计法(maximum likehood estimate)</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">back propagation</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -727,14 +705,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生成树计数问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Gale-Shapley Algorithm</a>
               </li>
              
@@ -743,7 +713,35 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">最大似然估计法(maximum likehood estimate)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">back propagation</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">数据可视化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">组合数学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">素数表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网络爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -755,7 +753,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">素数表</a>
+                <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -763,19 +761,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">组合数学</a>
+                <a href="javascript:void(0)" class="js-tag color3">生成树计数问题</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络爬虫</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">背包问题</a>
+                <a href="javascript:void(0)" class="js-tag color5">莫队算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -787,7 +777,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">莫队算法</a>
+                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">bitcoin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数字签名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">密码哈希函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">工作量证明</a>
               </li>
             
             <div class="clearfix"></div>
