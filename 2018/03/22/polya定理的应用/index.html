@@ -6,17 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/3 | 宝宝天龙</title>
+  <title>polya定理的应用 | 宝宝天龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="宝宝天龙">
-<meta property="og:url" content="http://yoursite.com/archives/2018/03/page/2/index.html">
+  <meta name="description" content="前两天本来是开了单独的一个组合数学的博文，但是发现里面的知识点基本都会了，特地把这个定理拿出来讲解。感觉最近一直在学习新的算法，过得很充实，但是总是隐隐感觉不太对劲，没有形成自己的思维。后两周的比赛加油啊。">
+<meta name="keywords" content="组合数学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="polya定理的应用">
+<meta property="og:url" content="http://yoursite.com/2018/03/22/polya定理的应用/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="description">
+<meta property="og:description" content="前两天本来是开了单独的一个组合数学的博文，但是发现里面的知识点基本都会了，特地把这个定理拿出来讲解。感觉最近一直在学习新的算法，过得很充实，但是总是隐隐感觉不太对劲，没有形成自己的思维。后两周的比赛加油啊。">
+<meta property="og:image" content="https://t1.picb.cc/uploads/2018/03/22/2gscPt.png">
+<meta property="og:image" content="https://t1.picb.cc/uploads/2018/03/22/2gs5u1.png">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?\frac{\sum{fixed\quad&space;points}}{transpose&space;number}&space;=&space;\frac{\sum_{g\in&space;G}D(g)}{\left&space;|&space;G&space;\right&space;|}=\frac{16+2+4+2}{4}=6">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;1&space;&&space;2\\&space;3&space;&&space;4&space;\end{bmatrix}">
+<meta property="og:image" content="https://t1.picb.cc/uploads/2018/03/22/2gszI6.png">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?\frac{\sum_{g\in&space;G}&space;circular\quad&space;sections}{transpose\quad&space;numbers}=\frac{\sum_{g\in&space;G}m^{c(g)}}{\left&space;|&space;G&space;\right&space;|}=\frac{2^4+2^1+2^2+2^1}{4}=6">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?total\quad&space;circular\quad&space;sections&space;=&space;{\sum_{i=0}^{n-1}c^{gcd(n,&space;i)}}">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?n*c^{\frac{n-1}{2}+1}">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?\frac{n-2}{2}+2">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?\frac{n}{2}*c^{\frac{n-2}{2}+2}">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?\frac{n}{2}*c^{\frac{n}{2}}">
+<meta property="og:image" content="http://latex.codecogs.com/gif.latex?ans&space;=&space;\left\{\begin{matrix}&space;\frac{\sum_{i=0}^{n-1}c^{gcd(n,&space;i)}+n*c^{\frac{n-1}{2}+1}}{2*n},n\quad&space;is\quad&space;a\quad&space;prime\\&space;\frac{\sum_{i=0}^{n-1}c^{gcd(n,&space;i)}+\frac{n}{2}*c^{\frac{n-2}{2}+2}+\frac{n}{2}*c^{\frac{n}{2}}}{2*n},&space;n\quad&space;is\quad&space;not\quad&space;a\quad&space;prime&space;\end{matrix}\right.">
+<meta property="og:updated_time" content="2018-03-22T12:34:22.883Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="宝宝天龙">
-<meta name="twitter:description" content="description">
+<meta name="twitter:title" content="polya定理的应用">
+<meta name="twitter:description" content="前两天本来是开了单独的一个组合数学的博文，但是发现里面的知识点基本都会了，特地把这个定理拿出来讲解。感觉最近一直在学习新的算法，过得很充实，但是总是隐隐感觉不太对劲，没有形成自己的思维。后两周的比赛加油啊。">
+<meta name="twitter:image" content="https://t1.picb.cc/uploads/2018/03/22/2gscPt.png">
   
     <link rel="alternative" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
   
@@ -153,390 +168,180 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-polya定理的应用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      polya定理的应用
+    </h1>
+  
+
+        
+        <a href="/2018/03/22/polya定理的应用/" class="archive-article-date">
+  	<time datetime="2018-03-22T10:27:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-22</time>
+</a>
+        
+      </header>
+      
+		<span class="archive-article-date">
+			阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前两天本来是开了单独的一个组合数学的博文，但是发现里面的知识点基本都会了，特地把这个定理拿出来讲解。<br>感觉最近一直在学习新的算法，过得很充实，但是总是隐隐感觉不太对劲，没有形成自己的思维。后两周的比赛加油啊。<br><a id="more"></a></p>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1 id="一道题目"><a href="#一道题目" class="headerlink" title="一道题目"></a>一道题目</h1><p>有一个2*2的方阵，用黑白两种颜色进行染色，通过旋转重合的方案算是同一种方案，问有多少种不同的方案。<br><img src="https://t1.picb.cc/uploads/2018/03/22/2gscPt.png" alt=""><br>这道题目的答案是6，怎么样解决这个问题呢？</p>
+<h2 id="Burnside引理"><a href="#Burnside引理" class="headerlink" title="Burnside引理"></a>Burnside引理</h2><p>{g1, g2, g3, g4} = {旋转0°， 逆时针旋转90°，逆时针旋转180°, 逆时针旋转270° };</p>
+<p><font color="#FF3030"><strong>注释：集合中任意种变化的组合必须包含在集合中，即必须要具有封闭性。</strong></font><br><img src="https://t1.picb.cc/uploads/2018/03/22/2gs5u1.png" alt=""><br><img src="http://latex.codecogs.com/gif.latex?\frac{\sum{fixed\quad&space;points}}{transpose&space;number}&space;=&space;\frac{\sum_{g\in&space;G}D(g)}{\left&space;|&space;G&space;\right&space;|}=\frac{16&plus;2&plus;4&plus;2}{4}=6" title="\frac{\sum{fixed\quad points}}{transpose number} = \frac{\sum_{g\in G}D(g)}{\left | G \right |}=\frac{16+2+4+2}{4}=6"></p>
+<p>Burnside引理具体要计算每一种变换的不动点的数目，时间复杂度是指数级别的。<br>因此，就引入了Polya定理（然而并不会证明）</p>
+<h2 id="Polya定理"><a href="#Polya定理" class="headerlink" title="Polya定理"></a>Polya定理</h2><ul>
+<li>G是{1,2,…,n}的一个置换群</li>
+<li>用m种颜色给1~n进行染色，不同染色方案数为</li>
+</ul>
+<p>首先对每一个格子进行相应的编号，称之为标准态：<br><img src="http://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;1&space;&&space;2\\&space;3&space;&&space;4&space;\end{bmatrix}" title="\begin{bmatrix} 1 & 2\\ 3 & 4 \end{bmatrix}"></p>
+<p><img src="https://t1.picb.cc/uploads/2018/03/22/2gszI6.png" alt=""></p>
+<p><img src="http://latex.codecogs.com/gif.latex?\frac{\sum_{g\in&space;G}&space;circular\quad&space;sections}{transpose\quad&space;numbers}=\frac{\sum_{g\in&space;G}m^{c(g)}}{\left&space;|&space;G&space;\right&space;|}=\frac{2^4&plus;2^1&plus;2^2&plus;2^1}{4}=6" title="\frac{\sum_{g\in G} circular\quad sections}{transpose\quad numbers}=\frac{\sum_{g\in G}m^{c(g)}}{\left | G \right |}=\frac{2^4+2^1+2^2+2^1}{4}=6"><br>其中，c(g)表示在g这种姿态下的循环节的个数。</p>
+<h1 id="Qusetion-Polya能替代Burnside定理吗？"><a href="#Qusetion-Polya能替代Burnside定理吗？" class="headerlink" title="Qusetion:Polya能替代Burnside定理吗？"></a>Qusetion:Polya能替代Burnside定理吗？</h1><h1 id="珠子的染色问题"><a href="#珠子的染色问题" class="headerlink" title="珠子的染色问题"></a>珠子的染色问题</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="">poj 2409</a></p>
+<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><ul>
+<li>给定一个珠子的颜色数目为c， 珠子的个数为s。其中翻转、旋转后与之前的情形有重复的情况的条件下，算一种染色方案。</li>
+<li>问一共有多少种不同的染色方案</li>
+</ul>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>Polya定理的应用：<br>分两种情况：</p>
+<h4 id="旋转："><a href="#旋转：" class="headerlink" title="旋转："></a>旋转：</h4><p>一个有n种旋转方式：{转动0个珠子， 转动1个珠子, …, 转动i个珠子，…, 转动n-1个珠子}。<br>其中\(\frac{n}{gcd(n, i)}\)个珠子构成一个循环节，那么一共有gcd(n, i)个循环节。<br><img src="http://latex.codecogs.com/gif.latex?total\quad&space;circular\quad&space;sections&space;=&space;{\sum_{i=0}^{n-1}c^{gcd(n,&space;i)}}" title="total\quad circular\quad sections = {\sum_{i=0}^{n-1}c^{gcd(n, i)}}"></p>
+<h4 id="翻转："><a href="#翻转：" class="headerlink" title="翻转："></a>翻转：</h4><p>有两种情况：</p>
+<h5 id="当n为奇数的时候："><a href="#当n为奇数的时候：" class="headerlink" title="当n为奇数的时候："></a>当n为奇数的时候：</h5><p>有n条翻转的对称轴，两个珠子为一组，构成\(\frac{n-1}{2}\)个循环节，剩下的一个珠子单独构成一个循环节。<br><img src="http://latex.codecogs.com/gif.latex?n*c^{\frac{n-1}{2}&plus;1}" title="n*c^{\frac{n-1}{2}+1}"></p>
+<h5 id="当n为偶数的时候："><a href="#当n为偶数的时候：" class="headerlink" title="当n为偶数的时候："></a>当n为偶数的时候：</h5><p>当一条对称轴穿过两个珠子的情况：<br>共有\(\frac{n}{2}\)条对称轴，两个珠子为一组，构成\(\frac{n-2}{2}\)个循环节，剩下在对称轴上面的两个珠子构成两个循环节。一共构成<img src="http://latex.codecogs.com/gif.latex?\frac{n-2}{2}&plus;2" title="\frac{n-2}{2}+2">个循环节。<br><img src="http://latex.codecogs.com/gif.latex?\frac{n}{2}*c^{\frac{n-2}{2}&plus;2}" title="\frac{n}{2}*c^{\frac{n-2}{2}+2}"></p>
+<p>当对称轴不穿过任何的珠子的时候，以对称轴为中心，两个为一组，构成\(\frac{n}{2}\)个循环节。<br><img src="http://latex.codecogs.com/gif.latex?\frac{n}{2}*c^{\frac{n}{2}}" title="\frac{n}{2}*c^{\frac{n}{2}}"></p>
+<h4 id="变换的种类的个数"><a href="#变换的种类的个数" class="headerlink" title="变换的种类的个数"></a>变换的种类的个数</h4><p>旋转有n种变换，翻转的时候，不论奇偶，都有n种变换。总共有2n种变换</p>
+<h3 id="总的式子"><a href="#总的式子" class="headerlink" title="总的式子"></a>总的式子</h3><p><img src="http://latex.codecogs.com/gif.latex?ans&space;=&space;\left\{\begin{matrix}&space;\frac{\sum_{i=0}^{n-1}c^{gcd(n,&space;i)}&plus;n*c^{\frac{n-1}{2}&plus;1}}{2*n},n\quad&space;is\quad&space;a\quad&space;prime\\&space;\frac{\sum_{i=0}^{n-1}c^{gcd(n,&space;i)}&plus;\frac{n}{2}*c^{\frac{n-2}{2}&plus;2}&plus;\frac{n}{2}*c^{\frac{n}{2}}}{2*n},&space;n\quad&space;is\quad&space;not\quad&space;a\quad&space;prime&space;\end{matrix}\right." title="ans = \left\{\begin{matrix} \frac{\sum_{i=0}^{n-1}c^{gcd(n, i)}+n*c^{\frac{n-1}{2}+1}}{2*n},n\quad is\quad a\quad prime\\ \frac{\sum_{i=0}^{n-1}c^{gcd(n, i)}+\frac{n}{2}*c^{\frac{n-2}{2}+2}+\frac{n}{2}*c^{\frac{n}{2}}}{2*n}, n\quad is\quad not\quad a\quad prime \end{matrix}\right."></p>
+<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> c, s;</div><div class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;c&gt;&gt;s)&#123;</div><div class="line">        <span class="keyword">if</span>(c+s == <span class="number">0</span>) <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">if</span>(s%<span class="number">2</span>)&#123;</div><div class="line">            <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;s; i++)&#123;</div><div class="line">                <span class="keyword">int</span> mul = <span class="number">1</span>;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;__gcd(s, i); j++)&#123;</div><div class="line">                    mul*=c;</div><div class="line">                &#125;</div><div class="line">                ans+=mul;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">int</span> mul = <span class="number">1</span>;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;(s<span class="number">-1</span>)/<span class="number">2</span>+<span class="number">1</span>; i++)&#123;</div><div class="line">                mul*=c;</div><div class="line">            &#125;</div><div class="line">            ans += s*mul;</div><div class="line">            <span class="built_in">cout</span>&lt;&lt;ans/(<span class="number">2</span>*s)&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;s; i++)&#123;</div><div class="line">                <span class="keyword">int</span> mul = <span class="number">1</span>;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;__gcd(s, i); j++)&#123;</div><div class="line">                    mul*=c;</div><div class="line">                &#125;</div><div class="line">                ans+=mul;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">int</span> mul = <span class="number">1</span>;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;s/<span class="number">2</span>; i++)&#123;</div><div class="line">                mul*=c;</div><div class="line">            &#125;</div><div class="line">            ans += s/<span class="number">2</span>*mul;</div><div class="line">            mul = <span class="number">1</span>;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;(s<span class="number">-2</span>)/<span class="number">2</span>+<span class="number">2</span>; i++)&#123;</div><div class="line">                mul*=c;</div><div class="line">            &#125;</div><div class="line">            ans += s/<span class="number">2</span>*mul;</div><div class="line">            <span class="built_in">cout</span>&lt;&lt;ans/(<span class="number">2</span>*s)&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>因为这道题目规模比较的小，还可以直接写出这些置换，用Burnside.</p>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1><p>Polya能代替Burnside吗</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/13/2-SAT/" class="archive-article-date">
-  	<time datetime="2018-03-13T02:03:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/13/2-SAT/">2-SAT</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">2SAT</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">组合数学</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/03/22/polya定理的应用/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/12/二分图的最大匹配/" class="archive-article-date">
-  	<time datetime="2018-03-12T15:04:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-12</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/21/online-latex公式编辑技巧的积累/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">online latex公式编辑技巧的积累</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/12/二分图的最大匹配/">二分图的最大匹配</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">图论</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/12/manacher算法/" class="archive-article-date">
-  	<time datetime="2018-03-12T10:19:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/12/manacher算法/">manacher算法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">manacher</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/12/子集生成/" class="archive-article-date">
-  	<time datetime="2018-03-12T08:19:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/12/子集生成/">序列的全排列、子集的生成</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/11/图论进阶篇/" class="archive-article-date">
-  	<time datetime="2018-03-11T07:17:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/11/图论进阶篇/">图论进阶篇</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">图论</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/11/生成树计数问题/" class="archive-article-date">
-  	<time datetime="2018-03-11T04:39:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/11/生成树计数问题/">生成树计数问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生成树计数问题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/11/有向图的最小生成树/" class="archive-article-date">
-  	<time datetime="2018-03-11T02:42:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/11/有向图的最小生成树/">有向图的最小生成树</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">有向图最小生成树</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/08/割点与桥/" class="archive-article-date">
-  	<time datetime="2018-03-08T12:04:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/08/割点与桥/">割点与桥</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">割点，桥</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">点-双连通图，边-双联通</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/08/4c题目的小积累/" class="archive-article-date">
-  	<time datetime="2018-03-08T07:04:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/08/4c题目的小积累/">4c题目的小积累</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/03/06/scc/" class="archive-article-date">
-  	<time datetime="2018-03-06T01:13:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/06/scc/">scc</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">scc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2018/03/">&laquo; Prev</a><a class="page-number" href="/archives/2018/03/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2018/03/page/3/">3</a><a class="extend next" rel="next" href="/archives/2018/03/page/3/">Next &raquo;</a>
-    </nav>
-  
+        
+        
+    </div>
+</aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
 
           </div>
         </div>
@@ -563,8 +368,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
