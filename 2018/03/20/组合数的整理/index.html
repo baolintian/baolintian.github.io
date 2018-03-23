@@ -17,7 +17,7 @@
 <meta property="og:description" content="组合数学中的一些基本的套路，感觉还是不会做题目啊QAQ感觉高中的组合数学被翔碾压，大学被各位巨巨智商碾压emmmmmm还有群论的大坑没有开， polya还不会">
 <meta property="og:image" content="http://latex.codecogs.com/gif.latex?f(n)&space;=&space;(n-1)*(f(n-1)+f(n-2))\\&space;f(n)-n*f(n-1)&space;=&space;-(f(n-1)-(n-1)*f(n-2))\\&space;we&space;\quad&space;find&space;\quad&space;a&space;\quad&space;series,&space;and&space;\quad&space;their&space;\quad&space;common&space;\quad&space;ratio&space;\quad&space;is\quad&space;-1.\\&space;initial&space;\quad&space;value:f(1)&space;=&space;0,&space;f(2)&space;=&space;1;\\&space;f(n)-n*f(n-1)&space;=&space;(-1)^{n-2}*(f(2)-f(1))\\&space;{\color{Red}&space;f(n)&space;=&space;n*f(n-1)+(-1)^{n},&space;n\ge&space;1}\\&space;Also,&space;after\quad&space;reading&space;\quad&space;some\quad&space;paper,&space;we&space;\quad&space;also\quad&space;have\quad&space;the\quad&space;following&space;\quad&space;equation:\\&space;{\color{Red}&space;f(n)=&space;[\frac{n!}{e}+0.5]}">
 <meta property="og:image" content="http://latex.codecogs.com/gif.latex?h(n)&space;=&space;\frac{4n-2}{n+1}&space;h(n-1)">
-<meta property="og:updated_time" content="2018-03-20T16:27:43.355Z">
+<meta property="og:updated_time" content="2018-03-23T05:29:39.544Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="组合数的整理">
 <meta name="twitter:description" content="组合数学中的一些基本的套路，感觉还是不会做题目啊QAQ感觉高中的组合数学被翔碾压，大学被各位巨巨智商碾压emmmmmm还有群论的大坑没有开， polya还不会">
@@ -62,6 +62,12 @@
 			<ul>
 			
 				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/categories/ACM">ACM</a></li>
+	        
+				<li><a href="/categories/python">python/ML/BD</a></li>
+	        
+				<li><a href="/categories/luan">杂知识/随想</a></li>
 	        
 			</ul>
 		</nav>
@@ -123,6 +129,12 @@
 			
 				
 			
+				
+			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -140,10 +152,16 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 100%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
+		        
+					<li style="width: 25%"><a href="/categories/ACM">ACM</a></li>
+		        
+					<li style="width: 25%"><a href="/categories/python">python/ML/BD</a></li>
+		        
+					<li style="width: 25%"><a href="/categories/luan">杂知识/随想</a></li>
 		        
 				</ul>
 			</nav>
@@ -224,6 +242,17 @@
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/ACM//" class="article-tag-list-link color4">ACM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -366,7 +395,7 @@
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -493,6 +522,18 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
@@ -513,15 +554,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">unicode</a>
+                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">utf-8</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -541,14 +578,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">函数调用内存分配</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">汇编语言</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">dp递推关系化简</a>
               </li>
              
@@ -557,11 +586,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hash</a>
+                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">自我想法</a>
+                <a href="javascript:void(0)" class="js-tag color5">hash</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -605,10 +634,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数论</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
              
@@ -621,7 +646,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">二分、三分</a>
+                <a href="javascript:void(0)" class="js-tag color3">数论</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -629,7 +654,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
+                <a href="javascript:void(0)" class="js-tag color1">二分、三分</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -645,11 +670,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
+                <a href="javascript:void(0)" class="js-tag color5">区间dp</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">博弈论</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">后缀自动机(SAM/DFA)</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -729,10 +758,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">深度学习</a>
               </li>
              
@@ -741,7 +766,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">状压dp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">生成树计数问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">数据可视化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -750,10 +783,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">求婚-拒绝算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">数据可视化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -773,11 +802,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络爬虫</a>
+                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">网络流</a>
+                <a href="javascript:void(0)" class="js-tag color5">网络爬虫</a>
               </li>
              
               <li class="article-tag-list-item">
