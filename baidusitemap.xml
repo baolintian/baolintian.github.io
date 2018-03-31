@@ -3,6 +3,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/09/20/hello-world/</loc>
+    <lastmod>2018-03-31T16:10:51.988Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎来到我的新博客</title>
+        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
+        
+        <tag>自我想法 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/03/08/4c%E9%A2%98%E7%9B%AE%E7%9A%84%E5%B0%8F%E7%A7%AF%E7%B4%AF/</loc>
     <lastmod>2018-03-31T01:20:53.371Z</lastmod>
     <data>
@@ -127,26 +147,6 @@
         <title>online latex公式编辑技巧的积累</title>
         <pubTime>2018-03-21T05:30:37.000Z</pubTime>
         
-         
-           
-             
-              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/09/20/hello-world/</loc>
-    <lastmod>2018-03-23T08:51:46.477Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎来到我的新博客</title>
-        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
-        
-        <tag>自我想法 </tag>
-         
          
            
              
