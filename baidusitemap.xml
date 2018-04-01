@@ -2,6 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+    
+  <url>
+    <loc>http://yoursite.com/2017/09/20/%E6%83%B3%E4%B9%B0%E7%9A%84%E4%B8%9C%E8%A5%BF/</loc>
+    <lastmod>2018-03-31T16:43:38.193Z</lastmod>
+    <data>
+        <display>
+        <title>想买的东西</title>
+        <pubTime>2017-09-20T15:23:45.000Z</pubTime>
+        
+        <tag>tips </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
   <url>
     <loc>http://yoursite.com/2017/09/20/hello-world/</loc>
     <lastmod>2018-03-31T16:10:51.988Z</lastmod>
@@ -39,7 +61,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://yoursite.com/2018/03/27/%E7%BB%84%E5%90%88%E6%B8%B8%E6%88%8F/</loc>
@@ -191,26 +212,6 @@
            
              
               <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/09/20/%E6%83%B3%E4%B9%B0%E7%9A%84%E4%B8%9C%E8%A5%BF/</loc>
-    <lastmod>2018-03-23T08:51:16.631Z</lastmod>
-    <data>
-        <display>
-        <title>想买的东西</title>
-        <pubTime>2017-09-20T15:23:45.000Z</pubTime>
-        
-        <tag>tips </tag>
-         
-         
-           
-             
-              <breadCrumb title="luan" url="http://yoursite.com/categories/luan/"/>
           
         </display>
     </data>
