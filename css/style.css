@@ -1108,6 +1108,12 @@ body .ui-tooltip {
     padding: 20px 10px;
   }
 }
+* {
+  cursor: url("http://om8u46rmb.bkt.clouddn.com/sword2.ico"), auto !important;
+}
+:active {
+  cursor: url("http://om8u46rmb.bkt.clouddn.com/sword1.ico"), auto !important;
+}
 .archives-wrap {
   position: relative;
   margin: 0 30px;
