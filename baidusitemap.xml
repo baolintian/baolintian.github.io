@@ -3,8 +3,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/09/20/hello-world/</loc>
+    <lastmod>2018-04-06T12:16:06.378Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎来到我的新博客</title>
+        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
+        
+        <tag>自我想法 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/04/03/kuangbin%E5%B8%A6%E4%BD%A0%E9%A3%9E%E4%B8%93%E9%A2%98%E4%B8%80/</loc>
-    <lastmod>2018-04-03T08:51:01.328Z</lastmod>
+    <lastmod>2018-04-06T12:15:41.464Z</lastmod>
     <data>
         <display>
         <title>kuangbin带你飞专题一</title>
@@ -43,26 +63,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://yoursite.com/2017/09/20/hello-world/</loc>
-    <lastmod>2018-03-31T16:10:51.988Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎来到我的新博客</title>
-        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
-        
-        <tag>自我想法 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://yoursite.com/2018/03/08/4c%E9%A2%98%E7%9B%AE%E7%9A%84%E5%B0%8F%E7%A7%AF%E7%B4%AF/</loc>
