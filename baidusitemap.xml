@@ -3,6 +3,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/04/03/kuangbin%E5%B8%A6%E4%BD%A0%E9%A3%9E%E4%B8%93%E9%A2%98%E4%B8%80/</loc>
+    <lastmod>2018-04-14T17:16:22.287Z</lastmod>
+    <data>
+        <display>
+        <title>kuangbin带你飞专题一</title>
+        <pubTime>2018-04-03T08:47:22.000Z</pubTime>
+        
+        <tag>搜索 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/09/20/hello-world/</loc>
     <lastmod>2018-04-06T12:16:06.378Z</lastmod>
     <data>
@@ -16,26 +36,6 @@
            
              
               <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/04/03/kuangbin%E5%B8%A6%E4%BD%A0%E9%A3%9E%E4%B8%93%E9%A2%98%E4%B8%80/</loc>
-    <lastmod>2018-04-06T12:15:41.464Z</lastmod>
-    <data>
-        <display>
-        <title>kuangbin带你飞专题一</title>
-        <pubTime>2018-04-03T08:47:22.000Z</pubTime>
-        
-        <tag>搜索 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
           
         </display>
     </data>
