@@ -3,6 +3,41 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/09/20/hello-world/</loc>
+    <lastmod>2018-04-17T08:45:43.846Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎来到我的新博客</title>
+        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
+        
+        <tag>自我想法 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/04/17/kuangbin%E6%9C%80%E7%9F%AD%E8%B7%AF%E4%B8%93%E9%A2%98/</loc>
+    <lastmod>2018-04-17T07:47:01.535Z</lastmod>
+    <data>
+        <display>
+        <title>kuangbin最短路专题</title>
+        <pubTime>2018-04-17T07:42:47.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/04/03/kuangbin%E5%B8%A6%E4%BD%A0%E9%A3%9E%E4%B8%93%E9%A2%98%E4%B8%80/</loc>
     <lastmod>2018-04-15T12:07:09.722Z</lastmod>
     <data>
@@ -34,26 +69,6 @@
            
              
               <breadCrumb title="acm" url="http://yoursite.com/categories/acm/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/09/20/hello-world/</loc>
-    <lastmod>2018-04-06T12:16:06.378Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎来到我的新博客</title>
-        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
-        
-        <tag>自我想法 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
           
         </display>
     </data>
