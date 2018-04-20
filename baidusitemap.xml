@@ -3,6 +3,41 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/04/20/%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/</loc>
+    <lastmod>2018-04-20T05:17:48.822Z</lastmod>
+    <data>
+        <display>
+        <title>树的直径</title>
+        <pubTime>2018-04-20T05:00:13.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/04/19/kuangbin%E4%B8%93%E9%A2%982-%E6%90%9C%E7%B4%A2%E8%BF%9B%E9%98%B6/</loc>
+    <lastmod>2018-04-20T04:57:56.413Z</lastmod>
+    <data>
+        <display>
+        <title>kuangbin专题2--搜索进阶</title>
+        <pubTime>2018-04-19T13:00:55.000Z</pubTime>
+        
+        <tag>搜索 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/04/19/%E5%87%B8%E5%8C%85/</loc>
     <lastmod>2018-04-19T15:31:51.780Z</lastmod>
     <data>
@@ -57,21 +92,6 @@
              
               <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/04/19/kuangbin%E4%B8%93%E9%A2%982-%E6%90%9C%E7%B4%A2%E8%BF%9B%E9%98%B6/</loc>
-    <lastmod>2018-04-19T13:00:55.849Z</lastmod>
-    <data>
-        <display>
-        <title>kuangbin专题2--搜索进阶</title>
-        <pubTime>2018-04-19T13:00:55.000Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
