@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/04/25/强联通缩点/index.html">
 <meta property="og:site_name" content="宝宝天龙">
 <meta property="og:description" content="实验室的氛围很好啊，希望以后多向巨巨学习。">
-<meta property="og:updated_time" content="2018-04-25T12:45:57.500Z">
+<meta property="og:updated_time" content="2018-04-25T12:49:11.065Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="强联通缩点">
 <meta name="twitter:description" content="实验室的氛围很好啊，希望以后多向巨巨学习。">
@@ -145,13 +145,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>Menu</li>
+                        <li>Tags</li>
                         
-                        <li>友情链接</li>
+                        <li>Friends</li>
                         
                         
-                        <li>关于我</li>
+                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -291,7 +291,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
       <div class="body-wrap"><article id="post-强联通缩点" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -340,7 +340,7 @@
         <p>实验室的氛围很好啊，希望以后多向巨巨学习。</p>
 <a id="more"></a>
 <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5934" target="_blank" rel="external">hdu 5934</a></p>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>先缩点，然后将入度为0的点的最小代价加在一起</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>先缩点，然后将入度为0的点的最小代价加在一起<br>注意两个int类型的数据相乘会超过int范围，数据必须开成long long 类型的</p>
 <h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e3</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></div><div class="line">    ll x, y, r, c;</div><div class="line">&#125;node[maxn];</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">int</span> n, m;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">sqr</span><span class="params">(Node a, Node b)</span></span>&#123;</div><div class="line">    ll r = a.r*a.r;</div><div class="line">    ll dis = ((a.x-b.x)*(a.x-b.x))+(a.y-b.y)*(a.y-b.y);</div><div class="line">    <span class="keyword">return</span> r&gt;=dis;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; G[maxn];</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; rG[maxn];</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vs;</div><div class="line"></div><div class="line">ll cost[maxn];</div><div class="line"><span class="keyword">int</span> belong[maxn];</div><div class="line"><span class="keyword">int</span> k;</div><div class="line"><span class="keyword">bool</span> vis[maxn];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u)</span></span>&#123;</div><div class="line">    vis[u] = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;G[u].size(); i++)&#123;</div><div class="line">        <span class="keyword">int</span> v = G[u][i];</div><div class="line">        <span class="keyword">if</span>(!vis[v])&#123;</div><div class="line">            dfs(v);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    vs.push_back(u);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">rdfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> k)</span></span>&#123;</div><div class="line">    vis[u] = <span class="literal">true</span>;</div><div class="line">    cost[k] = min(cost[k], node[u].c);</div><div class="line">    belong[u] = k;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;rG[u].size(); i++)&#123;</div><div class="line">        <span class="keyword">int</span> v = rG[u][i];</div><div class="line">        <span class="keyword">if</span>(!vis[v]) rdfs(v, k);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">scc</span><span class="params">()</span></span>&#123;</div><div class="line">    vs.clear();</div><div class="line">    <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="keyword">sizeof</span>(vis));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(!vis[i])&#123;</div><div class="line">            dfs(i);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    k=<span class="number">0</span>;</div><div class="line">    <span class="built_in">memset</span>(vis, <span class="number">0</span>, <span class="keyword">sizeof</span>(vis));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=vs.size()<span class="number">-1</span>; i&gt;=<span class="number">0</span>; i--)&#123;</div><div class="line">        <span class="keyword">int</span> u = vs[i];</div><div class="line">        <span class="keyword">if</span>(!vis[u]) &#123;</div><div class="line">            cost[++k] = INF;</div><div class="line">            rdfs(u, k);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> in[maxn];</div><div class="line"><span class="keyword">int</span> out[maxn];</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; new_G[maxn];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;maxn; i++)&#123;</div><div class="line">        G[i].clear();</div><div class="line">        rG[i].clear();</div><div class="line">        new_G[i].clear();</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">memset</span>(in, <span class="number">0</span>, <span class="keyword">sizeof</span>(in));</div><div class="line">    <span class="built_in">memset</span>(out, <span class="number">0</span>, <span class="keyword">sizeof</span>(out));</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> kase = <span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> t;</div><div class="line">    <span class="built_in">cin</span>&gt;&gt;t;</div><div class="line">    <span class="keyword">while</span>(t--)&#123;</div><div class="line">        <span class="built_in">cin</span>&gt;&gt;n;</div><div class="line">        init();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">            <span class="keyword">int</span> x, y, r, c;</div><div class="line">            <span class="built_in">cin</span>&gt;&gt;x&gt;&gt;y&gt;&gt;r&gt;&gt;c;</div><div class="line">            node[i].x = x, node[i].y = y;</div><div class="line">            node[i].r = r, node[i].c = c;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n; j++)&#123;</div><div class="line">                <span class="keyword">if</span>(i == j) <span class="keyword">continue</span>;</div><div class="line">                <span class="keyword">if</span>(sqr(node[i], node[j]))&#123;</div><div class="line">                    G[i].push_back(j);</div><div class="line">                    rG[j].push_back(i);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> tot = scc();</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;G[i].size(); j++)&#123;</div><div class="line">                <span class="keyword">int</span> v = G[i][j];</div><div class="line">                <span class="keyword">if</span>(belong[i]!=belong[v])&#123;</div><div class="line">                    in[belong[v]]++;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=k; i++)&#123;</div><div class="line">            <span class="keyword">if</span>(!in[i]) ans += cost[i];</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"Case #%d: %d\n"</span>, ++kase, ans);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
@@ -352,17 +352,17 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/04/25/强联通缩点/">强联通缩点</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Babydragon</a></p>
-        <p><span>发布时间:</span>2018-04-25, 20:43:01</p>
-        <p><span>最后更新:</span>2018-04-25, 20:45:57</p>
+        <p><span>Title:</span><a href="/2018/04/25/强联通缩点/">强联通缩点</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Babydragon</a></p>
+        <p><span>Created:</span>2018-04-25, 20:43:01</p>
+        <p><span>Updated:</span>2018-04-25, 20:49:11</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/04/25/强联通缩点/" title="强联通缩点">http://yoursite.com/2018/04/25/强联通缩点/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/04/25/强联通缩点/　　作者: Babydragon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2018/04/25/强联通缩点/" title="强联通缩点">http://yoursite.com/2018/04/25/强联通缩点/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2018/04/25/强联通缩点/　　By Babydragon" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
         </p>
     </div>
 
@@ -383,7 +383,7 @@
 </article>
 
     <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
+        <strong class="toc-title">Contents</strong>
         
             <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#问题"><span class="toc-number">1.</span> <span class="toc-text">问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题解"><span class="toc-number">1.1.</span> <span class="toc-text">题解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AC代码"><span class="toc-number">1.2.</span> <span class="toc-text">AC代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#未解决的问题"><span class="toc-number">2.</span> <span class="toc-text">未解决的问题</span></a></li></ol>
         
@@ -399,10 +399,10 @@
         }
     </style>
 
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
 
     <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
     </script>
 
 
@@ -455,13 +455,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/04/20/树的直径/" title="下一篇: 树的直径">
+            <a href="/2018/04/20/树的直径/" title="Next: 树的直径">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -484,14 +484,14 @@
                 2017-2018 Babydragon
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -500,7 +500,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -554,9 +554,9 @@ MathJax.Hub.Queue(function() {
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
