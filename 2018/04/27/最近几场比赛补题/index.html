@@ -15,17 +15,19 @@
 
 
 
-<meta name="description" content="我对素数一无所知">
-<meta name="keywords" content="素数表">
+<meta name="description" content="不轻易言弃">
 <meta property="og:type" content="article">
-<meta property="og:title" content="素数表">
-<meta property="og:url" content="http://yoursite.com/2018/02/26/素数表/index.html">
+<meta property="og:title" content="最近几场比赛补题">
+<meta property="og:url" content="http://yoursite.com/2018/04/27/最近几场比赛补题/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="我对素数一无所知">
-<meta property="og:updated_time" content="2018-03-23T05:32:08.678Z">
+<meta property="og:description" content="不轻易言弃">
+<meta property="og:image" content="http://wx2.sinaimg.cn/mw690/0060lm7Tly1fqrb1000uhj30qy067wew.jpg">
+<meta property="og:image" content="http://wx3.sinaimg.cn/mw690/0060lm7Tly1fqrb1dbdwtj30c304idfr.jpg">
+<meta property="og:updated_time" content="2018-04-27T09:41:15.909Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="素数表">
-<meta name="twitter:description" content="我对素数一无所知">
+<meta name="twitter:title" content="最近几场比赛补题">
+<meta name="twitter:description" content="不轻易言弃">
+<meta name="twitter:image" content="http://wx2.sinaimg.cn/mw690/0060lm7Tly1fqrb1000uhj30qy067wew.jpg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -54,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>素数表 | 宝宝天龙</title>
+<title>最近几场比赛补题 | 宝宝天龙</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -293,11 +295,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-素数表" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-最近几场比赛补题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/02/26/素数表/" class="article-date">
-      <time datetime="2018-02-25T18:29:17.000Z" itemprop="datePublished">2018-02-26</time>
+      <a href="/2018/04/27/最近几场比赛补题/" class="article-date">
+      <time datetime="2018-04-27T08:33:43.000Z" itemprop="datePublished">2018-04-27</time>
 </a>
 
 
@@ -312,7 +314,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      素数表
+      最近几场比赛补题
     </h1>
   
 
@@ -326,10 +328,6 @@
 
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/素数表/">素数表</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -337,15 +335,30 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>我对素数一无所知<br><a id="more"></a></p>
-<p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本来今天打比赛的时候，一心想要打出1e9范围内的素数表，直到后来用python打了出来。。。</p>
+        <p>不轻易言弃</p>
+<a id="more"></a>
+<h1 id="校赛"><a href="#校赛" class="headerlink" title="校赛"></a>校赛</h1><p>过了五题，有的题目还是需要仔细思考一下的。</p>
+<h2 id="E题"><a href="#E题" class="headerlink" title="E题"></a>E题</h2><p>三进制dp.用一个数组维护余数前缀的所有后缀的种类的个数，这种思想很是巧妙。<br><img src="http://wx2.sinaimg.cn/mw690/0060lm7Tly1fqrb1000uhj30qy067wew.jpg" alt=""><br><img src="http://wx3.sinaimg.cn/mw690/0060lm7Tly1fqrb1dbdwtj30c304idfr.jpg" alt=""></p>
 <blockquote>
-<p>pip install primesieve</p>
+<p>+1操作很明显 当转移到达的状态（i）的后缀和j 和 处理好的串的元素（b[i]）相同时，单独一个b[i]也能产生一个后缀和j</p>
+<p><code>对后缀进行划分（自动机dp的常见做法） dp[i][j]: 访问到第i号元素 后缀和必定为j 的 区间[1,i]子串 的取法总数</code></p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> primesieve <span class="keyword">import</span> *</div><div class="line">ans = primes(<span class="number">1e9</span>)</div><div class="line"><span class="keyword">with</span> open(<span class="string">'data.txt'</span>, <span class="string">'w'</span>) <span class="keyword">as</span> f:</div><div class="line">    <span class="keyword">for</span> number <span class="keyword">in</span> ans:</div><div class="line">        f.write(str(number)+<span class="string">','</span>)</div></pre></td></tr></table></figure>
-<p>1e9范围内有50847534个素数，符合\(\frac{n}{ln(n)}\)的规律。<br>打出来的素数表的txt文本大小有478Mb之大。我真是一个智障，还痴心想要把打的表粘上去。<br>明天给自己的数论加一点技能点。。。<br>一般的素数表打在1e5的范围之内，因为可以采用平方枚举的方法，超过1e5的质数(任意的数都可以拆成若干个质数的乘积)就要暴力的进行计算了。<br>学习如何减小筛选素数的范围，比如今天做的那个二分求等比数列的和的小技巧，其实还不是很懂。<br>1e9范围内的素数的最大的间隔为282<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> primesieve <span class="keyword">import</span> *</div><div class="line">ans = primes(<span class="number">1e9</span>)</div><div class="line">tot = count_primes(<span class="number">1</span>, <span class="number">1e9</span>)</div><div class="line">print(tot)</div><div class="line">interval = <span class="number">-1</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, tot):</div><div class="line">    interval = max(interval, ans[i]-ans[i<span class="number">-1</span>])</div><div class="line">print(interval)</div></pre></td></tr></table></figure></p>
-<p>所以昨天的B题倒着枚举就行了。。。菜醒</p>
+<p>第二个思想相当的厉害。</p>
+<h2 id="F题"><a href="#F题" class="headerlink" title="F题"></a>F题</h2><p>pq维护，我维护的是后面的出现的次数，每一次弹出最小的出现的次数。不用维护前面的，因为在pq中肯定不会用到它们</p>
+<h2 id="G"><a href="#G" class="headerlink" title="G"></a>G</h2><p>网络赛的升级版<br>队友是打表找规律做出来的。<br>先贴一个数据规模是100的代码</p>
+<h3 id="弱化版"><a href="#弱化版" class="headerlink" title="弱化版"></a>弱化版</h3><p><a href="http://acm.xidian.edu.cn/problem.php?id=1286" target="_blank" rel="external">弱化版</a><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> x, y;</div><div class="line">    <span class="keyword">int</span> step;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">1e9</span>;</div><div class="line"><span class="comment">//int bfs()&#123;</span></div><div class="line"><span class="comment">//    Node s;</span></div><div class="line"><span class="comment">//    s.x = s.y = 1;</span></div><div class="line"><span class="comment">//    s.step = 0;</span></div><div class="line"><span class="comment">//    queue&lt;Node&gt; q;</span></div><div class="line"><span class="comment">//    while(!q.empty()) q.pop();</span></div><div class="line"><span class="comment">//    q.push(s);</span></div><div class="line"><span class="comment">//    while(true)&#123;</span></div><div class="line"><span class="comment">//        Node temp = q.front();</span></div><div class="line"><span class="comment">//        q.pop();</span></div><div class="line"><span class="comment">//        if(temp.y == n) &#123;</span></div><div class="line"><span class="comment">//            return temp.step;</span></div><div class="line"><span class="comment">//        &#125;</span></div><div class="line"><span class="comment">//        else&#123;</span></div><div class="line"><span class="comment">//            Node temp1 = temp;</span></div><div class="line"><span class="comment">//            Node temp2 = temp;</span></div><div class="line"><span class="comment">//            temp1.y = temp1.x+temp1.y;</span></div><div class="line"><span class="comment">//            temp2.x = temp2.y;</span></div><div class="line"><span class="comment">//            temp2.y = 2*temp2.y;</span></div><div class="line"><span class="comment">//            temp1.step = temp2.step = temp.step+1;</span></div><div class="line"><span class="comment">//            q.push(temp1);</span></div><div class="line"><span class="comment">//            q.push(temp2);</span></div><div class="line"><span class="comment">//        &#125;</span></div><div class="line"><span class="comment">//    &#125;</span></div><div class="line"><span class="comment">//    return -1;</span></div><div class="line"><span class="comment">//&#125;</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">105</span>;</div><div class="line"><span class="keyword">int</span> ans[maxn][maxn];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>&#123;</div><div class="line">    <span class="comment">//cout&lt;&lt;x&lt;&lt;" "&lt;&lt;y&lt;&lt;endl;</span></div><div class="line">    <span class="keyword">int</span> tempx = x;</div><div class="line">    <span class="keyword">int</span> tempy = x+y;</div><div class="line">    <span class="keyword">if</span>(tempy&lt;=<span class="number">100</span>)&#123;</div><div class="line">        <span class="keyword">if</span>(ans[tempx][tempy]&gt;ans[x][y]+<span class="number">1</span>) ans[tempx][tempy] = ans[x][y]+<span class="number">1</span>;</div><div class="line">        dfs(tempx, tempy);</div><div class="line">    &#125;</div><div class="line">    tempx = y;</div><div class="line">    tempy = <span class="number">2</span>*y;</div><div class="line">    <span class="keyword">if</span>(tempy&lt;=<span class="number">100</span>)&#123;</div><div class="line">        <span class="keyword">if</span>(ans[tempx][tempy]&gt;ans[x][y]+<span class="number">1</span>) ans[tempx][tempy] = ans[x][y]+<span class="number">1</span>;</div><div class="line">        dfs(tempx, tempy);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> t;</div><div class="line">    <span class="built_in">cin</span>&gt;&gt;t;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;maxn; i++)</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;maxn; j++) ans[i][j] = INF;</div><div class="line">    ans[<span class="number">1</span>][<span class="number">1</span>] = <span class="number">0</span>;</div><div class="line">    dfs(<span class="number">1</span>, <span class="number">1</span>);</div><div class="line">    <span class="keyword">while</span>(t--)&#123;</div><div class="line">        <span class="built_in">cin</span>&gt;&gt;n;</div><div class="line">        <span class="keyword">int</span> ans1 = INF;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;maxn; i++)&#123;</div><div class="line">            ans1 = min(ans1, ans[i][n]);</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans1);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="强化版"><a href="#强化版" class="headerlink" title="强化版"></a>强化版</h3><p><a href="http://acm.xidian.edu.cn/problem.php?id=1290" target="_blank" rel="external">强化版</a><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span> + <span class="number">12</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MOD = <span class="number">1e9</span> + <span class="number">7</span>;</div><div class="line"><span class="keyword">int</span> n, m, f, t;</div><div class="line"></div><div class="line"><span class="keyword">int</span> data[maxn];</div><div class="line"><span class="keyword">int</span> prime[maxn];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">getprime</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">memset</span>(prime, <span class="number">0</span>, <span class="keyword">sizeof</span>(prime));</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; maxn; i ++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span>(! prime[i])prime[++ prime[<span class="number">0</span>]] = i;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= prime[<span class="number">0</span>] &amp;&amp; prime[j] &lt;= (maxn - <span class="number">1</span>) / i; j ++)</div><div class="line">        &#123;</div><div class="line">            prime[prime[j] * i] = <span class="number">1</span>;</div><div class="line">            <span class="keyword">if</span>(i % prime[j] == <span class="number">0</span>)<span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    getprime();</div><div class="line">    data[<span class="number">1</span>] = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= <span class="number">1000000</span>; i ++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">bool</span> isok = <span class="literal">false</span>;</div><div class="line">        f = lower_bound(prime + <span class="number">1</span>, prime + <span class="number">1</span> + prime[<span class="number">0</span>], i) - prime - <span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span>(i == prime[f + <span class="number">1</span>])</div><div class="line">        &#123;</div><div class="line">            data[i] = i - <span class="number">1</span>;</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> j = <span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k = <span class="number">1</span>; k &lt;= prime[<span class="number">0</span>]; k ++)</div><div class="line">            <span class="keyword">if</span>(i % prime[k] == <span class="number">0</span>)</div><div class="line">            &#123;</div><div class="line">                j = i / prime[k];</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#123;</div><div class="line">            data[i] = data[j] + i / j - <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</div><div class="line">    <span class="keyword">while</span>(n --)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;f);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, data[f]);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后就会发现，答案是n分解质因数之后，<code>所有的(质数-1)的和</code>。<br>然后啊，我就傻了吧唧的在外面的txt文本中打了409kb的表，发现交不上去。。。<br>看了队友的代码，发现自己的打表方式并不正确。</p>
+<h1 id="选拔第一场"><a href="#选拔第一场" class="headerlink" title="选拔第一场"></a>选拔第一场</h1><h2 id="A题"><a href="#A题" class="headerlink" title="A题"></a>A题</h2><p>图论签到题，我签了90min，严重导致士气下降。只用判断图中有没有环就行了。最后才想起来用scc…</p>
+<h2 id="B"><a href="#B" class="headerlink" title="B"></a>B</h2><p>大霸一发ac，并不知道</p>
+<h2 id="G思维题"><a href="#G思维题" class="headerlink" title="G思维题"></a>G思维题</h2><p>整队都卡了这一道题，看来平时的脑洞还是太少了。</p>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>取数组中连续的一段数字，使得它们的和模一个数m的值为0.</p>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>维护前缀的模值，当两个前缀的模值相等的时候，去掉中间的部分，不影响原来的模值。（即中间的和模值为0）</p>
+<h4 id="T了的代码"><a href="#T了的代码" class="headerlink" title="T了的代码"></a>T了的代码</h4><p>我不知道为什么一直T，这明明是O(n)的时间复杂度啊。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxm = <span class="number">1e4</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">int</span> n, m;</div><div class="line"><span class="keyword">int</span> num[maxn];</div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> l, r;</div><div class="line">&#125;node[maxm];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m))&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num[i]);</div><div class="line">            <span class="keyword">int</span> time = num[i]/m;</div><div class="line">            <span class="keyword">if</span>(time&lt;=<span class="number">0</span>)&#123;</div><div class="line">                num[i] = m*(<span class="number">-1</span>*time+<span class="number">1</span>)+num[i];</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span> &#123;</div><div class="line">                num[i] = num[i] - time*m;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;maxm; i++)&#123;</div><div class="line">            node[i].l = node[i].r = <span class="number">-1</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">            <span class="keyword">if</span>(node[num[i]].l!=<span class="number">-1</span>) &#123;</div><div class="line">                node[num[i]].r = i;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">else</span>&#123;</div><div class="line">                node[i].l = node[i].r = i;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;maxm; i++)&#123;</div><div class="line">            ans = max(ans, node[i].r-node[i].l);</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="J"><a href="#J" class="headerlink" title="J"></a>J</h2><p>kmp,要理解next[]的含义。因为是真后缀，前缀和后缀完全相同，在字符串的最后面加一个特殊字符。<br>然后用kmp的next[]压入一个set中，并且查询，若set中存在，那么前缀也在中间存在过。<br>时间复杂度O(n+m).<br>我觉得得补补字符串的坑，此时不填，更待何时！！！！</p>
+<h1 id="选拔第二场（模拟专场）"><a href="#选拔第二场（模拟专场）" class="headerlink" title="选拔第二场（模拟专场）"></a>选拔第二场（模拟专场）</h1><p>大霸想出来的用pq维护的感觉很巧妙。<br>然后就是一个fibonacii基的东西，感觉很巧妙，居然是数位dp…我们找了一个半小时规律，感觉还差最后一点点</p>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 <h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
     </div>
@@ -354,13 +367,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/02/26/素数表/">素数表</a></p>
+        <p><span>本文标题:</span><a href="/2018/04/27/最近几场比赛补题/">最近几场比赛补题</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Babydragon</a></p>
-        <p><span>发布时间:</span>2018-02-26, 02:29:17</p>
-        <p><span>最后更新:</span>2018-03-23, 13:32:08</p>
+        <p><span>发布时间:</span>2018-04-27, 16:33:43</p>
+        <p><span>最后更新:</span>2018-04-27, 17:41:15</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/02/26/素数表/" title="素数表">http://yoursite.com/2018/02/26/素数表/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/02/26/素数表/　　作者: Babydragon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/04/27/最近几场比赛补题/" title="最近几场比赛补题">http://yoursite.com/2018/04/27/最近几场比赛补题/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/04/27/最近几场比赛补题/　　作者: Babydragon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -372,16 +385,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/02/27/hash/">
-                    hash
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/02/25/等比数列的二分求和/">
-                    等比数列的二分求和
+                <a href="/2018/04/25/强联通缩点/">
+                    强联通缩点
                 </a>
             </div>
         
@@ -393,7 +400,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#未解决的问题"><span class="toc-number">2.</span> <span class="toc-text">未解决的问题</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#校赛"><span class="toc-number">1.</span> <span class="toc-text">校赛</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#E题"><span class="toc-number">1.1.</span> <span class="toc-text">E题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#F题"><span class="toc-number">1.2.</span> <span class="toc-text">F题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#G"><span class="toc-number">1.3.</span> <span class="toc-text">G</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#弱化版"><span class="toc-number">1.3.1.</span> <span class="toc-text">弱化版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#强化版"><span class="toc-number">1.3.2.</span> <span class="toc-text">强化版</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#选拔第一场"><span class="toc-number">2.</span> <span class="toc-text">选拔第一场</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#A题"><span class="toc-number">2.1.</span> <span class="toc-text">A题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B"><span class="toc-number">2.2.</span> <span class="toc-text">B</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#G思维题"><span class="toc-number">2.3.</span> <span class="toc-text">G思维题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#题意"><span class="toc-number">2.3.0.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#题解"><span class="toc-number">2.3.0.2.</span> <span class="toc-text">题解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#T了的代码"><span class="toc-number">2.3.0.3.</span> <span class="toc-text">T了的代码</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#J"><span class="toc-number">2.4.</span> <span class="toc-text">J</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#选拔第二场（模拟专场）"><span class="toc-number">3.</span> <span class="toc-text">选拔第二场（模拟专场）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#未解决的问题"><span class="toc-number">4.</span> <span class="toc-text">未解决的问题</span></a></li></ol>
         
     </div>
     <style>
@@ -429,7 +436,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"素数表　| 宝宝天龙　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"最近几场比赛补题　| 宝宝天龙　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -463,15 +470,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/02/27/hash/" title="上一篇: hash">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/02/25/等比数列的二分求和/" title="下一篇: 等比数列的二分求和">
+            <a href="/2018/04/25/强联通缩点/" title="下一篇: 强联通缩点">
                 <i class="fa fa-angle-right"></i>
             </a>
         
