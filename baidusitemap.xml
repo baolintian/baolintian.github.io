@@ -3,14 +3,14 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/04/29/gym%E8%A1%A5%E9%A2%98/</loc>
-    <lastmod>2018-04-29T08:52:42.495Z</lastmod>
+    <loc>http://yoursite.com/2018/04/30/kuangbin%E4%B8%93%E9%A2%989-%E8%BF%9E%E9%80%9A%E5%9B%BE/</loc>
+    <lastmod>2018-04-30T09:47:10.996Z</lastmod>
     <data>
         <display>
-        <title>gym补题</title>
-        <pubTime>2018-04-29T08:23:09.000Z</pubTime>
+        <title>kuangbin专题9--连通图</title>
+        <pubTime>2018-04-30T09:42:46.000Z</pubTime>
         
-        <tag>构造题 </tag>
+        <tag>图论 </tag>
          
          
            
@@ -24,7 +24,7 @@
     
   <url>
     <loc>http://yoursite.com/2017/09/20/hello-world/</loc>
-    <lastmod>2018-04-29T08:38:43.617Z</lastmod>
+    <lastmod>2018-04-30T08:30:40.802Z</lastmod>
     <data>
         <display>
         <title>欢迎来到我的新博客</title>
@@ -36,6 +36,64 @@
            
              
               <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/12/26/%E8%BF%91%E6%9C%9F%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
+    <lastmod>2018-04-29T12:20:57.101Z</lastmod>
+    <data>
+        <display>
+        <title>近期要做的事情</title>
+        <pubTime>2017-12-26T15:40:10.000Z</pubTime>
+        
+        <tag>tips </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/04/27/%E6%9C%80%E8%BF%91%E5%87%A0%E5%9C%BA%E6%AF%94%E8%B5%9B%E8%A1%A5%E9%A2%98/</loc>
+    <lastmod>2018-04-29T10:21:13.079Z</lastmod>
+    <data>
+        <display>
+        <title>最近几场比赛补题</title>
+        <pubTime>2018-04-27T08:33:43.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/04/29/gym%E8%A1%A5%E9%A2%98/</loc>
+    <lastmod>2018-04-29T08:52:42.495Z</lastmod>
+    <data>
+        <display>
+        <title>gym补题</title>
+        <pubTime>2018-04-29T08:23:09.000Z</pubTime>
+        
+        <tag>构造题 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
           
         </display>
     </data>
@@ -72,24 +130,6 @@
         
         <tag>最小费用流 </tag>
          
-         
-           
-             
-              <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/04/27/%E6%9C%80%E8%BF%91%E5%87%A0%E5%9C%BA%E6%AF%94%E8%B5%9B%E8%A1%A5%E9%A2%98/</loc>
-    <lastmod>2018-04-27T09:41:15.909Z</lastmod>
-    <data>
-        <display>
-        <title>最近几场比赛补题</title>
-        <pubTime>2018-04-27T08:33:43.000Z</pubTime>
-        
          
            
              
@@ -440,26 +480,6 @@
         <pubTime>2018-03-22T13:08:28.000Z</pubTime>
         
         <tag>个人感想 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/12/26/%E8%BF%91%E6%9C%9F%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
-    <lastmod>2018-03-23T08:52:18.226Z</lastmod>
-    <data>
-        <display>
-        <title>近期要做的事情</title>
-        <pubTime>2017-12-26T15:40:10.000Z</pubTime>
-        
-        <tag>tips </tag>
          
          
            
