@@ -15,16 +15,16 @@
 
 
 
-<meta name="description" content="description">
+<meta name="description" content="进制数的便捷的显示，而不是自己手动的模拟输出。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="差分约束系统">
-<meta property="og:url" content="http://yoursite.com/2018/03/18/差分约束系统/index.html">
+<meta property="og:title" content="c++中进制的显示">
+<meta property="og:url" content="http://yoursite.com/2018/05/03/c-中进制的显示/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="description">
-<meta property="og:updated_time" content="2018-03-23T05:29:47.175Z">
+<meta property="og:description" content="进制数的便捷的显示，而不是自己手动的模拟输出。">
+<meta property="og:updated_time" content="2018-05-03T06:26:51.291Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="差分约束系统">
-<meta name="twitter:description" content="description">
+<meta name="twitter:title" content="c++中进制的显示">
+<meta name="twitter:description" content="进制数的便捷的显示，而不是自己手动的模拟输出。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -53,7 +53,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>差分约束系统 | 宝宝天龙</title>
+<title>c++中进制的显示 | 宝宝天龙</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -292,11 +292,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-差分约束系统" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-c-中进制的显示" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/03/18/差分约束系统/" class="article-date">
-      <time datetime="2018-03-17T16:09:56.000Z" itemprop="datePublished">2018-03-18</time>
+      <a href="/2018/05/03/c-中进制的显示/" class="article-date">
+      <time datetime="2018-05-03T06:18:25.000Z" itemprop="datePublished">2018-05-03</time>
 </a>
 
 
@@ -311,7 +311,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      差分约束系统
+      c++中进制的显示
     </h1>
   
 
@@ -332,7 +332,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <p>进制数的便捷的显示，而不是自己手动的模拟输出。</p>
+<a id="more"></a>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e3</span>+<span class="number">10</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">bitset</span>&lt;<span class="keyword">sizeof</span>(<span class="keyword">int</span>)&gt; (<span class="number">15</span>)&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;hex&lt;&lt;<span class="number">15</span>&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;dec&lt;&lt;<span class="number">15</span>&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;oct&lt;&lt;<span class="number">15</span>&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">char</span> str[<span class="number">255</span>];</div><div class="line">    <span class="keyword">int</span> num = <span class="number">15</span>;</div><div class="line">    <span class="comment">//这个函数是任意进制的转换orz, 只要改变第三个参数就可以了</span></div><div class="line">    itoa(num, str, <span class="number">16</span>);</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;str;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
     </div>
     
@@ -340,13 +346,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/03/18/差分约束系统/">差分约束系统</a></p>
+        <p><span>本文标题:</span><a href="/2018/05/03/c-中进制的显示/">c++中进制的显示</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Babydragon</a></p>
-        <p><span>发布时间:</span>2018-03-18, 00:09:56</p>
-        <p><span>最后更新:</span>2018-03-23, 13:29:47</p>
+        <p><span>发布时间:</span>2018-05-03, 14:18:25</p>
+        <p><span>最后更新:</span>2018-05-03, 14:26:51</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/03/18/差分约束系统/" title="差分约束系统">http://yoursite.com/2018/03/18/差分约束系统/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/03/18/差分约束系统/　　作者: Babydragon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/05/03/c-中进制的显示/" title="c++中进制的显示">http://yoursite.com/2018/05/03/c-中进制的显示/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/05/03/c-中进制的显示/　　作者: Babydragon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -358,16 +364,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/03/20/组合数的整理/">
-                    组合数的整理
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/03/16/trie树/">
-                    trie树
+                <a href="/2018/05/03/FFT/">
+                    FFT
                 </a>
             </div>
         
@@ -379,7 +379,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#未解决的问题"><span class="toc-number">1.</span> <span class="toc-text">未解决的问题</span></a></li></ol>
         
     </div>
     <style>
@@ -415,7 +415,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"差分约束系统　| 宝宝天龙　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"c++中进制的显示　| 宝宝天龙　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -449,15 +449,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/03/20/组合数的整理/" title="上一篇: 组合数的整理">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/03/16/trie树/" title="下一篇: trie树">
+            <a href="/2018/05/03/FFT/" title="下一篇: FFT">
                 <i class="fa fa-angle-right"></i>
             </a>
         
