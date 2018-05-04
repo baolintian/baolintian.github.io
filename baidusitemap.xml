@@ -3,13 +3,15 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/05/03/c-%E4%B8%AD%E8%BF%9B%E5%88%B6%E7%9A%84%E6%98%BE%E7%A4%BA/</loc>
-    <lastmod>2018-05-03T06:26:51.291Z</lastmod>
+    <loc>http://yoursite.com/2018/05/04/STL%E4%B8%80%E4%BA%9B%E5%AE%B9%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-05-04T05:15:00.681Z</lastmod>
     <data>
         <display>
-        <title>c++中进制的显示</title>
-        <pubTime>2018-05-03T06:18:25.000Z</pubTime>
+        <title>STL一些容器的使用</title>
+        <pubTime>2018-05-04T05:06:54.000Z</pubTime>
         
+        <tag>STL </tag>
+         
          
            
              
@@ -22,14 +24,39 @@
     
   <url>
     <loc>http://yoursite.com/2018/05/03/FFT/</loc>
-    <lastmod>2018-05-03T06:18:01.456Z</lastmod>
+    <lastmod>2018-05-03T17:08:19.477Z</lastmod>
     <data>
         <display>
         <title>FFT</title>
         <pubTime>2018-05-03T06:18:01.000Z</pubTime>
         
+        <tag>数学 </tag>
+         
+        <tag>FFT-&gt;DFT\IDFT </tag>
+         
          
            
+             
+              <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/05/03/c-%E4%B8%AD%E8%BF%9B%E5%88%B6%E7%9A%84%E6%98%BE%E7%A4%BA/</loc>
+    <lastmod>2018-05-03T06:26:51.291Z</lastmod>
+    <data>
+        <display>
+        <title>c++中进制的显示</title>
+        <pubTime>2018-05-03T06:18:25.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
+          
         </display>
     </data>
     </url>
