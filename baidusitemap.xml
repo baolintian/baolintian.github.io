@@ -2,6 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+    
+  <url>
+    <loc>http://yoursite.com/2018/05/04/ex-kmp/</loc>
+    <lastmod>2018-05-04T05:20:01.002Z</lastmod>
+    <data>
+        <display>
+        <title>ex-kmp</title>
+        <pubTime>2018-05-04T05:20:00.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://yoursite.com/2018/05/04/STL%E4%B8%80%E4%BA%9B%E5%AE%B9%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2018-05-04T05:15:00.681Z</lastmod>
@@ -472,7 +488,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://yoursite.com/2017/09/20/%E6%83%B3%E4%B9%B0%E7%9A%84%E4%B8%9C%E8%A5%BF/</loc>

@@ -15,18 +15,16 @@
 
 
 
-<meta name="description" content="后缀数组的原理很好懂，但是蓝书上写的代码，我是真的读不懂啊emmmmmmm">
+<meta name="description" content="未解决的问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="后缀数组">
-<meta property="og:url" content="http://yoursite.com/2018/03/14/后缀数组/index.html">
+<meta property="og:title" content="ex-kmp">
+<meta property="og:url" content="http://yoursite.com/2018/05/04/ex-kmp/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="后缀数组的原理很好懂，但是蓝书上写的代码，我是真的读不懂啊emmmmmmm">
-<meta property="og:image" content="https://t1.picb.cc/uploads/2018/03/15/22DYSJ.png">
-<meta property="og:updated_time" content="2018-03-23T05:30:21.952Z">
+<meta property="og:description" content="未解决的问题">
+<meta property="og:updated_time" content="2018-05-04T05:20:01.002Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="后缀数组">
-<meta name="twitter:description" content="后缀数组的原理很好懂，但是蓝书上写的代码，我是真的读不懂啊emmmmmmm">
-<meta name="twitter:image" content="https://t1.picb.cc/uploads/2018/03/15/22DYSJ.png">
+<meta name="twitter:title" content="ex-kmp">
+<meta name="twitter:description" content="未解决的问题">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -55,7 +53,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>后缀数组 | 宝宝天龙</title>
+<title>ex-kmp | 宝宝天龙</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -298,11 +296,11 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="post-后缀数组" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ex-kmp" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/03/14/后缀数组/" class="article-date">
-      <time datetime="2018-03-14T12:11:15.000Z" itemprop="datePublished">2018-03-14</time>
+      <a href="/2018/05/04/ex-kmp/" class="article-date">
+      <time datetime="2018-05-04T05:20:00.000Z" itemprop="datePublished">2018-05-04</time>
 </a>
 
 
@@ -317,7 +315,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      后缀数组
+      ex-kmp
     </h1>
   
 
@@ -325,10 +323,6 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ACM/">ACM</a>
-    </div>
-
 
         
         <div class="clearfix"></div>
@@ -338,15 +332,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>后缀数组的原理很好懂，但是蓝书上写的代码，我是真的读不懂啊emmmmmmm</p>
-<a id="more"></a>
+        <a id="more"></a>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-<h1 id="后缀数组的原理"><a href="#后缀数组的原理" class="headerlink" title="后缀数组的原理"></a>后缀数组的原理</h1><p>运用了倍增的思想，不断的计算后缀的字典序的大小，关于倍增的图可以看刘汝佳那本书上面的图。<br>我主要画了一下关于最长公共前缀的原理图。<br><img src="https://t1.picb.cc/uploads/2018/03/15/22DYSJ.png" alt=""></p>
-<h1 id="代码里面的说明"><a href="#代码里面的说明" class="headerlink" title="代码里面的说明"></a>代码里面的说明</h1><p>其实sa[], x[]两个表示的东西非常的相似：<br>sa[i]表示的是：后缀的字典序排在第i位在原来的字符串中的位置为sa[i].<br>x[i]表示的是：字符串中的位置i在字典序中的大小为x[i].<br>两者其实是map<int, int=""> 的值发生了交换。</int,></p>
-<p>其中的一段代码看了好久：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//后面的字符串连接的是0，因此优先级最高，更新后面的第二维</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=n-k; i&lt;n; i++)&#123;</div><div class="line">    y[p++] = i;</div><div class="line">&#125;</div><div class="line"><span class="comment">//更新前面的第二维，有的字母不能影响前面的第二维，判断条件是sa[i]&gt;=k,小于就相当于不能影响前面</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)<span class="keyword">if</span>(sa[i]&gt;=k) y[p++] = sa[i]-k;</div></pre></td></tr></table></figure></p>
-<p>先更新的是后面连接’0’的第二维值，然后更新的是后面影响前面的第二维值。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e4</span>+<span class="number">10</span>;</div><div class="line"><span class="built_in">string</span> s;</div><div class="line"><span class="comment">//一个字符串的末尾必须是0，使得它的优先级最大</span></div><div class="line"><span class="comment">//x[]是第一维，y[]是第二维的数字</span></div><div class="line"><span class="comment">//c[]是统计字符的个数的</span></div><div class="line"><span class="keyword">int</span> sa[maxn], x[maxn], y[maxn], c[maxn], n;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">build_sa</span><span class="params">(<span class="keyword">int</span> m)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span> i;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; i++) c[i] = <span class="number">0</span>;</div><div class="line">    <span class="comment">//处理原来的字符串，使其范围为0~m-1，并且最后一个字符必须为0.</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) <span class="keyword">if</span>(s[i]&gt;=<span class="string">'A'</span>&amp;&amp;s[i]&lt;=<span class="string">'z'</span>)c[x[i]=(s[i]-<span class="string">'A'</span>+<span class="number">1</span>)]++;</div><div class="line">                            <span class="keyword">else</span> &#123;c[<span class="number">0</span>]++; x[i] = <span class="number">0</span>;&#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;m; i++) c[i] += c[i<span class="number">-1</span>];</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=n<span class="number">-1</span>; i&gt;=<span class="number">0</span>; i--) sa[--c[x[i]]] = i;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>; k&lt;=n; k&lt;&lt;=<span class="number">1</span>)&#123;</div><div class="line">        <span class="keyword">int</span> p = <span class="number">0</span>;</div><div class="line">        <span class="comment">//后面的字符串连接的是0，因此优先级最高，更新后面的第二维</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=n-k; i&lt;n; i++)&#123;</div><div class="line">            y[p++] = i;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//更新前面的第二维，有的字母不能影响前面的第二维，判断条件是sa[i]&gt;=k,小于就相当于不能影响前面</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)<span class="keyword">if</span>(sa[i]&gt;=k) y[p++] = sa[i]-k;</div><div class="line">        </div><div class="line">        <span class="comment">//更新sa[]数组</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; i++) c[i] = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) c[x[y[i]]]++;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;m; i++) c[i] += c[i<span class="number">-1</span>];</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=n<span class="number">-1</span>; i&gt;=<span class="number">0</span>; i--)&#123;</div><div class="line">            sa[--c[x[y[i]]]] = y[i];</div><div class="line">        &#125;</div><div class="line">        swap(x, y);</div><div class="line">        p = <span class="number">1</span>; x[sa[<span class="number">0</span>]] = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;n; i++)&#123;</div><div class="line">            <span class="comment">//若第一维和第二维的数字相等，那么它们的x[]的值是一样的，因为x[i]表示的以i为序号的后缀的排行大小为x[i]</span></div><div class="line">            x[sa[i]] = y[sa[i<span class="number">-1</span>]]==y[sa[i]]&amp;&amp;</div><div class="line">            y[sa[i<span class="number">-1</span>]+k]==y[sa[i]+k]?p<span class="number">-1</span>:p++;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//顺序全部不等，必然可以排序了</span></div><div class="line">        <span class="keyword">if</span>(p&gt;=n) <span class="keyword">break</span>;</div><div class="line">        m = p;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    s = <span class="string">"BANANA0"</span>;</div><div class="line">    n = s.length();</div><div class="line">    build_sa(<span class="number">255</span>);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</div><div class="line">        <span class="built_in">cout</span>&lt;&lt;sa[i]&lt;&lt;<span class="string">" "</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
     </div>
@@ -355,13 +343,13 @@
   
     
     <div class="copyright">
-        <p><span>本文標題:</span><a href="/2018/03/14/后缀数组/">后缀数组</a></p>
+        <p><span>本文標題:</span><a href="/2018/05/04/ex-kmp/">ex-kmp</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">Babydragon</a></p>
-        <p><span>發布時間:</span>2018-03-14, 20:11:15</p>
-        <p><span>最後更新:</span>2018-03-23, 13:30:21</p>
+        <p><span>發布時間:</span>2018-05-04, 13:20:00</p>
+        <p><span>最後更新:</span>2018-05-04, 13:20:01</p>
         <p>
-            <span>原始鏈接:</span><a class="post-url" href="/2018/03/14/后缀数组/" title="后缀数组">http://yoursite.com/2018/03/14/后缀数组/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/03/14/后缀数组/　　作者: Babydragon" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <span>原始鏈接:</span><a class="post-url" href="/2018/05/04/ex-kmp/" title="ex-kmp">http://yoursite.com/2018/05/04/ex-kmp/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/05/04/ex-kmp/　　作者: Babydragon" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -373,16 +361,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/03/16/trie树/">
-                    trie树
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/03/13/linux-command-line/">
-                    linux command line
+                <a href="/2018/05/04/STL一些容器的使用/">
+                    STL一些容器的使用
                 </a>
             </div>
         
@@ -394,7 +376,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目錄</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#后缀数组的原理"><span class="toc-number">1.</span> <span class="toc-text">后缀数组的原理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#代码里面的说明"><span class="toc-number">2.</span> <span class="toc-text">代码里面的说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#未解决的问题"><span class="toc-number">4.</span> <span class="toc-text">未解决的问题</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#未解决的问题"><span class="toc-number">1.</span> <span class="toc-text">未解决的问题</span></a></li></ol>
         
     </div>
     <style>
@@ -430,7 +412,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"后缀数组　| 宝宝天龙　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"ex-kmp　| 宝宝天龙　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -464,15 +446,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/03/16/trie树/" title="上一篇: trie树">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/03/13/linux-command-line/" title="下一篇: linux command line">
+            <a href="/2018/05/04/STL一些容器的使用/" title="下一篇: STL一些容器的使用">
                 <i class="fa fa-angle-right"></i>
             </a>
         
