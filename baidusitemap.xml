@@ -3,12 +3,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/05/15/cf-482-div2/</loc>
-    <lastmod>2018-05-15T05:09:00.288Z</lastmod>
+    <loc>http://yoursite.com/2018/05/16/cf483-div2/</loc>
+    <lastmod>2018-05-16T04:41:02.461Z</lastmod>
     <data>
         <display>
-        <title>cf-482 div2</title>
-        <pubTime>2018-05-15T05:03:15.000Z</pubTime>
+        <title>cf483-div2</title>
+        <pubTime>2018-05-16T04:19:57.000Z</pubTime>
         
         <tag>cf </tag>
          
@@ -24,13 +24,33 @@
     
   <url>
     <loc>http://yoursite.com/2018/05/14/kuangbin%E4%B8%93%E9%A2%98%E5%8D%81-%E5%B9%B6%E6%9F%A5%E9%9B%86/</loc>
-    <lastmod>2018-05-14T12:54:02.973Z</lastmod>
+    <lastmod>2018-05-15T05:35:47.429Z</lastmod>
     <data>
         <display>
         <title>kuangbin专题十---并查集</title>
         <pubTime>2018-05-14T12:51:11.000Z</pubTime>
         
         <tag>并查集 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/05/15/cf-482-div2/</loc>
+    <lastmod>2018-05-15T05:09:00.288Z</lastmod>
+    <data>
+        <display>
+        <title>cf-482 div2</title>
+        <pubTime>2018-05-15T05:03:15.000Z</pubTime>
+        
+        <tag>cf </tag>
          
          
            
