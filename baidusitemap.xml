@@ -3,6 +3,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/09/20/hello-world/</loc>
+    <lastmod>2018-05-23T05:07:17.853Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎来到我的新博客</title>
+        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
+        
+        <tag>自我想法 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/05/21/%E5%8D%9A%E5%BC%88%E8%AE%BA%E4%B8%80/</loc>
     <lastmod>2018-05-22T16:33:12.406Z</lastmod>
     <data>
@@ -96,26 +116,6 @@
            
              
               <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/09/20/hello-world/</loc>
-    <lastmod>2018-05-20T13:15:54.739Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎来到我的新博客</title>
-        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
-        
-        <tag>自我想法 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
           
         </display>
     </data>
