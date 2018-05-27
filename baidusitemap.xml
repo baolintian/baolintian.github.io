@@ -3,8 +3,68 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/05/27/CDQ%E5%88%86%E6%B2%BB%E8%A7%A3%E5%86%B3%E4%B8%80%E7%B1%BB%E5%81%8F%E5%BA%8F%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2018-05-27T02:52:46.423Z</lastmod>
+    <data>
+        <display>
+        <title>CDQ分治解决一类偏序问题</title>
+        <pubTime>2018-05-27T02:43:22.000Z</pubTime>
+        
+        <tag>分治 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/12/26/%E8%BF%91%E6%9C%9F%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
+    <lastmod>2018-05-26T17:12:05.394Z</lastmod>
+    <data>
+        <display>
+        <title>近期要做的事情</title>
+        <pubTime>2017-12-26T15:40:10.000Z</pubTime>
+        
+        <tag>tips </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/05/27/hash-BKDRHASH%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2018-05-26T17:02:44.197Z</lastmod>
+    <data>
+        <display>
+        <title>hash--BKDRHASH算法</title>
+        <pubTime>2018-05-26T16:36:32.000Z</pubTime>
+        
+        <tag>hash </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/05/22/%E5%8D%9A%E5%BC%88%E8%AE%BA%E4%BA%8C/</loc>
-    <lastmod>2018-05-26T14:10:21.367Z</lastmod>
+    <lastmod>2018-05-26T14:29:14.261Z</lastmod>
     <data>
         <display>
         <title>博弈论二</title>
@@ -387,26 +447,6 @@
            
              
               <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/12/26/%E8%BF%91%E6%9C%9F%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
-    <lastmod>2018-04-29T12:20:57.101Z</lastmod>
-    <data>
-        <display>
-        <title>近期要做的事情</title>
-        <pubTime>2017-12-26T15:40:10.000Z</pubTime>
-        
-        <tag>tips </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
           
         </display>
     </data>
