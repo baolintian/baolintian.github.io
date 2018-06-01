@@ -3,6 +3,41 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/06/01/%E7%A9%BA%E9%97%B4%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E/</loc>
+    <lastmod>2018-06-01T13:13:02.295Z</lastmod>
+    <data>
+        <display>
+        <title>空间自动点赞</title>
+        <pubTime>2018-06-01T08:52:00.000Z</pubTime>
+        
+        <tag>python </tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://yoursite.com/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/06/01/%E5%91%A8%E4%BA%94%E8%AE%AD%E7%BB%83%E8%A1%A5%E9%A2%98/</loc>
+    <lastmod>2018-06-01T12:15:25.013Z</lastmod>
+    <data>
+        <display>
+        <title>周五训练补题</title>
+        <pubTime>2018-06-01T12:15:24.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/05/30/%E7%94%A8latex%E5%86%99ppt/</loc>
     <lastmod>2018-06-01T08:56:28.416Z</lastmod>
     <data>
@@ -16,26 +51,6 @@
            
              
               <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/06/01/%E7%A9%BA%E9%97%B4%E8%87%AA%E5%8A%A8%E7%82%B9%E8%B5%9E/</loc>
-    <lastmod>2018-06-01T08:55:26.206Z</lastmod>
-    <data>
-        <display>
-        <title>空间自动点赞</title>
-        <pubTime>2018-06-01T08:52:00.000Z</pubTime>
-        
-        <tag>python </tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://yoursite.com/categories/python/"/>
           
         </display>
     </data>
