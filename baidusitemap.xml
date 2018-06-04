@@ -3,8 +3,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/05/30/%E7%94%A8latex%E5%86%99ppt/</loc>
+    <lastmod>2018-06-04T05:28:50.577Z</lastmod>
+    <data>
+        <display>
+        <title>用latex写ppt</title>
+        <pubTime>2018-05-29T16:52:02.000Z</pubTime>
+        
+        <tag>latex </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/06/03/%E5%91%A8%E6%97%A5gym%E7%BB%84%E9%98%9F%E8%B5%9B%E8%A1%A5%E9%A2%98/</loc>
-    <lastmod>2018-06-03T15:34:04.601Z</lastmod>
+    <lastmod>2018-06-03T16:42:13.695Z</lastmod>
     <data>
         <display>
         <title>周日gym组队赛补题</title>
@@ -72,26 +92,6 @@
         
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/05/30/%E7%94%A8latex%E5%86%99ppt/</loc>
-    <lastmod>2018-06-01T08:56:28.416Z</lastmod>
-    <data>
-        <display>
-        <title>用latex写ppt</title>
-        <pubTime>2018-05-29T16:52:02.000Z</pubTime>
-        
-        <tag>latex </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
-          
         </display>
     </data>
     </url>
