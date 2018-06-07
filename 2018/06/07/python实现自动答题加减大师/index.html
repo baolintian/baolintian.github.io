@@ -15,15 +15,17 @@
 
 
 
-<meta name="description" content="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="宝宝天龙">
-<meta property="og:url" content="http://yoursite.com/tags/back-propagation/index.html">
+<meta name="description" content="fork的一个项目，不过复原的过程还是遇到了很多的问题的。">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python实现自动答题加减大师">
+<meta property="og:url" content="http://yoursite.com/2018/06/07/python实现自动答题加减大师/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="description">
+<meta property="og:description" content="fork的一个项目，不过复原的过程还是遇到了很多的问题的。">
+<meta property="og:updated_time" content="2018-06-07T08:41:34.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="宝宝天龙">
-<meta name="twitter:description" content="description">
+<meta name="twitter:title" content="python实现自动答题加减大师">
+<meta name="twitter:description" content="fork的一个项目，不过复原的过程还是遇到了很多的问题的。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -52,7 +54,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Tag: back propagation | 宝宝天龙</title>
+<title>python实现自动答题加减大师 | 宝宝天龙</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -62,9 +64,9 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
-        isTag: true,
+        isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
@@ -295,60 +297,198 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-python实现自动答题加减大师" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/11/25/深度学习视频笔记/" class="archive-article-date">
-      <time datetime="2017-11-25T12:36:00.000Z" itemprop="datePublished">11-25</time>
+    <div class="article-meta">
+      <a href="/2018/06/07/python实现自动答题加减大师/" class="article-date">
+      <time datetime="2018-06-07T08:33:55.000Z" itemprop="datePublished">2018-06-07</time>
 </a>
 
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/25/深度学习视频笔记/">深度学习视频笔记</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python实现自动答题加减大师
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/python/">python</a>
     </div>
 
 
-          
+        
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/back-propagation/">back propagation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/深度学习/">深度学习</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>fork的一个项目，不过复原的过程还是遇到了很多的问题的。</p>
+<a id="more"></a>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<p><a href="https://github.com/clouduan/WechatGameAutoPlayer" target="_blank" rel="external">项目的链接</a><br><a href="https://github.com/1033020837/WechatGameScript" target="_blank" rel="external">学长使用了机器学习</a></p>
+<h1 id="主要的过程"><a href="#主要的过程" class="headerlink" title="主要的过程"></a>主要的过程</h1><ol>
+<li>将手机投到电脑屏幕上</li>
+<li>截取特定区域的图片</li>
+<li>识别图片中的数字，然后给定true or flase</li>
+<li>在特定的地方进行点击操作</li>
+</ol>
+<h1 id="我遇到的问题"><a href="#我遇到的问题" class="headerlink" title="我遇到的问题"></a>我遇到的问题</h1><ol>
+<li>安装python依赖包的时候遇到了很多的问题，不过大部分都解决了</li>
+<li>由于我用的投屏软件为Apowermirror,不是推荐的vysor,点击操作会滞留，直达我用右击来消除影响。。。骚操作</li>
+<li>然后就是区域的确定，截取的图片的地方是绝对位置，鼠标点击的位置好像是相对位置，可以通过测试测试出来。</li>
+</ol>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>希望能拿到than than老师的娃娃</p>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/06/07/python实现自动答题加减大师/">python实现自动答题加减大师</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Babydragon</a></p>
+        <p><span>发布时间:</span>2018-06-07, 16:33:55</p>
+        <p><span>最后更新:</span>2018-06-07, 16:41:34</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/06/07/python实现自动答题加减大师/" title="python实现自动答题加减大师">http://yoursite.com/2018/06/07/python实现自动答题加减大师/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/06/07/python实现自动答题加减大师/　　作者: Babydragon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/06/03/周日gym组队赛补题/">
+                    周日gym组队赛补题
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#主要的过程"><span class="toc-number">1.</span> <span class="toc-text">主要的过程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#我遇到的问题"><span class="toc-number">2.</span> <span class="toc-text">我遇到的问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#代码"><span class="toc-number">3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#未解决的问题"><span class="toc-number">4.</span> <span class="toc-text">未解决的问题</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
 
     
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"python实现自动答题加减大师　| 宝宝天龙　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section class="youyan" id="comments">
+    <script>
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = 'http://v2.uyan.cc/code/uyan.js?uid=2160246';
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+    <div id="uyan_frame"></div>
+</section>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/06/03/周日gym组队赛补题/" title="下一篇: 周日gym组队赛补题">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06/07/python实现自动答题加减大师/">python实现自动答题加减大师</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/03/周日gym组队赛补题/">周日gym组队赛补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/01/周五训练补题/">周五训练补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/01/空间自动点赞/">空间自动点赞</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/30/用latex写ppt/">用latex写ppt</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/29/rope初步/">rope初步</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/29/母函数初步/">母函数初步</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/27/gym101572补题/">gym101572补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/27/CDQ分治解决一类偏序问题/">CDQ分治解决一类偏序问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/27/hash-BKDRHASH算法/">hash--BKDRHASH算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/24/rush-b补题/">rush-b补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/24/Edu44补题/">Edu44补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/22/模拟题/">模拟题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/22/博弈论二/">博弈论二</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/21/博弈论一/">博弈论一</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/16/蓝书图论集合/">蓝书图论集合</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/16/cf483-div2/">cf483-div2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/15/cf-482-div2/">cf-482 div2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/14/kuangbin专题十-并查集/">kuangbin专题十---并查集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/14/java大数计算/">java大数计算</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/13/5-13训练补题/">5.13训练补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/04/ex-kmp/">ex-kmp</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/04/STL一些容器的使用/">STL一些容器的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/03/c-中进制的显示/">c++中进制的显示</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/03/FFT/">FFT</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/02/树链剖分/">树链剖分</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/02/cf-478/">cf-478</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/30/kuangbin专题9-连通图/">kuangbin专题9--连通图</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/29/gym补题/">gym补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/28/最小费用流/">最小费用流</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/28/线性基/">线性基</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/27/最近几场比赛补题/">最近几场比赛补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/25/强联通缩点/">强联通缩点</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/20/树的直径/">树的直径</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/19/kuangbin专题2-搜索进阶/">kuangbin专题2--搜索进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/19/最大矩形面积/">最大矩形面积</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/19/凸包/">凸包</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/19/平面扫描/">平面扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/18/cf-round754-div2/">cf-round754 div2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/18/kdtree/">kdtree</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/17/kuangbin最短路专题/">kuangbin最短路专题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/15/最小成本排序/">最小成本排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/03/kuangbin带你飞专题一/">kuangbin带你飞专题一</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/27/组合游戏/">组合游戏</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/24/阶梯博弈/">阶梯博弈</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/23/折半枚举/">折半枚举</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/22/水一发博客/">水一发博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/22/polya定理的应用/">polya定理的应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/21/online-latex公式编辑技巧的积累/">online latex公式编辑技巧的积累</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/20/数论/">数论</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/20/中国剩余定理/">中国剩余定理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/20/组合数的整理/">组合数的整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/18/差分约束系统/">差分约束系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/16/trie树/">trie树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/14/后缀数组/">后缀数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/13/linux-command-line/">linux command line</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/13/k-th-number/">k-th number</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/13/2-SAT/">2-SAT</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/二分图的最大匹配/">二分图的最大匹配</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/manacher算法/">manacher算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/子集生成/">序列的全排列、子集的生成</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/11/图论进阶篇/">图论进阶篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/11/生成树计数问题/">生成树计数问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/11/有向图的最小生成树/">有向图的最小生成树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/08/割点与桥/">割点与桥</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/08/4c题目的小积累/">4c题目的小积累</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/06/scc/">scc</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/05/poj2763-dfs序-BIT-LCA/">poj2763(dfs序+BIT+LCA)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/28/二分和三分/">二分和三分</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/28/RMQ/">RMQ</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/28/数独/">数独</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/28/二维线段树/">二维线段树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/27/hash/">hash</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/26/素数表/">素数表</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/25/等比数列的二分求和/">等比数列的二分求和</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/19/莫队算法/">莫队算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/13/2017-2018流水账/">2017~2018流水账</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/06/数模算法的整理/">数模算法的整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/03/机器学习资料collection/">机器学习大杂烩collection</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/01/python读写数据/">python读写数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/28/画复杂的网络图像/">画复杂的网络图像</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/20/模板/">模板</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/17/线段树模板/">线段树模板</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/31/网络爬虫/">网络爬虫</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/28/bitcoin/">bitcoin</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/26/近期要做的事情/">近期要做的事情</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/18/html入门/">html入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/17/PHP入门/">PHP入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/06/标记重捕法后面蕴含的概率论知识/">标记重捕法后面蕴含的概率论知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/04/小美赛终于结束了/">小美赛终于结束了</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/26/用python生成公式logo/">用python生成公式logo</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/25/深度学习视频笔记/">深度学习视频笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/24/图论的基础算法/">图论的基础算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/23/树上分治算法/">树上分治算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/14/第k短路问题/">第k短路问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/13/堆栈内存溢出漏洞/">堆栈内存溢出漏洞</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/12/interpolation-and-fitting/">interpolation and fitting</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/09/matlab语法复习/">matlab语法复习</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/09/囚徒的困境/">囚徒的困境</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/08/c语言函数调用的机制/">c语言函数调用的机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/08/多线程dp/">多线程dp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/07/数位dp/">数位dp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/AC自动机/">AC自动机</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/05/dp优化-连续递推的时间和空间优化/">dp优化--连续递推的时间和空间优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/04/状压dp/">状压dp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/01/区间dp/">区间dp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/31/线性dp/">线性dp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/31/背包问题/">背包问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/30/DAG上的动态规划/">DAG上的动态规划</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/25/树形dp入门/">树形dp入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/22/后缀自动机/">后缀自动机（待完善）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/09/网络流二十四题/">网络流二十四题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/09/一般图的匹配-带花树算法/">一般图的匹配</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/04/高斯消元/">高斯消元</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/03/稳定婚姻问题/">稳定婚姻问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/02/KM算法模板/">KM算法模板</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/01/Uva-1479-Graph-and-Queries/">Uva 1479 - Graph and Queries</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/25/Unicode学习/">Unicode学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/21/一些智障的问题/">一些智障的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/21/想入的坑/">想入的坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/21/Markdown语法学习/">Markdown语法学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/20/想买的东西/">想买的东西</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/20/hello-world/">欢迎来到我的新博客</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
