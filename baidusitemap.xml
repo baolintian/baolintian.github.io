@@ -3,6 +3,66 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/09/20/hello-world/</loc>
+    <lastmod>2018-06-10T15:12:02.288Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎来到我的新博客</title>
+        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
+        
+        <tag>自我想法 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/06/10/%E5%91%A8%E6%97%A5gym%E8%A1%A5%E9%A2%98/</loc>
+    <lastmod>2018-06-10T09:46:38.695Z</lastmod>
+    <data>
+        <display>
+        <title>周日gym补题</title>
+        <pubTime>2018-06-10T09:42:44.000Z</pubTime>
+        
+        <tag>cf </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://yoursite.com/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/05/30/%E7%94%A8latex%E5%86%99ppt/</loc>
+    <lastmod>2018-06-09T17:48:10.707Z</lastmod>
+    <data>
+        <display>
+        <title>用latex写ppt</title>
+        <pubTime>2018-05-29T16:52:02.000Z</pubTime>
+        
+        <tag>latex </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/06/09/%E5%91%A8%E4%BA%94cf%E8%A1%A5%E9%A2%98/</loc>
     <lastmod>2018-06-08T17:32:59.770Z</lastmod>
     <data>
@@ -43,26 +103,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/09/20/hello-world/</loc>
-    <lastmod>2018-06-07T09:55:25.443Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎来到我的新博客</title>
-        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
-        
-        <tag>自我想法 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/06/07/python%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E7%AD%94%E9%A2%98%E5%8A%A0%E5%87%8F%E5%A4%A7%E5%B8%88/</loc>
     <lastmod>2018-06-07T08:41:34.903Z</lastmod>
     <data>
@@ -76,26 +116,6 @@
            
              
               <breadCrumb title="python" url="http://yoursite.com/categories/python/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/05/30/%E7%94%A8latex%E5%86%99ppt/</loc>
-    <lastmod>2018-06-04T05:28:50.577Z</lastmod>
-    <data>
-        <display>
-        <title>用latex写ppt</title>
-        <pubTime>2018-05-29T16:52:02.000Z</pubTime>
-        
-        <tag>latex </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://yoursite.com/categories/ex/"/>
           
         </display>
     </data>
