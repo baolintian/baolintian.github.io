@@ -160,7 +160,7 @@
         <div id="switch-area" class="switch-area">
             <div class="switch-wrap">
                 <section class="switch-part switch-part1">
-                    <nav class="header-menu">
+                    <nav class="header-menu" style="overflow:auto;" >
                         <ul>
                         
                             <li><a href="/">主页</a></li>
@@ -191,8 +191,6 @@
                                 <a class="fa 网易云音乐" href="http://music.163.com/#/user/home?id=73217955" title="网易云音乐"></a>
                             
                                 <a class="fa bilibili" href="https://space.bilibili.com/2168045/#/" title="bilibili"></a>
-                            
-                                <a class="fa QQ" href="/873080408" title="QQ"></a>
                             
                         </ul>
                     </nav>
@@ -246,7 +244,7 @@
           <div class="slider-trigger"></div>
           <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Babydragon</a></h1>
       </div>
-    <div class="intrude-less">
+    <div class="intrude-less" style="display">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
                 <img src="/img/avatar.png" class="animated zoomIn">
@@ -257,7 +255,8 @@
             
             <p class="header-subtitle">才不会让你看到我的简介呢，因为你笨啊｡◕ᴗ◕｡｡◕ᴗ◕｡(〃´-ω･)</p>
             
-            <nav class="header-menu">
+            
+            <nav class="header-menu" style = "display">
                 <ul>
                 
                     <li><a href="/">主页</a></li>
@@ -289,8 +288,6 @@
                                 <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=73217955" title="网易云音乐"></a>
                             
                                 <a class="fa bilibili" target="_blank" href="https://space.bilibili.com/2168045/#/" title="bilibili"></a>
-                            
-                                <a class="fa QQ" target="_blank" href="/873080408" title="QQ"></a>
                             
                         </ul>
             </nav>
@@ -412,7 +409,30 @@
         }
     </script>
     
-    <script> loadComment(); </script>
+    <aside class="comment-bar">
+        <a href="javascript:void(0);">
+            <i class="fa fa-commenting-o animated infinite pulse"></i>
+            <i class="fa fa-spinner fa-pulse"></i>
+            <span class="count-comment"></span>
+        </a>
+    </aside>
+    <script>
+        var $commentBar = $("#comments aside.comment-bar");
+        var load$hide = function(){
+            $commentBar.find("a > i").toggle();
+            loadComment();
+            $commentBar.fadeOut(800);
+        }
+        $commentBar.click(function(){
+            load$hide();
+        })
+        $commentBar.children("a").hover(function(){
+            load$hide();
+        })
+        if (window.location.hash === "#comments") {
+            load$hide();
+        }
+    </script>
 
     <div id="uyan_frame"></div>
 </section>
