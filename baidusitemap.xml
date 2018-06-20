@@ -3,6 +3,92 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/06/19/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84/</loc>
+    <lastmod>2018-06-19T16:24:54.422Z</lastmod>
+    <data>
+        <display>
+        <title>欧拉路径</title>
+        <pubTime>2018-06-19T15:46:42.000Z</pubTime>
+        
+        <tag>欧拉路经 </tag>
+         
+        <tag>欧拉回路 </tag>
+         
+        <tag>混合图的欧拉路径\回路 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/06/19/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B9%E3%80%81%E6%9C%80%E8%BF%9C%E7%82%B9%E5%AF%B9/</loc>
+    <lastmod>2018-06-19T15:43:12.523Z</lastmod>
+    <data>
+        <display>
+        <title>最近点对、最远点对</title>
+        <pubTime>2018-06-19T15:22:32.000Z</pubTime>
+        
+        <tag>最近点对 </tag>
+         
+        <tag>最远点对 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2017/12/26/%E8%BF%91%E6%9C%9F%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
+    <lastmod>2018-06-19T15:18:51.307Z</lastmod>
+    <data>
+        <display>
+        <title>近期要做的事情</title>
+        <pubTime>2017-12-26T15:40:10.000Z</pubTime>
+        
+        <tag>tips </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/06/19/%E6%9B%BC%E5%93%88%E9%A1%BF%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</loc>
+    <lastmod>2018-06-19T06:15:16.761Z</lastmod>
+    <data>
+        <display>
+        <title>曼哈顿最小生成树</title>
+        <pubTime>2018-06-19T04:54:44.000Z</pubTime>
+        
+        <tag>曼哈顿最小生成树 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/06/19/%E6%88%91%E6%98%AF%E6%B1%9F%E5%B0%8F%E7%99%BD/</loc>
     <lastmod>2018-06-18T16:47:37.072Z</lastmod>
     <data>
@@ -251,26 +337,6 @@
            
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2017/12/26/%E8%BF%91%E6%9C%9F%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
-    <lastmod>2018-06-03T15:34:01.008Z</lastmod>
-    <data>
-        <display>
-        <title>近期要做的事情</title>
-        <pubTime>2017-12-26T15:40:10.000Z</pubTime>
-        
-        <tag>tips </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
           
         </display>
     </data>
