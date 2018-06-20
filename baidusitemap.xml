@@ -4,7 +4,7 @@
     
   <url>
     <loc>http://baolintian.github.io/2018/06/19/%E6%AC%A7%E6%8B%89%E8%B7%AF%E5%BE%84/</loc>
-    <lastmod>2018-06-19T16:24:54.422Z</lastmod>
+    <lastmod>2018-06-20T15:10:54.918Z</lastmod>
     <data>
         <display>
         <title>欧拉路径</title>
@@ -15,6 +15,26 @@
         <tag>欧拉回路 </tag>
          
         <tag>混合图的欧拉路径\回路 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/06/19/%E6%9B%BC%E5%93%88%E9%A1%BF%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</loc>
+    <lastmod>2018-06-20T14:58:29.957Z</lastmod>
+    <data>
+        <display>
+        <title>曼哈顿最小生成树</title>
+        <pubTime>2018-06-19T04:54:44.000Z</pubTime>
+        
+        <tag>曼哈顿最小生成树 </tag>
          
          
            
@@ -62,26 +82,6 @@
            
              
               <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/06/19/%E6%9B%BC%E5%93%88%E9%A1%BF%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91/</loc>
-    <lastmod>2018-06-19T06:15:16.761Z</lastmod>
-    <data>
-        <display>
-        <title>曼哈顿最小生成树</title>
-        <pubTime>2018-06-19T04:54:44.000Z</pubTime>
-        
-        <tag>曼哈顿最小生成树 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
           
         </display>
     </data>
