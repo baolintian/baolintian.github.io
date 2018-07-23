@@ -3,8 +3,48 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
+    <lastmod>2018-07-23T15:12:48.970Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎来到我的新博客</title>
+        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
+        
+        <tag>自我想法 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/07/23/multi-university-contest1/</loc>
+    <lastmod>2018-07-23T14:04:47.340Z</lastmod>
+    <data>
+        <display>
+        <title>multi-university contest1</title>
+        <pubTime>2018-07-23T10:25:00.000Z</pubTime>
+        
+        <tag>multi </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/06/17/%E5%8D%9A%E5%AE%A2%E7%89%88%E9%9D%A2%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2018-07-23T12:56:17.886Z</lastmod>
+    <lastmod>2018-07-23T12:59:32.116Z</lastmod>
     <data>
         <display>
         <title>博客版面更新记录</title>
@@ -31,26 +71,6 @@
            
              
               <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/07/23/multi-university-contest1/</loc>
-    <lastmod>2018-07-23T12:52:38.908Z</lastmod>
-    <data>
-        <display>
-        <title>multi-university contest1</title>
-        <pubTime>2018-07-23T10:25:00.000Z</pubTime>
-        
-        <tag>multi </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
           
         </display>
     </data>
@@ -108,26 +128,6 @@
         <pubTime>2018-07-01T13:00:45.000Z</pubTime>
         
         <tag>计组 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
-    <lastmod>2018-07-18T15:11:59.985Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎来到我的新博客</title>
-        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
-        
-        <tag>自我想法 </tag>
          
          
            
