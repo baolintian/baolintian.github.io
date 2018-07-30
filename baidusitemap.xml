@@ -3,15 +3,20 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/07/27/splay%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2018-07-29T13:54:48.302Z</lastmod>
+    <loc>http://baolintian.github.io/2018/07/30/%E5%8D%95%E8%B0%83%E6%A0%88%E3%80%81%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97/</loc>
+    <lastmod>2018-07-30T15:44:07.856Z</lastmod>
     <data>
         <display>
-        <title>splay学习</title>
-        <pubTime>2018-07-27T12:47:56.000Z</pubTime>
+        <title>单调栈、单调队列</title>
+        <pubTime>2018-07-30T10:31:14.000Z</pubTime>
         
+        <tag>multi-university </tag>
+         
          
            
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
         </display>
     </data>
     </url>
@@ -19,7 +24,7 @@
     
   <url>
     <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
-    <lastmod>2018-07-28T15:33:32.225Z</lastmod>
+    <lastmod>2018-07-30T15:40:02.815Z</lastmod>
     <data>
         <display>
         <title>训练实录</title>
@@ -32,6 +37,36 @@
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/07/30/multi-university-contest3/</loc>
+    <lastmod>2018-07-30T10:13:31.472Z</lastmod>
+    <data>
+        <display>
+        <title>multi-university contest3</title>
+        <pubTime>2018-07-30T10:13:31.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/07/27/splay%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2018-07-29T13:54:48.302Z</lastmod>
+    <data>
+        <display>
+        <title>splay学习</title>
+        <pubTime>2018-07-27T12:47:56.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
