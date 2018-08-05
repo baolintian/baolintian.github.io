@@ -3,14 +3,52 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/08/04/BIT%E4%B8%93%E9%A1%B9%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2018-08-04T10:18:57.532Z</lastmod>
+    <loc>http://baolintian.github.io/2018/08/04/%E6%9A%91%E5%81%87%E8%A1%A5%E9%81%97/</loc>
+    <lastmod>2018-08-05T04:35:30.243Z</lastmod>
     <data>
         <display>
-        <title>BIT专项总结</title>
-        <pubTime>2018-08-04T10:18:06.000Z</pubTime>
+        <title>暑假补遗</title>
+        <pubTime>2018-08-04T15:43:01.000Z</pubTime>
         
-        <tag>BIT </tag>
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
+    <lastmod>2018-08-05T04:34:53.178Z</lastmod>
+    <data>
+        <display>
+        <title>训练实录</title>
+        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
+        
+        <tag>训练实录 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/07/23/multi-university-contest1/</loc>
+    <lastmod>2018-08-05T03:58:19.001Z</lastmod>
+    <data>
+        <display>
+        <title>multi-university contest1</title>
+        <pubTime>2018-07-23T10:25:00.000Z</pubTime>
+        
+        <tag>multi </tag>
          
          
            
@@ -24,14 +62,59 @@
     
   <url>
     <loc>http://baolintian.github.io/2018/08/04/nowcoder-contest6/</loc>
-    <lastmod>2018-08-04T10:00:00.924Z</lastmod>
+    <lastmod>2018-08-05T02:56:43.322Z</lastmod>
     <data>
         <display>
         <title>nowcoder contest6</title>
         <pubTime>2018-08-04T10:00:00.000Z</pubTime>
         
+        <tag>nowcoder </tag>
+         
          
            
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/02/nowcoder-contest-5/</loc>
+    <lastmod>2018-08-05T01:46:54.856Z</lastmod>
+    <data>
+        <display>
+        <title>nowcoder contest-5</title>
+        <pubTime>2018-08-02T10:38:46.000Z</pubTime>
+        
+        <tag>nowcode </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/04/BIT%E4%B8%93%E9%A1%B9%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2018-08-05T00:21:26.304Z</lastmod>
+    <data>
+        <display>
+        <title>BIT专项总结</title>
+        <pubTime>2018-08-04T10:18:06.000Z</pubTime>
+        
+        <tag>BIT </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
         </display>
     </data>
     </url>
@@ -66,46 +149,6 @@
         <pubTime>2018-07-30T10:13:31.000Z</pubTime>
         
         <tag>multi </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
-    <lastmod>2018-08-03T06:59:36.326Z</lastmod>
-    <data>
-        <display>
-        <title>训练实录</title>
-        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
-        
-        <tag>训练实录 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/08/02/nowcoder-contest-5/</loc>
-    <lastmod>2018-08-03T06:58:42.050Z</lastmod>
-    <data>
-        <display>
-        <title>nowcoder contest-5</title>
-        <pubTime>2018-08-02T10:38:46.000Z</pubTime>
-        
-        <tag>nowcode </tag>
          
          
            
@@ -374,26 +417,6 @@
            
              
               <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/07/23/multi-university-contest1/</loc>
-    <lastmod>2018-07-24T08:40:52.468Z</lastmod>
-    <data>
-        <display>
-        <title>multi-university contest1</title>
-        <pubTime>2018-07-23T10:25:00.000Z</pubTime>
-        
-        <tag>multi </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
           
         </display>
     </data>
