@@ -3,15 +3,20 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/08/06/multi-university-contest5/</loc>
-    <lastmod>2018-08-06T12:13:12.835Z</lastmod>
+    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
+    <lastmod>2018-08-07T13:30:12.990Z</lastmod>
     <data>
         <display>
-        <title>multi-university contest5</title>
-        <pubTime>2018-08-06T10:41:01.000Z</pubTime>
+        <title>训练实录</title>
+        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
         
+        <tag>训练实录 </tag>
+         
          
            
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
         </display>
     </data>
     </url>
@@ -19,7 +24,7 @@
     
   <url>
     <loc>http://baolintian.github.io/2018/08/04/%E6%9A%91%E5%81%87%E8%A1%A5%E9%81%97/</loc>
-    <lastmod>2018-08-05T04:35:30.243Z</lastmod>
+    <lastmod>2018-08-07T07:35:11.900Z</lastmod>
     <data>
         <display>
         <title>暑假补遗</title>
@@ -36,20 +41,15 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
-    <lastmod>2018-08-05T04:34:53.178Z</lastmod>
+    <loc>http://baolintian.github.io/2018/08/06/multi-university-contest5/</loc>
+    <lastmod>2018-08-06T12:13:12.835Z</lastmod>
     <data>
         <display>
-        <title>训练实录</title>
-        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
+        <title>multi-university contest5</title>
+        <pubTime>2018-08-06T10:41:01.000Z</pubTime>
         
-        <tag>训练实录 </tag>
-         
          
            
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
         </display>
     </data>
     </url>
