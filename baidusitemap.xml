@@ -3,6 +3,48 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/08/11/BZOJ-4695-Picks-Loves-Segment-tree-III/</loc>
+    <lastmod>2018-08-11T02:14:22.165Z</lastmod>
+    <data>
+        <display>
+        <title>BZOJ 4695 Picks Loves Segment tree III</title>
+        <pubTime>2018-08-11T02:13:01.000Z</pubTime>
+        
+        <tag>数据结构 </tag>
+         
+        <tag>线段树 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
+    <lastmod>2018-08-10T16:37:09.452Z</lastmod>
+    <data>
+        <display>
+        <title>训练实录</title>
+        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
+        
+        <tag>训练实录 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/08/10/uoj228/</loc>
     <lastmod>2018-08-10T08:57:42.800Z</lastmod>
     <data>
@@ -25,26 +67,6 @@
         <title>模板</title>
         <pubTime>2018-01-20T08:41:57.000Z</pubTime>
         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
-    <lastmod>2018-08-09T15:14:29.673Z</lastmod>
-    <data>
-        <display>
-        <title>训练实录</title>
-        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
-        
-        <tag>训练实录 </tag>
-         
          
            
              
