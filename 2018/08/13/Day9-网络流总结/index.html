@@ -15,17 +15,17 @@
 
 
 
-<meta name="description" content="newcoder contest4">
-<meta name="keywords" content="newcoder">
+<meta name="description" content="简单总结一下">
+<meta name="keywords" content="网络流">
 <meta property="og:type" content="article">
-<meta property="og:title" content="newercoder contest4">
-<meta property="og:url" content="http://baolintian.github.io/2018/07/28/newercoder-contest4/index.html">
+<meta property="og:title" content="Day9 网络流总结">
+<meta property="og:url" content="http://baolintian.github.io/2018/08/13/Day9-网络流总结/index.html">
 <meta property="og:site_name" content="宝宝天龙">
-<meta property="og:description" content="newcoder contest4">
-<meta property="og:updated_time" content="2018-07-28T15:13:00.339Z">
+<meta property="og:description" content="简单总结一下">
+<meta property="og:updated_time" content="2018-08-12T18:12:23.400Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="newercoder contest4">
-<meta name="twitter:description" content="newcoder contest4">
+<meta name="twitter:title" content="Day9 网络流总结">
+<meta name="twitter:description" content="简单总结一下">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -52,7 +52,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>newercoder contest4 | 宝宝天龙</title>
+<title>Day9 网络流总结 | 宝宝天龙</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -302,11 +302,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-newercoder-contest4" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Day9-网络流总结" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/07/28/newercoder-contest4/" class="article-date">
-      <time datetime="2018-07-28T12:03:11.000Z" itemprop="datePublished">2018-07-28</time>
+      <a href="/2018/08/13/Day9-网络流总结/" class="article-date">
+      <time datetime="2018-08-12T17:52:11.000Z" itemprop="datePublished">2018-08-13</time>
 </a>
 
 
@@ -321,7 +321,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      newercoder contest4
+      Day9 网络流总结
     </h1>
   
 
@@ -336,7 +336,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/newcoder/">newcoder</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络流/">网络流</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -346,14 +346,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>newcoder contest4</p>
+        <p>简单总结一下</p>
 <a id="more"></a>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-<h1 id="A-指数循环节"><a href="#A-指数循环节" class="headerlink" title="A 指数循环节"></a>A 指数循环节</h1><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h3 id="打表的代码"><a href="#打表的代码" class="headerlink" title="打表的代码"></a>打表的代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e6</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> mod = <span class="number">1e9</span>+<span class="number">7</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</div><div class="line">    <span class="built_in">string</span> s;</div><div class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;s)&#123;</div><div class="line">        <span class="built_in">string</span> t;</div><div class="line">        t.clear();</div><div class="line">        <span class="keyword">int</span> tot = <span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span>(s.length()!=<span class="number">0</span>)&#123;</div><div class="line">            t.clear();</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;s.length(); i++)&#123;</div><div class="line">                <span class="keyword">if</span>(s[i] == <span class="string">'0'</span>) t+=s[i];</div><div class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(s[i] == <span class="string">'1'</span>) t+=s[i], t+=<span class="string">'0'</span>;</div><div class="line">                <span class="keyword">else</span> t+=s[i], t+=<span class="string">'1'</span>;</div><div class="line">            &#125;</div><div class="line">            tot++;</div><div class="line">            t = t.substr(<span class="number">1</span>, t.length());</div><div class="line">            <span class="built_in">cout</span>&lt;&lt;s&lt;&lt;<span class="string">" "</span>&lt;&lt;t&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">            s = t;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">cout</span>&lt;&lt;tot&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="ac-code"><a href="#ac-code" class="headerlink" title="ac code"></a>ac code</h2><p>相对欧拉公式进行一些说明：<br>\(a^b = a^{b \% phi(n)+phi(n)}(mod n)(b \gt phi(n))\),这里不要求a, n互质。这个公式是错误的！不要加后面的phi(n)<br>变形：<br>\(a^b = a^{(b+phi(n)) \% phi(n)}(mod n)\) 无后面的条件了！</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span>+<span class="number">10</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> modd = <span class="number">1e9</span>+<span class="number">7</span>;</div><div class="line"><span class="built_in">map</span>&lt;ll, ll&gt; mp;</div><div class="line"><span class="keyword">char</span> s[maxn];</div><div class="line"><span class="function">ll <span class="title">euler</span><span class="params">(ll x)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(mp.count(x)) <span class="keyword">return</span> mp[x];</div><div class="line">    ll ans = x;</div><div class="line">    ll temp = x;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>; i*i&lt;=x; i++)&#123;</div><div class="line">        <span class="keyword">if</span>(x%i ==<span class="number">0</span>)&#123;</div><div class="line">            ans -= ans/i;</div><div class="line">            <span class="keyword">while</span>(x%i == <span class="number">0</span>)&#123;</div><div class="line">                x /= i;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(x&gt;<span class="number">1</span>)&#123;</div><div class="line">        ans -= ans/x;</div><div class="line">    &#125;</div><div class="line">    mp[temp] = ans;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function">ll <span class="title">pow_mod</span><span class="params">(ll a, ll b, ll c)</span></span>&#123;</div><div class="line">    ll ans = <span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span>(b)&#123;</div><div class="line">        <span class="keyword">if</span>(b&amp;<span class="number">1</span>) ans = ans*a%c;</div><div class="line">        a = a*a%c;</div><div class="line">        b&gt;&gt;=<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function">ll <span class="title">dfs</span><span class="params">(ll x, ll mod)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(x&lt;<span class="number">0</span> || mod == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="comment">//cout&lt;&lt;s[x]&lt;&lt;" "&lt;&lt;x&lt;&lt;" "&lt;&lt;mod&lt;&lt;endl;</span></div><div class="line">    <span class="keyword">if</span>(s[x] == <span class="string">'0'</span>)&#123;</div><div class="line">        <span class="keyword">return</span> (dfs(x<span class="number">-1</span>, mod)+<span class="number">1l</span>l)%mod;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(s[x] == <span class="string">'1'</span>)&#123;</div><div class="line">        <span class="keyword">return</span> (<span class="number">2l</span>l*dfs(x<span class="number">-1</span>, mod)+<span class="number">2l</span>l)%mod;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(s[x] == <span class="string">'2'</span>) &#123;</div><div class="line">        <span class="keyword">return</span> (<span class="number">6l</span>l*pow_mod(<span class="number">2</span>, (dfs(x<span class="number">-1</span>, euler(mod))+euler(mod))%euler(mod), mod)%mod<span class="number">-3l</span>l+mod)%mod;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</div><div class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</div><div class="line">    <span class="comment">//cout&lt;&lt;euler1(1e9+7)&lt;&lt;endl;</span></div><div class="line">    <span class="keyword">int</span> t;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;t);</div><div class="line">    ll mi;</div><div class="line">    mp.clear();</div><div class="line">    <span class="keyword">while</span>(t--)&#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%s"</span>, s);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, dfs(<span class="built_in">strlen</span>(s)<span class="number">-1</span>, <span class="number">1e9</span>+<span class="number">7</span>));</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="G-删数问题"><a href="#G-删数问题" class="headerlink" title="G 删数问题"></a>G 删数问题</h1><h1 id="J-反向hash"><a href="#J-反向hash" class="headerlink" title="J 反向hash"></a>J 反向hash</h1><h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
+<p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><br>具体的实现可以看自己的代码<br>贴一下自己的思路：<br>有时间上传自己的图片，好困啊<br><img src="" alt=""></p>
+<p><img src="" alt=""></p>
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="#FF3030">未解决的问题</font></h1>
       
     </div>
     
@@ -361,13 +358,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/07/28/newercoder-contest4/">newercoder contest4</a></p>
+        <p><span>本文标题:</span><a href="/2018/08/13/Day9-网络流总结/">Day9 网络流总结</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Babydragon</a></p>
-        <p><span>发布时间:</span>2018-07-28, 20:03:11</p>
-        <p><span>最后更新:</span>2018-07-28, 23:13:00</p>
+        <p><span>发布时间:</span>2018-08-13, 01:52:11</p>
+        <p><span>最后更新:</span>2018-08-13, 02:12:23</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/07/28/newercoder-contest4/" title="newercoder contest4">http://baolintian.github.io/2018/07/28/newercoder-contest4/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://baolintian.github.io/2018/07/28/newercoder-contest4/　　作者: Babydragon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/13/Day9-网络流总结/" title="Day9 网络流总结">http://baolintian.github.io/2018/08/13/Day9-网络流总结/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://baolintian.github.io/2018/08/13/Day9-网络流总结/　　作者: Babydragon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -379,16 +376,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/07/30/multi-university-contest3/">
-                    multi-university contest3
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/07/27/splay学习/">
-                    splay学习
+                <a href="/2018/08/11/Day8-图论相关知识的补遗/">
+                    Day8 图论相关知识的补遗
                 </a>
             </div>
         
@@ -400,7 +391,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#A-指数循环节"><span class="toc-number">1.</span> <span class="toc-text">A 指数循环节</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题解"><span class="toc-number">1.1.</span> <span class="toc-text">题解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#打表的代码"><span class="toc-number">1.1.1.</span> <span class="toc-text">打表的代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ac-code"><span class="toc-number">1.2.</span> <span class="toc-text">ac code</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#G-删数问题"><span class="toc-number">2.</span> <span class="toc-text">G 删数问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#J-反向hash"><span class="toc-number">3.</span> <span class="toc-text">J 反向hash</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#未解决的问题"><span class="toc-number">4.</span> <span class="toc-text">未解决的问题</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#未解决的问题"><span class="toc-number">1.</span> <span class="toc-text">未解决的问题</span></a></li></ol>
         
     </div>
     <style>
@@ -436,7 +427,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"newercoder contest4　| 宝宝天龙　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Day9 网络流总结　| 宝宝天龙　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -456,15 +447,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/07/30/multi-university-contest3/" title="上一篇: multi-university contest3">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/07/27/splay学习/" title="下一篇: splay学习">
+            <a href="/2018/08/11/Day8-图论相关知识的补遗/" title="下一篇: Day8 图论相关知识的补遗">
                 <i class="fa fa-angle-right"></i>
             </a>
         
