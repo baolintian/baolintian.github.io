@@ -3,6 +3,70 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/08/17/LCT%E4%B8%93%E9%A2%98/</loc>
+    <lastmod>2018-08-17T08:30:28.849Z</lastmod>
+    <data>
+        <display>
+        <title>LCT专题</title>
+        <pubTime>2018-08-17T08:19:47.000Z</pubTime>
+        
+        <tag>LCT </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/17/hdu-4902-nice-boats/</loc>
+    <lastmod>2018-08-17T08:29:40.401Z</lastmod>
+    <data>
+        <display>
+        <title>hdu 4902 nice boats</title>
+        <pubTime>2018-08-17T08:28:30.000Z</pubTime>
+        
+        <tag>数据结构 </tag>
+         
+        <tag>wym </tag>
+         
+        <tag>线段树 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/05/02/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/</loc>
+    <lastmod>2018-08-17T07:47:58.554Z</lastmod>
+    <data>
+        <display>
+        <title>树链剖分</title>
+        <pubTime>2018-05-02T13:29:28.000Z</pubTime>
+        
+        <tag>数据结构 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/08/17/hdu-2475-Box/</loc>
     <lastmod>2018-08-16T17:18:40.125Z</lastmod>
     <data>
@@ -125,26 +189,6 @@
         <pubTime>2018-08-15T10:24:57.000Z</pubTime>
         
         <tag>multi </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/05/02/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/</loc>
-    <lastmod>2018-08-16T13:55:43.399Z</lastmod>
-    <data>
-        <display>
-        <title>树链剖分</title>
-        <pubTime>2018-05-02T13:29:28.000Z</pubTime>
-        
-        <tag>数据结构 </tag>
          
          
            
