@@ -3,6 +3,119 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/08/19/nowcoder-contest10/</loc>
+    <lastmod>2018-08-19T12:54:50.574Z</lastmod>
+    <data>
+        <display>
+        <title>nowcoder contest10</title>
+        <pubTime>2018-08-19T10:10:13.000Z</pubTime>
+        
+        <tag>nowcoder </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/19/%E5%85%B7%E6%9C%89%E7%8E%B0%E5%AE%9E%E6%84%8F%E4%B9%89%E7%9A%84%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2018-08-19T10:14:48.853Z</lastmod>
+    <data>
+        <display>
+        <title>具有现实意义的程序</title>
+        <pubTime>2018-08-19T10:11:58.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/18/%E8%83%8C%E5%8C%85%E4%B9%9D%E8%AE%B2/</loc>
+    <lastmod>2018-08-18T12:58:50.321Z</lastmod>
+    <data>
+        <display>
+        <title>背包九讲</title>
+        <pubTime>2018-08-18T12:58:50.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
+    <lastmod>2018-08-18T12:43:08.586Z</lastmod>
+    <data>
+        <display>
+        <title>训练实录</title>
+        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
+        
+        <tag>训练实录 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/18/%E5%9F%BA%E7%A1%80dp/</loc>
+    <lastmod>2018-08-18T12:41:40.703Z</lastmod>
+    <data>
+        <display>
+        <title>基础dp</title>
+        <pubTime>2018-08-18T09:36:26.000Z</pubTime>
+        
+        <tag>dp </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/18/%E5%8C%BA%E9%97%B4dp-1/</loc>
+    <lastmod>2018-08-18T10:21:05.407Z</lastmod>
+    <data>
+        <display>
+        <title>区间dp</title>
+        <pubTime>2018-08-18T09:35:30.000Z</pubTime>
+        
+        <tag>dp </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/08/18/FZU-1978-Repair-the-brackets/</loc>
     <lastmod>2018-08-18T03:57:27.331Z</lastmod>
     <data>
@@ -56,9 +169,9 @@
         
         <tag>数据结构 </tag>
          
-        <tag>wym </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>wym </tag>
          
          
            
@@ -146,9 +259,9 @@
         
         <tag>数据结构 </tag>
          
-        <tag>wym </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>wym </tag>
          
          
            
@@ -333,26 +446,6 @@
         <pubTime>2018-08-11T12:29:27.000Z</pubTime>
         
         <tag>图论 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
-    <lastmod>2018-08-13T02:02:44.054Z</lastmod>
-    <data>
-        <display>
-        <title>训练实录</title>
-        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
-        
-        <tag>训练实录 </tag>
          
          
            
