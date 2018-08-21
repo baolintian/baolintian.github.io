@@ -3,8 +3,68 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/08/20/multi-university-contest9/</loc>
+    <lastmod>2018-08-20T13:04:58.723Z</lastmod>
+    <data>
+        <display>
+        <title>multi-university contest9</title>
+        <pubTime>2018-08-20T11:06:46.000Z</pubTime>
+        
+        <tag>multi </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2017/12/26/%E8%BF%91%E6%9C%9F%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
+    <lastmod>2018-08-20T12:27:00.164Z</lastmod>
+    <data>
+        <display>
+        <title>近期要做的事情</title>
+        <pubTime>2017-12-26T15:40:10.000Z</pubTime>
+        
+        <tag>tips </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
+    <lastmod>2018-08-20T12:17:39.349Z</lastmod>
+    <data>
+        <display>
+        <title>训练实录</title>
+        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
+        
+        <tag>训练实录 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/08/19/nowcoder-contest10/</loc>
-    <lastmod>2018-08-19T12:54:50.574Z</lastmod>
+    <lastmod>2018-08-20T11:42:01.861Z</lastmod>
     <data>
         <display>
         <title>nowcoder contest10</title>
@@ -24,7 +84,7 @@
     
   <url>
     <loc>http://baolintian.github.io/2018/08/19/%E5%85%B7%E6%9C%89%E7%8E%B0%E5%AE%9E%E6%84%8F%E4%B9%89%E7%9A%84%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2018-08-19T10:14:48.853Z</lastmod>
+    <lastmod>2018-08-19T17:43:44.541Z</lastmod>
     <data>
         <display>
         <title>具有现实意义的程序</title>
@@ -50,26 +110,6 @@
         
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
-    <lastmod>2018-08-18T12:43:08.586Z</lastmod>
-    <data>
-        <display>
-        <title>训练实录</title>
-        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
-        
-        <tag>训练实录 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
         </display>
     </data>
     </url>
@@ -169,9 +209,9 @@
         
         <tag>数据结构 </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>wym </tag>
+         
+        <tag>线段树 </tag>
          
          
            
@@ -259,9 +299,9 @@
         
         <tag>数据结构 </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>wym </tag>
+         
+        <tag>线段树 </tag>
          
          
            
@@ -1080,26 +1120,6 @@
            
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2017/12/26/%E8%BF%91%E6%9C%9F%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
-    <lastmod>2018-06-19T15:18:51.307Z</lastmod>
-    <data>
-        <display>
-        <title>近期要做的事情</title>
-        <pubTime>2017-12-26T15:40:10.000Z</pubTime>
-        
-        <tag>tips </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
           
         </display>
     </data>
