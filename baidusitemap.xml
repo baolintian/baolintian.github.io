@@ -3,6 +3,52 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/08/24/SPOJ-QTREE5/</loc>
+    <lastmod>2018-08-24T13:26:27.408Z</lastmod>
+    <data>
+        <display>
+        <title>SPOJ QTREE5</title>
+        <pubTime>2018-08-24T13:23:46.000Z</pubTime>
+        
+        <tag>数据结构 </tag>
+         
+        <tag>wym </tag>
+         
+        <tag>LCT </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/24/XDOJ-1257-HDU-6435-%E6%9C%80%E5%A4%A7%E5%8C%96%E7%BB%9D%E5%AF%B9%E5%80%BC/</loc>
+    <lastmod>2018-08-24T13:25:10.242Z</lastmod>
+    <data>
+        <display>
+        <title>XDOJ 1257 & HDU 6435 最大化绝对值</title>
+        <pubTime>2018-08-24T13:24:05.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>思维 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/08/23/SPOJ-QTREE4-BZOJ-1095/</loc>
     <lastmod>2018-08-23T16:00:08.022Z</lastmod>
     <data>
@@ -268,9 +314,9 @@
         
         <tag>数据结构 </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>wym </tag>
+         
+        <tag>线段树 </tag>
          
          
            
@@ -358,9 +404,9 @@
         
         <tag>数据结构 </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>wym </tag>
+         
+        <tag>线段树 </tag>
          
          
            
