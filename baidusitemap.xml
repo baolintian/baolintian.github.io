@@ -3,6 +3,88 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/08/27/dp%E4%BC%98%E5%8C%96%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2018-08-27T13:16:23.241Z</lastmod>
+    <data>
+        <display>
+        <title>dp优化入门</title>
+        <pubTime>2018-08-27T09:06:58.000Z</pubTime>
+        
+        <tag>dp </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/26/%E5%88%86%E5%9D%97-1/</loc>
+    <lastmod>2018-08-26T13:24:12.228Z</lastmod>
+    <data>
+        <display>
+        <title>分块</title>
+        <pubTime>2018-08-26T13:13:38.000Z</pubTime>
+        
+        <tag>分块 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
+    <lastmod>2018-08-25T17:34:41.494Z</lastmod>
+    <data>
+        <display>
+        <title>训练实录</title>
+        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
+        
+        <tag>训练实录 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/24/XDOJ-1257-HDU-6435-%E6%9C%80%E5%A4%A7%E5%8C%96%E7%BB%9D%E5%AF%B9%E5%80%BC/</loc>
+    <lastmod>2018-08-24T13:37:40.041Z</lastmod>
+    <data>
+        <display>
+        <title>XDOJ 1257 & HDU 6435 最大化绝对值</title>
+        <pubTime>2018-08-24T13:24:05.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>思维 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/08/24/SPOJ-QTREE5/</loc>
     <lastmod>2018-08-24T13:26:27.408Z</lastmod>
     <data>
@@ -27,28 +109,6 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/08/24/XDOJ-1257-HDU-6435-%E6%9C%80%E5%A4%A7%E5%8C%96%E7%BB%9D%E5%AF%B9%E5%80%BC/</loc>
-    <lastmod>2018-08-24T13:25:10.242Z</lastmod>
-    <data>
-        <display>
-        <title>XDOJ 1257 & HDU 6435 最大化绝对值</title>
-        <pubTime>2018-08-24T13:24:05.000Z</pubTime>
-        
-        <tag>wym </tag>
-         
-        <tag>思维 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://baolintian.github.io/2018/08/23/SPOJ-QTREE4-BZOJ-1095/</loc>
     <lastmod>2018-08-23T16:00:08.022Z</lastmod>
     <data>
@@ -61,26 +121,6 @@
         <tag>wym </tag>
          
         <tag>lct </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
-    <lastmod>2018-08-22T13:45:50.465Z</lastmod>
-    <data>
-        <display>
-        <title>训练实录</title>
-        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
-        
-        <tag>训练实录 </tag>
          
          
            
