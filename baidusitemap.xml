@@ -3,6 +3,90 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/08/30/tree-dp%E5%85%A5%E9%97%A82/</loc>
+    <lastmod>2018-08-30T09:19:29.062Z</lastmod>
+    <data>
+        <display>
+        <title>tree-dp入门2</title>
+        <pubTime>2018-08-30T09:19:06.000Z</pubTime>
+        
+        <tag>dp </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/28/%E6%A0%91%E5%BD%A2dp%E5%85%A5%E9%97%A8-1/</loc>
+    <lastmod>2018-08-30T08:32:53.037Z</lastmod>
+    <data>
+        <display>
+        <title>树形dp入门</title>
+        <pubTime>2018-08-28T11:34:32.000Z</pubTime>
+        
+        <tag>dp </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/30/SPOJ-QTREE-POJ-3237/</loc>
+    <lastmod>2018-08-30T06:19:23.754Z</lastmod>
+    <data>
+        <display>
+        <title>SPOJ QTREE & POJ 3237</title>
+        <pubTime>2018-08-30T06:00:00.000Z</pubTime>
+        
+        <tag>数据结构 </tag>
+         
+        <tag>wym </tag>
+         
+        <tag>树链剖分 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/30/SOS-dp/</loc>
+    <lastmod>2018-08-30T06:07:37.691Z</lastmod>
+    <data>
+        <display>
+        <title>SOS dp</title>
+        <pubTime>2018-08-30T04:53:51.000Z</pubTime>
+        
+        <tag>dp </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
     <lastmod>2018-08-29T16:39:51.247Z</lastmod>
     <data>
@@ -53,26 +137,6 @@
         <tag>wym </tag>
          
         <tag>思维 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/08/28/%E6%A0%91%E5%BD%A2dp%E5%85%A5%E9%97%A8-1/</loc>
-    <lastmod>2018-08-28T13:36:37.759Z</lastmod>
-    <data>
-        <display>
-        <title>树形dp入门</title>
-        <pubTime>2018-08-28T11:34:32.000Z</pubTime>
-        
-        <tag>dp </tag>
          
          
            
