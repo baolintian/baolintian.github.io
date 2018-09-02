@@ -3,6 +3,50 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/09/02/%E5%9B%9E%E6%96%87%E6%A0%91/</loc>
+    <lastmod>2018-09-02T01:23:04.502Z</lastmod>
+    <data>
+        <display>
+        <title>回文树</title>
+        <pubTime>2018-09-01T17:20:00.000Z</pubTime>
+        
+        <tag>数据结构 </tag>
+         
+        <tag>wym </tag>
+         
+        <tag>回文树 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
+    <lastmod>2018-09-01T16:47:51.558Z</lastmod>
+    <data>
+        <display>
+        <title>训练实录</title>
+        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
+        
+        <tag>训练实录 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/08/30/%E4%B8%BB%E5%B8%AD%E6%A0%91%E5%B0%8F%E7%BB%93/</loc>
     <lastmod>2018-08-31T16:06:40.291Z</lastmod>
     <data>
@@ -125,26 +169,6 @@
         <pubTime>2018-08-30T04:53:51.000Z</pubTime>
         
         <tag>dp </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
-    <lastmod>2018-08-29T16:39:51.247Z</lastmod>
-    <data>
-        <display>
-        <title>训练实录</title>
-        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
-        
-        <tag>训练实录 </tag>
          
          
            
