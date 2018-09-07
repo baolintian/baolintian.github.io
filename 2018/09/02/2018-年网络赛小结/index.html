@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Babydragon" />
+
+
+
+<meta name="description" content="自闭的周末。">
+<meta name="keywords" content="wym,网络赛">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2018 年网络赛小结">
+<meta property="og:url" content="http://baolintian.github.io/2018/09/02/2018-年网络赛小结/index.html">
+<meta property="og:site_name" content="宝宝天龙">
+<meta property="og:description" content="自闭的周末。">
+<meta property="og:updated_time" content="2018-09-07T12:54:00.545Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2018 年网络赛小结">
+<meta name="twitter:description" content="自闭的周末。">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="宝宝天龙" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>2018 年网络赛小结 | 宝宝天龙</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: false,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Babydragon</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">才不会让你看到我的简介呢，因为你笨啊｡◕ᴗ◕｡｡◕ᴗ◕｡(〃´-ω･)</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu" style="overflow:auto;" >
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/categories/ACM">ACM</a></li>
+                        
+                            <li><a href="/categories/python">python/ML/BD</a></li>
+                        
+                            <li><a href="/categories/ex">杂知识/随想</a></li>
+                        
+                            <li><a href="/about/">.</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:tianbaolin1@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/baolintian" title="GitHub"></a>
+                            
+                                <a class="fa 知乎" href="https://www.zhihu.com/people/bao-bao-tian-long/activities" title="知乎"></a>
+                            
+                                <a class="fa CSDN" href="https://blog.csdn.net/bbtl_ast" title="CSDN"></a>
+                            
+                                <a class="fa Coding" href="https://babydragon.coding.me" title="Coding"></a>
+                            
+                                <a class="fa 网易云音乐" href="http://music.163.com/#/user/home?id=73217955" title="网易云音乐"></a>
+                            
+                                <a class="fa bilibili" href="https://space.bilibili.com/2168045/#/" title="bilibili"></a>
+                            
+                                <a class="fa QQ" href="/873080408" title="QQ"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2SAT/">2SAT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/A-算法/">A*算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AC自动机/">AC自动机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BIT/">BIT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BST/">BST</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CF/">CF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DAG上的最长路径-AOE网/">DAG上的最长路径(AOE网)</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DAG最长路-最短路/">DAG最长路/最短路</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dijkstra算法/">Dijkstra算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FFT-DFT-IDFT/">FFT->DFT\IDFT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gale-Shapley-Algorithm/">Gale-Shapley Algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/KM算法/">KM算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kruskal/">Kruskal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCA/">LCA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LCT/">LCT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MATLAB/">MATLAB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RMQ/">RMQ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/STL/">STL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/back-propagation/">back propagation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bitcoin/">bitcoin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cf/">cf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp/">dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dp递推关系化简/">dp递推关系化简</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hash/">hash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java大数计算/">java大数计算</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kdtree/">kdtree</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/latex/">latex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lct/">lct</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manacher/">manacher</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown语法/">markdown语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mathematical-modeling/">mathematical modeling</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matlab/">matlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/multi/">multi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/multi-university/">multi-university</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/newcoder/">newcoder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nowcode/">nowcode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nowcoder/">nowcoder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nowcoeder/">nowcoeder</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scc/">scc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/splay/">splay</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tips/">tips</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trainning/">trainning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/treap/">treap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trie树/">trie树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unicode/">unicode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/utf-8/">utf-8</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wym/">wym</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/一般图最大匹配/">一般图最大匹配</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人小结/">个人小结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人感想/">个人感想</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/主席树/">主席树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二分、三分/">二分、三分</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二进制高斯消元/">二进制高斯消元</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/内存溢出攻击/">内存溢出攻击</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/函数调用内存分配/">函数调用内存分配</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分块/">分块</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分治/">分治</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分治算法/">分治算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/割点，桥/">割点，桥</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动态规划/">动态规划</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/区间dp/">区间dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博弈论/">博弈论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/后缀自动机-SAM-DFA/">后缀自动机(SAM/DFA)</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/启发式合并/">启发式合并</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/回文树/">回文树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图中判断是否存在环/">图中判断是否存在环</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图的遍历/">图的遍历</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图论/">图论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字符串/">字符串</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/密码哈希函数/">密码哈希函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工作量证明/">工作量证明</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/带花树算法/">带花树算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/并查集/">并查集</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/强联通缩点/">强联通缩点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/思维/">思维</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/我是江小白/">我是江小白</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/拓扑排序/">拓扑排序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搜索/">搜索</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数位dp/">数位dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数字签名/">数字签名</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学/">数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数学建模/">数学建模</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据可视化/">数据可视化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数独/">数独</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数论/">数论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/曲线插值与拟合/">曲线插值与拟合</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/曼哈顿最小生成树/">曼哈顿最小生成树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最大似然估计法-maximum-likehood-estimate/">最大似然估计法(maximum likehood estimate)</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最小生成树/">最小生成树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最小费用流/">最小费用流</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最短路算法/">最短路算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最近点对/">最近点对</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最远点对/">最远点对</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/有向图最小生成树/">有向图最小生成树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/机器学习/">机器学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/构造题/">构造题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树上分治/">树上分治</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树形dp/">树形dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/树链剖分/">树链剖分</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模拟题/">模拟题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板/">模板</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/次小生成树/">次小生成树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/次短路算法/">次短路算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/欧拉回路/">欧拉回路</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/欧拉路经/">欧拉路经</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/求婚-拒绝算法/">求婚-拒绝算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/汇编语言/">汇编语言</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/深度学习/">深度学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/混合图的欧拉路径-回路/">混合图的欧拉路径\回路</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/点-双连通图，边-双联通/">点-双连通图，边-双联通</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/状压dp/">状压dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生成树计数问题/">生成树计数问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/离线算法/">离线算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/素数表/">素数表</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线性dp/">线性dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线性基/">线性基</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/线段树/">线段树</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/组合数学/">组合数学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络流/">网络流</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络爬虫/">网络爬虫</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网络赛/">网络赛</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/背包问题/">背包问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/自我想法/">自我想法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/莫队算法/">莫队算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/补题/">补题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计数dp/">计数dp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算几何/">计算几何</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计组/">计组</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计网/">计网</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/训练实录/">训练实录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高斯消元/">高斯消元</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://arch0n.sumblog.cn/">ar老师</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/wang9897/">汪巨巨</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://blog.csdn.net/qq_36124802">yeleng</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://61mon.com/index.php/about.html">刘毅博客</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.matrix67.com/blog/">Matrix67</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://ruanx.pw/">阮行止Oier博客</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">本科在读, 计算机专业学生, acmer菜鸡一枚, 爱好动漫与音乐。</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Babydragon</a></h1>
+      </div>
+    <div class="intrude-less" style="display">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Babydragon</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">才不会让你看到我的简介呢，因为你笨啊｡◕ᴗ◕｡｡◕ᴗ◕｡(〃´-ω･)</p>
+            
+            
+            <nav class="header-menu" style = "display">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/categories/ACM">ACM</a></li>
+                
+                    <li><a href="/categories/python">python/ML/BD</a></li>
+                
+                    <li><a href="/categories/ex">杂知识/随想</a></li>
+                
+                    <li><a href="/about/">.</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:tianbaolin1@qq.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/baolintian" title="GitHub"></a>
+                            
+                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/bao-bao-tian-long/activities" title="知乎"></a>
+                            
+                                <a class="fa CSDN" target="_blank" href="https://blog.csdn.net/bbtl_ast" title="CSDN"></a>
+                            
+                                <a class="fa Coding" target="_blank" href="https://babydragon.coding.me" title="Coding"></a>
+                            
+                                <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=73217955" title="网易云音乐"></a>
+                            
+                                <a class="fa bilibili" target="_blank" href="https://space.bilibili.com/2168045/#/" title="bilibili"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="/873080408" title="QQ"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-2018-年网络赛小结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/02/2018-年网络赛小结/" class="article-date">
+      <time datetime="2018-09-02T13:00:00.000Z" itemprop="datePublished">2018-09-02</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2018 年网络赛小结
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/ACM/">ACM</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wym/">wym</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络赛/">网络赛</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>自闭的周末。</p>
+<a id="more"></a>
+<h1 id="2018-年网络赛小结（南京）"><a href="#2018-年网络赛小结（南京）" class="headerlink" title="2018 年网络赛小结（南京）"></a>2018 年网络赛小结（南京）</h1><p>除了签到就什么都不会了。。</p>
+<h2 id="Problem-F"><a href="#Problem-F" class="headerlink" title="Problem F"></a>Problem F</h2><p>LCT 维护子树大小。</p>
+<p><del>利用 Monte Carlo 方法，</del> 答案是 $ 2 * \frac {sz_u-1} {d_u} $，其中 $sz_u$ 是联通块大小，$d_u$ 是度数。</p>
+<p>以为维护子树大小， LCT 可以直接搞。。其实这有个严重的问题：LCT 维护的是虚拟的大小信息。<br>一个点$x$，它的子树大小等于在 <code>splay</code> 中，它右节点的子树大小加上所有非偏爱边指向它的点的子树大小。<br>可以把这两个分别维护。<br>那么在 <code>access</code> 时，会有所改变，注意处理。<br><code>link</code> 的时候，也不能像简单的 <code>LCT</code> 那样 </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">makeroot(x); </div><div class="line">pf[x] = y;</div></pre></td></tr></table></figure>
+<p>因为 <code>y</code> 和它的祖先的子树大小变了，还需要</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">access(y);</div><div class="line">splay(y, <span class="number">0</span>);</div></pre></td></tr></table></figure>
+<p>子树的度可以直接在 <code>link</code> 和 <code>cut</code> 维护。</p>
+<h3 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line">	</div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line">	</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">100010</span>;</div><div class="line"><span class="keyword">const</span> ll MOD = <span class="number">998244353</span>;</div><div class="line"><span class="keyword">int</span> ch[N][<span class="number">2</span>],q[N],pre[N],size[N],sz[N], deg[N];   <span class="comment">//sz储存的是虚儿子的信息</span></div><div class="line"><span class="keyword">bool</span> rev[N];</div><div class="line"><span class="keyword">int</span> n,Q;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> bh)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">return</span> ch[pre[bh]][<span class="number">0</span>]==bh? <span class="number">0</span>:<span class="number">1</span>;</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">isroot</span><span class="params">(<span class="keyword">int</span> bh)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">return</span> ch[pre[bh]][<span class="number">0</span>]!=bh&amp;&amp;ch[pre[bh]][<span class="number">1</span>]!=bh;</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> bh)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">if</span> (!bh) <span class="keyword">return</span>;</div><div class="line">    size[bh]=size[ch[bh][<span class="number">0</span>]]+size[ch[bh][<span class="number">1</span>]]+sz[bh]+<span class="number">1</span>;</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> bh)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">if</span> (!bh) <span class="keyword">return</span>;</div><div class="line">    <span class="keyword">if</span> (rev[bh])</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span> (ch[bh][<span class="number">0</span>]) rev[ch[bh][<span class="number">0</span>]]^=<span class="number">1</span>;</div><div class="line">        <span class="keyword">if</span> (ch[bh][<span class="number">1</span>]) rev[ch[bh][<span class="number">1</span>]]^=<span class="number">1</span>;</div><div class="line">        swap(ch[bh][<span class="number">0</span>],ch[bh][<span class="number">1</span>]);</div><div class="line">        rev[bh]^=<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span> bh)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> fa=pre[bh];</div><div class="line">    <span class="keyword">int</span> grand=pre[fa];</div><div class="line">    <span class="keyword">int</span> wh=get(bh);</div><div class="line">    <span class="keyword">if</span> (!isroot(fa)) ch[grand][ch[grand][<span class="number">0</span>]==fa? <span class="number">0</span>:<span class="number">1</span>]=bh;</div><div class="line">    pre[bh]=grand;</div><div class="line">    ch[fa][wh]=ch[bh][wh^<span class="number">1</span>];</div><div class="line">    pre[ch[fa][wh]]=fa;</div><div class="line">    ch[bh][wh^<span class="number">1</span>]=fa;</div><div class="line">    pre[fa]=bh;</div><div class="line">    update(fa);</div><div class="line">    update(bh);</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">splay</span><span class="params">(<span class="keyword">int</span> bh)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> top=<span class="number">0</span>;</div><div class="line">    q[++top]=bh;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=bh;!isroot(i);i=pre[i])</div><div class="line">        q[++top]=pre[i];</div><div class="line">    <span class="keyword">while</span> (top) push(q[top--]);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> fa;!isroot(bh);rotate(bh))</div><div class="line">        <span class="keyword">if</span> (!isroot(fa=pre[bh]))</div><div class="line">            rotate(get(bh)==get(fa)? fa:bh);</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">expose</span><span class="params">(<span class="keyword">int</span> bh)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> t=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (bh)</div><div class="line">    &#123;</div><div class="line">        splay(bh);</div><div class="line"></div><div class="line">        sz[bh]+=size[ch[bh][<span class="number">1</span>]]-size[t];</div><div class="line">        <span class="comment">//x原来的右儿子的LCT子树信息加入x的虚子树信息，</span></div><div class="line">        <span class="comment">//把x的新的右儿子的LCT子树信息从x的虚子树信息中减去</span></div><div class="line">        ch[bh][<span class="number">1</span>]=t;</div><div class="line">        update(bh);</div><div class="line">        t=bh;</div><div class="line">        bh=pre[bh];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">makeroot</span><span class="params">(<span class="keyword">int</span> bh)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    expose(bh);</div><div class="line">    splay(bh);</div><div class="line">    rev[bh]^=<span class="number">1</span>;</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">link</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    makeroot(x);</div><div class="line">    makeroot(y);</div><div class="line">    pre[x] = y;</div><div class="line">    sz[y] += size[x];</div><div class="line">    deg[x] ++, deg[y] ++;</div><div class="line">    update(y);</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">cut</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	makeroot(x);</div><div class="line">    expose(y);</div><div class="line">    splay(y);</div><div class="line">    deg[x] --, deg[y] --;</div><div class="line">    size[y] -= size[x];</div><div class="line">    pre[x] = ch[y][<span class="number">0</span>] = <span class="number">0</span>;</div><div class="line">    update(y);</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    makeroot(x);</div><div class="line">    expose(y);</div><div class="line">    splay(x);</div><div class="line">    <span class="keyword">while</span>(pre[y]) y = pre[y];</div><div class="line">    <span class="keyword">return</span> x == y;</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function">ll <span class="title">pow_mod</span><span class="params">(ll a, ll b, ll m = MOD)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	ll ans = <span class="number">1</span>;</div><div class="line">	<span class="keyword">while</span>(b)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(b &amp; <span class="number">1</span>) ans = a * ans % m;</div><div class="line">		a = a * a % m;</div><div class="line">		b &gt;&gt;= <span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;Q);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) size[i]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">int</span> f, t, type, x, y;</div><div class="line">    ll ans;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++ i)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;f, &amp;t);</div><div class="line">        link(f, t);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=Q;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;type);</div><div class="line">        <span class="keyword">switch</span>(type)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">            	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;x, &amp;y);</div><div class="line">            	<span class="keyword">if</span>(find(x, y) || x == y) <span class="built_in">puts</span>(<span class="string">"-1"</span>);</div><div class="line">            	<span class="keyword">else</span> link(x, y);</div><div class="line">            	<span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">2</span>:</div><div class="line">            	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;x, &amp;y);</div><div class="line">            	<span class="keyword">if</span>(! find(x, y) || x == y) <span class="built_in">puts</span>(<span class="string">"-1"</span>);</div><div class="line">            	<span class="keyword">else</span></div><div class="line">                &#123;</div><div class="line">                    splay(y);</div><div class="line">                    push(y);</div><div class="line">                    <span class="keyword">int</span> fa = ch[y][<span class="number">0</span>];</div><div class="line">                    push(fa);</div><div class="line">                    <span class="keyword">while</span>(ch[fa][<span class="number">1</span>]) <span class="comment">//右子树</span></div><div class="line">                    &#123;</div><div class="line">                        fa=ch[fa][<span class="number">1</span>];</div><div class="line">                        push(fa);</div><div class="line">                    &#125;</div><div class="line">                    cut(y, fa);</div><div class="line">                &#125;</div><div class="line">            	<span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">3</span>:</div><div class="line">            	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;x);</div><div class="line">            	makeroot(x);</div><div class="line">            	ans = size[x] == <span class="number">1</span> ? <span class="number">0</span> : <span class="number">2l</span>l * (size[x] - <span class="number">1</span>) * pow_mod(deg[x], MOD - <span class="number">2</span>) % MOD;</div><div class="line">            	<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, ans);</div><div class="line">            	<span class="keyword">break</span>;</div><div class="line">            <span class="keyword">default</span>:</div><div class="line">            	<span class="comment">//assert(false);</span></div><div class="line">            	<span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Problem-G"><a href="#Problem-G" class="headerlink" title="Problem G"></a>Problem G</h2><p>给定一个序列 $A$ ，给定一个参数 $m$ 。</p>
+<p>每一轮，你可以利用 $m$ 消耗 $A_i$ 的代价将 $A_i$ 置为 $0$ ，直到 $m$ 比最大数还要小，此轮结束。</p>
+<p>每一轮你已经将 $t$ 个数置 $0$ ，询问 $t, m$ 。</p>
+<p>线段树维护区间最小值，然后 $A_i$ 置为 $0$ 的时候需要将 $m$ 去减 $A_i$ 即可。</p>
+<h3 id="AC-Code-1"><a href="#AC-Code-1" class="headerlink" title="AC Code"></a>AC Code</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//#define NOSTDCPP</span></div><div class="line"><span class="comment">//#define Cpp11</span></div><div class="line"><span class="comment">//#define Linux_System</span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> NOSTDCPP</span></div><div class="line">	</div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line">	</div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line">	</div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cassert&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;complex&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;deque&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;exception&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;functional&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;istream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iterator&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;list&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sstream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;typeinfo&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;utility&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;valarray&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line">	</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line">	</div><div class="line"><span class="meta"># <span class="meta-keyword">ifdef</span> Linux_System</span></div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> getchar getchar_unlocked</span></div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> putchar putchar_unlocked</span></div><div class="line"><span class="meta"># <span class="meta-keyword">endif</span></span></div><div class="line">	</div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> RESET(_) memset(_, 0, sizeof(_))</span></div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> RESET_(_, val) memset(_, val, sizeof(_))</span></div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> fi first</span></div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> se second</span></div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> pb push_back</span></div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> midf(x, y) ((x + y) &gt;&gt; 1)</span></div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> DXA(_) ((_ &lt;&lt; 1))</span></div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> DXB(_) ((_ &lt;&lt; 1) | 1)</span></div><div class="line">	</div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> next __Chtholly__</span></div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> x1 __Mercury__</span></div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> y1 __bbtl04__</span></div><div class="line"><span class="meta"># <span class="meta-keyword">define</span> index __ikooo__</span></div><div class="line">	</div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line">	</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span> &lt;<span class="keyword">int</span>&gt; vi;</div><div class="line"><span class="keyword">typedef</span> <span class="built_in">set</span> &lt;<span class="keyword">int</span>&gt; si;</div><div class="line"><span class="keyword">typedef</span> pair &lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; pii;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">double</span> ld;</div><div class="line">	</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MOD = <span class="number">1e9</span> + <span class="number">7</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">100009</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxm = <span class="number">300009</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">double</span> pi = <span class="built_in">acos</span>(<span class="number">-1.0</span>);</div><div class="line"><span class="keyword">const</span> <span class="keyword">double</span> eps = <span class="number">1e-6</span>;</div><div class="line">	</div><div class="line"><span class="function">ll <span class="title">myrand</span><span class="params">(ll mod)</span></span>&#123;<span class="keyword">return</span> ((ll)rand() &lt;&lt; <span class="number">32</span> ^ (ll)rand() &lt;&lt; <span class="number">16</span> ^ rand()) % mod;&#125;</div><div class="line">	</div><div class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt;</span></div><div class="line"><span class="class"><span class="title">inline</span> <span class="title">bool</span> <span class="title">scan_d</span>(<span class="title">T</span> &amp; <span class="title">ret</span>)</span></div><div class="line"><span class="class">&#123;</span></div><div class="line">	<span class="keyword">char</span> c;</div><div class="line">	<span class="keyword">int</span> sgn;</div><div class="line">	<span class="keyword">if</span>(c = getchar(), c == EOF)<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">	<span class="keyword">while</span>(c != <span class="string">'-'</span> &amp;&amp; (c &lt; <span class="string">'0'</span> || c &gt; <span class="string">'9'</span>))c = getchar();</div><div class="line">	sgn = (c == <span class="string">'-'</span>) ? <span class="number">-1</span> : <span class="number">1</span>;</div><div class="line">	ret = (c == <span class="string">'-'</span>) ? <span class="number">0</span> : (c - <span class="string">'0'</span>);</div><div class="line">	<span class="keyword">while</span>(c = getchar(), c &gt;= <span class="string">'0'</span> &amp;&amp; c &lt;= <span class="string">'9'</span>)</div><div class="line">		ret = ret * <span class="number">10</span> + (c - <span class="string">'0'</span>);</div><div class="line">	ret *= sgn;</div><div class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> Cpp11</span></div><div class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>, <span class="title">class</span> ... <span class="title">Args</span>&gt;</span></div><div class="line"><span class="class"><span class="title">inline</span> <span class="title">bool</span> <span class="title">scan_d</span>(<span class="title">T</span> &amp; <span class="title">ret</span>, <span class="title">Args</span> &amp; ... <span class="title">args</span>)</span></div><div class="line"><span class="class">&#123;</span></div><div class="line">	scan_d(ret);</div><div class="line">	scan_d(args...);</div><div class="line">&#125;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> cin.tie(0); cin.tie(nullptr);</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> cout.tie(0); cout.tie(nullptr);</span></div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">scan_ch</span><span class="params">(<span class="keyword">char</span> &amp;ch)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">if</span>(ch = getchar(), ch == EOF)<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">	<span class="keyword">while</span>(ch == <span class="string">' '</span> || ch == <span class="string">'\n'</span>)ch = getchar();</div><div class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">out_number</span><span class="params">(ll x)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">if</span>(x &lt; <span class="number">0</span>)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">putchar</span>(<span class="string">'-'</span>);</div><div class="line">		out_number(- x);</div><div class="line">		<span class="keyword">return</span> ;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(x &gt; <span class="number">9</span>)out_number(x / <span class="number">10</span>);</div><div class="line">	<span class="built_in">putchar</span>(x % <span class="number">10</span> + <span class="string">'0'</span>);</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="keyword">int</span> min_n[maxn &lt;&lt; <span class="number">2</span>], ans_o[maxn], ans_r[maxn];</div><div class="line"><span class="keyword">int</span> n, m, q;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">pre</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r, <span class="keyword">int</span> p)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">if</span>(l == r)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;min_n[p]);</div><div class="line">		<span class="keyword">return</span> ;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> mid = midf(l, r);</div><div class="line">	pre(l, mid, DXA(p));</div><div class="line">	pre(mid + <span class="number">1</span>, r, DXB(p));</div><div class="line">	min_n[p] = min(min_n[DXA(p)], min_n[DXB(p)]);</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="keyword">int</span> l, b, lamp;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> nl, <span class="keyword">int</span> nr, <span class="keyword">int</span> p)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">if</span>(nl == nr)</div><div class="line">	&#123;</div><div class="line">		min_n[p] = <span class="number">1e9</span> + <span class="number">9</span>;</div><div class="line">		<span class="keyword">return</span> ;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> mid = midf(nl, nr);</div><div class="line">	<span class="keyword">if</span>(l &lt;= mid) update(nl, mid, DXA(p));</div><div class="line">	<span class="keyword">else</span> update(mid + <span class="number">1</span>, nr, DXB(p));</div><div class="line">	min_n[p] = min(min_n[DXA(p)], min_n[DXB(p)]);</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> nl, <span class="keyword">int</span> nr, <span class="keyword">int</span> p)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">if</span>(nl == nr) </div><div class="line">	&#123;</div><div class="line">		lamp -= min_n[p];</div><div class="line">		<span class="keyword">return</span> nl;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">int</span> mid = midf(nl, nr);</div><div class="line">	<span class="keyword">if</span>(min_n[DXA(p)] &lt;= lamp) <span class="keyword">return</span> query(nl, mid, DXA(p));</div><div class="line">	<span class="keyword">else</span> <span class="keyword">return</span> query(mid + <span class="number">1</span>, nr, DXB(p));</div><div class="line">&#125;</div><div class="line">	</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	ios :: sync_with_stdio(<span class="literal">false</span>);</div><div class="line">	<span class="built_in">cin</span>.tie(<span class="number">0</span>);</div><div class="line">	<span class="built_in">cout</span>.tie(<span class="number">0</span>);</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;m);</div><div class="line">	pre(<span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line">	lamp = <span class="number">0</span>;</div><div class="line">	<span class="keyword">int</span> np = <span class="number">0</span>;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;q);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">100000</span>; ++ i)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(np &lt; n) lamp += m;</div><div class="line">		<span class="keyword">while</span>(lamp &gt;= min_n[<span class="number">1</span>] &amp;&amp; np &lt; n)</div><div class="line">		&#123;</div><div class="line">			l = query(<span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line">			++ np;</div><div class="line">			update(<span class="number">1</span>, n, <span class="number">1</span>);</div><div class="line">		&#125;</div><div class="line">		ans_o[i] = lamp;</div><div class="line">		ans_r[i] = np;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">while</span>(q --)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;m);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, ans_r[m], ans_o[m]);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Problem-I"><a href="#Problem-I" class="headerlink" title="Problem I"></a>Problem I</h2><p>了解了一种新的数据结构。。</p>
+<p><a href="https://babydragon.top/2018/09/02/回文树/" target="_blank" rel="external">题解在里面</a></p>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<h1 id="未解决的问题"><a href="#未解决的问题" class="headerlink" title="未解决的问题"></a><font color="FF0000">未解决的问题</font></h1><h1 id="2018-年网络赛小结（南京）-1"><a href="#2018-年网络赛小结（南京）-1" class="headerlink" title="2018 年网络赛小结（南京）"></a>2018 年网络赛小结（南京）</h1><h2 id="Problem-F-1"><a href="#Problem-F-1" class="headerlink" title="Problem F"></a>Problem F</h2><p>需要看看 LCT 维护子树。。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/09/02/2018-年网络赛小结/">2018 年网络赛小结</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Babydragon</a></p>
+        <p><span>发布时间:</span>2018-09-02, 21:00:00</p>
+        <p><span>最后更新:</span>2018-09-07, 20:54:00</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/02/2018-年网络赛小结/" title="2018 年网络赛小结">http://baolintian.github.io/2018/09/02/2018-年网络赛小结/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://baolintian.github.io/2018/09/02/2018-年网络赛小结/　　作者: Babydragon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/09/07/查询次数比较少的一类题目/">
+                    查询次数比较少的一类题目
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/09/02/回文树/">
+                    回文树
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2018-年网络赛小结（南京）"><span class="toc-number">1.</span> <span class="toc-text">2018 年网络赛小结（南京）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-F"><span class="toc-number">1.1.</span> <span class="toc-text">Problem F</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AC-Code"><span class="toc-number">1.1.1.</span> <span class="toc-text">AC Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-G"><span class="toc-number">1.2.</span> <span class="toc-text">Problem G</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AC-Code-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">AC Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-I"><span class="toc-number">1.3.</span> <span class="toc-text">Problem I</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#未解决的问题"><span class="toc-number">2.</span> <span class="toc-text">未解决的问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2018-年网络赛小结（南京）-1"><span class="toc-number">3.</span> <span class="toc-text">2018 年网络赛小结（南京）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem-F-1"><span class="toc-number">3.1.</span> <span class="toc-text">Problem F</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"2018 年网络赛小结　| 宝宝天龙　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/09/07/查询次数比较少的一类题目/" title="上一篇: 查询次数比较少的一类题目">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/09/02/回文树/" title="下一篇: 回文树">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/07/XDOJ-1344-Love-Live-矢泽妮可篇/">XDOJ 1344 Love Live! 矢泽妮可篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/07/查询次数比较少的一类题目/">查询次数比较少的一类题目</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/02/2018-年网络赛小结/">2018 年网络赛小结</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/02/回文树/">回文树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/31/NOIP-2013-D2T3-货车运输/">NOIP 2013 D1T3 货车运输</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/30/tree-dp入门2/">tree-dp入门2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/30/主席树小结/">主席树初探</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/30/SPOJ-QTREE-POJ-3237/">SPOJ QTREE & POJ 3237</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/30/SOS-dp/">SOS dp</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/29/dp优化总结/">dp优化总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/28/树形dp入门-1/">树形dp入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/27/dp优化入门/">dp优化入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/26/分块-1/">分块</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/24/XDOJ-1257-HDU-6435-最大化绝对值/">XDOJ 1257 & HDU 6435 最大化绝对值</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/24/SPOJ-QTREE5/">SPOJ QTREE5</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/23/SPOJ-QTREE4-BZOJ-1095/">SPOJ QTREE4 & BZOJ 1095</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/22/multi-university-contest10/">multi-university contest10</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/22/高级数据结构/">高级数据结构</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/multi-university-contest9/">multi-university contest9</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/19/具有现实意义的程序/">具有现实意义的程序</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/19/nowcoder-contest10/">nowcoder contest10</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/18/背包九讲/">背包九讲</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/18/基础dp/">基础dp</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/18/区间dp-1/">区间dp</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/18/FZU-1978-Repair-the-brackets/">FZU 1978 Repair the brackets</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/17/hdu-4902-nice-boats/">hdu 4902 nice boats</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/17/LCT专题/">LCT专题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/17/hdu-2475-Box/">hdu 2475 Box</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/16/nowcoder-contest9/">nowcoder contest9</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/15/multi-university-contest8/">multi-university contest8</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/14/多校里的一道好题/">多校里的一道好题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/14/BZOJ-3224/">BZOJ 3224</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/13/multi-university-contest7/">multi-university contest7</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/13/Day9-网络流总结/">Day9 网络流总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/11/Day8-图论相关知识的补遗/">Day8 图论相关知识的补遗</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/11/nowcoder-contest8/">nowcoder contest8</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/11/BZOJ-4355-Play-with-sequence/">BZOJ 4355 Play with sequence</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/11/BZOJ-4695-Picks-Loves-Segment-tree-III/">BZOJ 4695 Picks Loves Segment tree III</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/10/uoj228/">uoj228</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/09/nowcoder-contest7/">nowcoder contest7</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/06/multi-university-contest5/">multi-university contest5</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/04/暑假补遗/">暑假补遗</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/04/BIT专项总结/">BIT专项总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/04/nowcoder-contest6/">nowcoder contest6</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/03/分块/">分块</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/02/nowcoder-contest-5/">nowcoder contest-5</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/01/multi-university-contest4/">multi-university contest4</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/30/单调栈、单调队列/">单调栈、单调队列</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/30/multi-university-contest3/">multi-university contest3</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/28/newercoder-contest4/">newercoder contest4</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/27/splay学习/">splay学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/27/codeforce-round499-div2/">codeforce round499 div2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/26/newcoder-contest3/">newcoder contest3</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/25/muti-university-contest2/">muti-university contest2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/25/三类BIT/">三类BIT</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/24/LCA算法/">LCA算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/23/multi-university-contest1/">multi-university contest1</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/22/newcoder-contest2/">newcoder-contest2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/21/训练实录/">训练实录</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/20/放假了哈哈/">放假了哈哈</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/01/计组-手工模拟计算机的计算过程/">计组--手工模拟计算机的计算过程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/21/大素数测试以及分解/">大素数测试以及分解</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/19/欧拉路径/">欧拉路径</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/19/最近点对、最远点对/">最近点对、最远点对</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/19/曼哈顿最小生成树/">曼哈顿最小生成树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/19/我是江小白/">我是江小白</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/17/博客版面更新记录/">博客版面更新记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/16/ISAP求网络流/">ISAP求网络流</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/15/hash-求区间不同子串的个数/">hash-求区间不同子串的个数</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/12/计算机网络通信小知识积累/">计算机网络通信小知识积累</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/10/周日gym补题/">周日gym补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/09/周五cf补题/">周五cf补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/08/亦或最短路/">亦或最短路</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/07/python实现自动答题加减大师/">python实现自动答题加减大师</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/03/周日gym组队赛补题/">周日gym组队赛补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/01/周五训练补题/">周五训练补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/01/空间自动点赞/">空间自动点赞</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/30/用latex写ppt/">用latex写ppt</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/29/rope初步/">rope初步</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/29/母函数初步/">母函数初步</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/27/gym101572补题/">gym101572补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/27/CDQ分治解决一类偏序问题/">CDQ分治解决一类偏序问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/27/hash-BKDRHASH算法/">hash--BKDRHASH算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/24/rush-b补题/">rush-b补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/24/Edu44补题/">Edu44补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/22/模拟题/">模拟题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/22/博弈论二/">博弈论二</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/21/博弈论一/">博弈论一</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/16/蓝书图论集合/">蓝书图论集合</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/16/cf483-div2/">cf483-div2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/15/cf-482-div2/">cf-482 div2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/14/kuangbin专题十-并查集/">kuangbin专题十---并查集</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/14/java大数计算/">java大数计算</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/13/5-13训练补题/">5.13训练补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/04/ex-kmp/">ex-kmp</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/04/STL一些容器的使用/">STL一些容器的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/03/c-中进制的显示/">c++中进制的显示</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/03/FFT/">FFT</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/02/树链剖分/">树链剖分</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/02/cf-478/">cf-478</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/30/kuangbin专题9-连通图/">kuangbin专题9--连通图</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/29/gym补题/">gym补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/28/最小费用流/">最小费用流</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/28/线性基/">线性基</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/27/最近几场比赛补题/">最近几场比赛补题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/25/强联通缩点/">强联通缩点</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/20/树的直径/">树的直径</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/19/kuangbin专题2-搜索进阶/">kuangbin专题2--搜索进阶</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/19/最大矩形面积/">最大矩形面积</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/19/凸包/">凸包</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/19/平面扫描/">平面扫描</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/18/cf-round754-div2/">cf-round754 div2</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/18/kdtree/">kdtree</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/17/kuangbin最短路专题/">kuangbin最短路专题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/15/最小成本排序/">最小成本排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/03/kuangbin带你飞专题一/">kuangbin带你飞专题一</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/27/组合游戏/">组合游戏</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/24/阶梯博弈/">阶梯博弈</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/23/折半枚举/">折半枚举</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/22/水一发博客/">水一发博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/22/polya定理的应用/">polya定理的应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/21/online-latex公式编辑技巧的积累/">online latex公式编辑技巧的积累</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/20/数论/">数论</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/20/中国剩余定理/">中国剩余定理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/20/组合数的整理/">组合数的整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/18/差分约束系统/">差分约束系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/16/trie树/">trie树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/14/后缀数组/">后缀数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/13/linux-command-line/">linux command line</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/13/k-th-number/">k-th number</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/13/2-SAT/">2-SAT</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/二分图的最大匹配/">二分图的最大匹配</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/manacher算法/">manacher算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/12/子集生成/">序列的全排列、子集的生成</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/11/图论进阶篇/">图论进阶篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/11/生成树计数问题/">生成树计数问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/11/有向图的最小生成树/">有向图的最小生成树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/08/割点与桥/">割点与桥</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/08/4c题目的小积累/">4c题目的小积累</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/06/scc/">scc</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/05/poj2763-dfs序-BIT-LCA/">poj2763(dfs序+BIT+LCA)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/28/二分和三分/">二分和三分</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/28/RMQ/">RMQ</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/28/数独/">数独</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/28/二维线段树/">二维线段树</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/27/hash/">hash</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/26/素数表/">素数表</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/25/等比数列的二分求和/">等比数列的二分求和</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/19/莫队算法/">莫队算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/13/2017-2018流水账/">2017~2018流水账</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/06/数模算法的整理/">数模算法的整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/03/机器学习资料collection/">机器学习大杂烩collection</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/01/python读写数据/">python读写数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/28/画复杂的网络图像/">画复杂的网络图像</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/20/模板/">模板</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/17/线段树模板/">线段树模板</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/31/网络爬虫/">网络爬虫</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/28/bitcoin/">bitcoin</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/26/近期要做的事情/">近期要做的事情</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/18/html入门/">html入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/17/PHP入门/">PHP入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/06/标记重捕法后面蕴含的概率论知识/">标记重捕法后面蕴含的概率论知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/04/小美赛终于结束了/">小美赛终于结束了</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/26/用python生成公式logo/">用python生成公式logo</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/25/深度学习视频笔记/">深度学习视频笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/24/图论的基础算法/">图论的基础算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/23/树上分治算法/">树上分治算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/14/第k短路问题/">第k短路问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/13/堆栈内存溢出漏洞/">堆栈内存溢出漏洞</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/12/interpolation-and-fitting/">interpolation and fitting</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/09/matlab语法复习/">matlab语法复习</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/09/囚徒的困境/">囚徒的困境</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/08/c语言函数调用的机制/">c语言函数调用的机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/08/多线程dp/">多线程dp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/07/数位dp/">数位dp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/AC自动机/">AC自动机</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/05/dp优化-连续递推的时间和空间优化/">dp优化--连续递推的时间和空间优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/04/状压dp/">状压dp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/01/区间dp/">区间dp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/31/线性dp/">线性dp</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/31/背包问题/">背包问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/30/DAG上的动态规划/">DAG上的动态规划</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/25/树形dp入门/">树形dp入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/22/后缀自动机/">后缀自动机（待完善）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/09/网络流二十四题/">网络流二十四题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/09/一般图的匹配-带花树算法/">一般图的匹配</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/04/高斯消元/">高斯消元</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/03/稳定婚姻问题/">稳定婚姻问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/02/KM算法模板/">KM算法模板</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/01/Uva-1479-Graph-and-Queries/">Uva 1479 - Graph and Queries</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/25/Unicode学习/">Unicode学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/21/一些智障的问题/">一些智障的问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/21/想入的坑/">想入的坑</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/21/Markdown语法学习/">Markdown语法学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/20/想买的东西/">想买的东西</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/20/hello-world/">欢迎来到我的新博客</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017-2018 Babydragon
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 1;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+             post: ".article-entry a[href], .copyright a[href]", 
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+    {{ live2d() }}
+    <script type="text/javascript" src="/js/love.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2}});</script></body>
+</html>
