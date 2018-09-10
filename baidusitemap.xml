@@ -3,6 +3,90 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/09/10/%E4%BB%A3%E7%A0%81%E5%A0%86/</loc>
+    <lastmod>2018-09-10T10:31:37.356Z</lastmod>
+    <data>
+        <display>
+        <title>代码堆</title>
+        <pubTime>2018-09-09T16:13:17.000Z</pubTime>
+        
+        <tag>code </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
+    <lastmod>2018-09-09T16:14:31.857Z</lastmod>
+    <data>
+        <display>
+        <title>训练实录</title>
+        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
+        
+        <tag>训练实录 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/09/10/%E4%B8%80%E7%B1%BB%E9%9C%80%E8%A6%81%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2%E7%9A%84%E5%8D%9A%E5%BC%88%E8%AE%BA/</loc>
+    <lastmod>2018-09-09T16:12:44.084Z</lastmod>
+    <data>
+        <display>
+        <title>一类需要记忆化搜索的博弈论</title>
+        <pubTime>2018-09-09T16:09:09.000Z</pubTime>
+        
+        <tag>game </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/08/24/%E6%A0%91%E5%89%96%E6%90%9Elca/</loc>
+    <lastmod>2018-09-09T15:59:21.845Z</lastmod>
+    <data>
+        <display>
+        <title>树剖的一种应用 - 求 LCA</title>
+        <pubTime>2018-08-24T13:23:46.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>LCA </tag>
+         
+        <tag>树链剖分 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/09/09/%E6%9C%89%E4%B8%8A%E4%B8%8B%E7%95%8C%E7%9A%84%E7%BD%91%E7%BB%9C%E6%B5%81/</loc>
     <lastmod>2018-09-09T15:21:54.762Z</lastmod>
     <data>
@@ -70,26 +154,6 @@
         <tag>A*算法 </tag>
          
         <tag>Dijkstra算法 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
-    <lastmod>2018-09-08T11:44:17.546Z</lastmod>
-    <data>
-        <display>
-        <title>训练实录</title>
-        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
-        
-        <tag>训练实录 </tag>
          
          
            
@@ -2714,9 +2778,9 @@
         <title>数模算法的整理</title>
         <pubTime>2018-02-06T01:47:58.000Z</pubTime>
         
-        <tag>数学建模 </tag>
-         
         <tag>MATLAB </tag>
+         
+        <tag>数学建模 </tag>
          
          
            
