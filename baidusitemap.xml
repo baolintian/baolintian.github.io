@@ -3,14 +3,84 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/09/01/%E6%A0%91%E5%89%96%E6%90%9Elca/</loc>
+    <lastmod>2018-09-11T13:49:06.507Z</lastmod>
+    <data>
+        <display>
+        <title>树剖的一种应用 - 求 LCA</title>
+        <pubTime>2018-09-01T13:23:46.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>LCA </tag>
+         
+        <tag>树链剖分 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/09/11/2-SAT-1/</loc>
+    <lastmod>2018-09-11T13:48:27.397Z</lastmod>
+    <data>
+        <display>
+        <title>2-SAT</title>
+        <pubTime>2018-09-11T10:53:57.000Z</pubTime>
+        
+        <tag>2-SAT </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/09/10/%E4%BB%A3%E7%A0%81%E5%A0%86/</loc>
-    <lastmod>2018-09-10T10:31:37.356Z</lastmod>
+    <lastmod>2018-09-11T13:48:27.392Z</lastmod>
     <data>
         <display>
         <title>代码堆</title>
         <pubTime>2018-09-09T16:13:17.000Z</pubTime>
         
         <tag>code </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/09/11/SPOJ-GSS7/</loc>
+    <lastmod>2018-09-11T13:48:20.847Z</lastmod>
+    <data>
+        <display>
+        <title>SPOJ GSS7</title>
+        <pubTime>2018-09-11T13:00:02.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>数据结构 </tag>
+         
+        <tag>LCT </tag>
+         
+        <tag>树链剖分 </tag>
          
          
            
@@ -51,30 +121,6 @@
         <pubTime>2018-09-09T16:09:09.000Z</pubTime>
         
         <tag>game </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/08/24/%E6%A0%91%E5%89%96%E6%90%9Elca/</loc>
-    <lastmod>2018-09-09T15:59:21.845Z</lastmod>
-    <data>
-        <display>
-        <title>树剖的一种应用 - 求 LCA</title>
-        <pubTime>2018-08-24T13:23:46.000Z</pubTime>
-        
-        <tag>wym </tag>
-         
-        <tag>LCA </tag>
-         
-        <tag>树链剖分 </tag>
          
          
            
@@ -2778,9 +2824,9 @@
         <title>数模算法的整理</title>
         <pubTime>2018-02-06T01:47:58.000Z</pubTime>
         
-        <tag>MATLAB </tag>
-         
         <tag>数学建模 </tag>
+         
+        <tag>MATLAB </tag>
          
          
            
