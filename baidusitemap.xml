@@ -3,14 +3,42 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/09/19/%E6%9C%80%E5%A4%A7%E6%9D%83%E5%B0%81%E9%97%AD%E5%AD%90%E5%9B%BE/</loc>
-    <lastmod>2018-09-18T17:16:06.739Z</lastmod>
+    <loc>http://baolintian.github.io/2018/09/19/CodeForces-1042D/</loc>
+    <lastmod>2018-09-19T10:49:59.503Z</lastmod>
     <data>
         <display>
-        <title>最大权封闭子图</title>
-        <pubTime>2018-09-18T17:08:36.000Z</pubTime>
+        <title>CodeForces 1042D</title>
+        <pubTime>2018-09-19T07:00:00.000Z</pubTime>
         
-        <tag>最大权闭合子图 </tag>
+        <tag>wym </tag>
+         
+        <tag>数据结构 </tag>
+         
+        <tag>Splay </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/09/19/HDU-6217-BBP-Formula/</loc>
+    <lastmod>2018-09-19T10:49:23.110Z</lastmod>
+    <data>
+        <display>
+        <title>HDU 6217 BBP Formula</title>
+        <pubTime>2018-09-19T07:20:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>数值分析 </tag>
+         
+        <tag>技能积累 </tag>
          
          
            
@@ -24,13 +52,53 @@
     
   <url>
     <loc>http://baolintian.github.io/2018/09/10/%E4%BB%A3%E7%A0%81%E5%A0%86/</loc>
-    <lastmod>2018-09-18T13:56:53.481Z</lastmod>
+    <lastmod>2018-09-19T10:40:18.171Z</lastmod>
     <data>
         <display>
         <title>代码堆</title>
         <pubTime>2018-09-09T16:13:17.000Z</pubTime>
         
         <tag>code </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
+    <lastmod>2018-09-19T08:37:57.347Z</lastmod>
+    <data>
+        <display>
+        <title>训练实录</title>
+        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
+        
+        <tag>训练实录 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/09/19/%E6%9C%80%E5%A4%A7%E6%9D%83%E5%B0%81%E9%97%AD%E5%AD%90%E5%9B%BE/</loc>
+    <lastmod>2018-09-18T17:16:06.739Z</lastmod>
+    <data>
+        <display>
+        <title>最大权封闭子图</title>
+        <pubTime>2018-09-18T17:08:36.000Z</pubTime>
+        
+        <tag>最大权闭合子图 </tag>
          
          
            
@@ -123,26 +191,6 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
-    <lastmod>2018-09-15T10:18:32.292Z</lastmod>
-    <data>
-        <display>
-        <title>训练实录</title>
-        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
-        
-        <tag>训练实录 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://baolintian.github.io/2018/09/01/%E6%A0%91%E5%89%96%E6%90%9Elca/</loc>
     <lastmod>2018-09-11T13:49:06.507Z</lastmod>
     <data>
@@ -152,9 +200,9 @@
         
         <tag>wym </tag>
          
-        <tag>树链剖分 </tag>
-         
         <tag>LCA </tag>
+         
+        <tag>树链剖分 </tag>
          
          
            
@@ -198,9 +246,9 @@
          
         <tag>数据结构 </tag>
          
-        <tag>树链剖分 </tag>
-         
         <tag>LCT </tag>
+         
+        <tag>树链剖分 </tag>
          
          
            
