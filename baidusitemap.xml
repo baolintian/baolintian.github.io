@@ -3,6 +3,58 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/09/20/BZOJ-3213-%E6%A3%AE%E6%9E%97/</loc>
+    <lastmod>2018-09-20T08:23:02.459Z</lastmod>
+    <data>
+        <display>
+        <title>BZOJ 3213 森林</title>
+        <pubTime>2018-09-20T08:00:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>数据结构 </tag>
+         
+        <tag>主席树 </tag>
+         
+        <tag>在线 LCA </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/09/19/BZOJ-3589/</loc>
+    <lastmod>2018-09-20T08:22:07.144Z</lastmod>
+    <data>
+        <display>
+        <title>BZOJ 3589</title>
+        <pubTime>2018-09-19T15:50:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>数据结构 </tag>
+         
+        <tag>树链剖分 </tag>
+         
+        <tag>线段树 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/09/10/%E4%BB%A3%E7%A0%81%E5%A0%86/</loc>
     <lastmod>2018-09-19T14:26:38.655Z</lastmod>
     <data>
@@ -220,9 +272,9 @@
         
         <tag>wym </tag>
          
-        <tag>LCA </tag>
-         
         <tag>树链剖分 </tag>
+         
+        <tag>LCA </tag>
          
          
            
@@ -266,9 +318,9 @@
          
         <tag>数据结构 </tag>
          
-        <tag>LCT </tag>
-         
         <tag>树链剖分 </tag>
+         
+        <tag>LCT </tag>
          
          
            
@@ -457,9 +509,9 @@
          
         <tag>数据结构 </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>树链剖分 </tag>
+         
+        <tag>线段树 </tag>
          
         <tag>Kruskal </tag>
          
