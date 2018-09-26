@@ -3,6 +3,118 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/09/26/BZOJ-4999/</loc>
+    <lastmod>2018-09-26T13:59:37.883Z</lastmod>
+    <data>
+        <display>
+        <title>BZOJ 4999 This Problem Is Too Simple!</title>
+        <pubTime>2018-09-26T13:00:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>树链剖分 </tag>
+         
+        <tag>动态开点线段树 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/09/10/%E4%BB%A3%E7%A0%81%E5%A0%86/</loc>
+    <lastmod>2018-09-26T13:58:36.947Z</lastmod>
+    <data>
+        <display>
+        <title>代码堆</title>
+        <pubTime>2018-09-09T16:13:17.000Z</pubTime>
+        
+        <tag>code </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/09/25/POJ-2549-Sumsets/</loc>
+    <lastmod>2018-09-26T09:19:43.621Z</lastmod>
+    <data>
+        <display>
+        <title>POJ 2549 Sumsets</title>
+        <pubTime>2018-09-25T09:40:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>暴力 </tag>
+         
+        <tag>思维 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/09/26/HDU-5489-Removed-Interval/</loc>
+    <lastmod>2018-09-26T09:18:20.157Z</lastmod>
+    <data>
+        <display>
+        <title>HDU 5489 Removed Interval</title>
+        <pubTime>2018-09-26T09:40:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>动态规划 </tag>
+         
+        <tag>滑动窗口 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
+    <lastmod>2018-09-26T09:10:40.435Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎来到我的新博客</title>
+        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
+        
+        <tag>自我想法 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/09/20/HDU-6274/</loc>
     <lastmod>2018-09-25T09:32:39.392Z</lastmod>
     <data>
@@ -40,46 +152,6 @@
            
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/09/10/%E4%BB%A3%E7%A0%81%E5%A0%86/</loc>
-    <lastmod>2018-09-25T08:55:32.175Z</lastmod>
-    <data>
-        <display>
-        <title>代码堆</title>
-        <pubTime>2018-09-09T16:13:17.000Z</pubTime>
-        
-        <tag>code </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
-    <lastmod>2018-09-25T04:24:26.450Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎来到我的新博客</title>
-        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
-        
-        <tag>自我想法 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
           
         </display>
     </data>
@@ -3442,11 +3514,11 @@
         <title>Unicode学习</title>
         <pubTime>2017-09-25T06:54:21.000Z</pubTime>
         
-        <tag>python </tag>
-         
         <tag>unicode </tag>
          
         <tag>utf-8 </tag>
+         
+        <tag>python </tag>
          
          
            
