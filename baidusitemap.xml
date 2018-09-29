@@ -4,7 +4,7 @@
     
   <url>
     <loc>http://baolintian.github.io/2018/09/10/%E4%BB%A3%E7%A0%81%E5%A0%86/</loc>
-    <lastmod>2018-09-28T10:49:04.099Z</lastmod>
+    <lastmod>2018-09-29T15:09:45.215Z</lastmod>
     <data>
         <display>
         <title>代码堆</title>
@@ -17,6 +17,29 @@
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/09/30/DSU-ON-TREE/</loc>
+    <lastmod>2018-09-29T15:07:47.981Z</lastmod>
+    <data>
+        <display>
+        <title>DSU On Tree</title>
+        <pubTime>2018-09-29T16:00:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>数据结构 </tag>
+         
+        <tag>ACM </tag>
+         
+        <tag>DSU On Tree </tag>
+         
+         
+           
         </display>
     </data>
     </url>
