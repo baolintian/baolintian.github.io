@@ -3,18 +3,20 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/10/06/Day6-I/</loc>
-    <lastmod>2018-10-06T16:35:16.958Z</lastmod>
+    <loc>http://baolintian.github.io/2018/10/08/POJ-3150-BZOJ-2510/</loc>
+    <lastmod>2018-10-08T14:00:21.856Z</lastmod>
     <data>
         <display>
-        <title>牛客国庆Day6 清明梦超能力者黄YY</title>
-        <pubTime>2018-10-06T13:50:00.000Z</pubTime>
+        <title>POJ 3150 & BZOJ 2510 带有轮换的矩阵乘法</title>
+        <pubTime>2018-10-08T13:00:00.000Z</pubTime>
         
         <tag>wym </tag>
          
-        <tag>树链剖分 </tag>
+        <tag>数学 </tag>
          
-        <tag>线段树 </tag>
+        <tag>思维 </tag>
+         
+        <tag>矩阵 </tag>
          
          
            
@@ -28,13 +30,55 @@
     
   <url>
     <loc>http://baolintian.github.io/2018/09/10/%E4%BB%A3%E7%A0%81%E5%A0%86/</loc>
-    <lastmod>2018-10-06T16:24:58.286Z</lastmod>
+    <lastmod>2018-10-08T13:53:21.762Z</lastmod>
     <data>
         <display>
         <title>代码堆</title>
         <pubTime>2018-09-09T16:13:17.000Z</pubTime>
         
         <tag>code </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/01/20/%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2018-10-07T08:49:46.373Z</lastmod>
+    <data>
+        <display>
+        <title>模板</title>
+        <pubTime>2018-01-20T08:41:57.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/06/Day6-I/</loc>
+    <lastmod>2018-10-06T16:35:16.958Z</lastmod>
+    <data>
+        <display>
+        <title>牛客国庆Day6 清明梦超能力者黄YY</title>
+        <pubTime>2018-10-06T13:50:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>树链剖分 </tag>
+         
+        <tag>线段树 </tag>
          
          
            
@@ -297,24 +341,6 @@
         
         <tag>训练实录 </tag>
          
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/01/20/%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2018-09-21T03:59:01.479Z</lastmod>
-    <data>
-        <display>
-        <title>模板</title>
-        <pubTime>2018-01-20T08:41:57.000Z</pubTime>
-        
          
            
              
