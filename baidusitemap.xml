@@ -3,6 +3,66 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/09/30/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2018-10-12T12:07:37.264Z</lastmod>
+    <data>
+        <display>
+        <title>云计算与大数据课程学习记录</title>
+        <pubTime>2018-09-30T04:59:15.000Z</pubTime>
+        
+        <tag>大数据 </tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://baolintian.github.io/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/09/23/%E8%87%AA%E5%B7%B1%E4%B9%B0%E4%B8%AAvps%E6%90%AD%E6%A2%AF%E5%AD%90/</loc>
+    <lastmod>2018-10-10T14:31:30.581Z</lastmod>
+    <data>
+        <display>
+        <title>自己买个vps搭梯子</title>
+        <pubTime>2018-09-23T03:56:48.000Z</pubTime>
+        
+        <tag>vps </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/06/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2018-10-09T12:37:20.109Z</lastmod>
+    <data>
+        <display>
+        <title>汇编语言基础</title>
+        <pubTime>2018-10-05T17:32:55.000Z</pubTime>
+        
+        <tag>汇编语言 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/09/10/%E4%BB%A3%E7%A0%81%E5%A0%86/</loc>
     <lastmod>2018-10-09T10:29:48.312Z</lastmod>
     <data>
@@ -16,26 +76,6 @@
            
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/10/06/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2018-10-09T05:01:04.741Z</lastmod>
-    <data>
-        <display>
-        <title>汇编语言基础</title>
-        <pubTime>2018-10-05T17:32:55.000Z</pubTime>
-        
-        <tag>汇编语言 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
           
         </display>
     </data>
@@ -104,26 +144,6 @@
            
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/09/30/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2018-09-30T05:00:39.724Z</lastmod>
-    <data>
-        <display>
-        <title>云计算与大数据课程学习记录</title>
-        <pubTime>2018-09-30T04:59:15.000Z</pubTime>
-        
-        <tag>大数据 </tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://baolintian.github.io/categories/python/"/>
           
         </display>
     </data>
@@ -305,26 +325,6 @@
            
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/09/23/%E8%87%AA%E5%B7%B1%E4%B9%B0%E4%B8%AAvps%E6%90%AD%E6%A2%AF%E5%AD%90/</loc>
-    <lastmod>2018-09-23T11:54:13.682Z</lastmod>
-    <data>
-        <display>
-        <title>自己买个vps搭梯子</title>
-        <pubTime>2018-09-23T03:56:48.000Z</pubTime>
-        
-        <tag>vps </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
           
         </display>
     </data>
