@@ -123,52 +123,6 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/09/10/%E4%BB%A3%E7%A0%81%E5%A0%86/</loc>
-    <lastmod>2018-10-09T10:29:48.312Z</lastmod>
-    <data>
-        <display>
-        <title>代码堆</title>
-        <pubTime>2018-09-09T16:13:17.000Z</pubTime>
-        
-        <tag>code </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/10/08/POJ-3150-BZOJ-2510/</loc>
-    <lastmod>2018-10-08T14:00:21.856Z</lastmod>
-    <data>
-        <display>
-        <title>POJ 3150 & BZOJ 2510 带有轮换的矩阵乘法</title>
-        <pubTime>2018-10-08T13:00:00.000Z</pubTime>
-        
-        <tag>wym </tag>
-         
-        <tag>数学 </tag>
-         
-        <tag>思维 </tag>
-         
-        <tag>矩阵 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://baolintian.github.io/2018/01/20/%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2018-10-07T08:49:46.373Z</lastmod>
     <data>
@@ -205,29 +159,6 @@
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/09/30/DSU-ON-TREE/</loc>
-    <lastmod>2018-09-29T15:07:47.981Z</lastmod>
-    <data>
-        <display>
-        <title>DSU On Tree</title>
-        <pubTime>2018-09-29T16:00:00.000Z</pubTime>
-        
-        <tag>wym </tag>
-         
-        <tag>数据结构 </tag>
-         
-        <tag>ACM </tag>
-         
-        <tag>DSU On Tree </tag>
-         
-         
-           
         </display>
     </data>
     </url>
