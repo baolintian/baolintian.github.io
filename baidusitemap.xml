@@ -3,6 +3,90 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
+    <lastmod>2018-10-18T14:07:13.754Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎来到我的新博客</title>
+        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
+        
+        <tag>自我想法 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2018-10-18T14:02:49.252Z</lastmod>
+    <data>
+        <display>
+        <title>计算机视觉入门</title>
+        <pubTime>2018-10-18T13:21:21.000Z</pubTime>
+        
+        <tag>计算机视觉 </tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://baolintian.github.io/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/06/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2018-10-18T08:53:22.761Z</lastmod>
+    <data>
+        <display>
+        <title>汇编语言基础</title>
+        <pubTime>2018-10-05T17:32:55.000Z</pubTime>
+        
+        <tag>汇编语言 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/17/IEEE11-0-Math-Challenge/</loc>
+    <lastmod>2018-10-17T13:48:02.521Z</lastmod>
+    <data>
+        <display>
+        <title>IEEE XTreme 11.0 Math Challenge</title>
+        <pubTime>2018-10-17T13:00:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>数学 </tag>
+         
+        <tag>逆元 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/10/15/%E4%BB%A3%E7%A0%81%E5%A0%862/</loc>
     <lastmod>2018-10-16T13:37:23.126Z</lastmod>
     <data>
@@ -43,26 +127,6 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
-    <lastmod>2018-10-13T11:59:01.256Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎来到我的新博客</title>
-        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
-        
-        <tag>自我想法 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://baolintian.github.io/2018/09/30/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2018-10-12T12:07:37.264Z</lastmod>
     <data>
@@ -91,26 +155,6 @@
         <pubTime>2018-09-23T03:56:48.000Z</pubTime>
         
         <tag>vps </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/10/06/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2018-10-09T12:37:20.109Z</lastmod>
-    <data>
-        <display>
-        <title>汇编语言基础</title>
-        <pubTime>2018-10-05T17:32:55.000Z</pubTime>
-        
-        <tag>汇编语言 </tag>
          
          
            
@@ -196,9 +240,9 @@
         
         <tag>wym </tag>
          
-        <tag>树链剖分 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>树链剖分 </tag>
          
          
            
@@ -429,9 +473,9 @@
          
         <tag>数据结构 </tag>
          
-        <tag>树链剖分 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>树链剖分 </tag>
          
          
            
@@ -840,9 +884,9 @@
          
         <tag>数据结构 </tag>
          
-        <tag>树链剖分 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>树链剖分 </tag>
          
         <tag>Kruskal </tag>
          
