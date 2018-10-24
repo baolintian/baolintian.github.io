@@ -3,6 +3,70 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/10/23/CodeForces-100285C-CVS/</loc>
+    <lastmod>2018-10-24T09:48:17.283Z</lastmod>
+    <data>
+        <display>
+        <title>CodeForces 100285C CVS</title>
+        <pubTime>2018-10-23T08:50:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>数据结构 </tag>
+         
+        <tag>双向链表 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/15/%E4%BB%A3%E7%A0%81%E5%A0%862/</loc>
+    <lastmod>2018-10-24T09:46:08.310Z</lastmod>
+    <data>
+        <display>
+        <title>代码堆2</title>
+        <pubTime>2018-10-15T03:32:05.000Z</pubTime>
+        
+        <tag>代码堆 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2018-10-22T10:16:19.296Z</lastmod>
+    <data>
+        <display>
+        <title>计算机视觉入门</title>
+        <pubTime>2018-10-18T13:21:21.000Z</pubTime>
+        
+        <tag>计算机视觉 </tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://baolintian.github.io/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
     <lastmod>2018-10-19T10:07:23.866Z</lastmod>
     <data>
@@ -16,26 +80,6 @@
            
              
               <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/10/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2018-10-19T04:14:42.593Z</lastmod>
-    <data>
-        <display>
-        <title>计算机视觉入门</title>
-        <pubTime>2018-10-18T13:21:21.000Z</pubTime>
-        
-        <tag>计算机视觉 </tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://baolintian.github.io/categories/python/"/>
           
         </display>
     </data>
@@ -75,26 +119,6 @@
         <tag>数学 </tag>
          
         <tag>逆元 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/10/15/%E4%BB%A3%E7%A0%81%E5%A0%862/</loc>
-    <lastmod>2018-10-16T13:37:23.126Z</lastmod>
-    <data>
-        <display>
-        <title>代码堆2</title>
-        <pubTime>2018-10-15T03:32:05.000Z</pubTime>
-        
-        <tag>代码堆 </tag>
          
          
            
