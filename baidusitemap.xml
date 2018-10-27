@@ -3,18 +3,62 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/10/23/CodeForces-100285C-CVS/</loc>
-    <lastmod>2018-10-24T09:48:17.283Z</lastmod>
+    <loc>http://baolintian.github.io/2018/08/30/%E4%B8%BB%E5%B8%AD%E6%A0%91%E5%B0%8F%E7%BB%93/</loc>
+    <lastmod>2018-10-27T16:19:12.656Z</lastmod>
     <data>
         <display>
-        <title>CodeForces 100285C CVS</title>
-        <pubTime>2018-10-23T08:50:00.000Z</pubTime>
+        <title>主席树初探</title>
+        <pubTime>2018-08-30T06:00:00.000Z</pubTime>
         
         <tag>wym </tag>
          
-        <tag>数据结构 </tag>
+        <tag>主席树 </tag>
          
-        <tag>双向链表 </tag>
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/27/ZOJ-3987/</loc>
+    <lastmod>2018-10-27T16:18:43.759Z</lastmod>
+    <data>
+        <display>
+        <title>ZOJ 3987</title>
+        <pubTime>2018-10-27T15:20:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>思维 </tag>
+         
+        <tag>贪心 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/27/BZOJ-2821/</loc>
+    <lastmod>2018-10-27T16:17:49.647Z</lastmod>
+    <data>
+        <display>
+        <title>BZOJ 2821</title>
+        <pubTime>2018-10-27T14:40:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>分块 </tag>
          
          
            
@@ -28,7 +72,7 @@
     
   <url>
     <loc>http://baolintian.github.io/2018/10/15/%E4%BB%A3%E7%A0%81%E5%A0%862/</loc>
-    <lastmod>2018-10-24T09:46:08.310Z</lastmod>
+    <lastmod>2018-10-27T11:31:52.555Z</lastmod>
     <data>
         <display>
         <title>代码堆2</title>
@@ -48,7 +92,7 @@
     
   <url>
     <loc>http://baolintian.github.io/2018/10/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2018-10-22T10:16:19.296Z</lastmod>
+    <lastmod>2018-10-24T16:27:52.583Z</lastmod>
     <data>
         <display>
         <title>计算机视觉入门</title>
@@ -60,6 +104,30 @@
            
              
               <breadCrumb title="python" url="http://baolintian.github.io/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/23/CodeForces-100285C-CVS/</loc>
+    <lastmod>2018-10-24T09:48:17.283Z</lastmod>
+    <data>
+        <display>
+        <title>CodeForces 100285C CVS</title>
+        <pubTime>2018-10-23T08:50:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>数据结构 </tag>
+         
+        <tag>双向链表 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
           
         </display>
     </data>
@@ -864,28 +932,6 @@
         <title>查询次数比较少的一类题目</title>
         <pubTime>2018-09-07T02:42:27.000Z</pubTime>
         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/08/30/%E4%B8%BB%E5%B8%AD%E6%A0%91%E5%B0%8F%E7%BB%93/</loc>
-    <lastmod>2018-08-31T16:06:40.291Z</lastmod>
-    <data>
-        <display>
-        <title>主席树初探</title>
-        <pubTime>2018-08-30T06:00:00.000Z</pubTime>
-        
-        <tag>wym </tag>
-         
-        <tag>主席树 </tag>
-         
          
            
              
