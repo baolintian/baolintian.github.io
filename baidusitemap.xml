@@ -3,16 +3,121 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/08/30/%E4%B8%BB%E5%B8%AD%E6%A0%91%E5%B0%8F%E7%BB%93/</loc>
-    <lastmod>2018-10-27T16:19:12.656Z</lastmod>
+    <loc>http://baolintian.github.io/2018/10/27/CodeForces-538F/</loc>
+    <lastmod>2018-10-30T15:22:29.862Z</lastmod>
     <data>
         <display>
-        <title>主席树初探</title>
-        <pubTime>2018-08-30T06:00:00.000Z</pubTime>
+        <title>CodeForces 538F A Heap of Heaps</title>
+        <pubTime>2018-10-27T14:40:00.000Z</pubTime>
         
         <tag>wym </tag>
          
         <tag>主席树 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/27/Bit-Soccer/</loc>
+    <lastmod>2018-10-30T15:21:45.292Z</lastmod>
+    <data>
+        <display>
+        <title>Bit Soccer</title>
+        <pubTime>2018-10-27T15:20:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>思维 </tag>
+         
+        <tag>贪心 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/27/BZOJ-3289/</loc>
+    <lastmod>2018-10-30T15:20:34.173Z</lastmod>
+    <data>
+        <display>
+        <title>BZOJ 3289</title>
+        <pubTime>2018-10-27T14:40:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>莫队 </tag>
+         
+        <tag>树状数组 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/29/%E4%B8%BB%E5%B8%AD%E6%A0%91%E5%B0%8F%E7%BB%93/</loc>
+    <lastmod>2018-10-30T15:18:56.313Z</lastmod>
+    <data>
+        <display>
+        <title>主席树初探</title>
+        <pubTime>2018-10-29T14:00:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>主席树 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8%E5%AF%BC%E8%AE%BA%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2018-10-30T13:33:09.723Z</lastmod>
+    <data>
+        <display>
+        <title>计算机安全导论实验</title>
+        <pubTime>2018-10-30T13:32:23.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/15/%E4%BB%A3%E7%A0%81%E5%A0%862/</loc>
+    <lastmod>2018-10-29T13:08:28.931Z</lastmod>
+    <data>
+        <display>
+        <title>代码堆2</title>
+        <pubTime>2018-10-15T03:32:05.000Z</pubTime>
+        
+        <tag>代码堆 </tag>
          
          
            
@@ -59,26 +164,6 @@
         <tag>wym </tag>
          
         <tag>分块 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/10/15/%E4%BB%A3%E7%A0%81%E5%A0%862/</loc>
-    <lastmod>2018-10-27T11:31:52.555Z</lastmod>
-    <data>
-        <display>
-        <title>代码堆2</title>
-        <pubTime>2018-10-15T03:32:05.000Z</pubTime>
-        
-        <tag>代码堆 </tag>
          
          
            
@@ -288,9 +373,9 @@
         
         <tag>wym </tag>
          
-        <tag>数学 </tag>
-         
         <tag>思维 </tag>
+         
+        <tag>数学 </tag>
          
         <tag>矩阵 </tag>
          
@@ -332,9 +417,9 @@
         
         <tag>wym </tag>
          
-        <tag>树链剖分 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>树链剖分 </tag>
          
          
            
@@ -401,9 +486,9 @@
         
         <tag>wym </tag>
          
-        <tag>树链剖分 </tag>
-         
         <tag>动态开点线段树 </tag>
+         
+        <tag>树链剖分 </tag>
          
          
            
@@ -425,9 +510,9 @@
         
         <tag>wym </tag>
          
-        <tag>暴力 </tag>
-         
         <tag>思维 </tag>
+         
+        <tag>暴力 </tag>
          
          
            
@@ -565,9 +650,9 @@
          
         <tag>数据结构 </tag>
          
-        <tag>树链剖分 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>树链剖分 </tag>
          
          
            
@@ -954,9 +1039,9 @@
          
         <tag>数据结构 </tag>
          
-        <tag>树链剖分 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>树链剖分 </tag>
          
         <tag>Kruskal </tag>
          
