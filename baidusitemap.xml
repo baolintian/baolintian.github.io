@@ -3,6 +3,86 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/10/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8%E5%AF%BC%E8%AE%BA%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2018-11-02T08:23:09.875Z</lastmod>
+    <data>
+        <display>
+        <title>计算机安全导论实验</title>
+        <pubTime>2018-10-30T13:32:23.000Z</pubTime>
+        
+        <tag>计算机安全 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/15/%E4%BB%A3%E7%A0%81%E5%A0%862/</loc>
+    <lastmod>2018-11-02T08:13:39.835Z</lastmod>
+    <data>
+        <display>
+        <title>代码堆2</title>
+        <pubTime>2018-10-15T03:32:05.000Z</pubTime>
+        
+        <tag>代码堆 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2018-11-02T05:11:48.412Z</lastmod>
+    <data>
+        <display>
+        <title>计算机视觉入门</title>
+        <pubTime>2018-10-18T13:21:21.000Z</pubTime>
+        
+        <tag>计算机视觉 </tag>
+         
+         
+           
+             
+              <breadCrumb title="python" url="http://baolintian.github.io/categories/python/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/31/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2018-10-31T05:13:26.645Z</lastmod>
+    <data>
+        <display>
+        <title>数据库系统</title>
+        <pubTime>2018-10-31T05:12:19.000Z</pubTime>
+        
+        <tag>数据库 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/10/27/CodeForces-538F/</loc>
     <lastmod>2018-10-30T15:22:29.862Z</lastmod>
     <data>
@@ -95,41 +175,6 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/10/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8%E5%AF%BC%E8%AE%BA%E5%AE%9E%E9%AA%8C/</loc>
-    <lastmod>2018-10-30T13:33:09.723Z</lastmod>
-    <data>
-        <display>
-        <title>计算机安全导论实验</title>
-        <pubTime>2018-10-30T13:32:23.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/10/15/%E4%BB%A3%E7%A0%81%E5%A0%862/</loc>
-    <lastmod>2018-10-29T13:08:28.931Z</lastmod>
-    <data>
-        <display>
-        <title>代码堆2</title>
-        <pubTime>2018-10-15T03:32:05.000Z</pubTime>
-        
-        <tag>代码堆 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://baolintian.github.io/2018/10/27/ZOJ-3987/</loc>
     <lastmod>2018-10-27T16:18:43.759Z</lastmod>
     <data>
@@ -169,26 +214,6 @@
            
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/10/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2018-10-24T16:27:52.583Z</lastmod>
-    <data>
-        <display>
-        <title>计算机视觉入门</title>
-        <pubTime>2018-10-18T13:21:21.000Z</pubTime>
-        
-        <tag>计算机视觉 </tag>
-         
-         
-           
-             
-              <breadCrumb title="python" url="http://baolintian.github.io/categories/python/"/>
           
         </display>
     </data>
@@ -417,9 +442,9 @@
         
         <tag>wym </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>树链剖分 </tag>
+         
+        <tag>线段树 </tag>
          
          
            
@@ -486,9 +511,9 @@
         
         <tag>wym </tag>
          
-        <tag>动态开点线段树 </tag>
-         
         <tag>树链剖分 </tag>
+         
+        <tag>动态开点线段树 </tag>
          
          
            
@@ -650,9 +675,9 @@
          
         <tag>数据结构 </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>树链剖分 </tag>
+         
+        <tag>线段树 </tag>
          
          
            
@@ -1039,9 +1064,9 @@
          
         <tag>数据结构 </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>树链剖分 </tag>
+         
+        <tag>线段树 </tag>
          
         <tag>Kruskal </tag>
          
