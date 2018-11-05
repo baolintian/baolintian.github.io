@@ -3,6 +3,112 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/10/27/CodeForces-101964C/</loc>
+    <lastmod>2018-11-05T08:06:44.539Z</lastmod>
+    <data>
+        <display>
+        <title>Gym 101964C</title>
+        <pubTime>2018-10-27T15:20:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>思维 </tag>
+         
+        <tag>树 dp </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/11/04/BZOJ-2270/</loc>
+    <lastmod>2018-11-05T08:06:29.161Z</lastmod>
+    <data>
+        <display>
+        <title>BZOJ 2270</title>
+        <pubTime>2018-11-04T15:10:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>线段树 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/15/%E4%BB%A3%E7%A0%81%E5%A0%862/</loc>
+    <lastmod>2018-11-04T12:03:39.116Z</lastmod>
+    <data>
+        <display>
+        <title>代码堆2</title>
+        <pubTime>2018-10-15T03:32:05.000Z</pubTime>
+        
+        <tag>代码堆 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
+    <lastmod>2018-11-03T03:22:28.502Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎来到我的新博客</title>
+        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
+        
+        <tag>自我想法 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/11/02/%E5%9B%BE%E8%AE%BA%E5%A4%8D%E4%B9%A0/</loc>
+    <lastmod>2018-11-02T13:34:29.332Z</lastmod>
+    <data>
+        <display>
+        <title>图论复习</title>
+        <pubTime>2018-11-02T13:24:39.000Z</pubTime>
+        
+        <tag>图论 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/10/30/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8%E5%AF%BC%E8%AE%BA%E5%AE%9E%E9%AA%8C/</loc>
     <lastmod>2018-11-02T08:23:09.875Z</lastmod>
     <data>
@@ -16,26 +122,6 @@
            
              
               <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/10/15/%E4%BB%A3%E7%A0%81%E5%A0%862/</loc>
-    <lastmod>2018-11-02T08:13:39.835Z</lastmod>
-    <data>
-        <display>
-        <title>代码堆2</title>
-        <pubTime>2018-10-15T03:32:05.000Z</pubTime>
-        
-        <tag>代码堆 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
           
         </display>
     </data>
@@ -245,26 +331,6 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
-    <lastmod>2018-10-19T10:07:23.866Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎来到我的新博客</title>
-        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
-        
-        <tag>自我想法 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://baolintian.github.io/2018/10/06/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2018-10-18T08:53:22.761Z</lastmod>
     <data>
@@ -442,9 +508,9 @@
         
         <tag>wym </tag>
          
-        <tag>树链剖分 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>树链剖分 </tag>
          
          
            
@@ -673,11 +739,11 @@
         
         <tag>wym </tag>
          
+        <tag>线段树 </tag>
+         
         <tag>数据结构 </tag>
          
         <tag>树链剖分 </tag>
-         
-        <tag>线段树 </tag>
          
          
            
@@ -1020,9 +1086,9 @@
         
         <tag>wym </tag>
          
-        <tag>数据结构 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>数据结构 </tag>
          
          
            
@@ -1062,11 +1128,11 @@
         
         <tag>wym </tag>
          
+        <tag>线段树 </tag>
+         
         <tag>数据结构 </tag>
          
         <tag>树链剖分 </tag>
-         
-        <tag>线段树 </tag>
          
         <tag>Kruskal </tag>
          
@@ -1516,9 +1582,9 @@
         
         <tag>wym </tag>
          
-        <tag>数据结构 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>数据结构 </tag>
          
          
            
@@ -1606,9 +1672,9 @@
         
         <tag>wym </tag>
          
-        <tag>数据结构 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>数据结构 </tag>
          
          
            
