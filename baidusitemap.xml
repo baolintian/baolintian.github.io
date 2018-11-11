@@ -3,6 +3,68 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/11/11/ZOJ-4063/</loc>
+    <lastmod>2018-11-11T14:54:53.928Z</lastmod>
+    <data>
+        <display>
+        <title>ZOJ 4063 Tournament</title>
+        <pubTime>2018-11-11T11:00:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>构造 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/15/%E4%BB%A3%E7%A0%81%E5%A0%862/</loc>
+    <lastmod>2018-11-11T14:28:13.194Z</lastmod>
+    <data>
+        <display>
+        <title>代码堆2</title>
+        <pubTime>2018-10-15T03:32:05.000Z</pubTime>
+        
+        <tag>代码堆 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/11/09/LOJ-UOJ-%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2018-11-11T13:10:44.314Z</lastmod>
+    <data>
+        <display>
+        <title>LOJ-UOJ 模板</title>
+        <pubTime>2018-11-09T12:36:21.000Z</pubTime>
+        
+        <tag>模板 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/11/04/HDU-5933/</loc>
     <lastmod>2018-11-07T11:55:40.953Z</lastmod>
     <data>
@@ -39,26 +101,6 @@
         <tag>莫队 </tag>
          
         <tag>乱搞 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/10/15/%E4%BB%A3%E7%A0%81%E5%A0%862/</loc>
-    <lastmod>2018-11-07T10:28:40.638Z</lastmod>
-    <data>
-        <display>
-        <title>代码堆2</title>
-        <pubTime>2018-10-15T03:32:05.000Z</pubTime>
-        
-        <tag>代码堆 </tag>
          
          
            
@@ -625,9 +667,9 @@
         
         <tag>wym </tag>
          
-        <tag>树链剖分 </tag>
-         
         <tag>动态开点线段树 </tag>
+         
+        <tag>树链剖分 </tag>
          
          
            
@@ -787,9 +829,9 @@
         
         <tag>wym </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>数据结构 </tag>
+         
+        <tag>线段树 </tag>
          
         <tag>树链剖分 </tag>
          
@@ -1134,9 +1176,9 @@
         
         <tag>wym </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>数据结构 </tag>
+         
+        <tag>线段树 </tag>
          
          
            
@@ -1176,9 +1218,9 @@
         
         <tag>wym </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>数据结构 </tag>
+         
+        <tag>线段树 </tag>
          
         <tag>树链剖分 </tag>
          
@@ -1630,9 +1672,9 @@
         
         <tag>wym </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>数据结构 </tag>
+         
+        <tag>线段树 </tag>
          
          
            
@@ -1720,9 +1762,9 @@
         
         <tag>wym </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>数据结构 </tag>
+         
+        <tag>线段树 </tag>
          
          
            
