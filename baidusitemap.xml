@@ -3,16 +3,84 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/11/11/ZOJ-4063/</loc>
-    <lastmod>2018-11-11T14:54:53.928Z</lastmod>
+    <loc>http://baolintian.github.io/2018/11/15/XDU-1393/</loc>
+    <lastmod>2018-11-16T04:49:23.827Z</lastmod>
     <data>
         <display>
-        <title>ZOJ 4063 Tournament</title>
-        <pubTime>2018-11-11T11:00:00.000Z</pubTime>
+        <title>XDOJ 1393</title>
+        <pubTime>2018-11-15T15:20:00.000Z</pubTime>
         
         <tag>wym </tag>
          
-        <tag>构造 </tag>
+        <tag>线段树 </tag>
+         
+        <tag>数据结构 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/09/02/%E7%BA%BF%E6%AE%B5%E6%A0%91%E7%BB%B4%E6%8A%A4%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/</loc>
+    <lastmod>2018-11-16T04:48:47.115Z</lastmod>
+    <data>
+        <display>
+        <title>线段树维护树的直径</title>
+        <pubTime>2018-09-01T17:20:00.000Z</pubTime>
+        
+        <tag>wym </tag>
+         
+        <tag>线段树 </tag>
+         
+        <tag>数据结构 </tag>
+         
+        <tag>树的直径 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
+    <lastmod>2018-11-15T12:56:06.592Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎来到我的新博客</title>
+        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
+        
+        <tag>自我想法 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/11/09/LOJ-UOJ-%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2018-11-14T12:55:56.685Z</lastmod>
+    <data>
+        <display>
+        <title>LOJ-UOJ 模板</title>
+        <pubTime>2018-11-09T12:36:21.000Z</pubTime>
+        
+        <tag>模板 </tag>
          
          
            
@@ -26,7 +94,7 @@
     
   <url>
     <loc>http://baolintian.github.io/2018/10/15/%E4%BB%A3%E7%A0%81%E5%A0%862/</loc>
-    <lastmod>2018-11-11T14:28:13.194Z</lastmod>
+    <lastmod>2018-11-14T12:33:21.635Z</lastmod>
     <data>
         <display>
         <title>代码堆2</title>
@@ -45,14 +113,16 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/11/09/LOJ-UOJ-%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2018-11-11T13:10:44.314Z</lastmod>
+    <loc>http://baolintian.github.io/2018/11/11/ZOJ-4063/</loc>
+    <lastmod>2018-11-11T14:54:53.928Z</lastmod>
     <data>
         <display>
-        <title>LOJ-UOJ 模板</title>
-        <pubTime>2018-11-09T12:36:21.000Z</pubTime>
+        <title>ZOJ 4063 Tournament</title>
+        <pubTime>2018-11-11T11:00:00.000Z</pubTime>
         
-        <tag>模板 </tag>
+        <tag>wym </tag>
+         
+        <tag>构造 </tag>
          
          
            
@@ -190,26 +260,6 @@
            
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
-    <lastmod>2018-11-03T03:22:28.502Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎来到我的新博客</title>
-        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
-        
-        <tag>自我想法 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
           
         </display>
     </data>
@@ -667,9 +717,9 @@
         
         <tag>wym </tag>
          
-        <tag>动态开点线段树 </tag>
-         
         <tag>树链剖分 </tag>
+         
+        <tag>动态开点线段树 </tag>
          
          
            
@@ -829,9 +879,9 @@
         
         <tag>wym </tag>
          
-        <tag>数据结构 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>数据结构 </tag>
          
         <tag>树链剖分 </tag>
          
@@ -1176,9 +1226,9 @@
         
         <tag>wym </tag>
          
-        <tag>数据结构 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>数据结构 </tag>
          
          
            
@@ -1218,9 +1268,9 @@
         
         <tag>wym </tag>
          
-        <tag>数据结构 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>数据结构 </tag>
          
         <tag>树链剖分 </tag>
          
@@ -1672,9 +1722,9 @@
         
         <tag>wym </tag>
          
-        <tag>数据结构 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>数据结构 </tag>
          
          
            
@@ -1762,9 +1812,9 @@
         
         <tag>wym </tag>
          
-        <tag>数据结构 </tag>
-         
         <tag>线段树 </tag>
+         
+        <tag>数据结构 </tag>
          
          
            
