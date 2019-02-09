@@ -3,6 +3,107 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2019/02/09/study-record/</loc>
+    <lastmod>2019-02-09T11:55:20.557Z</lastmod>
+    <data>
+        <display>
+        <title>study record</title>
+        <pubTime>2019-02-09T02:38:24.000Z</pubTime>
+        
+        <tag>学习记录 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
+    <lastmod>2019-02-09T08:55:10.285Z</lastmod>
+    <data>
+        <display>
+        <title>欢迎来到我的新博客</title>
+        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
+        
+        <tag>自我想法 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2017/09/20/%E6%83%B3%E4%B9%B0%E7%9A%84%E4%B8%9C%E8%A5%BF/</loc>
+    <lastmod>2019-02-09T08:30:15.031Z</lastmod>
+    <data>
+        <display>
+        <title>想买的东西</title>
+        <pubTime>2017-09-20T15:23:45.000Z</pubTime>
+        
+        <tag>tips </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/02/13/2017-2018%E6%B5%81%E6%B0%B4%E8%B4%A6/</loc>
+    <lastmod>2019-02-09T08:26:01.287Z</lastmod>
+    <data>
+        <display>
+        <title>2017~2018流水账</title>
+        <pubTime>2018-02-13T11:12:32.000Z</pubTime>
+        
+        <tag>个人感想 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2018/10/31/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2018-12-09T09:36:56.764Z</lastmod>
+    <data>
+        <display>
+        <title>数据库系统</title>
+        <pubTime>2018-10-31T05:12:19.000Z</pubTime>
+        
+        <tag>数据库 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2018/11/09/LOJ-UOJ-%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2018-11-22T09:53:07.405Z</lastmod>
     <data>
@@ -36,26 +137,6 @@
            
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/10/31/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2018-11-21T11:53:37.546Z</lastmod>
-    <data>
-        <display>
-        <title>数据库系统</title>
-        <pubTime>2018-10-31T05:12:19.000Z</pubTime>
-        
-        <tag>数据库 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
           
         </display>
     </data>
@@ -148,26 +229,6 @@
            
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
-    <lastmod>2018-11-15T12:56:06.592Z</lastmod>
-    <data>
-        <display>
-        <title>欢迎来到我的新博客</title>
-        <pubTime>2017-09-20T13:00:13.311Z</pubTime>
-        
-        <tag>自我想法 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
           
         </display>
     </data>
@@ -759,9 +820,9 @@
         
         <tag>wym </tag>
          
-        <tag>动态开点线段树 </tag>
-         
         <tag>树链剖分 </tag>
+         
+        <tag>动态开点线段树 </tag>
          
          
            
@@ -3188,7 +3249,6 @@
     </url>
 
     
-    
   <url>
     <loc>http://baolintian.github.io/2018/05/04/STL%E4%B8%80%E4%BA%9B%E5%AE%B9%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2018-05-04T05:15:00.681Z</lastmod>
@@ -3582,26 +3642,6 @@
     </url>
 
     
-  <url>
-    <loc>http://baolintian.github.io/2017/09/20/%E6%83%B3%E4%B9%B0%E7%9A%84%E4%B8%9C%E8%A5%BF/</loc>
-    <lastmod>2018-03-31T16:43:38.193Z</lastmod>
-    <data>
-        <display>
-        <title>想买的东西</title>
-        <pubTime>2017-09-20T15:23:45.000Z</pubTime>
-        
-        <tag>tips </tag>
-         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
     
   <url>
     <loc>http://baolintian.github.io/2018/03/08/4c%E9%A2%98%E7%9B%AE%E7%9A%84%E5%B0%8F%E7%A7%AF%E7%B4%AF/</loc>
@@ -3707,26 +3747,6 @@
         <title>online latex公式编辑技巧的积累</title>
         <pubTime>2018-03-21T05:30:37.000Z</pubTime>
         
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2018/02/13/2017-2018%E6%B5%81%E6%B0%B4%E8%B4%A6/</loc>
-    <lastmod>2018-03-23T08:51:38.216Z</lastmod>
-    <data>
-        <display>
-        <title>2017~2018流水账</title>
-        <pubTime>2018-02-13T11:12:32.000Z</pubTime>
-        
-        <tag>个人感想 </tag>
-         
          
            
              
