@@ -3,6 +3,26 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2019/02/12/%E6%9C%89%E5%90%8E%E6%95%88%E6%80%A7%E7%9A%84%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E6%96%B9%E7%A8%8B/</loc>
+    <lastmod>2019-02-12T15:46:40.864Z</lastmod>
+    <data>
+        <display>
+        <title>有后效性的状态转移方程</title>
+        <pubTime>2019-02-12T15:20:49.000Z</pubTime>
+        
+        <tag>dp </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2019/02/09/study-record/</loc>
     <lastmod>2019-02-10T15:06:48.716Z</lastmod>
     <data>
@@ -820,9 +840,9 @@
         
         <tag>wym </tag>
          
-        <tag>树链剖分 </tag>
-         
         <tag>动态开点线段树 </tag>
+         
+        <tag>树链剖分 </tag>
          
          
            
