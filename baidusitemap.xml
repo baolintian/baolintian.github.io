@@ -4,7 +4,7 @@
     
   <url>
     <loc>http://baolintian.github.io/2019/02/16/%E9%AB%98%E8%83%BD%E7%8E%A9%E5%AE%B6%E5%8D%9A%E5%BC%88%E6%B8%B8%E6%88%8F-%E3%80%8A%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E3%80%8B%E5%BF%85%E8%83%9C%E7%AD%96%E7%95%A5/</loc>
-    <lastmod>2019-02-16T14:33:46.115Z</lastmod>
+    <lastmod>2019-02-17T13:07:46.138Z</lastmod>
     <data>
         <display>
         <title>高能玩家博弈游戏--《最后一个》必胜策略</title>
@@ -17,6 +17,21 @@
              
               <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2019/02/17/dp%E4%B8%8E%E6%A6%82%E7%8E%87%E6%9C%9F%E6%9C%9B/</loc>
+    <lastmod>2019-02-17T13:02:17.235Z</lastmod>
+    <data>
+        <display>
+        <title>dp与概率期望</title>
+        <pubTime>2019-02-17T06:07:00.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
@@ -255,9 +270,9 @@
         
         <tag>wym </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>数据结构 </tag>
+         
+        <tag>线段树 </tag>
          
          
            
@@ -279,9 +294,9 @@
         
         <tag>wym </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>数据结构 </tag>
+         
+        <tag>线段树 </tag>
          
         <tag>树的直径 </tag>
          
@@ -880,9 +895,9 @@
         
         <tag>wym </tag>
          
-        <tag>树链剖分 </tag>
-         
         <tag>动态开点线段树 </tag>
+         
+        <tag>树链剖分 </tag>
          
          
            
@@ -1042,9 +1057,9 @@
         
         <tag>wym </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>数据结构 </tag>
+         
+        <tag>线段树 </tag>
          
         <tag>树链剖分 </tag>
          
@@ -1389,9 +1404,9 @@
         
         <tag>wym </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>数据结构 </tag>
+         
+        <tag>线段树 </tag>
          
          
            
@@ -1431,9 +1446,9 @@
         
         <tag>wym </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>数据结构 </tag>
+         
+        <tag>线段树 </tag>
          
         <tag>树链剖分 </tag>
          
@@ -1885,9 +1900,9 @@
         
         <tag>wym </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>数据结构 </tag>
+         
+        <tag>线段树 </tag>
          
          
            
@@ -1975,9 +1990,9 @@
         
         <tag>wym </tag>
          
-        <tag>线段树 </tag>
-         
         <tag>数据结构 </tag>
+         
+        <tag>线段树 </tag>
          
          
            
