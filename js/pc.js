@@ -52,15 +52,6 @@ define([], function(){
         var timeout;
         var isEnterBtn = false;
         var isEnterTips = false;
-
-
-        
-
-        $(".tips-inner li").bind("click", function(){
-            var idx = $(this).index();
-            slide(idx);
-            Tips.hide();
-        });
     }
 
     var miniArchives = function(){
