@@ -3,6 +3,21 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/06/17/%E5%8D%9A%E5%AE%A2%E7%89%88%E9%9D%A2%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2019-04-12T09:46:40.592Z</lastmod>
+    <data>
+        <display>
+        <title>博客版面更新记录</title>
+        <pubTime>2018-06-16T16:11:56.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
     <lastmod>2019-04-06T15:40:40.562Z</lastmod>
     <data>
@@ -2613,21 +2628,6 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/06/17/%E5%8D%9A%E5%AE%A2%E7%89%88%E9%9D%A2%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2018-07-26T17:43:55.242Z</lastmod>
-    <data>
-        <display>
-        <title>博客版面更新记录</title>
-        <pubTime>2018-06-16T16:11:56.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://baolintian.github.io/2018/07/25/%E4%B8%89%E7%B1%BBBIT/</loc>
     <lastmod>2018-07-25T03:20:29.764Z</lastmod>
     <data>
@@ -3957,9 +3957,9 @@
         <title>数模算法的整理</title>
         <pubTime>2018-02-06T01:47:58.000Z</pubTime>
         
-        <tag>数学建模 </tag>
-         
         <tag>MATLAB </tag>
+         
+        <tag>数学建模 </tag>
          
          
            
