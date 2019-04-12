@@ -65,17 +65,7 @@ define([], function(){
             }, 100);
         });
 
-        $(".tips-box").bind("mouseenter", function(){
-            isEnterTips = true;
-            Tips.show();
-        }).bind("mouseleave", function(){
-            isEnterTips = false;
-            setTimeout(function(){
-                if(!isEnterBtn){
-                    Tips.hide();
-                }
-            }, 100);
-        });
+        
 
         $(".tips-inner li").bind("click", function(){
             var idx = $(this).index();
