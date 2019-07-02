@@ -3,6 +3,54 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2019/06/28/%E7%BB%83%E4%B9%A0/</loc>
+    <lastmod>2019-07-01T14:10:15.499Z</lastmod>
+    <data>
+        <display>
+        <title>练习</title>
+        <pubTime>2019-06-28T02:15:21.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2019/06/09/%E6%8A%95%E9%80%92%E4%BF%A1%E6%81%AF%E5%8F%8A%E7%BD%91%E9%A1%B5/</loc>
+    <lastmod>2019-06-09T03:00:36.406Z</lastmod>
+    <data>
+        <display>
+        <title>投递信息及网页</title>
+        <pubTime>2019-06-09T02:45:19.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2019/06/02/A-problem-a-day-keeps-WA-away/</loc>
+    <lastmod>2019-06-03T10:25:08.050Z</lastmod>
+    <data>
+        <display>
+        <title>A problem a day keeps WA away</title>
+        <pubTime>2019-06-02T15:12:47.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
     <lastmod>2019-05-29T15:06:30.497Z</lastmod>
     <data>
@@ -1097,9 +1145,9 @@
         <title>KM算法模板</title>
         <pubTime>2017-10-02T03:28:13.000Z</pubTime>
         
-        <tag>模板 </tag>
-         
         <tag>KM算法 </tag>
+         
+        <tag>模板 </tag>
          
          
            
