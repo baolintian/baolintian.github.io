@@ -3,6 +3,24 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2019/07/08/%E7%BB%83%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/</loc>
+    <lastmod>2019-07-11T14:56:49.483Z</lastmod>
+    <data>
+        <display>
+        <title>练习第二阶段</title>
+        <pubTime>2019-07-08T02:38:21.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2019/06/28/%E7%BB%83%E4%B9%A0/</loc>
     <lastmod>2019-07-04T16:09:58.355Z</lastmod>
     <data>
@@ -4105,9 +4123,9 @@
         <title>数模算法的整理</title>
         <pubTime>2018-02-06T01:47:58.000Z</pubTime>
         
-        <tag>MATLAB </tag>
-         
         <tag>数学建模 </tag>
+         
+        <tag>MATLAB </tag>
          
          
            
