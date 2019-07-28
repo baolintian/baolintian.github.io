@@ -3,6 +3,24 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2019/07/17/trainning/</loc>
+    <lastmod>2019-07-25T10:47:48.411Z</lastmod>
+    <data>
+        <display>
+        <title>trainning</title>
+        <pubTime>2019-07-17T02:46:23.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2019/07/08/%E7%BB%83%E4%B9%A0%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/</loc>
     <lastmod>2019-07-11T14:56:49.483Z</lastmod>
     <data>
@@ -1163,9 +1181,9 @@
         <title>KM算法模板</title>
         <pubTime>2017-10-02T03:28:13.000Z</pubTime>
         
-        <tag>KM算法 </tag>
-         
         <tag>模板 </tag>
+         
+        <tag>KM算法 </tag>
          
          
            
