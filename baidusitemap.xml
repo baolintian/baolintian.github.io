@@ -3,6 +3,44 @@
 
     
   <url>
+    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
+    <lastmod>2019-08-28T12:10:16.563Z</lastmod>
+    <data>
+        <display>
+        <title>训练实录</title>
+        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
+        
+        <tag>训练实录 </tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://baolintian.github.io/2019/08/06/info-collection/</loc>
+    <lastmod>2019-08-26T14:11:27.306Z</lastmod>
+    <data>
+        <display>
+        <title>info collection</title>
+        <pubTime>2019-08-06T06:12:47.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://baolintian.github.io/2017/09/20/hello-world/</loc>
     <lastmod>2019-08-26T12:29:20.366Z</lastmod>
     <data>
@@ -23,26 +61,6 @@
 
     
   <url>
-    <loc>http://baolintian.github.io/2018/07/21/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/</loc>
-    <lastmod>2019-08-26T12:29:17.963Z</lastmod>
-    <data>
-        <display>
-        <title>训练实录</title>
-        <pubTime>2018-07-20T16:40:55.000Z</pubTime>
-        
-        <tag>训练实录 </tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://baolintian.github.io/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://baolintian.github.io/2019/07/30/PTA/</loc>
     <lastmod>2019-08-06T08:08:40.406Z</lastmod>
     <data>
@@ -52,24 +70,6 @@
         
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://baolintian.github.io/2019/08/06/info-collection/</loc>
-    <lastmod>2019-08-06T06:14:08.232Z</lastmod>
-    <data>
-        <display>
-        <title>info collection</title>
-        <pubTime>2019-08-06T06:12:47.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="ex" url="http://baolintian.github.io/categories/ex/"/>
-          
         </display>
     </data>
     </url>
@@ -1214,9 +1214,9 @@
         <title>KM算法模板</title>
         <pubTime>2017-10-02T03:28:13.000Z</pubTime>
         
-        <tag>KM算法 </tag>
-         
         <tag>模板 </tag>
+         
+        <tag>KM算法 </tag>
          
          
            
